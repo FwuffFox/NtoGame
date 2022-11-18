@@ -1,25 +1,28 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using Services;
+using Zenject;
 using UnityEngine;
 
 public class PlayerRotator : MonoBehaviour
 {
-    private Camera _mainCamera;
+    public Camera camera;
 
-    private void OnEnable()
+    private IInputService _inputService;
+
+    [Inject]
+    private void Construct(IInputService inputService)
     {
-        _mainCamera = Camera.main;
+        _inputService = inputService;
     }
 
-    private void FixedUpdate () 
+    private void FixedUpdate() 
     {
-        LookAtCamera();
+        LookAtMouseCursor();
     }
     
-    private void LookAtCamera()
+    private void LookAtMouseCursor()
     {
-        var cameraRay = _mainCamera.ScreenPointToRay(Input.mousePosition);
+        Vector3 mousePosition = _inputService.GetMousePosition(); 
+        Ray cameraRay = camera.ScreenPointToRay(mousePosition);
         
         if (!Physics.Raycast(cameraRay, out var cameraRayHit) || !cameraRayHit.transform.CompareTag("Ground")) return;
         
