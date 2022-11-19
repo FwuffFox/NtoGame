@@ -2,6 +2,6 @@
 {
     public static class StaticDataPaths
     {
-        public const string LevelsData = "StaticData/GameData";
+        public const string LevelsData = "StaticData/LevelData";
     }
 }

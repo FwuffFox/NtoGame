@@ -13,7 +13,7 @@ namespace Services.Data
         public void Load()
         {
             _levels = LoadResources<LevelData>(StaticDataPaths.LevelsData)
-                .ToDictionary(_ => _.SceneName, _ => _);
+                .ToDictionary(_ => _.sceneName, _ => _);
         }
 
         public T LoadResource<T>(string path) where T : Object =>

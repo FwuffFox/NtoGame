@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move(Vector3 movementAxis)
     {
-        _rigidbody.MovePosition(transform.position + movementAxis * (speed * Time.deltaTime));
+        _rigidbody.MovePosition(Quaternion.Euler(0, transform.rotation.y, 0) * movementAxis * (speed * Time.deltaTime));
     }
 
 }

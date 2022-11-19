@@ -22,7 +22,7 @@ namespace Services.Factories
             return _assetProvider.Instantiate(PrefabPaths.Player, position)
                 .With(player =>
                 {
-                    _diContainer.Inject(player);
+                    _diContainer.InjectGameObject(player);
                     player.GetComponent<PlayerMovement>().speed = 5f;
                     player.GetComponent<PlayerRotator>().camera = Camera.main;
                 });

@@ -42,6 +42,7 @@ namespace Infrastructure.States
 
         private void OnLoaded()
         {
+                
             LevelData levelData = _staticDataService.GetLevels()[SceneManager.GetActiveScene().name];
 
             var player = _unitSpawner.SpawnPlayer();
