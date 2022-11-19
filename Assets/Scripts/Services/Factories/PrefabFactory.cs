@@ -1,5 +1,6 @@
 ﻿using Extensions;
 using Services.AssetManagement;
+using Logic.Player;
 using StaticData.Constants;
 using UnityEngine;
 using Zenject;
@@ -23,7 +24,7 @@ namespace Services.Factories
                 .With(player =>
                 {
                     _diContainer.InjectGameObject(player);
-                    player.GetComponent<PlayerMovement>().speed = 5f;
+                    player.GetComponent<PlayerMovement>().speed = 2f;
                     player.GetComponent<PlayerRotator>().camera = Camera.main;
                 });
         }
