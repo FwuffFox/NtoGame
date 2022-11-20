@@ -26,6 +26,9 @@ namespace Services.Factories
                     _diContainer.InjectGameObject(player);
                     player.GetComponent<PlayerMovement>().speed = 2f;
                     player.GetComponent<PlayerRotator>().camera = Camera.main;
+                    var health = player.GetComponent<PlayerHealth>();
+                    health.maxHealth = 100;
+                    health.currentHealth = 100;
                 });
         }
         public GameObject InstantiateUI() =>

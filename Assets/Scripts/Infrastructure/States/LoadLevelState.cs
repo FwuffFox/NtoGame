@@ -1,4 +1,6 @@
 ﻿using Logic.Camera;
+using Logic.Player;
+using Logic.UI;
 using Services;
 using Services.Data;
 using Services.Factories;
@@ -50,7 +52,8 @@ namespace Infrastructure.States
 
             if (_ui == null)
                 _ui = _prefabFactory.InstantiateUI();
-
+            
+            _ui.GetComponentInChildren<HealthUI>().SetPlayer(player.GetComponent<PlayerHealth>());
             _stateMachine.Enter<GameLoopState>();
         }
     }
