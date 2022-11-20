@@ -1,3 +1,4 @@
+using System;
 using Logic.Player;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,6 +17,11 @@ namespace Logic.UI
             healthSlider.maxValue = playerHealth.maxHealth;
             healthSlider.value = playerHealth.currentHealth;
             player.OnPlayerHealthChange += SetNewHealth;
+        }
+
+        private void OnDestroy()
+        {
+            playerHealth.OnPlayerHealthChange -= SetNewHealth;
         }
 
         private void SetNewHealth(int health)
