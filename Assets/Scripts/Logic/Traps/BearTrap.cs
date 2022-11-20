@@ -9,7 +9,7 @@ namespace Logic.Traps
         private void OnTriggerEnter(Collider other)
         {
             if (!other.gameObject.TryGetComponent<PlayerHealth>(out var playerHealth)) return;
-            playerHealth.GetDamage(10);
+            playerHealth.GetDamage(50);
             Destroy(gameObject);
         }
     }
