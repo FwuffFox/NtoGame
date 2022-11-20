@@ -16,34 +16,42 @@ namespace Infrastructure.States
         private ICoroutineRunner _coroutineRunner;
         private IUnitSpawner _unitSpawner;
         private GameStateMachine _gameStateMachine;
+        private IStaticDataService _staticDataService;
         
         public Action<int> OnPointsAmountChanged;
-        private int _points = 0;
-
+        private int _points;
         private GameObject _player;
+        private IEnumerator _eachSecondCoroutine;
 
         [Inject]
         public void Construct(ICoroutineRunner coroutineRunner, IUnitSpawner unitSpawner,
-            GameStateMachine gameStateMachine)
+            GameStateMachine gameStateMachine, IStaticDataService staticDataService)
         {
             _coroutineRunner = coroutineRunner;
             _unitSpawner = unitSpawner;
             _gameStateMachine = gameStateMachine;
+            _staticDataService = staticDataService;
+        }
+        
+        public void Enter()
+        {
+            _player = _unitSpawner.GetPlayer();
+            _eachSecondCoroutine = AddPointsEachSecond(_staticDataService.GameData.pointsPerSecond);
+            _coroutineRunner.StartCoroutine(_eachSecondCoroutine);
+            _player.GetComponent<PlayerHealth>().OnPlayerDeath += StartManagePlayerDeathCoroutine;
         }
         
         public void Exit()
         {
-            _coroutineRunner.StopCoroutine(AddPointEachSecond());
+            _player.GetComponent<PlayerHealth>().OnPlayerDeath -= StartManagePlayerDeathCoroutine;
+            _coroutineRunner.StopCoroutine(_eachSecondCoroutine);
         }
 
-        public void Enter()
+        private void StartManagePlayerDeathCoroutine()
         {
-            _coroutineRunner.StartCoroutine(AddPointEachSecond());
-            _player = _unitSpawner.GetPlayer();
-            _player.GetComponent<PlayerHealth>().OnPlayerDeath += 
-                () => _coroutineRunner.StartCoroutine(ManagePlayerDeath());
+            _coroutineRunner.StartCoroutine(ManagePlayerDeath());
         }
-
+        
         private IEnumerator ManagePlayerDeath()
         {
             yield return new WaitForSeconds(5);
@@ -53,12 +61,12 @@ namespace Infrastructure.States
         }
         
         //Test method
-        private IEnumerator AddPointEachSecond()
+        private IEnumerator AddPointsEachSecond(int pointsToAdd)
         {
             while (true)
             {
                 yield return new WaitForSeconds(1);
-                AddPoints(1);
+                AddPoints(pointsToAdd);
             }
         }
         

@@ -45,7 +45,7 @@ namespace Infrastructure.States
         private void OnLoaded()
         {
                 
-            LevelData levelData = _staticDataService.GetLevels()[SceneManager.GetActiveScene().name];
+            LevelData levelData = _staticDataService.Levels[SceneManager.GetActiveScene().name];
 
             var player = _unitSpawner.SpawnPlayer();
             Camera.main.GetComponentInParent<CameraFollower>()?.SetTarget(player);

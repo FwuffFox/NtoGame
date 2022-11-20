@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Infrastructure.States;
 using StaticData.Constants;
 using StaticData.ScriptableObjects;
 using UnityEngine;
@@ -8,12 +9,16 @@ namespace Services.Data
 {
     public class StaticDataService : IStaticDataService
     {
-        private Dictionary<string, LevelData> _levels = new Dictionary<string, LevelData>();
+        public Dictionary<string, LevelData> Levels { get; private set; } = new();
+
+        public GameData GameData { get; private set; }
         
         public void Load()
         {
-            _levels = LoadResources<LevelData>(StaticDataPaths.LevelsData)
+            Levels = LoadResources<LevelData>(StaticDataPaths.LevelsData)
                 .ToDictionary(_ => _.sceneName, _ => _);
+
+            GameData = LoadResource<GameData>(StaticDataPaths.GameData);
         }
 
         public T LoadResource<T>(string path) where T : Object =>
@@ -21,8 +26,5 @@ namespace Services.Data
 
         public T[] LoadResources<T>(string path) where T : Object =>
             Resources.LoadAll<T>(path);
-
-        public Dictionary<string, LevelData> GetLevels() =>
-            _levels;
     }
 }
