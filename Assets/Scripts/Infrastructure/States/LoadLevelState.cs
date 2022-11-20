@@ -46,7 +46,7 @@ namespace Infrastructure.States
             LevelData levelData = _staticDataService.GetLevels()[SceneManager.GetActiveScene().name];
 
             var player = _unitSpawner.SpawnPlayer();
-            Camera.main.GetComponent<CameraFollower>()?.SetTarget(player);
+            Camera.main.GetComponentInParent<CameraFollower>()?.SetTarget(player);
 
             if (_ui == null)
                 _ui = _prefabFactory.InstantiateUI();

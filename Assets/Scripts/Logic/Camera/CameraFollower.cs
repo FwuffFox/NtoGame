@@ -22,13 +22,8 @@ namespace Logic.Camera
         private void LateUpdate()
         {
             if (_target is null) return;
-            var position = transform.position;
-            var z = position.z;
-            position = Vector3.Lerp(position,
-                _target.transform.position + cameraDistance,
-                lerpValue * Time.deltaTime * lerpSpeed);
-            position = new Vector3(position.x, position.y, z);
-            transform.position = position;
+            var targetPos = _target.transform.position;
+            transform.position = new Vector3(targetPos.x, 0, targetPos.z);
         }
     }
 }
