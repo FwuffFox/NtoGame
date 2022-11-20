@@ -14,9 +14,9 @@ namespace Services
             _prefabFactory = prefabFactory;
         }
         
-        public GameObject SpawnPlayer()
+        public GameObject SpawnPlayer(Vector3 spawnPosition)
         {
-            return _player = _prefabFactory.InstantiatePlayer(Vector3.zero);
+            return _player = _prefabFactory.InstantiatePlayer(spawnPosition);
         }
 
         public GameObject GetPlayer()
