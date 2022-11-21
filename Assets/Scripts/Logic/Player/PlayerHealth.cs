@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Logic.Player
 {
@@ -35,9 +34,6 @@ namespace Logic.Player
             CurrentHealth -= damage;
             if (CurrentHealth <= 0)
             {
-                var animation = GetComponent<Animation>();
-                animation.clip = animation["die"].clip;
-                animation.Play();
                 OnPlayerDeath?.Invoke();
             }
         }

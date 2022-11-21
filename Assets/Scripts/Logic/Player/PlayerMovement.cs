@@ -11,7 +11,16 @@ namespace Logic.Player
 
         private Rigidbody _rigidbody;
 
-        [Range(0f, 10f)] public float speed;
+        public Action<float> OnMovementSpeedChange; 
+        private float _speed;
+        public float Speed
+        {
+            get => _speed;
+            set
+            {
+                _speed = value;
+            }
+        }
         
         public bool canMove = true;
         
@@ -54,17 +63,21 @@ namespace Logic.Player
         private void FixedUpdate()
         {
             Vector3 movementAxis = _inputService.GetMovementAxis();
-            if (movementAxis != Vector3.zero && canMove) Move(movementAxis);
+            var movementSpeed = (Speed * Time.deltaTime);
+            movementSpeed = _isRunning ? movementSpeed * runningSpeedModifier : movementSpeed;
+            if (movementAxis != Vector3.zero && canMove)
+            {
+                Move(movementAxis, movementSpeed);
+                OnMovementSpeedChange?.Invoke(movementSpeed);
+            }
+            else OnMovementSpeedChange?.Invoke(0);
         }
 
-        private void Move(Vector3 movementAxis)
+        private void Move(Vector3 movementAxis, float movementSpeed)
         {
-            _isRunning = _inputService.IsPressed(KeyCode.LeftShift)
-                         && CurrentStamina >= staminaConsumptionPerSecondOfRunning / 100f;
+            _isRunning = _inputService.IsPressed(KeyCode.LeftShift) && CurrentStamina >= staminaConsumptionPerSecondOfRunning / 100f;
             var matrix = Matrix4x4.Rotate(Quaternion.Euler(0, 45, 0));
             var skewedInput = matrix.MultiplyPoint3x4(movementAxis);
-            var movementSpeed = (speed * Time.deltaTime);
-            movementSpeed = _isRunning ? movementSpeed * runningSpeedModifier : movementSpeed;
             _rigidbody.MovePosition(transform.position + skewedInput * movementSpeed);
         }
 
