@@ -15,8 +15,8 @@ namespace Logic.UI
         {
             playerHealth = player;
             healthSlider.maxValue = playerHealth.maxHealth;
-            healthSlider.value = playerHealth.currentHealth;
-            player.OnPlayerHealthChange += SetNewHealth;
+            healthSlider.value = playerHealth.CurrentHealth;
+            playerHealth.OnPlayerHealthChange += SetNewHealth;
         }
 
         private void OnDestroy()
@@ -24,7 +24,7 @@ namespace Logic.UI
             playerHealth.OnPlayerHealthChange -= SetNewHealth;
         }
 
-        private void SetNewHealth(int health)
+        private void SetNewHealth(float health)
         {
             healthSlider.value = health;
         }

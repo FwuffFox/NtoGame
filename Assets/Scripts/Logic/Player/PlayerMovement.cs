@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using Services;
 using UnityEngine;
 using Zenject;
@@ -10,7 +12,28 @@ namespace Logic.Player
         private Rigidbody _rigidbody;
 
         [Range(0f, 10f)] public float speed;
+        
         public bool canMove = true;
+        
+        public float maxStamina;
+
+        public Action<float> OnPlayerStaminaChange;
+        private float _currentStamina;
+        public float CurrentStamina
+        {
+            get => _currentStamina;
+            set
+            {
+                _currentStamina = value >= maxStamina ? maxStamina : value;
+                OnPlayerStaminaChange?.Invoke(_currentStamina);
+            } 
+        }
+        
+        public float staminaRegenPerSecond;
+        public float staminaConsumptionPerSecondOfRunning;
+        public float staminaPerDodge;
+        public float runningSpeedModifier;
+        private bool _isRunning = false;
 
         private IInputService _inputService;
 
@@ -24,21 +47,43 @@ namespace Logic.Player
         {
             if (!TryGetComponent(out _rigidbody))
                 Debug.LogError("Attach rigidbody to player");
+            StartCoroutine(StaminaRegenerationCoroutine());
+            StartCoroutine(StaminaConsumptionByRunningCoroutine());
         }
 
         private void FixedUpdate()
         {
-            print(canMove);
             Vector3 movementAxis = _inputService.GetMovementAxis();
             if (movementAxis != Vector3.zero && canMove) Move(movementAxis);
         }
 
         private void Move(Vector3 movementAxis)
         {
+            _isRunning = _inputService.IsPressed(KeyCode.LeftShift)
+                         && CurrentStamina >= staminaConsumptionPerSecondOfRunning / 100f;
             var matrix = Matrix4x4.Rotate(Quaternion.Euler(0, 45, 0));
             var skewedInput = matrix.MultiplyPoint3x4(movementAxis);
-            _rigidbody.MovePosition(transform.position + skewedInput * (speed * Time.deltaTime));
+            var movementSpeed = (speed * Time.deltaTime);
+            movementSpeed = _isRunning ? movementSpeed * runningSpeedModifier : movementSpeed;
+            _rigidbody.MovePosition(transform.position + skewedInput * movementSpeed);
         }
 
+        private IEnumerator StaminaRegenerationCoroutine()
+        {
+            while (true)
+            {
+                yield return new WaitForSeconds(1);
+                CurrentStamina += staminaRegenPerSecond;
+            }
+        }
+        
+        private IEnumerator StaminaConsumptionByRunningCoroutine()
+        {
+            while (true)
+            {
+                yield return new WaitForSeconds(1f/100f);
+                if (_isRunning) CurrentStamina -= staminaConsumptionPerSecondOfRunning / 100f;
+            }
+        }
     }
 }

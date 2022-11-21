@@ -13,4 +13,9 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   maxHealth: 100
+  healthRegenPerSecond: 0
   speed: 2.5
+  runningSpeedModifier: 2
+  maxStamina: 100
+  staminaConsumptionPerSecondOfRunning: 50
+  staminaRegenPerSecond: 0

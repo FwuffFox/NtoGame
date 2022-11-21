@@ -54,6 +54,7 @@ namespace Infrastructure.States
                 _ui = _prefabFactory.InstantiateUI();
             
             _ui.GetComponentInChildren<HealthUI>().SetPlayer(player.GetComponent<PlayerHealth>());
+            _ui.GetComponentInChildren<StaminaUI>().SetPlayer(player.GetComponent<PlayerMovement>());
             _stateMachine.Enter<GameLoopState>();
         }
     }

@@ -14,5 +14,10 @@ namespace Services
         {
             return Input.mousePosition;
         }
+
+        public bool IsPressed(KeyCode key)
+        {
+            return Input.GetKey(key);
+        }
     }
 }
