@@ -13,12 +13,15 @@ namespace Services.Data
 
         public GameData GameData { get; private set; }
         
+        public PlayerData PlayerData { get; private set; }
+
         public void Load()
         {
             Levels = LoadResources<LevelData>(StaticDataPaths.LevelsData)
                 .ToDictionary(_ => _.sceneName, _ => _);
 
             GameData = LoadResource<GameData>(StaticDataPaths.GameData);
+            PlayerData = LoadResource<PlayerData>(StaticDataPaths.PlayerData);
         }
 
         public T LoadResource<T>(string path) where T : Object =>
