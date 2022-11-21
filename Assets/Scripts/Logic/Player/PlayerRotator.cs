@@ -8,6 +8,8 @@ namespace Logic.Player
     {
         public new UnityEngine.Camera camera;
 
+        public bool canRotate = true;
+
         private IInputService _inputService;
 
         [Inject]
@@ -18,7 +20,7 @@ namespace Logic.Player
 
         private void FixedUpdate() 
         {
-            LookAtMouseCursor();
+            if (canRotate) LookAtMouseCursor();
         }
     
         private void LookAtMouseCursor()

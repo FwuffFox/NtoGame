@@ -10,6 +10,7 @@ namespace Logic.Player
         private Rigidbody _rigidbody;
 
         [Range(0f, 10f)] public float speed;
+        public bool canMove = true;
 
         private IInputService _inputService;
 
@@ -27,8 +28,9 @@ namespace Logic.Player
 
         private void FixedUpdate()
         {
+            print(canMove);
             Vector3 movementAxis = _inputService.GetMovementAxis();
-            Move(movementAxis);
+            if (movementAxis != Vector3.zero && canMove) Move(movementAxis);
         }
 
         private void Move(Vector3 movementAxis)

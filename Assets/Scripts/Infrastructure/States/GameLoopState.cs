@@ -4,7 +4,6 @@ using Logic.Player;
 using Services;
 using Services.Data;
 using Services.Unity;
-using StaticData.Constants;
 using UnityEngine;
 using Zenject;
 using Object = UnityEngine.Object;
@@ -38,21 +37,24 @@ namespace Infrastructure.States
             _player = _unitSpawner.GetPlayer();
             _eachSecondCoroutine = AddPointsEachSecond(_staticDataService.GameData.pointsPerSecond);
             _coroutineRunner.StartCoroutine(_eachSecondCoroutine);
-            _player.GetComponent<PlayerHealth>().OnPlayerDeath += StartManagePlayerDeathCoroutine;
+            _player.GetComponent<PlayerHealth>().OnPlayerDeath += ManagePlayerDeath;
+            _player.GetComponent<PlayerRotator>().canRotate = true;
         }
         
         public void Exit()
         {
-            _player.GetComponent<PlayerHealth>().OnPlayerDeath -= StartManagePlayerDeathCoroutine;
+            _player.GetComponent<PlayerHealth>().OnPlayerDeath -= ManagePlayerDeath;
             _coroutineRunner.StopCoroutine(_eachSecondCoroutine);
         }
 
-        private void StartManagePlayerDeathCoroutine()
+        private void ManagePlayerDeath()
         {
-            _coroutineRunner.StartCoroutine(ManagePlayerDeath());
+            _player.GetComponent<PlayerMovement>().canMove = false;
+            _player.GetComponent<PlayerRotator>().canRotate = false;
+            _coroutineRunner.StartCoroutine(ManagePlayerDeathCoroutine());
         }
         
-        private IEnumerator ManagePlayerDeath()
+        private IEnumerator ManagePlayerDeathCoroutine()
         {
             yield return new WaitForSeconds(5);
             Object.Destroy(_player);
