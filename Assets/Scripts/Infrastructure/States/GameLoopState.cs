@@ -46,7 +46,6 @@ namespace Infrastructure.States
             _player.GetComponent<PlayerHealth>().OnPlayerDeath -= ManagePlayerDeath;
             _coroutineRunner.StopCoroutine(_eachSecondCoroutine);
         }
-
         private void ManagePlayerDeath()
         {
             _player.GetComponent<PlayerMovement>().canMove = false;
