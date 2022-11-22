@@ -6,6 +6,7 @@ namespace Services.Data
     public interface IStaticDataService
     {
         Dictionary<string, LevelData> Levels { get; } 
+        Dictionary<string, EnemyData> Enemies { get; } 
         GameData GameData { get; }
         PlayerData PlayerData { get; }
         void Load();

@@ -1,4 +1,5 @@
 ﻿using Logic.Camera;
+using Logic.Enemy;
 using Logic.Player;
 using Logic.UI;
 using Services;
@@ -50,6 +51,12 @@ namespace Infrastructure.States
             var player = _unitSpawner.SpawnPlayer(levelData.playerSpawnPoint);
             Camera.main.GetComponentInParent<CameraFollower>()?.SetTarget(player);
 
+            foreach (var enemy in levelData.enemies)
+            {
+                var spawnedEnemy = _unitSpawner.SpawnEnemy(enemy.position, enemy.name);
+                spawnedEnemy.GetComponent<EnemyAI>().SetPlayer(player);
+            }
+            
             if (_ui == null)
                 _ui = _prefabFactory.InstantiateUI();
             

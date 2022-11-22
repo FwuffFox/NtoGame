@@ -10,6 +10,8 @@ namespace Services.Data
     public class StaticDataService : IStaticDataService
     {
         public Dictionary<string, LevelData> Levels { get; private set; } = new();
+        
+        public Dictionary<string, EnemyData> Enemies { get; private set; } = new();
 
         public GameData GameData { get; private set; }
         
@@ -18,7 +20,9 @@ namespace Services.Data
         public void Load()
         {
             Levels = LoadResources<LevelData>(StaticDataPaths.LevelsData)
-                .ToDictionary(_ => _.sceneName, _ => _);
+                .ToDictionary(data => data.sceneName, data => data);
+            Enemies = LoadResources<EnemyData>(StaticDataPaths.EnemiesData)
+                .ToDictionary(data => data.enemyName, data => data);
 
             GameData = LoadResource<GameData>(StaticDataPaths.GameData);
             PlayerData = LoadResource<PlayerData>(StaticDataPaths.PlayerData);

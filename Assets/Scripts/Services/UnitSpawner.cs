@@ -1,4 +1,5 @@
-﻿using Services.Factories;
+﻿using System.Collections.Generic;
+using Services.Factories;
 using UnityEngine;
 
 namespace Services
@@ -7,8 +8,9 @@ namespace Services
     {
         private readonly IPrefabFactory _prefabFactory;
 
-        private GameObject _player;
-        
+        public GameObject Player { get; private set; }
+        public List<GameObject> Enemies { get; private set; } = new();
+
         public UnitSpawner(IPrefabFactory prefabFactory)
         {
             _prefabFactory = prefabFactory;
@@ -16,12 +18,14 @@ namespace Services
         
         public GameObject SpawnPlayer(Vector3 spawnPosition)
         {
-            return _player = _prefabFactory.InstantiatePlayer(spawnPosition);
+            return Player = _prefabFactory.InstantiatePlayer(spawnPosition);
         }
 
-        public GameObject GetPlayer()
+        public GameObject SpawnEnemy(Vector3 spawnPosition, string enemyName)
         {
-            return _player;
+            var enemy = _prefabFactory.InstantiateEnemy(spawnPosition, enemyName);
+            Enemies.Add(enemy);
+            return enemy;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace StaticData.ScriptableObjects
 {
@@ -8,5 +9,14 @@ namespace StaticData.ScriptableObjects
         public string sceneName;
 
         public Vector3 playerSpawnPoint;
+
+        public Enemy[] enemies;
+
+        [Serializable]
+        public struct Enemy
+        {
+            public Vector3 position;
+            public string name;
+        }
     }
 }

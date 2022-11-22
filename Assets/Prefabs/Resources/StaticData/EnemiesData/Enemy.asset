@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e47f29cc39bb4260a3ce88c7f04b080c, type: 3}
-  m_Name: Main
+  m_Script: {fileID: 11500000, guid: 8364086ea0ef408d93d7514a967784b6, type: 3}
+  m_Name: Enemy
   m_EditorClassIdentifier: 
-  sceneName: Main
-  playerSpawnPoint: {x: 0, y: 0.5, z: 0}
-  enemies:
-  - position: {x: 10, y: 0, z: 0}
-    name: Enemy
+  enemyName: Enemy
+  seeRange: 5
+  attackRange: 0
+  speed: 1

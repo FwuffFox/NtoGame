@@ -34,7 +34,7 @@ namespace Infrastructure.States
         
         public void Enter()
         {
-            _player = _unitSpawner.GetPlayer();
+            _player = _unitSpawner.Player;
             _eachSecondCoroutine = AddPointsEachSecond(_staticDataService.GameData.pointsPerSecond);
             _coroutineRunner.StartCoroutine(_eachSecondCoroutine);
             _player.GetComponent<PlayerHealth>().OnPlayerDeath += ManagePlayerDeath;

@@ -1,4 +1,5 @@
 ﻿using Extensions;
+using Logic.Enemy;
 using Services.AssetManagement;
 using Logic.Player;
 using Services.Data;
@@ -28,6 +29,8 @@ namespace Services.Factories
             return _assetProvider.Instantiate(PrefabPaths.Player, position)
                 .With(player =>
                 {
+                    player.name = "Player";
+                    
                     _diContainer.InjectGameObject(player);
 
                     var movement = player.GetComponent<PlayerMovement>()
@@ -44,6 +47,20 @@ namespace Services.Factories
                         .With(x => movement.OnMovementSpeedChange += x.SetSpeed)
                         .With(x => movement.OnIsRunningChange += x.SetIsRunning);
                     
+                });
+        }
+
+        public GameObject InstantiateEnemy(Vector3 position, string enemyName)
+        {
+            EnemyData enemyData = _staticDataService.Enemies[enemyName];
+
+            return _assetProvider.Instantiate(PrefabPaths.Enemies[enemyName], position)
+                .With(enemy =>
+                {
+                    enemy.name = enemyName;
+
+                    enemy.GetComponent<EnemyAI>()
+                        .With(x => x.SetProperties(enemyData));
                 });
         }
         public GameObject InstantiateUI() =>
