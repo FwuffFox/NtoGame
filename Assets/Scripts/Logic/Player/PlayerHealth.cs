@@ -15,7 +15,7 @@ namespace Logic.Player
             get => _maxHealth;
             set => _maxHealth = value;
         }
-
+        
         public Action<float> OnPlayerHealthChange;
         private float _currentHealth;
         public float CurrentHealth
@@ -42,11 +42,14 @@ namespace Logic.Player
             StartCoroutine(RegenerationCoroutine());
         }
 
+        private bool _isDead;
         public void GetDamage(float damage)
         {
+            if (_isDead) return;
             CurrentHealth -= damage;
             if (CurrentHealth <= 0)
             {
+                _isDead = true;
                 OnPlayerDeath?.Invoke();
             }
         }

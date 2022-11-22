@@ -12,5 +12,7 @@ namespace StaticData.ScriptableObjects
         public float attackRange;
         public float speed;
 
+        public float damage;
+        public float attackCooldown;
     }
 }

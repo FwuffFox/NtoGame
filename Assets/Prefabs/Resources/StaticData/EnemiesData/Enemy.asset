@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Enemy
   m_EditorClassIdentifier: 
   enemyName: Enemy
-  seeRange: 5
-  attackRange: 0
-  speed: 1
+  seeRange: 10
+  attackRange: 3
+  speed: 2
+  damage: 10
+  attackCooldown: 2
