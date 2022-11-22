@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Main
   m_EditorClassIdentifier: 
   sceneName: Main
-  playerSpawnPoint: {x: 0, y: 0, z: 0}
+  playerSpawnPoint: {x: 0, y: 0.5, z: 0}

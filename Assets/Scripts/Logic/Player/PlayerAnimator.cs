@@ -7,6 +7,9 @@ namespace Logic.Player
     public class PlayerAnimator : MonoBehaviour
     {
         private Animator _animator;
+        private static readonly int Speed = Animator.StringToHash("Speed");
+        private static readonly int Death = Animator.StringToHash("Death");
+        private static readonly int IsRunning = Animator.StringToHash("IsRunning");
 
         private void OnEnable()
         {
@@ -15,12 +18,17 @@ namespace Logic.Player
 
         public void SetSpeed(float speed)
         {
-            _animator.SetFloat("Speed", speed);
+            _animator.SetFloat(Speed, speed);
         }
 
         public void SetDeath()
         {
-            _animator.SetTrigger("Death");
+            _animator.SetTrigger(Death);
+        }
+
+        public void SetIsRunning(bool isRunning)
+        {
+            _animator.SetBool(IsRunning, isRunning);
         }
     }
 }

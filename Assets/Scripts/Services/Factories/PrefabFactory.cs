@@ -48,7 +48,8 @@ namespace Services.Factories
 
                     var animator = player.GetComponent<PlayerAnimator>()
                         .With(x => health.OnPlayerDeath += x.SetDeath)
-                        .With(x => movement.OnMovementSpeedChange += x.SetSpeed);
+                        .With(x => movement.OnMovementSpeedChange += x.SetSpeed)
+                        .With(x => movement.OnIsRunningChange += x.SetIsRunning);
                 });
         }
         public GameObject InstantiateUI() =>

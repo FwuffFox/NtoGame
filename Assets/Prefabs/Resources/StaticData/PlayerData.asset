@@ -18,4 +18,4 @@ MonoBehaviour:
   runningSpeedModifier: 2
   maxStamina: 100
   staminaConsumptionPerSecondOfRunning: 50
-  staminaRegenPerSecond: 0
+  staminaRegenPerSecond: 10
