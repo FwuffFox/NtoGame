@@ -13,7 +13,7 @@ namespace Logic.UI
         public void SetPlayer(PlayerMovement player)
         {
             playerMovement = player;
-            staminaSlider.maxValue = playerMovement.maxStamina;
+            staminaSlider.maxValue = playerMovement.MaxStamina;
             staminaSlider.value = playerMovement.CurrentStamina;
             playerMovement.OnPlayerStaminaChange += SetNewStamina;
         }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Services;
+using StaticData.ScriptableObjects;
 using UnityEngine;
 using Zenject;
 
@@ -24,7 +25,12 @@ namespace Logic.Player
         
         public bool canMove = true;
         
-        public float maxStamina;
+        private float _maxStamina;
+        public float MaxStamina
+        {
+            get => _maxStamina;
+            set => _maxStamina = value;
+        }
 
         public Action<float> OnPlayerStaminaChange;
         private float _currentStamina;
@@ -33,15 +39,15 @@ namespace Logic.Player
             get => _currentStamina;
             set
             {
-                _currentStamina = value >= maxStamina ? maxStamina : value;
+                _currentStamina = value >= _maxStamina ? _maxStamina : value;
                 OnPlayerStaminaChange?.Invoke(_currentStamina);
             } 
         }
         
-        public float staminaRegenPerSecond;
-        public float staminaConsumptionPerSecondOfRunning;
-        public float staminaPerDodge;
-        public float runningSpeedModifier;
+        private float _staminaRegenPerSecond;
+        private float _staminaConsumptionPerSecondOfRunning;
+        private float _staminaPerDodge;
+        private float _runningSpeedModifier;
 
         public Action<bool> OnIsRunningChange;
         private bool _isRunning = false;
@@ -52,6 +58,17 @@ namespace Logic.Player
         private void Construct(IInputService inputService)
         {
             _inputService = inputService;
+        }
+
+        public void SetProperties(PlayerData playerData)
+        {
+            Speed = playerData.speed;
+            _runningSpeedModifier = playerData.runningSpeedModifier;
+            MaxStamina = playerData.maxStamina;
+            CurrentStamina = MaxStamina;
+            _staminaRegenPerSecond = playerData.staminaRegenPerSecond;
+            _staminaConsumptionPerSecondOfRunning = playerData.staminaConsumptionPerSecondOfRunning;
+            _staminaPerDodge = playerData.staminaPerDodge;
         }
 
         private void OnEnable()
@@ -65,9 +82,9 @@ namespace Logic.Player
         private void FixedUpdate()
         {
             Vector3 movementAxis = _inputService.GetMovementAxis();
-            _isRunning = _inputService.IsPressed(KeyCode.LeftShift) && CurrentStamina >= staminaConsumptionPerSecondOfRunning / 100f;
+            _isRunning = _inputService.IsPressed(KeyCode.LeftShift) && CurrentStamina >= _staminaConsumptionPerSecondOfRunning / 100f;
             var movementSpeed = (Speed * Time.deltaTime);
-            movementSpeed = _isRunning ? movementSpeed * runningSpeedModifier : movementSpeed;
+            movementSpeed = _isRunning ? movementSpeed * _runningSpeedModifier : movementSpeed;
             if (movementAxis != Vector3.zero && canMove)
             {
                 Move(movementAxis, movementSpeed);
@@ -93,7 +110,7 @@ namespace Logic.Player
             while (true)
             {
                 yield return new WaitForSeconds(1f/100f);
-                CurrentStamina += staminaRegenPerSecond / 100f;
+                CurrentStamina += _staminaRegenPerSecond / 100f;
             }
         }
         
@@ -102,7 +119,7 @@ namespace Logic.Player
             while (true)
             {
                 yield return new WaitForSeconds(1f/100f);
-                if (_isRunning) CurrentStamina -= staminaConsumptionPerSecondOfRunning / 100f;
+                if (_isRunning) CurrentStamina -= _staminaConsumptionPerSecondOfRunning / 100f;
             }
         }
     }

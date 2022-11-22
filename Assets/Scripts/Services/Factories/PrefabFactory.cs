@@ -29,27 +29,21 @@ namespace Services.Factories
                 .With(player =>
                 {
                     _diContainer.InjectGameObject(player);
-                    
+
                     var movement = player.GetComponent<PlayerMovement>()
-                        .With(x => x.Speed = playerData.speed)
-                        .With(x => x.runningSpeedModifier = playerData.runningSpeedModifier)
-                        .With(x => x.maxStamina = playerData.maxStamina)
-                        .With(x => x.CurrentStamina = x.maxStamina)
-                        .With(x => x.staminaRegenPerSecond = playerData.staminaRegenPerSecond)
-                        .With(x => x.staminaConsumptionPerSecondOfRunning = playerData.staminaConsumptionPerSecondOfRunning);
+                        .With(x => x.SetProperties(playerData));
                     
                     var rotator = player.GetComponent<PlayerRotator>()
                         .With(x => x.camera = Camera.main);
                     
                     var health = player.GetComponent<PlayerHealth>()
-                        .With(x => x.maxHealth = playerData.maxHealth)
-                        .With(x => x.CurrentHealth = x.maxHealth)
-                        .With(x => x.healthRegeneratedPerSecond = playerData.healthRegenPerSecond);
+                        .With(x => x.SetProperties(playerData));
 
                     var animator = player.GetComponent<PlayerAnimator>()
                         .With(x => health.OnPlayerDeath += x.SetDeath)
                         .With(x => movement.OnMovementSpeedChange += x.SetSpeed)
                         .With(x => movement.OnIsRunningChange += x.SetIsRunning);
+                    
                 });
         }
         public GameObject InstantiateUI() =>

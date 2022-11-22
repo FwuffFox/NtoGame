@@ -14,6 +14,7 @@ namespace StaticData.ScriptableObjects
         public float runningSpeedModifier;
         public float maxStamina;
         public float staminaConsumptionPerSecondOfRunning;
+        public float staminaPerDodge;
         public float staminaRegenPerSecond;
     }
 }

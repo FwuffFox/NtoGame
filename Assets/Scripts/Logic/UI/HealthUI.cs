@@ -14,7 +14,7 @@ namespace Logic.UI
         public void SetPlayer(PlayerHealth player)
         {
             playerHealth = player;
-            healthSlider.maxValue = playerHealth.maxHealth;
+            healthSlider.maxValue = playerHealth.MaxHealth;
             healthSlider.value = playerHealth.CurrentHealth;
             playerHealth.OnPlayerHealthChange += SetNewHealth;
         }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using StaticData.ScriptableObjects;
 using UnityEngine;
 
 namespace Logic.Player
@@ -8,7 +9,12 @@ namespace Logic.Player
     {
         public Action OnPlayerDeath;
         
-        public float maxHealth;
+        private float _maxHealth;
+        public float MaxHealth
+        {
+            get => _maxHealth;
+            set => _maxHealth = value;
+        }
 
         public Action<float> OnPlayerHealthChange;
         private float _currentHealth;
@@ -17,13 +23,20 @@ namespace Logic.Player
             get => _currentHealth;
             set
             {
-                _currentHealth = value >= maxHealth ? maxHealth : value;
+                _currentHealth = value >= _maxHealth ? _maxHealth : value;
                 OnPlayerHealthChange?.Invoke(_currentHealth);
             }
         }
         
-        public float healthRegeneratedPerSecond;
+        private float _healthRegenPerSecond;
 
+        public void SetProperties(PlayerData playerData)
+        {
+            MaxHealth = playerData.maxHealth;
+            CurrentHealth = MaxHealth;
+            _healthRegenPerSecond = playerData.healthRegenPerSecond;
+        }
+        
         private void OnEnable()
         {
             StartCoroutine(RegenerationCoroutine());
@@ -43,7 +56,7 @@ namespace Logic.Player
             while (true)
             {
                 yield return new WaitForSeconds(1);
-                CurrentHealth += healthRegeneratedPerSecond;
+                CurrentHealth += _healthRegenPerSecond;
             }
         }
 
