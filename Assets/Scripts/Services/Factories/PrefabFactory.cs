@@ -4,6 +4,7 @@ using Services.AssetManagement;
 using Logic.Player;
 using Services.Data;
 using StaticData.Constants;
+using StaticData.Enums;
 using StaticData.ScriptableObjects;
 using UnityEngine;
 using Zenject;
@@ -50,14 +51,14 @@ namespace Services.Factories
                 });
         }
 
-        public GameObject InstantiateEnemy(Vector3 position, string enemyName)
+        public GameObject InstantiateEnemy(Vector3 position, EnemyType enemyType)
         {
-            EnemyData enemyData = _staticDataService.Enemies[enemyName];
+            EnemyData enemyData = _staticDataService.Enemies[enemyType];
 
-            return _assetProvider.Instantiate(PrefabPaths.Enemies[enemyName], position)
+            return _assetProvider.Instantiate(PrefabPaths.Enemies[enemyType], position)
                 .With(enemy =>
                 {
-                    enemy.name = enemyName;
+                    enemy.name = enemyData.enemyName;
 
                     enemy.GetComponent<EnemyAI>()
                         .With(x => x.SetProperties(enemyData));

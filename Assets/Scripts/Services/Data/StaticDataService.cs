@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Infrastructure.States;
 using StaticData.Constants;
+using StaticData.Enums;
 using StaticData.ScriptableObjects;
 using UnityEngine;
 
@@ -11,7 +11,7 @@ namespace Services.Data
     {
         public Dictionary<string, LevelData> Levels { get; private set; } = new();
         
-        public Dictionary<string, EnemyData> Enemies { get; private set; } = new();
+        public Dictionary<EnemyType, EnemyData> Enemies { get; private set; } = new();
 
         public GameData GameData { get; private set; }
         
@@ -22,7 +22,7 @@ namespace Services.Data
             Levels = LoadResources<LevelData>(StaticDataPaths.LevelsData)
                 .ToDictionary(data => data.sceneName, data => data);
             Enemies = LoadResources<EnemyData>(StaticDataPaths.EnemiesData)
-                .ToDictionary(data => data.enemyName, data => data);
+                .ToDictionary(data => data.enemyType, data => data);
 
             GameData = LoadResource<GameData>(StaticDataPaths.GameData);
             PlayerData = LoadResource<PlayerData>(StaticDataPaths.PlayerData);

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Services.Factories;
+using StaticData.Enums;
 using UnityEngine;
 
 namespace Services
@@ -21,9 +22,9 @@ namespace Services
             return Player = _prefabFactory.InstantiatePlayer(spawnPosition);
         }
 
-        public GameObject SpawnEnemy(Vector3 spawnPosition, string enemyName)
+        public GameObject SpawnEnemy(Vector3 spawnPosition, EnemyType enemyType)
         {
-            var enemy = _prefabFactory.InstantiateEnemy(spawnPosition, enemyName);
+            var enemy = _prefabFactory.InstantiateEnemy(spawnPosition, enemyType);
             Enemies.Add(enemy);
             return enemy;
         }

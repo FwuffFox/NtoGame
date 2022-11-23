@@ -1,4 +1,5 @@
 ﻿using System;
+using StaticData.Enums;
 using UnityEngine;
 
 namespace StaticData.ScriptableObjects
@@ -16,7 +17,7 @@ namespace StaticData.ScriptableObjects
         public struct Enemy
         {
             public Vector3 position;
-            public string name;
+            public EnemyType enemyType;
         }
     }
 }

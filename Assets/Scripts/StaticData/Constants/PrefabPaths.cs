@@ -1,15 +1,16 @@
 ﻿using System.Collections.Generic;
+using StaticData.Enums;
 
 namespace StaticData.Constants
 {
     public static class PrefabPaths
     {
         /// <summary>
-        /// Gives a path corresponding to key (Enemy name)
+        /// Gives a path corresponding to key (Enemy type)
         /// </summary>
-        public static readonly Dictionary<string, string> Enemies = new()
+        public static readonly Dictionary<EnemyType, string> Enemies = new()
         {
-            {"Enemy", "Units/Enemy"}
+            {EnemyType.Default, "Units/Enemies/Default"}
         };
         public const string Player = "Units/Player";
         public const string UI = "UI";

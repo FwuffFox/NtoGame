@@ -53,7 +53,7 @@ namespace Infrastructure.States
 
             foreach (var enemy in levelData.enemies)
             {
-                var spawnedEnemy = _unitSpawner.SpawnEnemy(enemy.position, enemy.name);
+                var spawnedEnemy = _unitSpawner.SpawnEnemy(enemy.position, enemy.enemyType);
                 spawnedEnemy.GetComponent<EnemyAI>().SetPlayer(player);
             }
             

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using StaticData.Enums;
 using StaticData.ScriptableObjects;
 using UnityEngine;
 namespace Services.Data
@@ -6,7 +7,7 @@ namespace Services.Data
     public interface IStaticDataService
     {
         Dictionary<string, LevelData> Levels { get; } 
-        Dictionary<string, EnemyData> Enemies { get; } 
+        Dictionary<EnemyType, EnemyData> Enemies { get; } 
         GameData GameData { get; }
         PlayerData PlayerData { get; }
         void Load();
