@@ -7,29 +7,23 @@ using UnityEngine.AI;
 
 namespace Logic.Enemy
 {
-    [RequireComponent(typeof(NavMeshAgent))]
+    [RequireComponent(typeof(EnemyMover), typeof(EnemyAttacker))]
     public class EnemyAI : MonoBehaviour
     {
         private GameObject _player;
         private PlayerHealth _playerHealth;
         // [SerializeField] private Transform _raycaster;
-        private NavMeshAgent _navMeshAgent;
+        private EnemyMover _enemyMover;
+        private EnemyAttacker _enemyAttacker;
 
         [SerializeField] private LayerMask playerMask;
         
         private float _seeRange;
         private float _attackRange;
-        private float _speed;
-
-        private float _damage;
-        private float _attackCooldown;
-
-        private bool _canAttack = true;
 
         private void OnEnable()
         {
-            if (!TryGetComponent(out _navMeshAgent))
-                Debug.LogError("Enemy doesn't have NavMeshAgent");
+            _enemyMover = GetComponent<EnemyMover>();
         }
 
         public void SetPlayer(GameObject player)
@@ -42,9 +36,6 @@ namespace Logic.Enemy
         {
             _seeRange = enemyData.seeRange;
             _attackRange = enemyData.attackRange;
-            _speed = enemyData.speed;
-            _damage = enemyData.damage;
-            _attackCooldown = enemyData.attackCooldown;
         }
 
         public void Update()
@@ -55,29 +46,11 @@ namespace Logic.Enemy
             //var isSomethingInTheWay = Physics.Linecast(_raycaster.position, _player.transform.position);
             //if (isSomethingInTheWay) return;
             var canAttackPlayer = Physics.CheckSphere(position, _attackRange, playerMask);
-            if (canAttackPlayer) AttackPlayer();
-            else ApproachPlayer();
+            if (canAttackPlayer) _enemyAttacker.AttackPlayer(_player);
+            else _enemyMover.Follow(_player);
         }
 
-        private void AttackPlayer()
-        {
-            if (!_canAttack) return;
-            _playerHealth.GetDamage(_damage);
-            StartCoroutine(AttackCooldown());
-        }
-
-        private IEnumerator AttackCooldown()
-        {
-            _canAttack = false;
-            yield return new WaitForSeconds(_attackCooldown);
-            _canAttack = true;
-        }
         
-        private void ApproachPlayer()
-        {
-            _navMeshAgent.speed = _speed;
-            _navMeshAgent.destination = _player.transform.position;
-        }
 
         private void OnDrawGizmos()
         {

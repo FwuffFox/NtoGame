@@ -62,6 +62,13 @@ namespace Services.Factories
 
                     enemy.GetComponent<EnemyAI>()
                         .With(x => x.SetProperties(enemyData));
+
+                    enemy.GetComponent<EnemyMover>()
+                        .With(x => x.SetProperties(enemyData));
+
+                    enemy.GetComponent<EnemyAttacker>()
+                        .With(x => x.SetProperties(enemyData));
+
                 });
         }
         public GameObject InstantiateUI() =>
