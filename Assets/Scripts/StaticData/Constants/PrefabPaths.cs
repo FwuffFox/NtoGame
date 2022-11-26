@@ -10,7 +10,8 @@ namespace StaticData.Constants
         /// </summary>
         public static readonly Dictionary<EnemyType, string> Enemies = new()
         {
-            {EnemyType.Default, "Units/Enemies/Default"}
+            {EnemyType.Default, "Units/Enemies/Default"},
+            {EnemyType.Stronger, "Units/Enemies/Stronger"}
         };
         public const string Player = "Units/Player";
         public const string UI = "UI";

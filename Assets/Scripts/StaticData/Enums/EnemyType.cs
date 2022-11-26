@@ -2,6 +2,7 @@
 {
     public enum EnemyType
     {
-        Default
+        Default,
+        Stronger
     }
 }

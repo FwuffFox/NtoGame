@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8364086ea0ef408d93d7514a967784b6, type: 3}
-  m_Name: Default
+  m_Name: Stronger
   m_EditorClassIdentifier: 
-  enemyType: 0
-  enemyName: Default
-  seeRange: 5
-  attackRange: 2
-  speed: 1.5
-  damage: 10
-  attackCooldown: 2
+  enemyType: 1
+  enemyName: 
+  seeRange: 0
+  attackRange: 0
+  speed: 0
+  damage: 0
+  attackCooldown: 0

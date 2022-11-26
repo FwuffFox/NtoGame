@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 6417472750741228772}
   - component: {fileID: 7570114357383269537}
   - component: {fileID: 5935245810139579257}
+  - component: {fileID: 2396448669919647146}
+  - component: {fileID: 4201011269141754502}
   m_Layer: 0
   m_Name: Default
   m_TagString: Untagged
@@ -134,10 +136,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e337f4a0f23417eb4fec7435f6cfab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _raycaster: {fileID: 4453974327948929292}
+  enemyMover: {fileID: 2396448669919647146}
+  enemyAttacker: {fileID: 4201011269141754502}
   playerMask:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &2396448669919647146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5922740027861103948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 364dae12f3a3473c89a312671f68b753, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  navMeshAgent: {fileID: 7570114357383269537}
+--- !u!114 &4201011269141754502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5922740027861103948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cab6c0c24d644309ba1b9d282b2b48af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6982635492680314975
 GameObject:
   m_ObjectHideFlags: 0

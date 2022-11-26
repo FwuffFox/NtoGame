@@ -12,6 +12,9 @@ namespace Logic.Traps
         private void OnTriggerEnter(Collider other)
         {
             if (!other.gameObject.TryGetComponent<PlayerHealth>(out var playerHealth)) return;
+            var debuffer = other.gameObject.GetComponent<PlayerDebuffSystem>();
+            var timedDebuff = new PlayerDebuffSystem.TimedDebuff(PlayerDebuffSystem.DebuffType.Speed, 5, 2);
+            debuffer.AddDebuff(timedDebuff);
             bearTrapSound.Play();
             Destroy(GetComponentInParent<MeshRenderer>());
             playerHealth.GetDamage(50);

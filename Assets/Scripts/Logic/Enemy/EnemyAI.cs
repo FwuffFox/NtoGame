@@ -12,20 +12,14 @@ namespace Logic.Enemy
     {
         private GameObject _player;
         private PlayerHealth _playerHealth;
-        // [SerializeField] private Transform _raycaster;
-        private EnemyMover _enemyMover;
-        private EnemyAttacker _enemyAttacker;
+
+        [SerializeField] private EnemyMover enemyMover;
+        [SerializeField] private EnemyAttacker enemyAttacker;
 
         [SerializeField] private LayerMask playerMask;
         
         private float _seeRange;
         private float _attackRange;
-
-        private void OnEnable()
-        {
-            _enemyMover = GetComponent<EnemyMover>();
-            _enemyAttacker = GetComponent<EnemyAttacker>();
-        }
 
         public void SetPlayer(GameObject player)
         {
@@ -47,8 +41,8 @@ namespace Logic.Enemy
             //var isSomethingInTheWay = Physics.Linecast(_raycaster.position, _player.transform.position);
             //if (isSomethingInTheWay) return;
             var canAttackPlayer = Physics.CheckSphere(position, _attackRange, playerMask);
-            if (canAttackPlayer) _enemyAttacker.AttackPlayer(_playerHealth);
-            else _enemyMover.Follow(_player);
+            if (canAttackPlayer) enemyAttacker.AttackPlayer(_playerHealth);
+            else enemyMover.Follow(_player);
         }
         
         private void OnDrawGizmos()
