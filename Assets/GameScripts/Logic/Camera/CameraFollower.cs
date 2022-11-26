@@ -14,7 +14,7 @@ namespace GameScripts.Logic.Camera
         [SerializeField] 
         private float lerpSpeed;
 
-        [CanBeNull] private GameObject _target = null;
+        [CanBeNull] private GameObject _target;
 
         public void SetTarget(GameObject target) => _target = target;
 

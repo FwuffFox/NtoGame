@@ -6,15 +6,15 @@ namespace GameScripts.Logic.UI
 {
     public class StaminaUI : MonoBehaviour
     {
-        [SerializeField] private Slider staminaSlider;
+        [SerializeField] private Slider _staminaSlider;
 
         public PlayerMovement playerMovement;
 
         public void SetPlayer(PlayerMovement player)
         {
             playerMovement = player;
-            staminaSlider.maxValue = playerMovement.MaxStamina;
-            staminaSlider.value = playerMovement.CurrentStamina;
+            _staminaSlider.maxValue = playerMovement.MaxStamina;
+            _staminaSlider.value = playerMovement.CurrentStamina;
             playerMovement.OnPlayerStaminaChange += SetNewStamina;
         }
 
@@ -25,7 +25,7 @@ namespace GameScripts.Logic.UI
 
         private void SetNewStamina(float stamina)
         {
-            staminaSlider.value = stamina;
+            _staminaSlider.value = stamina;
         }
     }
 }

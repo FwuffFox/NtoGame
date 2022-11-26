@@ -6,15 +6,15 @@ namespace GameScripts.Logic.UI
 {
     public class HealthUI : MonoBehaviour
     {
-        [SerializeField] private Slider healthSlider;
+        [SerializeField] private Slider _healthSlider;
 
         public PlayerHealth playerHealth;
 
         public void SetPlayer(PlayerHealth player)
         {
             playerHealth = player;
-            healthSlider.maxValue = playerHealth.MaxHealth;
-            healthSlider.value = playerHealth.CurrentHealth;
+            _healthSlider.maxValue = playerHealth.MaxHealth;
+            _healthSlider.value = playerHealth.CurrentHealth;
             playerHealth.OnPlayerHealthChange += SetNewHealth;
         }
 
@@ -25,7 +25,7 @@ namespace GameScripts.Logic.UI
 
         private void SetNewHealth(float health)
         {
-            healthSlider.value = health;
+            _healthSlider.value = health;
         }
     }
 }
