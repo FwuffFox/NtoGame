@@ -24,7 +24,7 @@ namespace GameScripts.Logic.Player
         }
         
         public bool canMove = true;
-        
+
         private float _maxStamina;
         public float MaxStamina
         {

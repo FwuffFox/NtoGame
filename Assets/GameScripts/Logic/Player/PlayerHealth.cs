@@ -64,9 +64,11 @@ namespace GameScripts.Logic.Player
             }
         }
 
+        #if UNITY_EDITOR
         [InspectorButton("OnHealButton")]
         [SerializeField] private bool healButton;
 
         private void OnHealButton() => CurrentHealth = _maxHealth;
+        #endif
     }
 }

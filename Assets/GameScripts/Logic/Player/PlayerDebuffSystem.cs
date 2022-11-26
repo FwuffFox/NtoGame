@@ -1,32 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using EditorScripts.Inspector;
+using GameScripts.Logic.Debuffs;
 using UnityEngine;
 
 namespace GameScripts.Logic.Player
 {
     public class PlayerDebuffSystem : MonoBehaviour
     {
-        [SerializeField] private PlayerMovement playerMovement;
-
-        public enum DebuffType
-        {
-            Stamina,
-            Health,
-            Speed
-        }
-        
-        public struct TimedDebuff
-        {
-            public DebuffType Type;
-            public int Duration;
-            public float Power;
-
-            public TimedDebuff(DebuffType type, int duration, float power)
-            {
-                Type = type;
-                Duration = duration;
-                Power = power;
-            }
-        }
+        [SerializeField] private PlayerMovement _playerMovement;
+        [SerializeField] private PlayerHealth _playerHealth;
 
         public void AddDebuff(TimedDebuff timedDebuff)
         {
@@ -35,10 +18,11 @@ namespace GameScripts.Logic.Player
 
         private IEnumerator TimedDebuffCoroutine(TimedDebuff timedDebuff)
         {
-            switch (timedDebuff.Type)
+            switch (timedDebuff.DebuffType)
             {
-                case DebuffType.Speed: playerMovement.Speed -= timedDebuff.Power; break;
-                default: yield break;
+                case TimedDebuffType.Speed: _playerMovement.Speed -= timedDebuff.DebuffValue; break;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
 
             while (timedDebuff.Duration > 0)
@@ -47,11 +31,43 @@ namespace GameScripts.Logic.Player
                 timedDebuff.Duration -= 1;
             }
             
-            switch (timedDebuff.Type)
+            switch (timedDebuff.DebuffType)
             {
-                case DebuffType.Speed: playerMovement.Speed += timedDebuff.Power; break;
-                default: yield break;
+                case TimedDebuffType.Speed: _playerMovement.Speed += timedDebuff.DebuffValue; break;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
         }
+
+        public void AddDebuff(PeriodicalTimedDebuff debuff)
+        {
+            StartCoroutine(PeriodicalTimedDebuffCoroutine(debuff));
+        }
+
+        private IEnumerator PeriodicalTimedDebuffCoroutine(PeriodicalTimedDebuff debuff)
+        {
+            while (debuff.Duration > 0)
+            {
+                switch (debuff.DebuffType)
+                {
+                    case PeriodicalTimedDebuffType.Health: _playerHealth.GetDamage(debuff.DebuffValuePerSecond);
+                        break;
+                    case PeriodicalTimedDebuffType.Stamina: _playerMovement.CurrentStamina -= debuff.DebuffValuePerSecond;
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+
+                yield return new WaitForSeconds(1);
+                debuff.Duration -= 1;
+            }
+        }
+        
+        #if UNITY_EDITOR
+        [InspectorButton("RemoveAllDebuffsButton", ButtonWidth = 200)]
+        [SerializeField] private bool removeAllDebuffs;
+
+        private void RemoveAllDebuffsButton() => StopAllCoroutines();
+        #endif
     }
 }
