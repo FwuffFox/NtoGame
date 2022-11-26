@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8364086ea0ef408d93d7514a967784b6, type: 3}
-  m_Name: Enemy
+  m_Name: Default
   m_EditorClassIdentifier: 
   enemyName: Enemy
   seeRange: 10

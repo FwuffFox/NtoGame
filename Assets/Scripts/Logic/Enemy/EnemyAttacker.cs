@@ -18,10 +18,10 @@ namespace Logic.Enemy
             _attackCooldown = enemyData.attackCooldown;
         }
         
-        public void AttackPlayer(GameObject player)
+        public void AttackPlayer(PlayerHealth player)
         {
             if (!_canAttack) return;
-            player.GetComponent<PlayerHealth>().GetDamage(_damage);
+            player.GetDamage(_damage);
             StartCoroutine(AttackCooldown());
         }
 

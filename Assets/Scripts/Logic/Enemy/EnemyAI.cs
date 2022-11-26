@@ -24,6 +24,7 @@ namespace Logic.Enemy
         private void OnEnable()
         {
             _enemyMover = GetComponent<EnemyMover>();
+            _enemyAttacker = GetComponent<EnemyAttacker>();
         }
 
         public void SetPlayer(GameObject player)
@@ -46,12 +47,10 @@ namespace Logic.Enemy
             //var isSomethingInTheWay = Physics.Linecast(_raycaster.position, _player.transform.position);
             //if (isSomethingInTheWay) return;
             var canAttackPlayer = Physics.CheckSphere(position, _attackRange, playerMask);
-            if (canAttackPlayer) _enemyAttacker.AttackPlayer(_player);
+            if (canAttackPlayer) _enemyAttacker.AttackPlayer(_playerHealth);
             else _enemyMover.Follow(_player);
         }
-
         
-
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.yellow;

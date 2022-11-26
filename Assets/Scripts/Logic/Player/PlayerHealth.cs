@@ -62,10 +62,5 @@ namespace Logic.Player
                 CurrentHealth += _healthRegenPerSecond;
             }
         }
-
-        private void OnDisable()
-        {
-            StopCoroutine(RegenerationCoroutine());
-        }
     }
 }
