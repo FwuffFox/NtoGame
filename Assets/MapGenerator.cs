@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using GameScripts.Extensions;
 using UnityEngine;
 
 public class MapGenerator : MonoBehaviour
@@ -13,8 +14,12 @@ public class MapGenerator : MonoBehaviour
 	private float posX=0.0f;
 	private float posZ=0.0f;
 	private int tileCountWithZero;
+
+	private Transform _landFolder;
 	
-	void Start() {
+	void Start()
+	{
+		_landFolder = Instantiate(new GameObject().With(x => x.name = "Land")).transform;
 		generateMap();
 	}
 	
@@ -22,7 +27,9 @@ public class MapGenerator : MonoBehaviour
 		tileCountWithZero=tile.Count-1;
 		for (int w=0;w<mapSize;w++) {
 			for (int h=0;h<mapSize;h++) {
-				Instantiate(tile[Random.Range(0,tileCountWithZero)], new Vector3(posX,0,posZ),Quaternion.Euler(-90,0,0));
+				var obj = Instantiate(tile[Random.Range(0,tileCountWithZero)], new Vector3(posX, 0, posZ),
+					Quaternion.Euler(-90,0,0));
+				obj.parent = _landFolder;
 				posX+=tileStep;
 			}
 			posZ+=tileStep;

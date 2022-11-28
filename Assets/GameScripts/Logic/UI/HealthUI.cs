@@ -16,6 +16,7 @@ namespace GameScripts.Logic.UI
             _healthSlider.maxValue = playerHealth.MaxHealth;
             _healthSlider.value = playerHealth.CurrentHealth;
             playerHealth.OnPlayerHealthChange += SetNewHealth;
+            playerHealth.OnPlayerMaxHealthChange += SetNewMaxHealth;
         }
 
         private void OnDestroy()
@@ -26,6 +27,11 @@ namespace GameScripts.Logic.UI
         private void SetNewHealth(float health)
         {
             _healthSlider.value = health;
+        }
+        
+        private void SetNewMaxHealth(float health)
+        {
+            _healthSlider.maxValue = health;
         }
     }
 }

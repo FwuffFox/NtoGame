@@ -14,12 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: Main
   playerSpawnPoint: {x: 0, y: 1, z: 0}
-  enemies:
-  - position: {x: 10, y: 1, z: 0}
-    name: Enemy
-  - position: {x: 10, y: 1, z: 10}
-    name: Enemy
-  - position: {x: 10, y: 1, z: 20}
-    name: Enemy
-  - position: {x: 20, y: 1, z: 20}
-    name: Enemy
+  enemies: []

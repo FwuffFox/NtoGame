@@ -1,4 +1,5 @@
-﻿using GameScripts.Logic.Camera;
+﻿using GameScripts.Extensions;
+using GameScripts.Logic.Camera;
 using GameScripts.Logic.Enemy;
 using GameScripts.Logic.Player;
 using GameScripts.Logic.UI;
@@ -6,6 +7,7 @@ using GameScripts.Services;
 using GameScripts.Services.Data;
 using GameScripts.Services.Factories;
 using GameScripts.Services.Unity;
+using GameScripts.StaticData;
 using GameScripts.StaticData.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -49,6 +51,15 @@ namespace GameScripts.Infrastructure.States
             LevelData levelData = _staticDataService.Levels[SceneManager.GetActiveScene().name];
 
             var player = _unitSpawner.SpawnPlayer(levelData.playerSpawnPoint);
+            
+            Curses.HealthCurse.SetOnMaxStacksFunction(p =>
+            {
+                p.GetComponent<PlayerHealth>().GetDamage(999);
+                Debug.Log("Max stack on health curse");
+                return true;
+            }, player);
+            
+            
             Camera.main.GetComponentInParent<CameraFollower>()?.SetTarget(player);
 
             foreach (var enemy in levelData.enemies)

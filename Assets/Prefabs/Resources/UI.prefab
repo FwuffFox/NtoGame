@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c4c035435fbba04d91631df8d3ffb08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthSlider: {fileID: 5906343171413559777}
+  _healthSlider: {fileID: 5906343171413559777}
   playerHealth: {fileID: 0}
 --- !u!1 &4170635441056206401
 GameObject:
@@ -759,7 +759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ce3f279b34d49d46ad7611f5ac0cfae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  staminaSlider: {fileID: 3823175583273305760}
+  _staminaSlider: {fileID: 3823175583273305760}
   playerMovement: {fileID: 0}
 --- !u!1 &7453823654464507574
 GameObject:

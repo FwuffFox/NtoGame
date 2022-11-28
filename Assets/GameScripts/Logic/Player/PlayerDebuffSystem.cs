@@ -2,6 +2,7 @@
 using System.Collections;
 using EditorScripts.Inspector;
 using GameScripts.Logic.Debuffs;
+using GameScripts.StaticData.Enums;
 using UnityEngine;
 
 namespace GameScripts.Logic.Player
@@ -11,48 +12,48 @@ namespace GameScripts.Logic.Player
         [SerializeField] private PlayerMovement _playerMovement;
         [SerializeField] private PlayerHealth _playerHealth;
 
-        public void AddDebuff(TimedDebuff timedDebuff)
+        public void AddDebuff(SimpleDebuff simpleDebuff)
         {
-            StartCoroutine(TimedDebuffCoroutine(timedDebuff));
+            StartCoroutine(SimpleDebuffCoroutine(simpleDebuff));
         }
 
-        private IEnumerator TimedDebuffCoroutine(TimedDebuff timedDebuff)
+        private IEnumerator SimpleDebuffCoroutine(SimpleDebuff simpleDebuff)
         {
-            switch (timedDebuff.DebuffType)
+            switch (simpleDebuff.DebuffType)
             {
-                case TimedDebuffType.Speed: _playerMovement.Speed -= timedDebuff.DebuffValue; break;
+                case SimpleDebuffType.Speed: _playerMovement.Speed -= simpleDebuff.DebuffValue; break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
 
-            while (timedDebuff.Duration > 0)
+            while (simpleDebuff.Duration > 0)
             {
                 yield return new WaitForSeconds(1);
-                timedDebuff.Duration -= 1;
+                simpleDebuff.Duration -= 1;
             }
             
-            switch (timedDebuff.DebuffType)
+            switch (simpleDebuff.DebuffType)
             {
-                case TimedDebuffType.Speed: _playerMovement.Speed += timedDebuff.DebuffValue; break;
+                case SimpleDebuffType.Speed: _playerMovement.Speed += simpleDebuff.DebuffValue; break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
         }
 
-        public void AddDebuff(PeriodicalTimedDebuff debuff)
+        public void AddDebuff(PeriodicalDebuff debuff)
         {
-            StartCoroutine(PeriodicalTimedDebuffCoroutine(debuff));
+            StartCoroutine(PeriodicalDebuffCoroutine(debuff));
         }
 
-        private IEnumerator PeriodicalTimedDebuffCoroutine(PeriodicalTimedDebuff debuff)
+        private IEnumerator PeriodicalDebuffCoroutine(PeriodicalDebuff debuff)
         {
             while (debuff.Duration > 0)
             {
                 switch (debuff.DebuffType)
                 {
-                    case PeriodicalTimedDebuffType.Health: _playerHealth.GetDamage(debuff.DebuffValuePerSecond);
+                    case PeriodicalDebuffType.Health: _playerHealth.GetDamage(debuff.DebuffValuePerSecond);
                         break;
-                    case PeriodicalTimedDebuffType.Stamina: _playerMovement.CurrentStamina -= debuff.DebuffValuePerSecond;
+                    case PeriodicalDebuffType.Stamina: _playerMovement.CurrentStamina -= debuff.DebuffValuePerSecond;
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
@@ -62,6 +63,10 @@ namespace GameScripts.Logic.Player
                 debuff.Duration -= 1;
             }
         }
+       
+        
+        
+        
         
         #if UNITY_EDITOR
         [InspectorButton("RemoveAllDebuffsButton", ButtonWidth = 200)]

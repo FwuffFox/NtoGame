@@ -779,6 +779,7 @@ GameObject:
   - component: {fileID: 6551278922892892725}
   - component: {fileID: 1801820715673411265}
   - component: {fileID: -5862720708158300067}
+  - component: {fileID: 4709524712825742527}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -842,6 +843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65783172ec0a4eb681a209b31154b926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxHealth: 0
   _currentHealth: 0
   healButton: 0
 --- !u!54 &4252107660230147068
@@ -919,6 +921,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerMovement: {fileID: 8427430536715291764}
+  _playerHealth: {fileID: 5076391165056853385}
+  removeAllDebuffs: 0
+--- !u!114 &4709524712825742527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3396413128375704072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41e2af4a257a4308b66c522a41ea5cce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _playerHealth: {fileID: 5076391165056853385}
 --- !u!1 &3564145182107553972
 GameObject:

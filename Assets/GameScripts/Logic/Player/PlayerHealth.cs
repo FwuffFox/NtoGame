@@ -9,12 +9,18 @@ namespace GameScripts.Logic.Player
     public class PlayerHealth : MonoBehaviour
     {
         public Action OnPlayerDeath;
-        
-        private float _maxHealth;
+
+        public Action<float> OnPlayerMaxHealthChange;
+        [SerializeReadOnly, SerializeField] private float _maxHealth;
         public float MaxHealth
         {
             get => _maxHealth;
-            set => _maxHealth = value;
+            set 
+            {
+                _maxHealth = value;
+                if (CurrentHealth > MaxHealth) CurrentHealth = MaxHealth;
+                OnPlayerMaxHealthChange?.Invoke(_maxHealth);
+            }
         }
         
         public Action<float> OnPlayerHealthChange;
