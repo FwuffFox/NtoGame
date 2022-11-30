@@ -1,7 +1,9 @@
 ﻿using GameScripts.Logic.Camera;
 using GameScripts.Logic.Enemy;
+using GameScripts.Logic.Generators;
 using GameScripts.Logic.Player;
 using GameScripts.Logic.UI;
+using GameScripts.Logic.UI.InGame;
 using GameScripts.Services.Data;
 using GameScripts.Services.Factories;
 using GameScripts.Services.UnitSpawner;
@@ -46,11 +48,11 @@ namespace GameScripts.Infrastructure.States
 
         private void OnLoaded()
         {
-                
-            LevelData levelData = _staticDataService.Levels[SceneManager.GetActiveScene().name];
-
+            var sceneName = SceneManager.GetActiveScene().name;
+            LevelData levelData = _staticDataService.Levels[sceneName];
+            var mapGenerator = _prefabFactory.InstantiateMapGenerator(sceneName);
+            mapGenerator.GetComponent<GroundGenerator>().Generate();
             var player = _unitSpawner.SpawnPlayer(levelData.playerSpawnPoint);
-            
             Curses.HealthCurse.SetOnMaxStacksFunction(p =>
             {
                 p.GetComponent<PlayerHealth>().GetDamage(999);
@@ -68,7 +70,7 @@ namespace GameScripts.Infrastructure.States
             }
             
             if (_ui == null)
-                _ui = _prefabFactory.InstantiateUI();
+                _ui = _prefabFactory.InstantiateUI<LoadLevelState>();
             
             _ui.GetComponentInChildren<HealthUI>().SetPlayer(player.GetComponent<PlayerHealth>());
             _ui.GetComponentInChildren<StaminaUI>().SetPlayer(player.GetComponent<PlayerMovement>());

@@ -17,6 +17,7 @@ namespace GameScripts.Services.Factories
             new()
             {
                 { typeof(BootstrapState), BindState(new BootstrapState()) },
+                { typeof(MenuState), BindState(new MenuState())},
                 { typeof(LoadLevelState), BindState(new LoadLevelState()) },
                 { typeof(GameLoopState), BindState(new GameLoopState()) }
             };

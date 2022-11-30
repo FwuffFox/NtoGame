@@ -23,14 +23,15 @@ namespace GameScripts.Infrastructure.States
         public void Enter()
         {
             WarmUp();
-            _sceneLoader.LoadAsync(SceneNames.Bootstrap, EnterLoadLevel);
+            _sceneLoader.LoadAsync(SceneNames.Bootstrap, EnterMenuState);
         }
 
         public void Exit() { }
 
-        private void EnterLoadLevel()
+        private void EnterMenuState()
         {
-            _stateMachine.Enter<LoadLevelState, string>(SceneNames.Main);
+            _stateMachine.Enter<MenuState>();
+            //_stateMachine.Enter<LoadLevelState, string>(SceneNames.Main);
         }
 
         private void WarmUp()

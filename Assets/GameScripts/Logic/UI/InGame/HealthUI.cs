@@ -2,7 +2,7 @@ using GameScripts.Logic.Player;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace GameScripts.Logic.UI
+namespace GameScripts.Logic.UI.InGame
 {
     public class HealthUI : MonoBehaviour
     {

@@ -1,4 +1,5 @@
-﻿using GameScripts.StaticData.Enums;
+﻿using GameScripts.Infrastructure.States;
+using GameScripts.StaticData.Enums;
 using UnityEngine;
 
 namespace GameScripts.Services.Factories
@@ -8,6 +9,7 @@ namespace GameScripts.Services.Factories
         GameObject InstantiatePlayer(Vector3 position);
         GameObject InstantiateEnemy(Vector3 position, EnemyType enemyType);
         GameObject InstantiateTrap(Vector3 position);
-        GameObject InstantiateUI();
+        GameObject InstantiateMapGenerator(string sceneName);
+        GameObject InstantiateUI<TState>() where TState : class, IStateWithExit;
     }
 }

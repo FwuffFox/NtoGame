@@ -58,7 +58,7 @@ namespace GameScripts.Infrastructure.States
             yield return new WaitForSeconds(5);
             Object.Destroy(_player);
             _points = 0;
-            _gameStateMachine.Enter<BootstrapState>();
+            _gameStateMachine.Enter<MenuState>();
         }
         
         //Test method

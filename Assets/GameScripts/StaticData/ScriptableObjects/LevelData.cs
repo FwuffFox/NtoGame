@@ -10,6 +10,8 @@ namespace GameScripts.StaticData.ScriptableObjects
         public string sceneName;
 
         public Vector3 playerSpawnPoint;
+
+        public int mapSize;
         
         [Serializable]
         public struct Enemy

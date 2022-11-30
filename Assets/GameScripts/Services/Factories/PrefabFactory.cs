@@ -1,5 +1,7 @@
 ﻿using GameScripts.Extensions;
+using GameScripts.Infrastructure.States;
 using GameScripts.Logic.Enemy;
+using GameScripts.Logic.Generators;
 using GameScripts.Logic.Player;
 using GameScripts.Services.AssetManagement;
 using GameScripts.Services.Data;
@@ -79,12 +81,24 @@ namespace GameScripts.Services.Factories
         [CanBeNull] private Transform _trapParent;
         public GameObject InstantiateTrap(Vector3 position)
         {
-            _trapParent ??= new GameObject(ParentObjects.Enemies).transform;
+            _trapParent ??= new GameObject(ParentObjects.Traps).transform;
             return _assetProvider.Instantiate(PrefabPaths.BearTrap, position, _trapParent);
         }
 
-        public GameObject InstantiateUI() =>
-            _assetProvider.Instantiate(PrefabPaths.UI)
+        public GameObject InstantiateMapGenerator(string sceneName)
+        {
+            LevelData levelData = _staticDataService.Levels[sceneName];
+            return _assetProvider.Instantiate(PrefabPaths.MapGenerator)
+                .With(gen =>
+                {
+                    _diContainer.InjectGameObject(gen);
+
+                    gen.GetComponent<GroundGenerator>().With(x => x.SetProperties(levelData));
+                });
+        }
+            
+        public GameObject InstantiateUI<TState>() where TState : class, IStateWithExit =>
+            _assetProvider.Instantiate(PrefabPaths.UIs[typeof(TState)])
                 .With(ui => _diContainer.InjectGameObject(ui));
     }
 }

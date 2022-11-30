@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-namespace GameScripts.Logic.UI
+namespace GameScripts.Logic.UI.InGame
 {
     public class PointsUI : MonoBehaviour
     {
