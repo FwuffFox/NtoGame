@@ -10,14 +10,24 @@ namespace GameScripts.StaticData.ScriptableObjects
         public string sceneName;
 
         public Vector3 playerSpawnPoint;
-
-        public Enemy[] enemies;
-
+        
         [Serializable]
         public struct Enemy
         {
             public Vector3 position;
             public EnemyType enemyType;
         }
+        
+        [Space]
+        public Enemy[] enemies;
+
+        [Serializable]
+        public struct Trap
+        {
+            public Vector3 position;
+        }
+
+        [Space] 
+        public Trap[] traps;
     }
 }

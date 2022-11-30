@@ -6,6 +6,7 @@ using GameScripts.Services.Data;
 using GameScripts.StaticData.Constants;
 using GameScripts.StaticData.Enums;
 using GameScripts.StaticData.ScriptableObjects;
+using JetBrains.Annotations;
 using UnityEngine;
 using Zenject;
 
@@ -51,11 +52,14 @@ namespace GameScripts.Services.Factories
                 });
         }
 
+        [CanBeNull] private Transform _enemyParent;
+        
         public GameObject InstantiateEnemy(Vector3 position, EnemyType enemyType)
         {
+            _enemyParent ??= new GameObject(ParentObjects.Enemies).transform;
             EnemyData enemyData = _staticDataService.Enemies[enemyType];
 
-            return _assetProvider.Instantiate(PrefabPaths.Enemies[enemyType], position)
+            return _assetProvider.Instantiate(PrefabPaths.Enemies[enemyType], position, _enemyParent)
                 .With(enemy =>
                 {
                     enemy.name = enemyData.enemyName;
@@ -71,6 +75,14 @@ namespace GameScripts.Services.Factories
 
                 });
         }
+
+        [CanBeNull] private Transform _trapParent;
+        public GameObject InstantiateTrap(Vector3 position)
+        {
+            _trapParent ??= new GameObject(ParentObjects.Enemies).transform;
+            return _assetProvider.Instantiate(PrefabPaths.BearTrap, position, _trapParent);
+        }
+
         public GameObject InstantiateUI() =>
             _assetProvider.Instantiate(PrefabPaths.UI)
                 .With(ui => _diContainer.InjectGameObject(ui));

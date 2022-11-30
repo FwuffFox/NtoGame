@@ -39,9 +39,9 @@ namespace GameScripts.Logic.Player
 
         public void SetProperties(PlayerData playerData)
         {
-            MaxHealth = playerData.maxHealth;
+            MaxHealth = playerData.health.maxHealth;
             CurrentHealth = MaxHealth;
-            _healthRegenPerSecond = playerData.healthRegenPerSecond;
+            _healthRegenPerSecond = playerData.health.healthRegenPerSecond;
         }
         
         private void OnEnable()

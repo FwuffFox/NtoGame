@@ -1,7 +1,7 @@
 ﻿using GameScripts.StaticData.Constants;
 using UnityEngine;
 
-namespace GameScripts.Services
+namespace GameScripts.Services.InputService
 {
     public class InputService : IInputService
     {

@@ -3,7 +3,7 @@ using GameScripts.Services.Factories;
 using GameScripts.StaticData.Enums;
 using UnityEngine;
 
-namespace GameScripts.Services
+namespace GameScripts.Services.UnitSpawner
 {
     public class UnitSpawner : IUnitSpawner
     {
@@ -11,6 +11,7 @@ namespace GameScripts.Services
 
         public GameObject Player { get; private set; }
         public List<GameObject> Enemies { get; private set; } = new();
+        public List<GameObject> Traps { get; private set; } = new();
 
         public UnitSpawner(IPrefabFactory prefabFactory)
         {
@@ -27,6 +28,13 @@ namespace GameScripts.Services
             var enemy = _prefabFactory.InstantiateEnemy(spawnPosition, enemyType);
             Enemies.Add(enemy);
             return enemy;
+        }
+
+        public GameObject SpawnTraps(Vector3 trapPosition)
+        {
+            var trap = _prefabFactory.InstantiateTrap(trapPosition);
+            Traps.Add(trap);
+            return trap;
         }
     }
 }

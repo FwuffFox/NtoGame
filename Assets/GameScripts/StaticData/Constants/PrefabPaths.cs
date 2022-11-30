@@ -15,5 +15,6 @@ namespace GameScripts.StaticData.Constants
         };
         public const string Player = "Units/Player";
         public const string UI = "UI";
+        public const string BearTrap = "Traps/BearTrap";
     }
 }

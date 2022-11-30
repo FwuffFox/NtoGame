@@ -1,20 +1,40 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace GameScripts.StaticData.ScriptableObjects
 {
     [CreateAssetMenu(fileName = "Player Data", menuName = "StaticData/PlayerData")]
     public class PlayerData : ScriptableObject
     {
-        [Header("PlayerHealth")]
-        public float maxHealth;
-        public float healthRegenPerSecond;
+        [Serializable]
+        public struct Health
+        {
+            public float maxHealth;
+            public float healthRegenPerSecond;
+        }
+
+        [Space]
+        public Health health;
         
-        [Header("PlayerMovement")]
-        public float speed;
-        public float runningSpeedModifier;
-        public float maxStamina;
-        public float staminaConsumptionPerSecondOfRunning;
-        public float staminaPerDodge;
-        public float staminaRegenPerSecond;
+        [Serializable]
+        public struct Speed
+        {
+            public float baseSpeed;
+            public float runningSpeedModifier;
+        }
+        
+        [Space]
+        public Speed speed;
+        
+        [Serializable]
+        public struct Stamina
+        {
+            public float maxStamina;
+            public float staminaConsumptionPerSecondOfRunning;
+            public float staminaPerDodge;
+            public float staminaRegenPerSecond;
+        }
+        [Space]
+        public Stamina stamina;
     }
 }

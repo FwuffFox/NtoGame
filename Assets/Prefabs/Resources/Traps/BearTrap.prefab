@@ -46,6 +46,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bearTrapSound: {fileID: 3213162857067910293}
+  _bleeding:
+    duration: 5
+    damagePerSecond: 5
+  _speedDebuff:
+    duration: 3
+    slowness: 1
 --- !u!65 &8289124558389657636
 BoxCollider:
   m_ObjectHideFlags: 0

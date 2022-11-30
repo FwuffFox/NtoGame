@@ -7,6 +7,7 @@ namespace GameScripts.Services.Factories
     {
         GameObject InstantiatePlayer(Vector3 position);
         GameObject InstantiateEnemy(Vector3 position, EnemyType enemyType);
+        GameObject InstantiateTrap(Vector3 position);
         GameObject InstantiateUI();
     }
 }

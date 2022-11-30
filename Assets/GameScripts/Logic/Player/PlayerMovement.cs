@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using GameScripts.Services;
+using GameScripts.Services.InputService;
 using GameScripts.StaticData.ScriptableObjects;
 using UnityEngine;
 using Zenject;
@@ -62,13 +63,13 @@ namespace GameScripts.Logic.Player
 
         public void SetProperties(PlayerData playerData)
         {
-            Speed = playerData.speed;
-            _runningSpeedModifier = playerData.runningSpeedModifier;
-            MaxStamina = playerData.maxStamina;
+            Speed = playerData.speed.baseSpeed;
+            _runningSpeedModifier = playerData.speed.runningSpeedModifier;
+            MaxStamina = playerData.stamina.maxStamina;
             CurrentStamina = MaxStamina;
-            _staminaRegenPerSecond = playerData.staminaRegenPerSecond;
-            _staminaConsumptionPerSecondOfRunning = playerData.staminaConsumptionPerSecondOfRunning;
-            _staminaPerDodge = playerData.staminaPerDodge;
+            _staminaRegenPerSecond = playerData.stamina.staminaRegenPerSecond;
+            _staminaConsumptionPerSecondOfRunning = playerData.stamina.staminaConsumptionPerSecondOfRunning;
+            _staminaPerDodge = playerData.stamina.staminaPerDodge;
         }
 
         private void OnEnable()
