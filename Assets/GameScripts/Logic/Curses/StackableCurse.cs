@@ -8,9 +8,9 @@ namespace GameScripts.Logic.Curses
     public class StackableCurse
     {
         public CurseType CurseType;
-        public int MaxStacks;
+        public readonly int MaxStacks;
         public Action<StackableCurse> OnNewStack;
-        private int _currentStacks;
+        public int CurrentStacks;
         public float CurseValuePerStack;
 
         private Func<GameObject, bool> _onMaxStacks;
@@ -29,15 +29,19 @@ namespace GameScripts.Logic.Curses
             _obj = obj;
         }
 
+        private bool _canAddStack = true;
         public void AddStack()
         {
-            if (_currentStacks + 1 >= MaxStacks)
-            {
-                _currentStacks = MaxStacks;
-                _onMaxStacks?.Invoke(_obj);
-            }
-            _currentStacks++;
+            if (!_canAddStack) return;
             OnNewStack?.Invoke(this);
+            if (CurrentStacks + 1 >= MaxStacks)
+            {
+                CurrentStacks = MaxStacks;
+                _onMaxStacks?.Invoke(_obj);
+                _canAddStack = false;
+                return;
+            }
+            CurrentStacks++;
         }
         
     }

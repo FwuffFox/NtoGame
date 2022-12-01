@@ -2,7 +2,6 @@
 using GameScripts.Logic.Enemy;
 using GameScripts.Logic.Generators;
 using GameScripts.Logic.Player;
-using GameScripts.Logic.UI;
 using GameScripts.Logic.UI.InGame;
 using GameScripts.Services.Data;
 using GameScripts.Services.Factories;
@@ -18,13 +17,14 @@ namespace GameScripts.Infrastructure.States
 {
     public class LoadLevelState : IStateWithPayload<string>
     {
+        private GameObject _ui;
+        
         private GameStateMachine _gameStateMachine;
         private ISceneLoader _sceneLoader;
         private GameStateMachine _stateMachine;
         private IStaticDataService _staticDataService;
         private IUnitSpawner _unitSpawner;
         private IPrefabFactory _prefabFactory;
-        private GameObject _ui;
 
         [Inject]
         public void Construct(GameStateMachine stateMachine, ISceneLoader sceneLoader,
@@ -74,6 +74,7 @@ namespace GameScripts.Infrastructure.States
             
             _ui.GetComponentInChildren<HealthUI>().SetPlayer(player.GetComponent<PlayerHealth>());
             _ui.GetComponentInChildren<StaminaUI>().SetPlayer(player.GetComponent<PlayerMovement>());
+            player.GetComponent<PlayerCurseSystem>().OnCurseChange += _ui.GetComponentInChildren<CurseUI>().UpdateCurses;
             _stateMachine.Enter<GameLoopState>();
         }
     }

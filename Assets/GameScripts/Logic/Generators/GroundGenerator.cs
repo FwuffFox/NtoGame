@@ -28,7 +28,6 @@ namespace GameScripts.Logic.Generators
 		public void Generate()
 		{
 			_landFolder = Instantiate(new GameObject().With(x => x.name = "Land")).transform;
-			Debug.Log($"Generating map with size: {_mapSize}");
 			GenerateMap();
 		}
 	

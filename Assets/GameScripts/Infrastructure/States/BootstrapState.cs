@@ -31,7 +31,6 @@ namespace GameScripts.Infrastructure.States
         private void EnterMenuState()
         {
             _stateMachine.Enter<MenuState>();
-            //_stateMachine.Enter<LoadLevelState, string>(SceneNames.Main);
         }
 
         private void WarmUp()

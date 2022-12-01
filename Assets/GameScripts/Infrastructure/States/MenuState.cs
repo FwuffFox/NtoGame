@@ -1,16 +1,16 @@
-﻿using GameScripts.Extensions;
-using GameScripts.Logic.UI.InMenu;
+﻿using GameScripts.Logic.UI.InMenu;
 using GameScripts.Services.Factories;
 using GameScripts.Services.Unity;
 using GameScripts.StaticData.Constants;
 using UnityEngine;
-using UnityEngine.UI;
 using Zenject;
 
 namespace GameScripts.Infrastructure.States
 {
     public class MenuState : IState
     {
+        private GameObject _ui;
+        
         private ISceneLoader _sceneLoader;
         private GameStateMachine _stateMachine;
         private IPrefabFactory _prefabFactory;
@@ -30,14 +30,14 @@ namespace GameScripts.Infrastructure.States
 
         private void OnMenuLoaded()
         {
-            var ui = _prefabFactory.InstantiateUI<MenuState>();
-            // TODO: Refactor this to load ui from factory
-            ui.GetComponent<MenuUI>().PlayButton.onClick.AddListener(OnPlayButtonClick);
+            if (_ui == null)
+                _ui = _prefabFactory.InstantiateUI<MenuState>();
+            _ui.GetComponent<MenuUI>().PlayButton.onClick.AddListener(OnPlayButtonClick);
         }
 
         private void OnPlayButtonClick()
         {
-            Debug.Log("Loading level");
+            _ui.GetComponent<MenuUI>().StartLoadingScreen();
             _stateMachine.Enter<LoadLevelState, string>(SceneNames.Main);
         }
         public void Exit() { }

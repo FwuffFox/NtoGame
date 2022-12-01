@@ -15,6 +15,7 @@ namespace GameScripts.Logic
 
         private void OnTriggerStay(Collider other)
         {
+            Debug.DrawLine(transform.position, other.transform.position, Color.red, 0.1f);
             if (!canCurse) return;
             if (!other.TryGetComponent(out PlayerCurseSystem curseSystem)) return;
             curseSystem.AddStack(curseType);

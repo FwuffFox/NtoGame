@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8491043298556544702}
-  - component: {fileID: 938990362054190027}
   - component: {fileID: 2676352081369492325}
-  - component: {fileID: 965085052290555617}
-  - component: {fileID: 8685921293625198143}
+  - component: {fileID: 7405012174023512317}
+  - component: {fileID: 4184730793209568111}
+  - component: {fileID: 4086458344702723583}
   m_Layer: 0
   m_Name: TestCurseObject
   m_TagString: Untagged
@@ -27,22 +27,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7287623845247092375}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -5.62554, y: 0, z: 21.849133}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &938990362054190027
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7287623845247092375}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!23 &2676352081369492325
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -85,8 +77,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &965085052290555617
-BoxCollider:
+--- !u!33 &7405012174023512317
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7287623845247092375}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!135 &4184730793209568111
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -96,9 +96,9 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 3, z: 3}
+  m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8685921293625198143
+--- !u!114 &4086458344702723583
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,6 +110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8f57579a5374038a9629ecd8882b5e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curseCooldown: 2
+  curseCooldown: 1
   curseType: 0
   canCurse: 1
