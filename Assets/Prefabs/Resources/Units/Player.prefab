@@ -936,6 +936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerHealth: {fileID: 5076391165056853385}
+  _playerMovement: {fileID: 8427430536715291764}
 --- !u!1 &3564145182107553972
 GameObject:
   m_ObjectHideFlags: 0

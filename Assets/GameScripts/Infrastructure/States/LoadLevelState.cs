@@ -60,6 +60,13 @@ namespace GameScripts.Infrastructure.States
                 return true;
             }, player);
             
+            Curses.StaminaCurse.SetOnMaxStacksFunction(p =>
+                        {
+                            p.GetComponent<PlayerMovement>().Speed = 0;
+                            Debug.Log("Max stack on stamina curse");
+                            return true;
+                        }, player);
+            
             
             Camera.main.GetComponentInParent<CameraFollower>()?.SetTarget(player);
 
