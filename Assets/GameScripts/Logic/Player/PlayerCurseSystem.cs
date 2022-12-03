@@ -38,6 +38,22 @@ namespace GameScripts.Logic.Player
             OnCurseChange?.Invoke(_curses);
         }
 
+        public void ClearCurse(CurseType curseType)
+        {
+            _curses[curseType].CurrentStacks = 0;
+            switch (curseType)
+            {
+                case CurseType.Health:
+                    _playerHealth.MaxHealth = 100; 
+                    break;
+                case CurseType.Stamina:
+                    _playerMovement.MaxStamina = 100;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+            OnCurseChange?.Invoke(_curses);
+        }
         public void AddStack(CurseType curseType)
         {
             _curses[curseType].AddStack();
