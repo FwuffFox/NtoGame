@@ -11,6 +11,7 @@ namespace GameScripts.Logic
     public class TestCurseObject : MonoBehaviour
     {
         [SerializeField] private float curseCooldown;
+        [SerializeField] private Collider _collider;
         public CurseType CurseType;
         [SerializeField] private GameObject cleanseItem;
         [SerializeReadOnly, SerializeField] private bool canCurse = true;
@@ -59,6 +60,13 @@ namespace GameScripts.Logic
             cleansedRecently = true;
             yield return new WaitForSeconds(afterCleanseCooldown);
             cleansedRecently = false;
+        }
+
+        private void OnDrawGizmos()
+        {
+            if (_collider.enabled == false) return;
+            Gizmos.color = Color.red;
+            Gizmos.DrawSphere(transform.position + Vector3.up * 5, 1);
         }
     }
 }

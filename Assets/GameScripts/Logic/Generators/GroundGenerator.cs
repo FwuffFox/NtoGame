@@ -14,10 +14,9 @@ namespace GameScripts.Logic.Generators
 		[SerializeField]
 		private float tileStep=3.16f;
 		[SerializeField]
-		private List<Transform> tile;
+		private List<Transform> tiles;
 		private float posX=0.0f;
 		private float posZ=0.0f;
-		private int tileCountWithZero;
 
 		[SerializeField] private NavMeshSurface _navMeshSurface;
 
@@ -37,14 +36,14 @@ namespace GameScripts.Logic.Generators
 	
 		private void GenerateMap() 
 		{
-			tileCountWithZero = tile.Count - 1;
 			for (int w = 0; w < _mapSize; w++) 
 			{
 				for (int h = 0;h < _mapSize; h++) 
 				{
-					var obj = Instantiate(tile[Random.Range(0, tileCountWithZero)], new Vector3(posX, 0, posZ),
+					var obj = Instantiate(tiles[Random.Range(0, tiles.Count)], new Vector3(posX, 0, posZ),
 						Quaternion.Euler(-90, 0, 0));
 					obj.parent = _landFolder;
+					if (Random.Range(0, 10) == 0) obj.GetComponentsInChildren<Collider>()[0].enabled = true;
 					posX+=tileStep;
 				}
 				posZ+=tileStep;
