@@ -10,6 +10,7 @@ using GameScripts.Services.Unity;
 using GameScripts.StaticData;
 using GameScripts.StaticData.ScriptableObjects;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 using Zenject;
 

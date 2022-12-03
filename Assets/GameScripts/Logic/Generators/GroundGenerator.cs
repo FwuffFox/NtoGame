@@ -3,6 +3,7 @@ using GameScripts.Extensions;
 using GameScripts.Services.InputService;
 using GameScripts.StaticData.ScriptableObjects;
 using UnityEngine;
+using UnityEngine.AI;
 using Zenject;
 
 namespace GameScripts.Logic.Generators
@@ -18,6 +19,8 @@ namespace GameScripts.Logic.Generators
 		private float posZ=0.0f;
 		private int tileCountWithZero;
 
+		[SerializeField] private NavMeshSurface _navMeshSurface;
+
 		private Transform _landFolder;
 
 		public void SetProperties(LevelData data)
@@ -29,6 +32,7 @@ namespace GameScripts.Logic.Generators
 		{
 			_landFolder = Instantiate(new GameObject().With(x => x.name = "Land")).transform;
 			GenerateMap();
+			_navMeshSurface.BuildNavMesh();
 		}
 	
 		private void GenerateMap() 
