@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1034465219942596894}
   - component: {fileID: 3008369276873356756}
   - component: {fileID: 2750442870267717686}
+  - component: {fileID: 6765699229046021085}
   m_Layer: 0
   m_Name: elkaTile
   m_TagString: Ground
@@ -99,6 +100,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: ca7a20f67f98d624eafbcc25b8daa5c7, type: 3}
+--- !u!114 &6765699229046021085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3656680571671909377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dee656cca1671142bcc1f458031115d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HaveSpawnPoint: 0
+  SpawnPoint: {fileID: 0}
 --- !u!1001 &3404468008713988765
 PrefabInstance:
   m_ObjectHideFlags: 0

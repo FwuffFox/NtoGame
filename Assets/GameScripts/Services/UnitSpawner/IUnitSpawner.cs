@@ -12,6 +12,6 @@ namespace GameScripts.Services.UnitSpawner
         GameObject SpawnPlayer() => SpawnPlayer(Vector3.zero);
         GameObject SpawnPlayer(Vector3 spawnPoint);
         GameObject SpawnEnemy(Vector3 spawnPosition, EnemyType enemyType);
-        GameObject SpawnTraps(Vector3 trapPosition);
+        GameObject SpawnTrap(Vector3 trapPosition);
     }
 }
