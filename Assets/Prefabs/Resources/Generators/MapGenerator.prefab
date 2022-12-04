@@ -57,6 +57,7 @@ MonoBehaviour:
   - {fileID: 8567274853111232790, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
   - {fileID: 8567274853111232790, guid: 7e1e3aa09e3a8fc4f94521f82f0dc743, type: 3}
   - {fileID: 8567274853111232790, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+  - {fileID: 8567274853111232790, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
   _navMeshSurface: {fileID: 6870081781584189043}
 --- !u!114 &6870081781584189043
 MonoBehaviour:
