@@ -24,6 +24,7 @@ namespace GameScripts.Logic.Generators
 
 		[SerializeField] private NavMeshSurface _navMeshSurface;
 		private int _trapsCount;
+		private int _unitsCount;
 
 		private Transform _landFolder;
 
@@ -39,6 +40,7 @@ namespace GameScripts.Logic.Generators
 		{
 			_mapSize = data.mapSize;
 			_trapsCount = data.mapSize;
+			_unitsCount = data.mapSize;
 		}
 		
 		public void Generate()
@@ -72,6 +74,18 @@ namespace GameScripts.Logic.Generators
 		{
 			var tilesWithSpawn = spawnedTiles.Where(tile => tile.HaveSpawnPoint).ToList();
 			for (int i = 0; i < _trapsCount; i++)
+			{
+				if (tilesWithSpawn.Count == 0) break;
+				var spawnTile = tilesWithSpawn[Random.Range(0, tilesWithSpawn.Count)];
+				_unitSpawner.SpawnTrap(spawnTile.SpawnPoint.position);
+				tilesWithSpawn.Remove(spawnTile);
+			}
+		}
+		
+		private void PlaceUnits()
+		{
+			var tilesWithSpawn = spawnedTiles.Where(tile => tile.HaveSpawnPoint).ToList();
+			for (int i = 0; i < _unitsCount; i++)
 			{
 				if (tilesWithSpawn.Count == 0) break;
 				var spawnTile = tilesWithSpawn[Random.Range(0, tilesWithSpawn.Count)];
