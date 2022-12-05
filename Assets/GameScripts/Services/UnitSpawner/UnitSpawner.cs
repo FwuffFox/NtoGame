@@ -30,7 +30,7 @@ namespace GameScripts.Services.UnitSpawner
             return enemy;
         }
 
-        public GameObject SpawnTraps(Vector3 trapPosition)
+        public GameObject SpawnTrap(Vector3 trapPosition)
         {
             var trap = _prefabFactory.InstantiateTrap(trapPosition);
             Traps.Add(trap);

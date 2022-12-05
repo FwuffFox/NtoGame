@@ -31,6 +31,7 @@ namespace GameScripts.Logic.Player
             set
             {
                 _currentHealth = value >= _maxHealth ? _maxHealth : value;
+                _currentHealth = value <= 0 ? 0 : value;
                 OnPlayerHealthChange?.Invoke(_currentHealth);
             }
         }

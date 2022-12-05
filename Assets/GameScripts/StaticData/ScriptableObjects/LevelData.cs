@@ -12,6 +12,8 @@ namespace GameScripts.StaticData.ScriptableObjects
         public Vector3 playerSpawnPoint;
 
         public int mapSize;
+
+        public int trapsCount;
         
         [Serializable]
         public struct Enemy
@@ -22,14 +24,6 @@ namespace GameScripts.StaticData.ScriptableObjects
         
         [Space]
         public Enemy[] enemies;
-
-        [Serializable]
-        public struct Trap
-        {
-            public Vector3 position;
-        }
-
-        [Space] 
-        public Trap[] traps;
+        
     }
 }

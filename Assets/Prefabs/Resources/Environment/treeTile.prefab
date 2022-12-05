@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4704793226494342835}
   - component: {fileID: 7398921377933886073}
   - component: {fileID: 4531158207303482159}
+  - component: {fileID: 7230528121826704380}
   m_Layer: 0
   m_Name: treeTile
   m_TagString: Ground
@@ -99,6 +100,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: ca7a20f67f98d624eafbcc25b8daa5c7, type: 3}
+--- !u!114 &7230528121826704380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9056391108386661292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dee656cca1671142bcc1f458031115d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HaveSpawnPoint: 0
+  SpawnPoint: {fileID: 0}
 --- !u!1001 &7516926299414397027
 PrefabInstance:
   m_ObjectHideFlags: 0
