@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using GameScripts.Logic.Player;
 using GameScripts.StaticData.ScriptableObjects;
 using UnityEngine;
@@ -7,6 +8,7 @@ namespace GameScripts.Logic.Enemy
 {
     public class EnemyAttacker : MonoBehaviour
     {
+        public Action OnAttack;
         private float _damage;
         private float _attackCooldown;
 
@@ -23,6 +25,7 @@ namespace GameScripts.Logic.Enemy
             if (!_canAttack) return;
             player.GetDamage(_damage);
             StartCoroutine(AttackCooldown());
+            OnAttack?.Invoke();
         }
 
         private IEnumerator AttackCooldown()

@@ -12,8 +12,7 @@ namespace GameScripts.StaticData.Constants
         /// </summary>
         public static readonly Dictionary<EnemyType, string> Enemies = new()
         {
-            {EnemyType.Default, "Units/Enemies/Default"},
-            {EnemyType.Stronger, "Units/Enemies/Stronger"}
+            {EnemyType.Warrior, "Units/Enemies/EnemyWarrior"}
         };
         
         /// <summary>

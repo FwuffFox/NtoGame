@@ -66,14 +66,18 @@ namespace GameScripts.Services.Factories
                 {
                     enemy.name = enemyData.enemyName;
 
-                    enemy.GetComponent<EnemyAI>()
+                    var ai = enemy.GetComponent<EnemyAI>()
                         .With(x => x.SetProperties(enemyData));
 
-                    enemy.GetComponent<EnemyMover>()
+                    var mover = enemy.GetComponent<EnemyMover>()
                         .With(x => x.SetProperties(enemyData));
 
-                    enemy.GetComponent<EnemyAttacker>()
+                    var attacker = enemy.GetComponent<EnemyAttacker>()
                         .With(x => x.SetProperties(enemyData));
+
+                    enemy.GetComponent<EnemyAnimator>()
+                        .With(x => mover.OnSpeedChange += x.SetSpeed)
+                        .With(x => attacker.OnAttack += x.SetAttack);
 
                 });
         }

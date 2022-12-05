@@ -14,16 +14,7 @@ namespace GameScripts.StaticData.ScriptableObjects
         public int mapSize;
 
         public int trapsCount;
-        
-        [Serializable]
-        public struct Enemy
-        {
-            public Vector3 position;
-            public EnemyType enemyType;
-        }
-        
-        [Space]
-        public Enemy[] enemies;
-        
+
+        public int unitCount;
     }
 }

@@ -52,8 +52,10 @@ namespace GameScripts.Infrastructure.States
             var sceneName = SceneManager.GetActiveScene().name;
             LevelData levelData = _staticDataService.Levels[sceneName];
             var mapGenerator = _prefabFactory.InstantiateMapGenerator(sceneName);
-            mapGenerator.GetComponent<GroundGenerator>().Generate();
+            var generator = mapGenerator.GetComponent<GroundGenerator>();
+            generator.GenerateMapAndTraps();
             var player = _unitSpawner.SpawnPlayer(levelData.playerSpawnPoint);
+            generator.PlaceUnits(player);
             Curses.HealthCurse.SetOnMaxStacksFunction(p =>
             {
                 p.GetComponent<PlayerHealth>().GetDamage(999);
@@ -69,13 +71,7 @@ namespace GameScripts.Infrastructure.States
                         }, player);
             
             
-            Camera.main.GetComponentInParent<CameraFollower>()?.SetTarget(player);
-
-            foreach (var enemy in levelData.enemies)
-            {
-                var spawnedEnemy = _unitSpawner.SpawnEnemy(enemy.position, enemy.enemyType);
-                spawnedEnemy.GetComponent<EnemyAI>().SetPlayer(player);
-            }
+            Camera.main.GetComponentInParent<CameraFollower>()?.SetTarget(player);            
             
             if (_ui == null)
                 _ui = _prefabFactory.InstantiateUI<LoadLevelState>();

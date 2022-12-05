@@ -2,8 +2,9 @@ using System.Collections.Generic;
 using System.Linq;
 using GameScripts.Extensions;
 using GameScripts.Logic.Tiles;
-using GameScripts.Services.InputService;
+using GameScripts.Logic.Enemy;
 using GameScripts.Services.UnitSpawner;
+using GameScripts.StaticData.Enums;
 using GameScripts.StaticData.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.AI;
@@ -18,7 +19,8 @@ namespace GameScripts.Logic.Generators
 		private float tileStep=3.16f;
 		[SerializeField]
 		private List<Tile> tiles;
-		private List<Tile> spawnedTiles = new();
+		private readonly List<Tile> _spawnedTiles = new();
+		private List<Tile> _tilesWithSpawn;
 		private float posX=0.0f;
 		private float posZ=0.0f;
 
@@ -39,14 +41,15 @@ namespace GameScripts.Logic.Generators
 		public void SetProperties(LevelData data)
 		{
 			_mapSize = data.mapSize;
-			_trapsCount = data.mapSize;
-			_unitsCount = data.mapSize;
+			_trapsCount = data.trapsCount;
+			_unitsCount = data.unitCount;
 		}
 		
-		public void Generate()
+		public void GenerateMapAndTraps()
 		{
 			_landFolder = Instantiate(new GameObject().With(x => x.name = "Land")).transform;
 			GenerateMap();
+			_tilesWithSpawn = _spawnedTiles.Where(tile => tile.HaveSpawnPoint).ToList();
 			PlaceTraps();
 			_navMeshSurface.BuildNavMesh();
 		}
@@ -60,7 +63,7 @@ namespace GameScripts.Logic.Generators
 					var obj = Instantiate(tiles[Random.Range(0, tiles.Count)].transform, new Vector3(posX, 0, posZ),
 						Quaternion.Euler(-90, 0, 0));
 					var tile = obj.GetComponent<Tile>();
-					spawnedTiles.Add(tile);
+					_spawnedTiles.Add(tile);
 					obj.parent = _landFolder;
 					if (Random.Range(0, 10) == 0) obj.GetComponentsInChildren<Collider>()[0].enabled = true;
 					posX+=tileStep;
@@ -72,25 +75,24 @@ namespace GameScripts.Logic.Generators
 
 		private void PlaceTraps()
 		{
-			var tilesWithSpawn = spawnedTiles.Where(tile => tile.HaveSpawnPoint).ToList();
 			for (int i = 0; i < _trapsCount; i++)
 			{
-				if (tilesWithSpawn.Count == 0) break;
-				var spawnTile = tilesWithSpawn[Random.Range(0, tilesWithSpawn.Count)];
+				if (_tilesWithSpawn.Count == 0) break;
+				var spawnTile = _tilesWithSpawn[Random.Range(0, _tilesWithSpawn.Count)];
 				_unitSpawner.SpawnTrap(spawnTile.SpawnPoint.position);
-				tilesWithSpawn.Remove(spawnTile);
+				_tilesWithSpawn.Remove(spawnTile);
 			}
 		}
 		
-		private void PlaceUnits()
+		public void PlaceUnits(GameObject player)
 		{
-			var tilesWithSpawn = spawnedTiles.Where(tile => tile.HaveSpawnPoint).ToList();
 			for (int i = 0; i < _unitsCount; i++)
 			{
-				if (tilesWithSpawn.Count == 0) break;
-				var spawnTile = tilesWithSpawn[Random.Range(0, tilesWithSpawn.Count)];
-				_unitSpawner.SpawnTrap(spawnTile.SpawnPoint.position);
-				tilesWithSpawn.Remove(spawnTile);
+				if (_tilesWithSpawn.Count == 0) break;
+				var spawnTile = _tilesWithSpawn[Random.Range(0, _tilesWithSpawn.Count)];
+				var enemy = _unitSpawner.SpawnEnemy(spawnTile.SpawnPoint.position, EnemyType.Warrior);
+				enemy.GetComponent<EnemyAI>().SetPlayer(player);
+				_tilesWithSpawn.Remove(spawnTile);
 			}
 		}
 	}
