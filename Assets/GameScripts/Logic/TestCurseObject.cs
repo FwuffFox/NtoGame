@@ -8,7 +8,7 @@ using UnityEngine;
 namespace GameScripts.Logic
 {
     [RequireComponent(typeof(Collider))]
-    public class TestCurseObject : MonoBehaviour
+    public class TestCurseObject : MonoBehaviour 
     {
         [SerializeField] private float curseCooldown;
         [SerializeField] private Collider _collider;

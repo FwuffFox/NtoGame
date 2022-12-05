@@ -1,28 +1,29 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace GameScripts.Logic.Player
 {
     [RequireComponent(typeof(Animator))]
     public class PlayerAnimator : MonoBehaviour
     {
-        [SerializeField] private Animator animator;
+        [FormerlySerializedAs("animator")] [SerializeField] private Animator _animator;
         private static readonly int Speed = Animator.StringToHash("Speed");
         private static readonly int Death = Animator.StringToHash("Death");
         private static readonly int IsRunning = Animator.StringToHash("IsRunning");
 
         public void SetSpeed(float speed)
         {
-            animator.SetFloat(Speed, speed);
+            _animator.SetFloat(Speed, speed);
         }
 
         public void SetDeath()
         {
-            animator.SetTrigger(Death);
+            _animator.SetTrigger(Death);
         }
 
         public void SetIsRunning(bool isRunning)
         {
-            animator.SetBool(IsRunning, isRunning);
+            _animator.SetBool(IsRunning, isRunning);
         }
     }
 }
