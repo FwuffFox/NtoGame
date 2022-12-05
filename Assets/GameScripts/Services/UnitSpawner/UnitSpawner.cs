@@ -36,5 +36,12 @@ namespace GameScripts.Services.UnitSpawner
             Traps.Add(trap);
             return trap;
         }
+		
+		public GameObject SpawnEnemy(Vector3 enemyPosition)
+        {
+            var enemy = _prefabFactory.InstantiateEnemy(enemyPosition,0);
+            Enemies.Add(enemy);
+            return enemy;
+        }
     }
 }
