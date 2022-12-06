@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HaveSpawnPoint: 0
+  HaveCursedObject: 1
   SpawnPoint: {fileID: 0}
 --- !u!1001 &6273964651091371700
 PrefabInstance:

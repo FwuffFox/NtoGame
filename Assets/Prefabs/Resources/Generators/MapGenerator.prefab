@@ -79,7 +79,7 @@ MonoBehaviour:
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
+  m_IgnoreNavMeshObstacle: 0
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Default
   m_EditorClassIdentifier: 
   enemyType: 0
-  enemyName: Default
-  seeRange: 5
+  enemyName: Warrior
+  seeRange: 7
   attackRange: 2
-  speed: 1.5
+  speed: 2.5
   damage: 10
   attackCooldown: 2

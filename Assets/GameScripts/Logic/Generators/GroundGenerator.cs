@@ -65,7 +65,15 @@ namespace GameScripts.Logic.Generators
 					var tile = obj.GetComponent<Tile>();
 					_spawnedTiles.Add(tile);
 					obj.parent = _landFolder;
-					if (Random.Range(0, 10) == 0) obj.GetComponentsInChildren<Collider>()[0].enabled = true;
+					if (tile.HaveCursedObject)
+					{
+						if (Random.Range(0, 10) == 0)
+						{
+							var curseObj = obj.GetComponentInChildren<TestCurseObject>();
+							curseObj.Enable(true);
+							curseObj.CurseType = GetRandomCurseType();
+						}
+					}
 					posX+=tileStep;
 				}
 				posZ+=tileStep;
@@ -94,6 +102,13 @@ namespace GameScripts.Logic.Generators
 				enemy.GetComponent<EnemyAI>().SetPlayer(player);
 				_tilesWithSpawn.Remove(spawnTile);
 			}
+		}
+
+		private readonly CurseType[] _curseTypes = { CurseType.Health, CurseType.Stamina };
+		private CurseType GetRandomCurseType()
+		{
+			var random = Random.Range(0, 101);
+			return _curseTypes[random % _curseTypes.Length];
 		}
 	}
 }

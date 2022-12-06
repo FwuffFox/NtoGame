@@ -10,17 +10,24 @@ namespace GameScripts.Logic
     [RequireComponent(typeof(Collider))]
     public class TestCurseObject : MonoBehaviour 
     {
+        [SerializeField] private bool _isEnabled;
         [SerializeField] private float curseCooldown;
-        [SerializeField] private Collider _collider;
-        public CurseType CurseType;
+        [SerializeReadOnly] public CurseType CurseType;
         [SerializeField] private GameObject cleanseItem;
         [SerializeReadOnly, SerializeField] private bool canCurse = true;
         [SerializeField] private float afterCleanseCooldown;
         [SerializeReadOnly, SerializeField] private bool cleansedRecently;
         [SerializeReadOnly, SerializeField] private bool isCleanseSpawned;
+        [SerializeField] private GameObject curseObjectMask;
 
+        public void Enable(bool isTrue) 
+        {
+            _isEnabled = isTrue;
+        }
+        
         private void OnTriggerEnter(Collider other)
         {
+            if (!_isEnabled) return;
             if (cleansedRecently) return;
             if (isCleanseSpawned) return;
             var myPos = transform.position;
@@ -33,11 +40,14 @@ namespace GameScripts.Logic
 
         private void OnTriggerStay(Collider other)
         {
+            if (!_isEnabled) return;
             if (cleansedRecently) return;
+            if (!isCleanseSpawned) OnTriggerEnter(other);
             var myPos = transform.position;
             Debug.DrawLine(myPos, other.transform.position, Color.red, 0.1f);
             if (!canCurse) return;
             if (!other.TryGetComponent(out PlayerCurseSystem curseSystem)) return;
+            curseObjectMask.SetActive(true);
             curseSystem.AddStack(CurseType);
             StartCoroutine(Cooldown());
         }
@@ -53,6 +63,7 @@ namespace GameScripts.Logic
         {
             isCleanseSpawned = false;
             StartCoroutine(CleanseCooldown());
+            curseObjectMask.SetActive(false);
         }
 
         private IEnumerator CleanseCooldown()
@@ -64,7 +75,7 @@ namespace GameScripts.Logic
 
         private void OnDrawGizmos()
         {
-            if (_collider.enabled == false) return;
+            if (!_isEnabled) return;
             Gizmos.color = Color.red;
             Gizmos.DrawSphere(transform.position + Vector3.up * 5, 1);
         }
