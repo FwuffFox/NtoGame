@@ -23,7 +23,8 @@ namespace GameScripts.Logic.Generators
 		private List<Tile> _tilesWithSpawn;
 		private float posX=0.0f;
 		private float posZ=0.0f;
-
+		private int tileNumber;
+		
 		[SerializeField] private NavMeshSurface _navMeshSurface;
 		private int _trapsCount;
 		private int _unitsCount;
@@ -60,7 +61,9 @@ namespace GameScripts.Logic.Generators
 			{
 				for (int h = 0;h < _mapSize; h++) 
 				{
-					var obj = Instantiate(tiles[Random.Range(0, tiles.Count)].transform, new Vector3(posX, 0, posZ),
+					if (w==0&&h==0) tileNumber=0; //1 тайл-всегда обычный
+					else tileNumber=Random.Range(0,tiles.Count);
+					var obj = Instantiate(tiles[tileNumber].transform, new Vector3(posX, 0, posZ),
 						Quaternion.Euler(-90, 0, 0));
 					var tile = obj.GetComponent<Tile>();
 					_spawnedTiles.Add(tile);
