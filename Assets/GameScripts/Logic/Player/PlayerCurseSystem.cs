@@ -17,6 +17,7 @@ namespace GameScripts.Logic.Player
             { CurseType.Health, StaticData.Curses.HealthCurse },
             { CurseType.Stamina, StaticData.Curses.StaminaCurse }
         };
+        public Dictionary<CurseType, StackableCurse> Curses => _curses;
 
         private void Start()
         {

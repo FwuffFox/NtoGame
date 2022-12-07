@@ -17,6 +17,7 @@ namespace GameScripts.Logic.UI.InGame
             {
                 var curse = stackableCurse.Value;
                 if (curse.CurrentStacks == 0) continue;
+                if (curse.ShouldBeUnVisibleUi) continue;
                 _text.text += $"{stackableCurse.Key.CurseTypeToString()}: {curse.CurrentStacks}/{curse.MaxStacks}\n";
             }
         }

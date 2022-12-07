@@ -22,6 +22,9 @@ namespace GameScripts.Logic
         [SerializeReadOnly, SerializeField] private bool isCleanseSpawned;
         [SerializeField] private GameObject curseObjectMask;
 
+
+        private TestCleanseObject _cleanseObj;
+
         public void Enable(bool isTrue) 
         {
             _isEnabled = isTrue;
@@ -33,11 +36,15 @@ namespace GameScripts.Logic
             if (!_isEnabled) return;
             if (cleansedRecently) return;
             if (isCleanseSpawned) return;
+            if (!other.TryGetComponent(out PlayerCurseSystem curseSystem)) return;
+            if (curseSystem.Curses[CurseType].IsMaxed) return;
             var myPos = transform.position;
             var playerPos = other.transform.position;
             var oppositeVector = new Vector3(myPos.x - (playerPos.x - myPos.x), myPos.y, myPos.z - (playerPos.z - myPos.z));
-            var cleanse = Instantiate(cleanseItem, oppositeVector, Quaternion.identity, transform);
-            cleanse.GetComponent<TestCleanseObject>().SetParentCurseObject(this);
+            var obj = Instantiate(cleanseItem, oppositeVector, Quaternion.identity, transform);
+            var cleanse = obj.GetComponent<TestCleanseObject>();
+            cleanse.SetParentCurseObject(this);
+            _cleanseObj = cleanse;
             isCleanseSpawned = true;
         }
 
@@ -50,7 +57,22 @@ namespace GameScripts.Logic
             Debug.DrawLine(myPos, other.transform.position, Color.red, 0.1f);
             if (!canCurse) return;
             if (!other.TryGetComponent(out PlayerCurseSystem curseSystem)) return;
-            curseObjectMask.SetActive(true);
+            if (curseSystem.Curses[CurseType].IsLastStack && isCleanseSpawned) {
+                _cleanseObj.DestroyMe();
+                isCleanseSpawned = false;
+                Enable(false);
+            }
+            if (!curseSystem.Curses[CurseType].ShouldBeUnVisible && isCleanseSpawned)
+            {
+                curseObjectMask.SetActive(true);
+                _cleanseObj.EnableMask(true);
+            }
+            else if (isCleanseSpawned)
+            {
+                curseObjectMask.SetActive(false);
+                _cleanseObj.EnableMask(false);
+            }
+            
             curseSystem.AddStack(CurseType);
             StartCoroutine(Cooldown());
         }
