@@ -6,9 +6,9 @@ namespace GameScripts.Logic
 {
     public class TestCleanseObject : MonoBehaviour
     {
-        private TestCurseObject _curseObject;
+        private CurseObject _curseObject;
 
-        public void SetParentCurseObject(TestCurseObject curseObject)
+        public void SetParentCurseObject(CurseObject curseObject)
         {
             _curseObject = curseObject;
         }

@@ -7,9 +7,11 @@ using UnityEngine;
 
 namespace GameScripts.Logic
 {
-    [RequireComponent(typeof(Collider))]
-    public class TestCurseObject : MonoBehaviour 
+    [RequireComponent(typeof(SphereCollider))]
+    public class CurseObject : MonoBehaviour
     {
+        [SerializeField] private SphereCollider _collider;
+        [SerializeField] private CurseObjectMover _curseObjectMover;
         [SerializeField] private bool _isEnabled;
         [SerializeField] private float curseCooldown;
         [SerializeReadOnly] public CurseType CurseType;
@@ -23,6 +25,7 @@ namespace GameScripts.Logic
         public void Enable(bool isTrue) 
         {
             _isEnabled = isTrue;
+            _curseObjectMover.Enable(isTrue);
         }
         
         private void OnTriggerEnter(Collider other)
@@ -76,8 +79,10 @@ namespace GameScripts.Logic
         private void OnDrawGizmos()
         {
             if (!_isEnabled) return;
-            Gizmos.color = Color.red;
-            Gizmos.DrawSphere(transform.position + Vector3.up * 5, 1);
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(transform.position, _collider.radius * transform.lossyScale.x);
+            Gizmos.color = Color.blue;
+            Gizmos.DrawCube(transform.position + Vector3.up * 5, Vector3.one);
         }
     }
 }
