@@ -954,6 +954,7 @@ MonoBehaviour:
   _attackCooldown: 0.6
   _attackRange: 6
   model: {fileID: 2623816353093435570}
+  _playerAnimator: {fileID: 1801820715673411265}
 --- !u!1 &3564145182107553972
 GameObject:
   m_ObjectHideFlags: 0
