@@ -61,7 +61,7 @@ namespace GameScripts.Logic.Generators
 			{
 				for (int h = 0;h < _mapSize; h++) 
 				{
-					if (w==0&&h==0) tileNumber=0; //1 тайл-всегда обычный
+					if (w==0&&h==0||w==_mapSize-1&&h==_mapSize-1) tileNumber=0; //1 тайл-всегда обычный
 					else tileNumber=Random.Range(0,tiles.Count);
 					var obj = Instantiate(tiles[tileNumber].transform, new Vector3(posX, 0, posZ),
 						Quaternion.Euler(-90, 0, 0));
