@@ -16,5 +16,14 @@ namespace GameScripts.StaticData.ScriptableObjects
         public int trapsCount;
 
         public int unitCount;
+        
+        [Serializable]
+        public struct LevelCurses
+        {
+            public CurseType Type;
+            public int Amount;
+        }
+
+        [Space] public LevelCurses[] Curses;
     }
 }

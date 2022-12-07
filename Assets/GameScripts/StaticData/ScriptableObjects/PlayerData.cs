@@ -36,5 +36,15 @@ namespace GameScripts.StaticData.ScriptableObjects
         }
         [Space]
         public Stamina stamina;
+
+        [Serializable]
+        public struct Attack
+        {
+            public int Damage;
+            public float AttackCooldown;
+            public float AttackRange;
+        }
+
+        [Space] public Attack attack = new() { Damage = 35, AttackCooldown = 0.6f, AttackRange = 2f };
     }
 }

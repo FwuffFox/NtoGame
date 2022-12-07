@@ -17,3 +17,10 @@ MonoBehaviour:
   mapSize: 40
   trapsCount: 10
   unitCount: 10
+  Curses:
+  - Type: 0
+    Amount: 5
+  - Type: 1
+    Amount: 10
+  - Type: 2
+    Amount: 3

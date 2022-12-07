@@ -46,10 +46,14 @@ namespace GameScripts.Services.Factories
                     var health = player.GetComponent<PlayerHealth>()
                         .With(x => x.SetProperties(playerData));
 
+                    var attack = player.GetComponent<PlayerAttack>()
+                        .With(x => x.SetProperties(playerData));
+
                     var animator = player.GetComponent<PlayerAnimator>()
                         .With(x => health.OnPlayerDeath += x.SetDeath)
                         .With(x => movement.OnMovementSpeedChange += x.SetSpeed)
-                        .With(x => movement.OnIsRunningChange += x.SetIsRunning);
+                        .With(x => movement.OnIsRunningChange += x.SetIsRunning)
+                        .With(x => attack.OnAttack += x.SetAttack);
                     
                 });
         }
@@ -86,7 +90,8 @@ namespace GameScripts.Services.Factories
         public GameObject InstantiateTrap(Vector3 position)
         {
             _trapParent ??= new GameObject(ParentObjects.Traps).transform;
-            return _assetProvider.Instantiate(PrefabPaths.BearTrap, position, _trapParent);
+            return _assetProvider.Instantiate(PrefabPaths.BearTrap, position, _trapParent)
+                .With(trap => trap.name = "BearTrap");
         }
 
         public GameObject InstantiateMapGenerator(string sceneName)

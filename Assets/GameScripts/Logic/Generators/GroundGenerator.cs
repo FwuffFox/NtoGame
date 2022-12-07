@@ -15,15 +15,17 @@ namespace GameScripts.Logic.Generators
 	public class GroundGenerator : MonoBehaviour
 	{
 		private int _mapSize;
+		private LevelData.LevelCurses[] _curses;
 		[SerializeField]
 		private float tileStep=3.16f;
 		[SerializeField]
 		private List<Tile> tiles;
 		private readonly List<Tile> _spawnedTiles = new();
+		private readonly List<CurseObject> _curseObjects = new();
 		private List<Tile> _tilesWithSpawn;
-		private float posX=0.0f;
-		private float posZ=0.0f;
-		private int tileNumber;
+		private float _posX;
+		private float _posZ;
+		private int _tileNumber;
 		
 		[SerializeField] private NavMeshSurface _navMeshSurface;
 		private int _trapsCount;
@@ -44,6 +46,7 @@ namespace GameScripts.Logic.Generators
 			_mapSize = data.mapSize;
 			_trapsCount = data.trapsCount;
 			_unitsCount = data.unitCount;
+			_curses = data.Curses;
 		}
 		
 		public void GenerateMapAndTraps()
@@ -52,35 +55,31 @@ namespace GameScripts.Logic.Generators
 			GenerateMap();
 			_tilesWithSpawn = _spawnedTiles.Where(tile => tile.HaveSpawnPoint).ToList();
 			PlaceTraps();
+			PlaceCursedObjects();
 			_navMeshSurface.BuildNavMesh();
 		}
-	
+
 		private void GenerateMap() 
 		{
 			for (int w = 0; w < _mapSize; w++) 
 			{
 				for (int h = 0;h < _mapSize; h++) 
 				{
-					if (w==0&&h==0||w==_mapSize-1&&h==_mapSize-1) tileNumber=0; //1 тайл-всегда обычный
-					else tileNumber=Random.Range(0,tiles.Count);
-					var obj = Instantiate(tiles[tileNumber].transform, new Vector3(posX, 0, posZ),
+					if (w==0&&h==0||w==_mapSize-1&&h==_mapSize-1) _tileNumber=0; //1 тайл-всегда обычный
+					else _tileNumber=Random.Range(0,tiles.Count);
+					var obj = Instantiate(tiles[_tileNumber].transform, new Vector3(_posX, 0, _posZ),
 						Quaternion.Euler(-90, 0, 0));
 					var tile = obj.GetComponent<Tile>();
 					_spawnedTiles.Add(tile);
 					obj.parent = _landFolder;
 					if (tile.HaveCursedObject)
 					{
-						if (Random.Range(0, 10) == 0)
-						{
-							var curseObj = obj.GetComponentInChildren<CurseObject>();
-							curseObj.Enable(true);
-							curseObj.CurseType = GetRandomCurseType();
-						}
+						_curseObjects.Add(obj.GetComponentInChildren<CurseObject>());
 					}
-					posX+=tileStep;
+					_posX+=tileStep;
 				}
-				posZ+=tileStep;
-				posX=0;
+				_posZ+=tileStep;
+				_posX=0;
 			}
 		}
 
@@ -106,12 +105,24 @@ namespace GameScripts.Logic.Generators
 				_tilesWithSpawn.Remove(spawnTile);
 			}
 		}
-
-		private readonly CurseType[] _curseTypes = { CurseType.Health, CurseType.Stamina };
-		private CurseType GetRandomCurseType()
+		
+		private void PlaceCursedObjects()
 		{
-			var random = Random.Range(0, 101);
-			return _curseTypes[random % _curseTypes.Length];
+			foreach (var levelCurse in _curses)
+			{
+				for (int i = 0; i < levelCurse.Amount; i++)
+				{
+					if (_curseObjects.Count == 0)
+					{
+						Debug.LogError("Not enough curse objects to place all curses");
+						return;
+					}
+					var cursedObj = _curseObjects[Random.Range(0, _curseObjects.Count)];
+					cursedObj.Enable(true);
+					cursedObj.CurseType = levelCurse.Type;
+					_curseObjects.Remove(cursedObj);
+				}
+			}
 		}
 	}
 }
