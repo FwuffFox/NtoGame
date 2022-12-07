@@ -9,7 +9,10 @@ namespace GameScripts.Logic.Enemy
     {
         private GameObject _player;
         private PlayerHealth _playerHealth;
-
+		[SerializeField] private int _health=100;
+		private bool _died=false;
+		
+		[SerializeField] private EnemyAnimator enemyAnimator;
         [SerializeField] private EnemyMover enemyMover;
         [SerializeField] private EnemyAttacker enemyAttacker;
 
@@ -18,6 +21,15 @@ namespace GameScripts.Logic.Enemy
         private float _seeRange;
         private float _attackRange;
 
+		public void SetDamage(int damage) {
+			_health-=damage;
+			if (_health<=0&&!_died) {
+				//умер
+				_died=true;
+				enemyAnimator.SetDeath();
+			}
+		}
+		
         public void SetPlayer(GameObject player)
         {
             _player = player;
@@ -32,14 +44,16 @@ namespace GameScripts.Logic.Enemy
 
         public void Update()
         {
-            var position = transform.position;
-            var canSeePlayer = Physics.CheckSphere(position, _seeRange, playerMask);
-            if (!canSeePlayer) return;
-            //var isSomethingInTheWay = Physics.Linecast(_raycaster.position, _player.transform.position);
-            //if (isSomethingInTheWay) return;
-            var canAttackPlayer = Physics.CheckSphere(position, _attackRange, playerMask);
-            if (canAttackPlayer) enemyAttacker.AttackPlayer(_playerHealth);
-            else enemyMover.Follow(_player);
+			if (!_died) {
+				var position = transform.position;
+				var canSeePlayer = Physics.CheckSphere(position, _seeRange, playerMask);
+				if (!canSeePlayer) return;
+				//var isSomethingInTheWay = Physics.Linecast(_raycaster.position, _player.transform.position);
+				//if (isSomethingInTheWay) return;
+				var canAttackPlayer = Physics.CheckSphere(position, _attackRange, playerMask);
+				if (canAttackPlayer) enemyAttacker.AttackPlayer(_playerHealth);
+				else enemyMover.Follow(_player);
+			}
         }
         
         private void OnDrawGizmos()
