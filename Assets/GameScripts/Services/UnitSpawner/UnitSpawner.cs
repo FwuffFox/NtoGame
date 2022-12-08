@@ -39,9 +39,9 @@ namespace GameScripts.Services.UnitSpawner
             return trap;
         }
 
-        public GameObject SpawnFireplace(Vector3 pos, bool isFinal)
+        public GameObject SpawnFireplace(Vector3 pos, FireplaceType type)
         {
-            var fireplace = _prefabFactory.InstantiateFireplace(pos, isFinal);
+            var fireplace = _prefabFactory.InstantiateFireplace(pos, type);
             fireplace.transform.rotation = Quaternion.Euler(-70.524f, 1.212f, -1.714f); 
             Fireplaces.Add(fireplace);
             return fireplace;

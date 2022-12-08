@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using GameScripts.Extensions;
@@ -9,6 +10,7 @@ using GameScripts.StaticData.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.AI;
 using Zenject;
+using Random = UnityEngine.Random;
 
 namespace GameScripts.Logic.Generators
 {
@@ -16,17 +18,15 @@ namespace GameScripts.Logic.Generators
 	{
 		private int _mapSize;
 		private LevelData.LevelCurses[] _curses;
-		[SerializeField]
-		private float tileStep=3.16f;
-		[SerializeField]
-		private List<Tile> tiles;
+		private const float TileStep = 3.16f;
+		private List<Tile> _tiles = new();
 		private readonly List<Tile> _spawnedTiles = new();
 		private readonly List<CurseObject> _curseObjects = new();
 		private List<Tile> _tilesWithSpawn;
 		private float _posX;
 		private float _posZ;
-		private int _tileNumber;
-		
+		private LevelData.XZCoord[] _coords;
+
 		[SerializeField] private NavMeshSurface _navMeshSurface;
 		private int _trapsCount;
 		private int _unitsCount;
@@ -47,6 +47,12 @@ namespace GameScripts.Logic.Generators
 			_trapsCount = data.trapsCount;
 			_unitsCount = data.unitCount;
 			_curses = data.Curses;
+			foreach (var tileWithPower in data.GeneratorTiles)
+			{
+				for (int i = 0; i < tileWithPower.Power; i++)
+					_tiles.Add(tileWithPower.Tile);
+			}
+			_coords = data.CheckpointsCoors;
 		}
 		
 		public void GenerateMapAndTraps()
@@ -63,24 +69,30 @@ namespace GameScripts.Logic.Generators
 		{
 			for (int w = 0; w < _mapSize; w++) 
 			{
-				for (int h = 0;h < _mapSize; h++) 
+				for (int h = 0;h < _mapSize; h++)
 				{
-					if (w == 0 && h == 0 || w == _mapSize - 1 && h == _mapSize - 1)
+					int tileNumber;
+					if (w == 0 && h == 0 || w == _mapSize - 1 && h == _mapSize - 1 || _coords.Contains(new LevelData.XZCoord { X = w, Z = h }))
 					{
-						_tileNumber=0; //1 тайл-всегда обычный
+						tileNumber = 0;
 					}
-					else _tileNumber=Random.Range(0,tiles.Count);
-					var obj = Instantiate(tiles[_tileNumber].transform, new Vector3(_posX, 0, _posZ),
+					else tileNumber=Random.Range(0,_tiles.Count);
+					var obj = Instantiate(_tiles[tileNumber].transform, new Vector3(_posX, 0, _posZ),
 						Quaternion.Euler(-90, 0, 0));
 					var tile = obj.GetComponent<Tile>();
 					if (w == 0 && h == 0)
 					{
-						_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, false);
+						_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, FireplaceType.Start);
 						tile.HaveSpawnPoint = false;
 					}
 					else if (w == _mapSize - 1 && h == _mapSize - 1)
 					{
-						_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, true);
+						_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, FireplaceType.Final);
+						tile.HaveSpawnPoint = false;
+					}
+					else if (_coords.Contains(new LevelData.XZCoord { X = w, Z = h }))
+					{
+						_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, FireplaceType.Checkpoint);
 						tile.HaveSpawnPoint = false;
 					}
 					_spawnedTiles.Add(tile);
@@ -89,9 +101,9 @@ namespace GameScripts.Logic.Generators
 					{
 						_curseObjects.Add(obj.GetComponentInChildren<CurseObject>());
 					}
-					_posX+=tileStep;
+					_posX+=TileStep;
 				}
-				_posZ+=tileStep;
+				_posZ+=TileStep;
 				_posX=0;
 			}
 		}

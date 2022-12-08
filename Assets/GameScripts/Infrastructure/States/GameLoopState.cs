@@ -43,7 +43,9 @@ namespace GameScripts.Infrastructure.States
             _player.GetComponent<PlayerHealth>().OnPlayerDeath += ManagePlayerDeath;
             _player.GetComponent<PlayerRotator>().canRotate = true;
             _fireplaces = _unitSpawner.Fireplaces.Select(f => f.GetComponent<Fireplace>()).ToList();
-            _fireplaces.First(f => f.IsFinal).OnFinalCampfireReached += () => _gameStateMachine.Enter<MenuState>();
+            _fireplaces
+                .First(f => f.Type == FireplaceType.Final)
+                .OnFinalCampfireReached += () => _gameStateMachine.Enter<MenuState>();
         }
         
         public void Exit()

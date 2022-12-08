@@ -9,14 +9,14 @@ public class Fireplace : MonoBehaviour
     [SerializeField] private ParticleSystem _particle;
 
     private bool _particleIsPlayed;
-    public bool IsFinal;
+    public FireplaceType Type;
     public Action OnFinalCampfireReached;
-    
+
 
     private void OnTriggerEnter(Collider other)
     {
         if (!IsPlayer(other)) return;
-        if (IsFinal) StartCoroutine(OnFinalReach());
+        if (Type == FireplaceType.Final) StartCoroutine(OnFinalReach());
         _particleIsPlayed = true;
         print("Play");
         _particle.Play();
@@ -50,4 +50,11 @@ public class Fireplace : MonoBehaviour
     {
         return collider.TryGetComponent<PlayerMovement>(out _);
     }
+}
+
+public enum FireplaceType
+{
+    Start,
+    Checkpoint,
+    Final
 }

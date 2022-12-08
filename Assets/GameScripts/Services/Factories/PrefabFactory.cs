@@ -106,14 +106,14 @@ namespace GameScripts.Services.Factories
                 });
         }
 
-        public GameObject InstantiateFireplace(Vector3 position, bool isFinal)
+        public GameObject InstantiateFireplace(Vector3 position, FireplaceType type)
         {
             return _assetProvider.Instantiate(PrefabPaths.Fireplace, position)
                 .With(fireplace =>
                 {
                     _diContainer.InjectGameObject(fireplace);
 
-                    fireplace.GetComponent<Fireplace>().IsFinal = isFinal;
+                    fireplace.GetComponent<Fireplace>().Type = type;
                 });
         }
 

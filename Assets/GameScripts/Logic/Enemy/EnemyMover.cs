@@ -28,6 +28,8 @@ namespace GameScripts.Logic.Enemy
         
         public void Stop()
         {
+            _navMeshAgent.speed = 0;
+            OnSpeedChange?.Invoke(0);
             _navMeshAgent.isStopped = true;
         }
     }

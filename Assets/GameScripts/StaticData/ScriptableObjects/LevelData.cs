@@ -1,4 +1,5 @@
 ﻿using System;
+using GameScripts.Logic.Tiles;
 using GameScripts.StaticData.Enums;
 using UnityEngine;
 
@@ -25,5 +26,22 @@ namespace GameScripts.StaticData.ScriptableObjects
         }
 
         [Space] public LevelCurses[] Curses;
+
+        [Serializable]
+        public struct TileWithPower
+        {
+            public Tile Tile;
+            public int Power;
+        }
+        [Space] public TileWithPower[] GeneratorTiles;
+
+        [Serializable]
+        public struct XZCoord
+        {
+            public int X;
+            public int Z;
+        }
+
+        [Space] public XZCoord[] CheckpointsCoors;
     }
 }
