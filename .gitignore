@@ -58,3 +58,10 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+## Manually Added
+
+# ignore JetBrains generated files
+/.idea/
+
+# ignore UserSettings
+/[Uu]serSettings/
