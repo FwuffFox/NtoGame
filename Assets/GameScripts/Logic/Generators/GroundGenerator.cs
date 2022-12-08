@@ -65,11 +65,24 @@ namespace GameScripts.Logic.Generators
 			{
 				for (int h = 0;h < _mapSize; h++) 
 				{
-					if (w==0&&h==0||w==_mapSize-1&&h==_mapSize-1) _tileNumber=0; //1 тайл-всегда обычный
+					if (w == 0 && h == 0 || w == _mapSize - 1 && h == _mapSize - 1)
+					{
+						_tileNumber=0; //1 тайл-всегда обычный
+					}
 					else _tileNumber=Random.Range(0,tiles.Count);
 					var obj = Instantiate(tiles[_tileNumber].transform, new Vector3(_posX, 0, _posZ),
 						Quaternion.Euler(-90, 0, 0));
 					var tile = obj.GetComponent<Tile>();
+					if (w == 0 && h == 0)
+					{
+						_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, false);
+						tile.HaveSpawnPoint = false;
+					}
+					else if (w == _mapSize - 1 && h == _mapSize - 1)
+					{
+						_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, true);
+						tile.HaveSpawnPoint = false;
+					}
 					_spawnedTiles.Add(tile);
 					obj.parent = _landFolder;
 					if (tile.HaveCursedObject)
@@ -90,6 +103,7 @@ namespace GameScripts.Logic.Generators
 				if (_tilesWithSpawn.Count == 0) break;
 				var spawnTile = _tilesWithSpawn[Random.Range(0, _tilesWithSpawn.Count)];
 				_unitSpawner.SpawnTrap(spawnTile.SpawnPoint.position);
+				spawnTile.HaveSpawnPoint = false;
 				_tilesWithSpawn.Remove(spawnTile);
 			}
 		}

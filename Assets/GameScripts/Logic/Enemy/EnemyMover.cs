@@ -2,13 +2,14 @@
 using GameScripts.StaticData.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 
 namespace GameScripts.Logic.Enemy
 {
     [RequireComponent(typeof(NavMeshAgent))]
     public class EnemyMover : MonoBehaviour
     {
-        [SerializeField] private NavMeshAgent navMeshAgent;
+        [FormerlySerializedAs("navMeshAgent")] [SerializeField] private NavMeshAgent _navMeshAgent;
         public Action<float> OnSpeedChange;
         private float _speed;
 
@@ -19,9 +20,15 @@ namespace GameScripts.Logic.Enemy
 
         public void Follow(GameObject obj)
         {
-            navMeshAgent.speed = _speed;
+            _navMeshAgent.isStopped = false;
+            _navMeshAgent.speed = _speed;
             OnSpeedChange?.Invoke(_speed);
-            navMeshAgent.SetDestination(obj.transform.position);
+            _navMeshAgent.SetDestination(obj.transform.position);
+        }
+        
+        public void Stop()
+        {
+            _navMeshAgent.isStopped = true;
         }
     }
 }

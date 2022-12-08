@@ -13,6 +13,8 @@ namespace GameScripts.Services.UnitSpawner
         public List<GameObject> Enemies { get; private set; } = new();
         public List<GameObject> Traps { get; private set; } = new();
 
+        public List<GameObject> Fireplaces { get; private set; } = new();
+
         public UnitSpawner(IPrefabFactory prefabFactory)
         {
             _prefabFactory = prefabFactory;
@@ -36,7 +38,14 @@ namespace GameScripts.Services.UnitSpawner
             Traps.Add(trap);
             return trap;
         }
-		
+
+        public GameObject SpawnFireplace(Vector3 pos, bool isFinal)
+        {
+            var fireplace = _prefabFactory.InstantiateFireplace(pos, isFinal);
+            fireplace.transform.rotation = Quaternion.Euler(-70.524f, 1.212f, -1.714f); 
+            Fireplaces.Add(fireplace);
+            return fireplace;
+        }
 		public GameObject SpawnEnemy(Vector3 enemyPosition)
         {
             var enemy = _prefabFactory.InstantiateEnemy(enemyPosition,0);

@@ -27,5 +27,6 @@ namespace GameScripts.StaticData.Constants
         public const string Player = "Units/Player";
         public const string BearTrap = "Traps/BearTrap";
         public const string MapGenerator = "Generators/MapGenerator";
+        public const string Fireplace = "Fireplace/Fireplace";
     }
 }

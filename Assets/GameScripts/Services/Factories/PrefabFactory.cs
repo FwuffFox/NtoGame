@@ -105,7 +105,18 @@ namespace GameScripts.Services.Factories
                     gen.GetComponent<GroundGenerator>().With(x => x.SetProperties(levelData));
                 });
         }
-            
+
+        public GameObject InstantiateFireplace(Vector3 position, bool isFinal)
+        {
+            return _assetProvider.Instantiate(PrefabPaths.Fireplace, position)
+                .With(fireplace =>
+                {
+                    _diContainer.InjectGameObject(fireplace);
+
+                    fireplace.GetComponent<Fireplace>().IsFinal = isFinal;
+                });
+        }
+
         public GameObject InstantiateUI<TState>() where TState : class, IStateWithExit =>
             _assetProvider.Instantiate(PrefabPaths.UIs[typeof(TState)])
                 .With(ui => _diContainer.InjectGameObject(ui));

@@ -861,7 +861,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 96
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!65 &7303279414703947877
 BoxCollider:
@@ -938,6 +938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerHealth: {fileID: 5076391165056853385}
   _playerMovement: {fileID: 8427430536715291764}
+  _playerAttack: {fileID: 0}
 --- !u!114 &7002836884501173190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -950,11 +951,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8242ae6305fd00e4eae6ccae5998e8e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 35
-  _attackCooldown: 0.6
+  <Damage>k__BackingField: 0
+  _canAttack: 1
+  <AttackCooldown>k__BackingField: 0
   _attackRange: 6
   model: {fileID: 2623816353093435570}
-  _playerAnimator: {fileID: 1801820715673411265}
 --- !u!1 &3564145182107553972
 GameObject:
   m_ObjectHideFlags: 0
