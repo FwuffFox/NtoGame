@@ -10,6 +10,7 @@ namespace GameScripts.Services.Factories
         GameObject InstantiateEnemy(Vector3 position, EnemyType enemyType);
         GameObject InstantiateTrap(Vector3 position);
         GameObject InstantiateMapGenerator(string sceneName);
+        GameObject InstantiateFireplace(Vector3 position, FireplaceType type);
         GameObject InstantiateUI<TState>() where TState : class, IStateWithExit;
     }
 }

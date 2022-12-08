@@ -1,5 +1,4 @@
 ﻿using GameScripts.Logic.Camera;
-using GameScripts.Logic.Enemy;
 using GameScripts.Logic.Generators;
 using GameScripts.Logic.Player;
 using GameScripts.Logic.UI.InGame;
@@ -10,7 +9,6 @@ using GameScripts.Services.Unity;
 using GameScripts.StaticData;
 using GameScripts.StaticData.ScriptableObjects;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 using Zenject;
 
@@ -67,6 +65,13 @@ namespace GameScripts.Infrastructure.States
             {
                 p.GetComponent<PlayerMovement>().Speed -= 1;
                 Debug.Log("Max stack on stamina curse");
+                return true;
+            }, player);
+            
+            Curses.DamageCurse.SetOnMaxStacksFunction(p =>
+            {
+                p.GetComponent<PlayerAttack>().AttackCooldown *= 2;
+                Debug.Log("Max stack on damage curse");
                 return true;
             }, player);
             
