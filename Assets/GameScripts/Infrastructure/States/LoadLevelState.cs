@@ -58,7 +58,7 @@ namespace GameScripts.Infrastructure.States
             generator.PlaceUnits(player);
             Curses.HealthCurse.SetOnMaxStacksFunction(p =>
             {
-                p.GetComponent<PlayerHealth>().GetDamage(999);
+                p.GetComponent<PlayerHealth>().MaxHealth = 1;
                 Debug.Log("Max stack on health curse");
                 return true;
             }, player);

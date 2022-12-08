@@ -72,7 +72,7 @@ namespace GameScripts.Logic.Generators
 					{
 						if (Random.Range(0, 10) == 0)
 						{
-							var curseObj = obj.GetComponentInChildren<TestCurseObject>();
+							var curseObj = obj.GetComponentInChildren<CurseObject>();
 							curseObj.Enable(true);
 							curseObj.CurseType = GetRandomCurseType();
 						}

@@ -1,5 +1,68 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &529902441546232264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1250979396391206855}
+  - component: {fileID: 1332469160004365687}
+  - component: {fileID: 3995974668857805245}
+  m_Layer: 0
+  m_Name: CurseObjectMover
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1250979396391206855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529902441546232264}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8491043298556544702}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1332469160004365687
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529902441546232264}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3995974668857805245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529902441546232264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0316783c4d1e418d8cc1212ba16c9c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveRadius: 5
+  _moveCooldown: 10
+  _canMove: 1
+  _collider: {fileID: 4184730793209568111}
+  _isEnable: 0
 --- !u!1 &7287623845247092375
 GameObject:
   m_ObjectHideFlags: 0
@@ -29,7 +92,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1250979396391206855}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -44,7 +108,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1389643445531733207
 MonoBehaviour:
@@ -58,8 +122,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8f57579a5374038a9629ecd8882b5e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curseCooldown: 1
   _collider: {fileID: 4184730793209568111}
+  _curseObjectMover: {fileID: 3995974668857805245}
+  _isEnabled: 0
+  curseCooldown: 1
   CurseType: 0
   cleanseItem: {fileID: 488002473797756275, guid: eb40521fe2e09a3459e383f4a699f9ae,
     type: 3}
@@ -67,3 +133,4 @@ MonoBehaviour:
   afterCleanseCooldown: 30
   cleansedRecently: 0
   isCleanseSpawned: 0
+  curseObjectMask: {fileID: 0}

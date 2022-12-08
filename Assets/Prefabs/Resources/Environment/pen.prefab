@@ -205,11 +205,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5953796529744134301}
     m_Modifications:
+    - target: {fileID: 1250979396391206855, guid: 1b44532bc904fab41bc64d77816ef1b1,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332469160004365687, guid: 1b44532bc904fab41bc64d77816ef1b1,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389643445531733207, guid: 1b44532bc904fab41bc64d77816ef1b1,
+        type: 3}
+      propertyPath: _isEnabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1389643445531733207, guid: 1b44532bc904fab41bc64d77816ef1b1,
         type: 3}
       propertyPath: curseObjectMask
       value: 
       objectReference: {fileID: 8722390926015836378}
+    - target: {fileID: 4184730793209568111, guid: 1b44532bc904fab41bc64d77816ef1b1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184730793209568111, guid: 1b44532bc904fab41bc64d77816ef1b1,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7287623845247092375, guid: 1b44532bc904fab41bc64d77816ef1b1,
         type: 3}
       propertyPath: m_Name

@@ -13,6 +13,11 @@ namespace GameScripts.Logic.Curses
         public int CurrentStacks;
         public float CurseValuePerStack;
 
+        public bool ShouldBeUnVisible => CurrentStacks >= MaxStacks / 2;
+        public bool ShouldBeUnVisibleUi => IsMaxed;
+        public bool IsMaxed => CurrentStacks == MaxStacks;
+        public bool IsLastStack => MaxStacks - CurrentStacks == 1;
+
         private Func<GameObject, bool> _onMaxStacks;
         private GameObject _obj;
 
