@@ -9,6 +9,7 @@ namespace GameScripts.Logic.Traps
     public class BearTrap : MonoBehaviour
     {
         [SerializeField] private AudioSource _bearTrapSound;
+        [SerializeField] private Animator _animator;
         
         [Serializable]
         private struct Bleeding
@@ -27,6 +28,7 @@ namespace GameScripts.Logic.Traps
         }
 
         [SerializeField] private SpeedDebuff _speedDebuff;
+        private static readonly int Close = Animator.StringToHash("Close");
 
         private void OnTriggerEnter(Collider other)
         {
@@ -34,9 +36,9 @@ namespace GameScripts.Logic.Traps
             var debuffer = other.gameObject.GetComponent<PlayerDebuffSystem>();
             ApplyDebuffs(debuffer);
             _bearTrapSound.Play();
-            Destroy(GetComponentInParent<MeshRenderer>());
             playerHealth.GetDamage(10);
-            Destroy(gameObject);
+            _animator.SetTrigger(Close);
+            Destroy(gameObject); // DELETE COLLIDER
         }
 
         private void ApplyDebuffs(PlayerDebuffSystem player)

@@ -939,7 +939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerHealth: {fileID: 5076391165056853385}
   _playerMovement: {fileID: 8427430536715291764}
-  _playerAttack: {fileID: 0}
+  _playerAttack: {fileID: 7002836884501173190}
 --- !u!114 &7002836884501173190
 MonoBehaviour:
   m_ObjectHideFlags: 0

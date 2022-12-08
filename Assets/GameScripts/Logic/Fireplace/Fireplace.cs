@@ -17,6 +17,11 @@ public class Fireplace : MonoBehaviour
     {
         if (!IsPlayer(other)) return;
         if (Type == FireplaceType.Final) StartCoroutine(OnFinalReach());
+        if (Type == FireplaceType.Checkpoint)
+        {
+            PlayerPrefs.SetFloat("CheckpointX", transform.position.x + 1);
+            PlayerPrefs.SetFloat("CheckpointZ", transform.position.z + 1);
+        }
         _particleIsPlayed = true;
         print("Play");
         _particle.Play();
@@ -25,6 +30,8 @@ public class Fireplace : MonoBehaviour
     private IEnumerator OnFinalReach()
     {
         yield return new WaitForSeconds(5);
+        PlayerPrefs.SetFloat("CheckpointX", 0);
+        PlayerPrefs.SetFloat("CheckpointZ", 0);
         OnFinalCampfireReached?.Invoke();
     }
     private void OnTriggerStay(Collider other)

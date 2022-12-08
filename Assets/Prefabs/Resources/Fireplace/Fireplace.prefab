@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6138148044240629262}
   - component: {fileID: 5966833146445289326}
   - component: {fileID: 4894392749795132732}
+  - component: {fileID: -8859567792401691675}
   m_Layer: 0
   m_Name: Fireplace
   m_TagString: Untagged
@@ -114,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _particle: {fileID: 2125229653666544005}
-  IsFinal: 0
+  Type: 0
 --- !u!135 &4894392749795132732
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -128,6 +129,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.375
   m_Center: {x: 0.003120236, y: -0.041961253, z: 0.000103798375}
+--- !u!54 &-8859567792401691675
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6480254138569823057}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 122
+  m_CollisionDetection: 0
 --- !u!1001 &5155393368669615984
 PrefabInstance:
   m_ObjectHideFlags: 0

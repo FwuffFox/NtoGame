@@ -60,6 +60,7 @@ namespace GameScripts.Infrastructure.States
         {
             _player.GetComponent<PlayerMovement>().canMove = false;
             _player.GetComponent<PlayerRotator>().canRotate = false;
+            Object.Destroy(_player.GetComponent<PlayerAttack>());
             _coroutineRunner.StartCoroutine(ManagePlayerDeathCoroutine());
         }
         

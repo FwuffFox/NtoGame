@@ -15,8 +15,8 @@ MonoBehaviour:
   sceneName: Main
   playerSpawnPoint: {x: 0, y: 1, z: 0}
   mapSize: 40
-  trapsCount: 10
-  unitCount: 10
+  trapsCount: 30
+  unitCount: 20
   Curses:
   - Type: 0
     Amount: 5

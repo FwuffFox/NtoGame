@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HaveSpawnPoint: 0
-  HaveCursedObject: 1
+  HaveCursedObject: 0
   SpawnPoint: {fileID: 0}
 --- !u!1001 &1601524832752119487
 PrefabInstance:
@@ -373,6 +373,11 @@ PrefabInstance:
       propertyPath: curseObjectMask
       value: 
       objectReference: {fileID: 1943491841007883246}
+    - target: {fileID: 4184730793209568111, guid: 1b44532bc904fab41bc64d77816ef1b1,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7287623845247092375, guid: 1b44532bc904fab41bc64d77816ef1b1,
         type: 3}
       propertyPath: m_Name
