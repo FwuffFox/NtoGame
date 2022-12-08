@@ -8,6 +8,8 @@ namespace EditorScripts.Inspector
     {
  
     }
+
+#if (UNITY_EDITOR) 
  
     [CustomPropertyDrawer(typeof(SerializeReadOnlyAttribute))]
     public class SerializeReadOnlyDrawer : PropertyDrawer
@@ -27,4 +29,5 @@ namespace EditorScripts.Inspector
             GUI.enabled = true;
         }
     }
+#endif
 }
