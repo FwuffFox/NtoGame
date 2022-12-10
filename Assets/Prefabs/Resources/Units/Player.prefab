@@ -955,8 +955,11 @@ MonoBehaviour:
   <Damage>k__BackingField: 0
   _canAttack: 1
   <AttackCooldown>k__BackingField: 0
-  _attackRange: 6
+  _attackRange: 10
   model: {fileID: 2623816353093435570}
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &3564145182107553972
 GameObject:
   m_ObjectHideFlags: 0

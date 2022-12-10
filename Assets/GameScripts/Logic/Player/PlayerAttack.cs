@@ -17,6 +17,7 @@ public class PlayerAttack : MonoBehaviour
 	[field: SerializeField] public float AttackCooldown { get; set; }
 	[SerializeField] private float _attackRange;
 	[SerializeField] private Transform model;
+	[SerializeField] private LayerMask enemyMask;
 
 	public Action OnAttack;
 
@@ -33,13 +34,18 @@ public class PlayerAttack : MonoBehaviour
 		if (!_canAttack) return;
 		if (!Input.GetMouseButtonDown(0)) return;
 		var shotDirection=model.TransformDirection(Vector3.forward);
-		Physics.Raycast(transform.position, shotDirection, out RaycastHit hit, _attackRange);
+		Physics.SphereCast(transform.position,_attackRange,shotDirection,out RaycastHit hit,1,enemyMask);
 		if (hit.collider!=null&&hit.collider.gameObject.layer==8)
 		{
 			hit.transform.GetComponent<EnemyAI>().SetDamage(Damage);
 		}
 		OnAttack?.Invoke();
 		StartCoroutine(AttackCooldownCoroutine());
+	}
+	
+	private void OnDrawGizmos() {
+		var shotDirection=model.TransformDirection(Vector3.forward);
+		Gizmos.DrawWireSphere(transform.position+shotDirection,_attackRange);
 	}
 	
 	 private IEnumerator AttackCooldownCoroutine() 
