@@ -34,11 +34,11 @@ MonoBehaviour:
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 1
+    Power: 2
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 1
+    Power: 2
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 1
+    Power: 2
   CheckpointsCoors:
   - X: 5
     Z: 5
