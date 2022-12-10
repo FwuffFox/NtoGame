@@ -1,3 +1,4 @@
+using System;
 using EditorScripts.Inspector;
 using GameScripts.Logic.Player;
 using UnityEngine;
@@ -9,6 +10,8 @@ namespace GameScripts.Logic.UI.InGame
     {
         [SerializeField] private Slider _healthSlider;
         [SerializeField] private Text _healthText;
+        [SerializeField] private Image _background;
+        [SerializeField] private Image _fill;
 
         [SerializeReadOnly] public PlayerHealth playerHealth;
 
@@ -30,12 +33,39 @@ namespace GameScripts.Logic.UI.InGame
         {
             _healthSlider.value = health;
             _healthText.text = $"{health}/{playerHealth.MaxHealth}";
+            ManageColors();
+        }
+
+        void ManageColors()
+        {
+            if (Math.Abs(playerHealth.MaxHealth - 1) < 1)
+            {
+                _fill.color = Color.black;
+                _background.color = Color.black;
+                return;
+            }
+            switch (playerHealth.CurrentHealth)
+            {
+                case < 50:
+                    _fill.color = Color.red;
+                    _background.color = Color.red + Color.black;
+                    return;
+                case < 80:
+                    _fill.color = Color.yellow;
+                    _background.color = Color.yellow + Color.black;
+                    return;
+                default:
+                    _fill.color = Color.green;
+                    _background.color = Color.green + Color.black;
+                    break;
+            }
         }
         
         private void SetNewMaxHealth(float health)
         {
             _healthSlider.maxValue = health;
             _healthText.text = $"{playerHealth.CurrentHealth}/{health}";
+            ManageColors();
         }
     }
 }

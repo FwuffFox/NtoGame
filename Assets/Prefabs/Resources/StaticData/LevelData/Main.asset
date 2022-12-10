@@ -15,8 +15,8 @@ MonoBehaviour:
   sceneName: Main
   playerSpawnPoint: {x: 0, y: 1, z: 0}
   mapSize: 40
-  trapsCount: 10
-  unitCount: 10
+  trapsCount: 30
+  unitCount: 20
   Curses:
   - Type: 0
     Amount: 5
@@ -40,5 +40,9 @@ MonoBehaviour:
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
   CheckpointsCoors:
-  - X: 5
-    Z: 5
+  - X: 20
+    Z: 20
+  - X: 10
+    Z: 30
+  - X: 30
+    Z: 10

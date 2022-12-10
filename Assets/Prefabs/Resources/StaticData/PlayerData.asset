@@ -23,3 +23,7 @@ MonoBehaviour:
     staminaConsumptionPerSecondOfRunning: 20
     staminaPerDodge: 0
     staminaRegenPerSecond: 5
+  attack:
+    Damage: 35
+    AttackCooldown: 1.2
+    AttackRange: 2

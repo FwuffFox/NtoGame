@@ -52,7 +52,10 @@ namespace GameScripts.Infrastructure.States
             var mapGenerator = _prefabFactory.InstantiateMapGenerator(sceneName);
             var generator = mapGenerator.GetComponent<GroundGenerator>();
             generator.GenerateMapAndTraps();
-            var player = _unitSpawner.SpawnPlayer(levelData.playerSpawnPoint);
+
+            var playerPosition = new Vector3(PlayerPrefs.GetFloat("CheckpointX"), 1 , PlayerPrefs.GetFloat("CheckpointX"));
+            playerPosition = playerPosition == Vector3.zero ? levelData.playerSpawnPoint : playerPosition;
+            var player = _unitSpawner.SpawnPlayer(playerPosition);
             generator.PlaceUnits(player);
             Curses.HealthCurse.SetOnMaxStacksFunction(p =>
             {
