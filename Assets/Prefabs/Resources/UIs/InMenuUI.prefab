@@ -596,7 +596,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7377627186530490237}
   - component: {fileID: 3546257358224960750}
-  - component: {fileID: 9090298384996973104}
+  - component: {fileID: 2598895952502866050}
   m_Layer: 5
   m_Name: GameName
   m_TagString: Untagged
@@ -613,7 +613,7 @@ RectTransform:
   m_GameObject: {fileID: 5599245428689289718}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.4584, y: 2.4584, z: 2.4584}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9042742183089252603}
@@ -621,7 +621,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 129, y: 167}
+  m_AnchoredPosition: {x: 165, y: 167}
   m_SizeDelta: {x: 178.6066, y: 62.7513}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3546257358224960750
@@ -632,7 +632,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5599245428689289718}
   m_CullTransparentMesh: 1
---- !u!114 &9090298384996973104
+--- !u!114 &2598895952502866050
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -641,7 +641,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5599245428689289718}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -652,20 +652,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 5
-    m_MaxSize: 50
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "\u0421\u0432\u0430\u0440\u043E\u0433"
+  m_Sprite: {fileID: 21300000, guid: 69db50a569ce35f4dba28e21c9c719f0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &6216168904356712821
 GameObject:
   m_ObjectHideFlags: 0
