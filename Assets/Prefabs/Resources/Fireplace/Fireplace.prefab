@@ -339,6 +339,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6554417410594524917, guid: cd684bf5e14ff40bd9fde69f0ad12184,
         type: 3}
+      propertyPath: LightsModule.light
+      value: 
+      objectReference: {fileID: 6418306077928482134, guid: 99541561e93a75842bad87f900f409ea,
+        type: 3}
+    - target: {fileID: 6554417410594524917, guid: cd684bf5e14ff40bd9fde69f0ad12184,
+        type: 3}
+      propertyPath: LightsModule.ratio
+      value: 0.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554417410594524917, guid: cd684bf5e14ff40bd9fde69f0ad12184,
+        type: 3}
+      propertyPath: LightsModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554417410594524917, guid: cd684bf5e14ff40bd9fde69f0ad12184,
+        type: 3}
       propertyPath: VelocityModule.enabled
       value: 0
       objectReference: {fileID: 0}

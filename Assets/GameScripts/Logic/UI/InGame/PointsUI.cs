@@ -15,12 +15,12 @@ namespace GameScripts.Logic.UI.InGame
         private void Construct(GameLoopState gameLoopState)
         {
             _gameLoopState = gameLoopState;
-			_gameLoopState._player.GetComponent<PlayerMoney>().onMoneyChanged+=ChangePointsAmount;
+			_gameLoopState.OnMoneyAmountChanged +=ChangePointsAmount;
         }
 
         private void OnDestroy()
         {
-            _gameLoopState.OnPointsAmountChanged -= ChangePointsAmount;
+            _gameLoopState.OnMoneyAmountChanged -= ChangePointsAmount;
         }
 
         public void ChangePointsAmount(int newAmount)
