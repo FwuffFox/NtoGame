@@ -26,4 +26,4 @@ MonoBehaviour:
   attack:
     Damage: 35
     AttackCooldown: 1.2
-    AttackRange: 2
+    AttackRange: 3
