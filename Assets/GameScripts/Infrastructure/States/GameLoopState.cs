@@ -19,7 +19,7 @@ namespace GameScripts.Infrastructure.States
         private GameStateMachine _gameStateMachine;
         private IStaticDataService _staticDataService;
         
-        public Action<int> OnPointsAmountChanged;
+        public Action<int> OnMoneyAmountChanged;
         private int _points;
         public GameObject _player;
         private IEnumerator _eachSecondCoroutine;
@@ -38,10 +38,9 @@ namespace GameScripts.Infrastructure.States
         public void Enter()
         {
             _player = _unitSpawner.Player;
-            _eachSecondCoroutine = AddPointsEachSecond(_staticDataService.GameData.pointsPerSecond);
-            _coroutineRunner.StartCoroutine(_eachSecondCoroutine);
             _player.GetComponent<PlayerHealth>().OnPlayerDeath += ManagePlayerDeath;
             _player.GetComponent<PlayerRotator>().canRotate = true;
+            _player.GetComponent<PlayerMoney>().onMoneyChanged += (a) => OnMoneyAmountChanged?.Invoke(a);
             _fireplaces = _unitSpawner.Fireplaces.Select(f => f.GetComponent<Fireplace>()).ToList();
             _fireplaces
                 .First(f => f.Type == FireplaceType.Final)
@@ -51,7 +50,6 @@ namespace GameScripts.Infrastructure.States
         public void Exit()
         {
             _player.GetComponent<PlayerHealth>().OnPlayerDeath -= ManagePlayerDeath;
-            _coroutineRunner.StopCoroutine(_eachSecondCoroutine);
             Object.Destroy(_player);
             _points = 0;
         }
@@ -69,21 +67,6 @@ namespace GameScripts.Infrastructure.States
             yield return new WaitForSeconds(5);
             _gameStateMachine.Enter<MenuState>();
         }
-        
-        //Test method
-        private IEnumerator AddPointsEachSecond(int pointsToAdd)
-        {
-            while (true)
-            {
-                yield return new WaitForSeconds(1);
-                AddPoints(pointsToAdd);
-            }
-        }
-        
-        private void AddPoints(int amount)
-        {
-            _points += amount;
-            OnPointsAmountChanged?.Invoke(_points);
-        }
+       
     }
 }
