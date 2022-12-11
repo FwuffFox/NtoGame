@@ -21,7 +21,7 @@ namespace GameScripts.Infrastructure.States
         
         public Action<int> OnPointsAmountChanged;
         private int _points;
-        private GameObject _player;
+        public GameObject _player;
         private IEnumerator _eachSecondCoroutine;
         private List<Fireplace> _fireplaces;
 

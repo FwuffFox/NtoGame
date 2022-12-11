@@ -15,7 +15,7 @@ namespace GameScripts.Logic.UI.InGame
         private void Construct(GameLoopState gameLoopState)
         {
             _gameLoopState = gameLoopState;
-            _gameLoopState.OnPointsAmountChanged += ChangePointsAmount;
+			_gameLoopState._player.GetComponent<PlayerMoney>().onMoneyChanged+=ChangePointsAmount;
         }
 
         private void OnDestroy()
@@ -25,7 +25,7 @@ namespace GameScripts.Logic.UI.InGame
 
         public void ChangePointsAmount(int newAmount)
         {
-            counter.text = $"Points: {newAmount}";
+            counter.text = $"Money: {newAmount}";
         }
     }
 }
