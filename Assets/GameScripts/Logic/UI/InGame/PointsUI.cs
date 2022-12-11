@@ -25,7 +25,7 @@ namespace GameScripts.Logic.UI.InGame
 
         public void ChangePointsAmount(int newAmount)
         {
-            counter.text = $"Money: {newAmount}";
+            counter.text = $"Монеты: {newAmount}";
         }
     }
 }
