@@ -1,6 +1,4 @@
-using System;
 using System.Linq;
-using GameScripts.Services;
 using GameScripts.Services.InputService;
 using GameScripts.StaticData.Constants;
 using UnityEngine;
@@ -11,8 +9,6 @@ namespace GameScripts.Logic.Player
     public class PlayerRotator : MonoBehaviour
     {
         public new UnityEngine.Camera camera;
-
-        public bool canRotate = true;
 
         private readonly RaycastHit[] _raycastHits = new RaycastHit[50];
 
@@ -26,7 +22,7 @@ namespace GameScripts.Logic.Player
 
         private void FixedUpdate() 
         {
-            if (canRotate) LookAtMouseCursor();
+            LookAtMouseCursor();
         }
     
         private void LookAtMouseCursor()

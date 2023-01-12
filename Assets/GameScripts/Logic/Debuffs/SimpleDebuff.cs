@@ -9,15 +9,15 @@ namespace GameScripts.Logic.Debuffs
     /// <typeparam name="TPlayerComponent">Component that will be changed during debuff.</typeparam>
     public class SimpleDebuff<TPlayerComponent> where TPlayerComponent : MonoBehaviour
     {
-        public int Duration;
+        public int DurationInSeconds;
         
         public readonly Action<TPlayerComponent> ActionOnDebuffStart;
 
         public readonly Action<TPlayerComponent> ActionOnDebuffEnd;
         
-        public SimpleDebuff(int duration, Action<TPlayerComponent> actionOnDebuffStart, Action<TPlayerComponent> actionOnDebuffEnd)
+        public SimpleDebuff(int durationInSeconds, Action<TPlayerComponent> actionOnDebuffStart, Action<TPlayerComponent> actionOnDebuffEnd)
         {
-            Duration = duration;
+            DurationInSeconds = durationInSeconds;
             ActionOnDebuffStart = actionOnDebuffStart;
             ActionOnDebuffEnd = actionOnDebuffEnd;
         }

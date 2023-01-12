@@ -10,14 +10,14 @@ namespace GameScripts.Logic.Debuffs
     /// <typeparam name="TPlayerComponent">Component that will be changed during debuff.</typeparam>
     public class PeriodicalDebuff<TPlayerComponent> where TPlayerComponent : MonoBehaviour
     {
-        public int Duration;
+        public int DurationInSeconds;
         
-        public readonly Action<TPlayerComponent> ActionOnTick;
+        public readonly Action<TPlayerComponent> ActionOnSecondPass;
 
-        public PeriodicalDebuff(int duration, Action<TPlayerComponent> actionOnTick)
+        public PeriodicalDebuff(int durationInSeconds, Action<TPlayerComponent> actionOnSecondPass)
         {
-            Duration = duration;
-            ActionOnTick = actionOnTick;
+            DurationInSeconds = durationInSeconds;
+            ActionOnSecondPass = actionOnSecondPass;
         }
     }
 }

@@ -27,7 +27,7 @@ namespace GameScripts.Logic.Enemy
 			_health-=damage;
 			if (_health > 0 || _died) return;
 			_died=true;
-			_player.GetComponent<PlayerMoney>().addMoney(100);
+			_player.GetComponent<PlayerMoney>().AddMoney(100);
 			_enemyAnimator.SetDeath();
 		}
 		

@@ -17,30 +17,26 @@ namespace GameScripts.Infrastructure.States
         private ICoroutineRunner _coroutineRunner;
         private IUnitSpawner _unitSpawner;
         private GameStateMachine _gameStateMachine;
-        private IStaticDataService _staticDataService;
-        
+
         public Action<int> OnMoneyAmountChanged;
-        private int _points;
-        public GameObject _player;
+        private GameObject _player;
         private IEnumerator _eachSecondCoroutine;
         private List<Fireplace> _fireplaces;
 
         [Inject]
         public void Construct(ICoroutineRunner coroutineRunner, IUnitSpawner unitSpawner,
-            GameStateMachine gameStateMachine, IStaticDataService staticDataService)
+            GameStateMachine gameStateMachine)
         {
             _coroutineRunner = coroutineRunner;
             _unitSpawner = unitSpawner;
             _gameStateMachine = gameStateMachine;
-            _staticDataService = staticDataService;
         }
         
         public void Enter()
         {
             _player = _unitSpawner.Player;
             _player.GetComponent<PlayerHealth>().OnPlayerDeath += ManagePlayerDeath;
-            _player.GetComponent<PlayerRotator>().canRotate = true;
-            _player.GetComponent<PlayerMoney>().onMoneyChanged += (a) => OnMoneyAmountChanged?.Invoke(a);
+            _player.GetComponent<PlayerMoney>().OnMoneyChanged += (a) => OnMoneyAmountChanged?.Invoke(a);
             _fireplaces = _unitSpawner.Fireplaces.Select(f => f.GetComponent<Fireplace>()).ToList();
             _fireplaces
                 .First(f => f.Type == FireplaceType.Final)
@@ -51,13 +47,12 @@ namespace GameScripts.Infrastructure.States
         {
             _player.GetComponent<PlayerHealth>().OnPlayerDeath -= ManagePlayerDeath;
             Object.Destroy(_player);
-            _points = 0;
         }
         
         private void ManagePlayerDeath()
         {
-            _player.GetComponent<PlayerMovement>().canMove = false;
-            _player.GetComponent<PlayerRotator>().canRotate = false;
+            Object.Destroy(_player.GetComponent<PlayerMovement>());
+            Object.Destroy(_player.GetComponent<PlayerRotator>());
             Object.Destroy(_player.GetComponent<PlayerAttack>());
             _coroutineRunner.StartCoroutine(ManagePlayerDeathCoroutine());
         }

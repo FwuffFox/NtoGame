@@ -15,16 +15,12 @@ namespace GameScripts.Logic.Player
 
         public Action<float> OnMovementSpeedChange; 
         private float _speed;
+
         public float Speed
         {
             get => _speed;
-            set
-            {
-                _speed = value;
-            }
+            set { _speed = value; }
         }
-        
-        public bool canMove = true;
 
         private float _maxStamina;
         public float MaxStamina
@@ -86,7 +82,7 @@ namespace GameScripts.Logic.Player
             _isRunning = _inputService.IsPressed(KeyCode.LeftShift) && CurrentStamina >= _staminaConsumptionPerSecondOfRunning / 100f;
             var movementSpeed = (Speed * Time.deltaTime);
             movementSpeed = _isRunning ? movementSpeed * _runningSpeedModifier : movementSpeed;
-            if (movementAxis != Vector3.zero && canMove)
+            if (movementAxis != Vector3.zero)
             {
                 Move(movementAxis, movementSpeed);
                 OnMovementSpeedChange?.Invoke(movementSpeed);

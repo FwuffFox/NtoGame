@@ -31,10 +31,10 @@ namespace GameScripts.Logic.Player
 
             simpleDebuff.ActionOnDebuffStart(component);
             
-            while (simpleDebuff.Duration > 0)
+            while (simpleDebuff.DurationInSeconds > 0)
             {
                 yield return new WaitForSeconds(1);
-                simpleDebuff.Duration -= 1;
+                simpleDebuff.DurationInSeconds -= 1;
             }
 
             simpleDebuff.ActionOnDebuffEnd(component);
@@ -51,12 +51,12 @@ namespace GameScripts.Logic.Player
             where TPlayerComponent : MonoBehaviour
         {
             var component = _playerComponentDictionary[typeof(TPlayerComponent)] as TPlayerComponent;
-            while (debuff.Duration > 0)
+            while (debuff.DurationInSeconds > 0)
             {
-                debuff.ActionOnTick.Invoke(component);
+                debuff.ActionOnSecondPass.Invoke(component);
 
                 yield return new WaitForSeconds(1);
-                debuff.Duration -= 1;
+                debuff.DurationInSeconds -= 1;
             }
         }
        
