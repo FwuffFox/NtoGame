@@ -35,7 +35,7 @@ public class PlayerAttack : MonoBehaviour
 		if (!Input.GetMouseButtonDown(0)) return;
 		var shotDirection=model.TransformDirection(Vector3.forward);
 		Physics.SphereCast(transform.position,0,shotDirection,out RaycastHit hit,_attackRange,enemyMask);
-		if (hit.collider!=null)
+		if (hit.collider != null)
 		{
 			hit.transform.GetComponent<EnemyAI>().SetDamage(Damage);
 		}

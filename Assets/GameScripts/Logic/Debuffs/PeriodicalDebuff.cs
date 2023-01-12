@@ -1,18 +1,23 @@
-﻿using GameScripts.StaticData.Enums;
+﻿using System;
+using GameScripts.StaticData.Enums;
+using UnityEngine;
 
 namespace GameScripts.Logic.Debuffs
 {
-    public class PeriodicalDebuff
+    /// <summary>
+    /// A debuff that is applying an effect each second.
+    /// </summary>
+    /// <typeparam name="TPlayerComponent">Component that will be changed during debuff.</typeparam>
+    public class PeriodicalDebuff<TPlayerComponent> where TPlayerComponent : MonoBehaviour
     {
-        public PeriodicalDebuffType DebuffType;
         public int Duration;
-        public float DebuffValuePerSecond;
+        
+        public readonly Action<TPlayerComponent> ActionOnTick;
 
-        public PeriodicalDebuff(PeriodicalDebuffType debuffType, int duration, float debuffValuePerSecond)
+        public PeriodicalDebuff(int duration, Action<TPlayerComponent> actionOnTick)
         {
-            DebuffType = debuffType;
             Duration = duration;
-            DebuffValuePerSecond = debuffValuePerSecond;
+            ActionOnTick = actionOnTick;
         }
     }
 }

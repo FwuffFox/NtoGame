@@ -54,7 +54,13 @@ namespace GameScripts.Services.Factories
                         .With(x => movement.OnMovementSpeedChange += x.SetSpeed)
                         .With(x => movement.OnIsRunningChange += x.SetIsRunning)
                         .With(x => attack.OnAttack += x.SetAttack);
-                    
+
+                    var debuffSystem = player.GetComponent<PlayerDebuffSystem>().With(x =>
+                    {
+                        x.RegisterComponent(health);
+                        x.RegisterComponent(movement);
+                    });
+
                 });
         }
 

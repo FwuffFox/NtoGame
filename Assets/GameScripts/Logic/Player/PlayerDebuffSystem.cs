@@ -1,63 +1,59 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using EditorScripts.Inspector;
 using GameScripts.Logic.Debuffs;
-using GameScripts.StaticData.Enums;
 using UnityEngine;
 
 namespace GameScripts.Logic.Player
 {
     public class PlayerDebuffSystem : MonoBehaviour
     {
-        [SerializeField] private PlayerMovement _playerMovement;
-        [SerializeField] private PlayerHealth _playerHealth;
+        private readonly Dictionary<Type, MonoBehaviour> _playerComponentDictionary = new();
 
-        public void AddDebuff(SimpleDebuff simpleDebuff)
+        public void RegisterComponent<TPlayerComponent>(TPlayerComponent playerComponent)
+            where TPlayerComponent : MonoBehaviour
+        {
+            _playerComponentDictionary.Add(typeof(TPlayerComponent), playerComponent);
+        }
+
+        public void AddDebuff<TPlayerComponent>(SimpleDebuff<TPlayerComponent> simpleDebuff)
+            where TPlayerComponent : MonoBehaviour
         {
             StartCoroutine(SimpleDebuffCoroutine(simpleDebuff));
         }
 
-        private IEnumerator SimpleDebuffCoroutine(SimpleDebuff simpleDebuff)
+        private IEnumerator SimpleDebuffCoroutine<TPlayerComponent>
+            (SimpleDebuff<TPlayerComponent> simpleDebuff)
+            where TPlayerComponent : MonoBehaviour
         {
-            switch (simpleDebuff.DebuffType)
-            {
-                case SimpleDebuffType.Speed: _playerMovement.Speed -= simpleDebuff.DebuffValue; break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
+            var component = _playerComponentDictionary[typeof(TPlayerComponent)] as TPlayerComponent;
 
+            simpleDebuff.ActionOnDebuffStart(component);
+            
             while (simpleDebuff.Duration > 0)
             {
                 yield return new WaitForSeconds(1);
                 simpleDebuff.Duration -= 1;
             }
-            
-            switch (simpleDebuff.DebuffType)
-            {
-                case SimpleDebuffType.Speed: _playerMovement.Speed += simpleDebuff.DebuffValue; break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
+
+            simpleDebuff.ActionOnDebuffEnd(component);
         }
 
-        public void AddDebuff(PeriodicalDebuff debuff)
+        public void AddDebuff<TPlayerComponent>(PeriodicalDebuff<TPlayerComponent> debuff)
+            where TPlayerComponent : MonoBehaviour
         {
             StartCoroutine(PeriodicalDebuffCoroutine(debuff));
         }
 
-        private IEnumerator PeriodicalDebuffCoroutine(PeriodicalDebuff debuff)
+        private IEnumerator PeriodicalDebuffCoroutine<TPlayerComponent>
+            (PeriodicalDebuff<TPlayerComponent> debuff)
+            where TPlayerComponent : MonoBehaviour
         {
+            var component = _playerComponentDictionary[typeof(TPlayerComponent)] as TPlayerComponent;
             while (debuff.Duration > 0)
             {
-                switch (debuff.DebuffType)
-                {
-                    case PeriodicalDebuffType.Health: _playerHealth.GetDamage(debuff.DebuffValuePerSecond);
-                        break;
-                    case PeriodicalDebuffType.Stamina: _playerMovement.CurrentStamina -= debuff.DebuffValuePerSecond;
-                        break;
-                    default:
-                        throw new ArgumentOutOfRangeException();
-                }
+                debuff.ActionOnTick.Invoke(component);
 
                 yield return new WaitForSeconds(1);
                 debuff.Duration -= 1;
@@ -71,7 +67,7 @@ namespace GameScripts.Logic.Player
         #if UNITY_EDITOR
         [InspectorButton("RemoveAllDebuffsButton", ButtonWidth = 200)]
         [SerializeField] private bool removeAllDebuffs;
-
+        
         private void RemoveAllDebuffsButton() => StopAllCoroutines();
         #endif
     }

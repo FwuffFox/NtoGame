@@ -43,8 +43,11 @@ namespace GameScripts.Logic.Traps
 
         private void ApplyDebuffs(PlayerDebuffSystem player)
         {
-            var bleedingDebuff = new PeriodicalDebuff(PeriodicalDebuffType.Health, _bleeding.duration, _bleeding.damagePerSecond);
-            var speedDebuff = new SimpleDebuff(SimpleDebuffType.Speed, _speedDebuff.duration, _speedDebuff.slowness);
+            var bleedingDebuff = new PeriodicalDebuff<PlayerHealth>(_bleeding.duration,
+                health => health.GetDamage(_bleeding.damagePerSecond));
+            var speedDebuff = new SimpleDebuff<PlayerMovement>(_speedDebuff.duration,
+                movement => movement.Speed -= _speedDebuff.slowness,
+                movement => movement.Speed += _speedDebuff.slowness);
             player.AddDebuff(bleedingDebuff);
             player.AddDebuff(speedDebuff);
         }
