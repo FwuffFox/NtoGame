@@ -33,6 +33,7 @@ namespace GameScripts.Logic.Units.Enemy
 
         public void SetProperties(EnemyData enemyData)
         {
+	        MaxHealth = 100;
 	        Health = 100;
             _seeRange = enemyData.seeRange;
             _attackRange = enemyData.attackRange;

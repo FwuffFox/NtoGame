@@ -48,10 +48,13 @@ namespace GameScripts.Services.Factories
                         .With(x => x.SetProperties(playerData));
 
                     var animator = player.GetComponent<PlayerAnimator>()
-                        .With(x => health.OnBattleUnitDeath += x.SetDeath)
-                        .With(x => movement.OnMovementSpeedChange += x.SetSpeed)
-                        .With(x => movement.OnIsRunningChange += x.SetIsRunning)
-                        .With(x => attack.OnAttack += x.SetAttack);
+                        .With(animator =>
+                        {
+                            health.OnBattleUnitDeath += animator.SetDeath;
+                            movement.OnMovementSpeedChange += animator.SetSpeed;
+                            movement.OnIsRunningChange += animator.SetIsRunning;
+                            attack.OnAttack += animator.SetAttack;
+                        });
 
                     var debuffSystem = player.GetComponent<PlayerDebuffSystem>().With(x =>
                     {
@@ -89,6 +92,12 @@ namespace GameScripts.Services.Factories
                             mover.OnSpeedChange += animator.SetSpeed;
                             attacker.OnAttack += animator.SetAttack;
                             ai.OnBattleUnitDeath += animator.SetDeath;
+                        });
+
+                    enemy.GetComponent<EnemyUI>()
+                        .With(ui =>
+                        {
+                            ui.SetTarget(ai);
                         });
 
                 });
