@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GameScripts.Logic.Enemy
+namespace GameScripts.Logic.Units.Enemy
 {
     [RequireComponent((typeof(Animator)))]
     public class EnemyAnimator : MonoBehaviour

@@ -5,7 +5,7 @@ using EditorScripts.Inspector;
 using GameScripts.Logic.Debuffs;
 using UnityEngine;
 
-namespace GameScripts.Logic.Player
+namespace GameScripts.Logic.Units.Player
 {
     public class PlayerDebuffSystem : MonoBehaviour
     {

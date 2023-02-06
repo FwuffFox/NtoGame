@@ -4,7 +4,7 @@ using GameScripts.Logic.Curses;
 using GameScripts.StaticData.Enums;
 using UnityEngine;
 
-namespace GameScripts.Logic.Player
+namespace GameScripts.Logic.Units.Player
 {
     public class PlayerCurseSystem : MonoBehaviour
     {

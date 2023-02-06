@@ -1,7 +1,7 @@
 ﻿using GameScripts.Logic.Camera;
 using GameScripts.Logic.Generators;
-using GameScripts.Logic.Player;
 using GameScripts.Logic.UI.InGame;
+using GameScripts.Logic.Units.Player;
 using GameScripts.Services.Data;
 using GameScripts.Services.Factories;
 using GameScripts.Services.UnitSpawner;

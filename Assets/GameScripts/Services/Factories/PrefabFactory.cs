@@ -1,8 +1,9 @@
 ﻿using GameScripts.Extensions;
 using GameScripts.Infrastructure.States;
-using GameScripts.Logic.Enemy;
+using GameScripts.Logic.Fireplace;
 using GameScripts.Logic.Generators;
-using GameScripts.Logic.Player;
+using GameScripts.Logic.Units.Enemy;
+using GameScripts.Logic.Units.Player;
 using GameScripts.Services.AssetManagement;
 using GameScripts.Services.Data;
 using GameScripts.StaticData.Constants;
@@ -47,7 +48,7 @@ namespace GameScripts.Services.Factories
                         .With(x => x.SetProperties(playerData));
 
                     var animator = player.GetComponent<PlayerAnimator>()
-                        .With(x => health.OnPlayerDeath += x.SetDeath)
+                        .With(x => health.OnBattleUnitDeath += x.SetDeath)
                         .With(x => movement.OnMovementSpeedChange += x.SetSpeed)
                         .With(x => movement.OnIsRunningChange += x.SetIsRunning)
                         .With(x => attack.OnAttack += x.SetAttack);
@@ -83,8 +84,12 @@ namespace GameScripts.Services.Factories
                         .With(x => x.SetProperties(enemyData));
 
                     enemy.GetComponent<EnemyAnimator>()
-                        .With(x => mover.OnSpeedChange += x.SetSpeed)
-                        .With(x => attacker.OnAttack += x.SetAttack);
+                        .With(animator =>
+                        {
+                            mover.OnSpeedChange += animator.SetSpeed;
+                            attacker.OnAttack += animator.SetAttack;
+                            ai.OnBattleUnitDeath += animator.SetDeath;
+                        });
 
                 });
         }

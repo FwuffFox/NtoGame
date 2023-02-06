@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections;
-using GameScripts.Logic.Player;
+using GameScripts.Logic.Units.Player;
 using GameScripts.StaticData.ScriptableObjects;
 using UnityEngine;
 
-namespace GameScripts.Logic.Enemy
+namespace GameScripts.Logic.Units.Enemy
 {
     public class EnemyAttacker : MonoBehaviour
     {

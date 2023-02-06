@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace GameScripts.Logic.Player
+namespace GameScripts.Logic.Units.Player
 {
     [RequireComponent(typeof(Animator))]
     public class PlayerAnimator : MonoBehaviour

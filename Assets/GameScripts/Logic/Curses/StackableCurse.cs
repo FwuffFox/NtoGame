@@ -1,5 +1,4 @@
 ﻿using System;
-using GameScripts.Logic.Player;
 using GameScripts.StaticData.Enums;
 using UnityEngine;
 

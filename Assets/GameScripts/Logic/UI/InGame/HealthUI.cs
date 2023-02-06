@@ -1,6 +1,6 @@
 using System;
 using EditorScripts.Inspector;
-using GameScripts.Logic.Player;
+using GameScripts.Logic.Units.Player;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,14 +19,15 @@ namespace GameScripts.Logic.UI.InGame
         {
             playerHealth = player;
             _healthSlider.maxValue = playerHealth.MaxHealth;
-            _healthSlider.value = playerHealth.CurrentHealth;
-            playerHealth.OnPlayerHealthChange += SetNewHealth;
-            playerHealth.OnPlayerMaxHealthChange += SetNewMaxHealth;
+            _healthSlider.value = playerHealth.Health;
+            playerHealth.OnBattleUnitHealthChange += SetNewHealth;
+            playerHealth.OnBattleUnitMaxHealthChange += SetNewMaxHealth;
         }
 
         private void OnDestroy()
         {
-            playerHealth.OnPlayerHealthChange -= SetNewHealth;
+            playerHealth.OnBattleUnitHealthChange -= SetNewHealth;
+            playerHealth.OnBattleUnitMaxHealthChange -= SetNewMaxHealth;
         }
 
         private void SetNewHealth(float health)
@@ -44,7 +45,7 @@ namespace GameScripts.Logic.UI.InGame
                 _background.color = Color.black;
                 return;
             }
-            switch (playerHealth.CurrentHealth)
+            switch (playerHealth.Health)
             {
                 case < 50:
                     _fill.color = Color.red;
@@ -64,7 +65,7 @@ namespace GameScripts.Logic.UI.InGame
         private void SetNewMaxHealth(float health)
         {
             _healthSlider.maxValue = health;
-            _healthText.text = $"{playerHealth.CurrentHealth}/{health}";
+            _healthText.text = $"{playerHealth.Health}/{health}";
             ManageColors();
         }
     }

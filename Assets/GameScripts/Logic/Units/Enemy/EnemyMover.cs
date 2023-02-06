@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Serialization;
 
-namespace GameScripts.Logic.Enemy
+namespace GameScripts.Logic.Units.Enemy
 {
     [RequireComponent(typeof(NavMeshAgent))]
     public class EnemyMover : MonoBehaviour

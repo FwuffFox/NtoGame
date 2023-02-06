@@ -1,6 +1,6 @@
 using System;
 using GameScripts.Logic.Debuffs;
-using GameScripts.Logic.Player;
+using GameScripts.Logic.Units.Player;
 using GameScripts.StaticData.Enums;
 using UnityEngine;
 

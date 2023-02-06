@@ -1,4 +1,4 @@
-using GameScripts.Logic.Player;
+using GameScripts.Logic.Units.Player;
 using UnityEngine;
 using UnityEngine.UI;
 

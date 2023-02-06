@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace GameScripts.Logic.Player
+namespace GameScripts.Logic.Units.Player
 {
 	public class PlayerMoney : MonoBehaviour
 	{ 

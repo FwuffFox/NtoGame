@@ -1,12 +1,11 @@
 using System;
 using System.Collections;
-using GameScripts.Services;
 using GameScripts.Services.InputService;
 using GameScripts.StaticData.ScriptableObjects;
 using UnityEngine;
 using Zenject;
 
-namespace GameScripts.Logic.Player
+namespace GameScripts.Logic.Units.Player
 {
     public class PlayerMovement : MonoBehaviour
     {

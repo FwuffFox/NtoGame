@@ -230,8 +230,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e337f4a0f23417eb4fec7435f6cfab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxHealth: 0
   _health: 100
-  _enemyAnimator: {fileID: 5150150980551761397}
+  _healButton: 0
   _enemyMover: {fileID: 3864904858595052783}
   _enemyAttacker: {fileID: 8088746603740170984}
   playerMask:
