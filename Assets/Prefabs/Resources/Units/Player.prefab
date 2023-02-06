@@ -773,7 +773,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2623816353093435570}
   - component: {fileID: 8427430536715291764}
-  - component: {fileID: 3210028909584167862}
   - component: {fileID: 5076391165056853385}
   - component: {fileID: 4252107660230147068}
   - component: {fileID: 7303279414703947877}
@@ -819,21 +818,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3257507d468e1e845be5b4db0be6b2a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canMove: 1
---- !u!114 &3210028909584167862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3396413128375704072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de8873ae94f5797448c84efbe8eb3102, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 0}
-  canRotate: 1
 --- !u!114 &5076391165056853385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -923,8 +907,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee06a7592579413883c1eba097e794d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerMovement: {fileID: 8427430536715291764}
-  _playerHealth: {fileID: 5076391165056853385}
   removeAllDebuffs: 0
 --- !u!114 &4709524712825742527
 MonoBehaviour:
@@ -973,8 +955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac4e98043e92ab945a075e2889e0daaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 0
-  moneyText: {fileID: 0}
+  Money: 0
 --- !u!1 &3564145182107553972
 GameObject:
   m_ObjectHideFlags: 0

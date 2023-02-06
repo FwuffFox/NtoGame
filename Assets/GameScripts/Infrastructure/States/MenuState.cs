@@ -2,6 +2,7 @@
 using GameScripts.Services.Factories;
 using GameScripts.Services.Unity;
 using GameScripts.StaticData.Constants;
+using JetBrains.Annotations;
 using UnityEngine;
 using Zenject;
 
@@ -28,17 +29,27 @@ namespace GameScripts.Infrastructure.States
             _sceneLoader.LoadAsync(SceneNames.Menu, OnMenuLoaded);
         }
 
+        private MenuUI _menuUI;
         private void OnMenuLoaded()
         {
             if (_ui == null)
                 _ui = _prefabFactory.InstantiateUI<MenuState>();
-            _ui.GetComponent<MenuUI>().PlayButton.onClick.AddListener(OnPlayButtonClick);
+            if (_menuUI == null)
+                _menuUI = _ui.GetComponent<MenuUI>();
+            _menuUI.PlayButton.onClick.AddListener(OnPlayButtonClick);
+            _menuUI.PlaygroundButton.onClick.AddListener(OnPlaygroundButtonClick);
         }
 
         private void OnPlayButtonClick()
         {
-            _ui.GetComponent<MenuUI>().StartLoadingScreen();
+            _menuUI.StartLoadingScreen();
             _stateMachine.Enter<LoadLevelState, string>(SceneNames.Main);
+        }
+
+        private void OnPlaygroundButtonClick()
+        {
+            _menuUI.StartLoadingScreen();
+            _stateMachine.Enter<LoadLevelState, string>(SceneNames.Playground);
         }
         public void Exit() { }
     }

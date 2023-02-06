@@ -39,10 +39,7 @@ namespace GameScripts.Services.Factories
 
                     var movement = player.GetComponent<PlayerMovement>()
                         .With(x => x.SetProperties(playerData));
-                    
-                    var rotator = player.GetComponent<PlayerRotator>()
-                        .With(x => x.camera = Camera.main);
-                    
+
                     var health = player.GetComponent<PlayerHealth>()
                         .With(x => x.SetProperties(playerData));
 

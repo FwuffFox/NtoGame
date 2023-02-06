@@ -38,9 +38,9 @@ namespace GameScripts.Infrastructure.States
             _player.GetComponent<PlayerHealth>().OnPlayerDeath += ManagePlayerDeath;
             _player.GetComponent<PlayerMoney>().OnMoneyChanged += (a) => OnMoneyAmountChanged?.Invoke(a);
             _fireplaces = _unitSpawner.Fireplaces.Select(f => f.GetComponent<Fireplace>()).ToList();
-            _fireplaces
-                .First(f => f.Type == FireplaceType.Final)
-                .OnFinalCampfireReached += () => _gameStateMachine.Enter<MenuState>();
+            var finalFireplace = _fireplaces.FirstOrDefault(f => f.Type == FireplaceType.Final);
+            if (finalFireplace != null)
+                finalFireplace.OnFinalCampfireReached += () => _gameStateMachine.Enter<MenuState>();
         }
         
         public void Exit()
@@ -52,7 +52,6 @@ namespace GameScripts.Infrastructure.States
         private void ManagePlayerDeath()
         {
             Object.Destroy(_player.GetComponent<PlayerMovement>());
-            Object.Destroy(_player.GetComponent<PlayerRotator>());
             Object.Destroy(_player.GetComponent<PlayerAttack>());
             _coroutineRunner.StartCoroutine(ManagePlayerDeathCoroutine());
         }
