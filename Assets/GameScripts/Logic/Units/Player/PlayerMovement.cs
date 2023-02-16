@@ -12,21 +12,25 @@ namespace GameScripts.Logic.Units.Player
 
         private Rigidbody _rigidbody;
 
-        public Action<float> OnMovementSpeedChange; 
-        private float _speed;
+        public Action<float> OnMovementSpeedChange;
 
-        public float Speed
+        private float _baseSpeed;
+        private float _runningSpeedModifier;
+
+        public float MovementSpeedModifier { get; set; } = 1f;
+
+        private float _movementSpeed;
+        public float MovementSpeed
         {
-            get => _speed;
-            set { _speed = value; }
+            get => _movementSpeed;
+            set
+            {
+                OnMovementSpeedChange?.Invoke(value);
+                _movementSpeed = value;
+            }
         }
 
-        private float _maxStamina;
-        public float MaxStamina
-        {
-            get => _maxStamina;
-            set => _maxStamina = value;
-        }
+        public float MaxStamina { get; set; }
 
         public Action<float> OnPlayerStaminaChange;
         private float _currentStamina;
@@ -35,7 +39,7 @@ namespace GameScripts.Logic.Units.Player
             get => _currentStamina;
             set
             {
-                _currentStamina = value >= _maxStamina ? _maxStamina : value;
+                _currentStamina = value >= MaxStamina ? MaxStamina : value;
                 OnPlayerStaminaChange?.Invoke(_currentStamina);
             } 
         }
@@ -43,10 +47,19 @@ namespace GameScripts.Logic.Units.Player
         private float _staminaRegenPerSecond;
         private float _staminaConsumptionPerSecondOfRunning;
         private float _staminaPerDodge;
-        private float _runningSpeedModifier;
 
         public Action<bool> OnIsRunningChange;
+
         private bool _isRunning;
+        private bool IsRunning
+        {
+            get => _isRunning;
+            set
+            {
+                OnIsRunningChange?.Invoke(value);
+                _isRunning = value;
+            }
+        }
 
         private IInputService _inputService;
 
@@ -58,7 +71,7 @@ namespace GameScripts.Logic.Units.Player
 
         public void SetProperties(PlayerData playerData)
         {
-            Speed = playerData.speed.baseSpeed;
+            _baseSpeed = playerData.speed.baseSpeed;
             _runningSpeedModifier = playerData.speed.runningSpeedModifier;
             MaxStamina = playerData.stamina.maxStamina;
             CurrentStamina = MaxStamina;
@@ -78,19 +91,17 @@ namespace GameScripts.Logic.Units.Player
         private void FixedUpdate()
         {
             Vector3 movementAxis = _inputService.GetMovementAxis();
-            _isRunning = _inputService.IsPressed(KeyCode.LeftShift) && CurrentStamina >= _staminaConsumptionPerSecondOfRunning / 100f;
-            var movementSpeed = Speed * Time.deltaTime;
-            movementSpeed = _isRunning ? movementSpeed * _runningSpeedModifier : movementSpeed;
             if (movementAxis != Vector3.zero)
             {
-                Move(movementAxis, movementSpeed);
-                OnMovementSpeedChange?.Invoke(movementSpeed);
-                OnIsRunningChange?.Invoke(_isRunning);
+                IsRunning = _inputService.IsPressed(KeyCode.LeftShift) && CurrentStamina >= _staminaConsumptionPerSecondOfRunning / 100f;
+                MovementSpeed = _baseSpeed * Time.deltaTime;
+                MovementSpeed = IsRunning ? MovementSpeed * _runningSpeedModifier : MovementSpeed;
+                Move(movementAxis, MovementSpeed);
             }
             else
             {
-                OnMovementSpeedChange?.Invoke(0);
-                OnIsRunningChange?.Invoke(false);
+                MovementSpeed = 0;
+                IsRunning = false;
             }
         }
 
@@ -116,7 +127,7 @@ namespace GameScripts.Logic.Units.Player
             while (true)
             {
                 yield return new WaitForSeconds(1f/100f);
-                if (_isRunning) CurrentStamina -= _staminaConsumptionPerSecondOfRunning / 100f;
+                if (IsRunning) CurrentStamina -= _staminaConsumptionPerSecondOfRunning / 100f;
             }
         }
     }

@@ -4,14 +4,17 @@ using UnityEngine;
 namespace GameScripts.Logic.Units.Player
 {
 	public class PlayerMoney : MonoBehaviour
-	{ 
-		public int Money;
+	{
 		public Action<int> OnMoneyChanged;
-	
-		public void AddMoney(int n)
+		private int _money;
+		public int Money
 		{
-			Money += n;
-			OnMoneyChanged?.Invoke(Money);
+			get => _money;
+			set
+			{
+				OnMoneyChanged?.Invoke(value);
+				_money = value;
+			}
 		}
 	}
 }

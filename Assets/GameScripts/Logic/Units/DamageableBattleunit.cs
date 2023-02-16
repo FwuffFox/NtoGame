@@ -5,7 +5,7 @@ using UnityEngine.Serialization;
 
 namespace GameScripts.Logic.Units
 {
-    public abstract class BattleUnitHealth : MonoBehaviour
+    public abstract class DamageableBattleunit : MonoBehaviour
     {
         
         public Action<float> OnBattleUnitMaxHealthChange;

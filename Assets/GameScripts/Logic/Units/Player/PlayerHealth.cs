@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace GameScripts.Logic.Units.Player
 {
-    public class PlayerHealth : BattleUnitHealth
+    public class PlayerHealth : DamageableBattleunit
     {
         private float _healthRegenPerSecond;
 

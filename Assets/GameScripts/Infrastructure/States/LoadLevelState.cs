@@ -65,7 +65,7 @@ namespace GameScripts.Infrastructure.States
             
             Curses.StaminaCurse.SetOnMaxStacksFunction(p =>
             {
-                p.GetComponent<PlayerMovement>().Speed -= 1;
+                p.GetComponent<PlayerMovement>().MovementSpeedModifier *= 0.5f;
                 Debug.Log("Max stack on stamina curse");
             }, player);
             

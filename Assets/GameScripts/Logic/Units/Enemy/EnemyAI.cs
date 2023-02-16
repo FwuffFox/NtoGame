@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 namespace GameScripts.Logic.Units.Enemy
 {
     [RequireComponent(typeof(EnemyMover), typeof(EnemyAttacker))]
-    public class EnemyAI : BattleUnitHealth
+    public class EnemyAI : DamageableBattleunit
     {
         private GameObject _player;
         private PlayerHealth _playerHealth;
@@ -19,10 +19,10 @@ namespace GameScripts.Logic.Units.Enemy
         private float _seeRange;
         private float _attackRange;
 
-        public override void GetDamage(float damage)
+        public override void OnHealthReachZero()
         {
-	        _player.GetComponent<PlayerMoney>().AddMoney(100);
-	        base.GetDamage(damage);
+	        _player.GetComponent<PlayerMoney>().Money += 100;
+	        base.OnHealthReachZero();
         }
 
         public void SetPlayer(GameObject player)

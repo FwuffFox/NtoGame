@@ -46,8 +46,8 @@ namespace GameScripts.Logic.Traps
             var bleedingDebuff = new PeriodicalDebuff<PlayerHealth>(_bleeding.duration,
                 health => health.GetDamage(_bleeding.damagePerSecond));
             var speedDebuff = new SimpleDebuff<PlayerMovement>(_speedDebuff.duration,
-                movement => movement.Speed -= _speedDebuff.slowness,
-                movement => movement.Speed += _speedDebuff.slowness);
+                movement => movement.MovementSpeedModifier *= _speedDebuff.slowness,
+                movement => movement.MovementSpeedModifier /= _speedDebuff.slowness);
             player.AddDebuff(bleedingDebuff);
             player.AddDebuff(speedDebuff);
         }
