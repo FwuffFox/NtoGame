@@ -4,6 +4,7 @@ using GameScripts.Logic.Fireplace;
 using GameScripts.Logic.Generators;
 using GameScripts.Logic.Units.Enemy;
 using GameScripts.Logic.Units.Player;
+using GameScripts.Logic.Units.Player.FightingSystem;
 using GameScripts.Services.AssetManagement;
 using GameScripts.Services.Data;
 using GameScripts.StaticData.Constants;
@@ -44,8 +45,15 @@ namespace GameScripts.Services.Factories
                     var health = player.GetComponent<PlayerHealth>()
                         .With(x => x.SetProperties(playerData));
 
+                    var comboSystem = player.GetComponent<ComboStateMachine>()
+                        .With(x => x.SetNextStateToMain());
+                    
                     var attack = player.GetComponent<PlayerAttack>()
-                        .With(x => x.SetProperties(playerData));
+                        .With(x =>
+                        {
+                            x.SetProperties(playerData);
+                            x.MeleeComboStateMachine = comboSystem;
+                        });
 
                     var animator = player.GetComponent<PlayerAnimator>()
                         .With(animator =>
@@ -53,7 +61,6 @@ namespace GameScripts.Services.Factories
                             health.OnBattleUnitDeath += animator.SetDeath;
                             movement.OnMovementSpeedChange += animator.SetSpeed;
                             movement.OnIsRunningChange += animator.SetIsRunning;
-                            attack.OnAttack += animator.SetAttack;
                         });
 
                     var debuffSystem = player.GetComponent<PlayerDebuffSystem>().With(x =>

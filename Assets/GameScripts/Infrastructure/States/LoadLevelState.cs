@@ -71,7 +71,7 @@ namespace GameScripts.Infrastructure.States
             
             Curses.DamageCurse.SetOnMaxStacksFunction(p =>
             {
-                p.GetComponent<PlayerAttack>().AttackCooldown *= 2;
+                p.GetComponent<PlayerAttack>().Damage *= Mathf.CeilToInt(0.5f);
                 Debug.Log("Max stack on damage curse");
             }, player);
             

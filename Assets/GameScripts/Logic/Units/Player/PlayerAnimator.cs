@@ -27,6 +27,16 @@ namespace GameScripts.Logic.Units.Player
             _animator.SetTrigger(Attack);
         }
 
+        public void SetTrigger(string animName)
+        {
+            _animator.SetTrigger(animName);
+        }
+        
+        public void SetTrigger(int animId)
+        {
+            _animator.SetTrigger(animId);
+        }
+
         public void SetIsRunning(bool isRunning)
         {
             _animator.SetBool(IsRunning, isRunning);

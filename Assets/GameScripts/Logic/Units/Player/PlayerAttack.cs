@@ -1,12 +1,13 @@
 using System;
-using System.Collections;
 using EditorScripts.Inspector;
-using GameScripts.Logic.Units.Enemy;
+using GameScripts.Logic.Units.Player.FightingSystem;
 using GameScripts.StaticData.ScriptableObjects;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace GameScripts.Logic.Units.Player
 {
+	[RequireComponent(typeof(ComboStateMachine))]
 	public class PlayerAttack : MonoBehaviour
 	{
 		private int _defaultDamage;
@@ -14,45 +15,29 @@ namespace GameScripts.Logic.Units.Player
 		public void ResetDamage() => Damage = _defaultDamage;
 
 		[SerializeField, SerializeReadOnly] private bool _canAttack = true;
-		[field: SerializeField] public float AttackCooldown { get; set; }
-		[SerializeField] private float _attackRange;
-		[SerializeField] private Transform model;
-		[SerializeField] private LayerMask enemyMask;
 
-		public Action OnAttack;
+		[SerializeReadOnly] public ComboStateMachine MeleeComboStateMachine;
+		public void OnEnable()
+		{
+			MeleeComboStateMachine = GetComponent<ComboStateMachine>();
+		}
 
 		public void SetProperties(PlayerData data)
 		{
 			_defaultDamage = data.attack.Damage;
 			Damage = _defaultDamage;
-			AttackCooldown = data.attack.AttackCooldown;
-			_attackRange = data.attack.AttackRange;
 		}
 	
 		private void Update()
 		{
 			if (!_canAttack) return;
-			if (!Input.GetMouseButtonDown(0)) return;
-			var shotDirection=model.TransformDirection(Vector3.forward);
-			Physics.SphereCast(transform.position,0,shotDirection,out RaycastHit hit,_attackRange,enemyMask);
-			if (hit.collider != null)
+			//print($"{nameof(MeleeComboStateMachine)}:{MeleeComboStateMachine == null}");
+			//print($"{nameof(MeleeComboStateMachine.CurrentState)}:{MeleeComboStateMachine.CurrentState == null}");
+			if (Input.GetMouseButton(0) &&
+			    MeleeComboStateMachine.CurrentState.GetType() == typeof(IdleState))
 			{
-				hit.transform.GetComponent<EnemyAI>().GetDamage(Damage);
+				MeleeComboStateMachine.SetNextState(new EntryState());
 			}
-			OnAttack?.Invoke();
-			StartCoroutine(AttackCooldownCoroutine());
-		}
-	
-		private void OnDrawGizmos() {
-			var shotDirection=model.TransformDirection(Vector3.forward);
-			Gizmos.DrawWireSphere(transform.position+shotDirection,_attackRange);
-		}
-	
-		private IEnumerator AttackCooldownCoroutine() 
-		{
-			_canAttack = false;
-			yield return new WaitForSeconds(AttackCooldown);
-			_canAttack = true;
 		}
 	}
 }
