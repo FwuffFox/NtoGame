@@ -31,8 +31,6 @@ namespace GameScripts.Logic.Units.Player
 		private void Update()
 		{
 			if (!_canAttack) return;
-			//print($"{nameof(MeleeComboStateMachine)}:{MeleeComboStateMachine == null}");
-			//print($"{nameof(MeleeComboStateMachine.CurrentState)}:{MeleeComboStateMachine.CurrentState == null}");
 			if (Input.GetMouseButton(0) &&
 			    MeleeComboStateMachine.CurrentState.GetType() == typeof(IdleState))
 			{
