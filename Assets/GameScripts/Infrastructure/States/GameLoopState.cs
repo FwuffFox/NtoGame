@@ -2,8 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using GameScripts.Logic.Fireplace;
-using GameScripts.Logic.Units.Player;
+using GameScripts.Logic.Player;
 using GameScripts.Services.Data;
 using GameScripts.Services.UnitSpawner;
 using GameScripts.Services.Unity;
@@ -18,41 +17,47 @@ namespace GameScripts.Infrastructure.States
         private ICoroutineRunner _coroutineRunner;
         private IUnitSpawner _unitSpawner;
         private GameStateMachine _gameStateMachine;
-
+        private IStaticDataService _staticDataService;
+        
         public Action<int> OnMoneyAmountChanged;
-        private GameObject _player;
+        private int _points;
+        public GameObject _player;
         private IEnumerator _eachSecondCoroutine;
         private List<Fireplace> _fireplaces;
 
         [Inject]
         public void Construct(ICoroutineRunner coroutineRunner, IUnitSpawner unitSpawner,
-            GameStateMachine gameStateMachine)
+            GameStateMachine gameStateMachine, IStaticDataService staticDataService)
         {
             _coroutineRunner = coroutineRunner;
             _unitSpawner = unitSpawner;
             _gameStateMachine = gameStateMachine;
+            _staticDataService = staticDataService;
         }
         
         public void Enter()
         {
             _player = _unitSpawner.Player;
-            _player.GetComponent<PlayerHealth>().OnBattleUnitDeath += ManagePlayerDeath;
-            _player.GetComponent<PlayerMoney>().OnMoneyChanged += (a) => OnMoneyAmountChanged?.Invoke(a);
+            _player.GetComponent<PlayerHealth>().OnPlayerDeath += ManagePlayerDeath;
+            _player.GetComponent<PlayerRotator>().canRotate = true;
+            _player.GetComponent<PlayerMoney>().onMoneyChanged += (a) => OnMoneyAmountChanged?.Invoke(a);
             _fireplaces = _unitSpawner.Fireplaces.Select(f => f.GetComponent<Fireplace>()).ToList();
-            var finalFireplace = _fireplaces.FirstOrDefault(f => f.Type == FireplaceType.Final);
-            if (finalFireplace != null)
-                finalFireplace.OnFinalCampfireReached += () => _gameStateMachine.Enter<MenuState>();
+            _fireplaces
+                .First(f => f.Type == FireplaceType.Final)
+                .OnFinalCampfireReached += () => _gameStateMachine.Enter<MenuState>();
         }
         
         public void Exit()
         {
-            _player.GetComponent<PlayerHealth>().OnBattleUnitDeath -= ManagePlayerDeath;
+            _player.GetComponent<PlayerHealth>().OnPlayerDeath -= ManagePlayerDeath;
             Object.Destroy(_player);
+            _points = 0;
         }
         
         private void ManagePlayerDeath()
         {
-            Object.Destroy(_player.GetComponent<PlayerMovement>());
+            _player.GetComponent<PlayerMovement>().canMove = false;
+            _player.GetComponent<PlayerRotator>().canRotate = false;
             Object.Destroy(_player.GetComponent<PlayerAttack>());
             _coroutineRunner.StartCoroutine(ManagePlayerDeathCoroutine());
         }

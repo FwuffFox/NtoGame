@@ -1,17 +1,17 @@
 ﻿using System;
-using GameScripts.Logic.Units.Player;
+using GameScripts.Logic.Player;
 using UnityEngine;
 
 namespace GameScripts.Logic
 {
     public class TestCleanseObject : MonoBehaviour
     {
-        private CurseObject.CurseObject _curseObject;
+        private CurseObject _curseObject;
         [SerializeField] private GameObject _cleanseObjMask;
 
         public void EnableMask(bool isTrue) => _cleanseObjMask.SetActive(isTrue);
 
-        public void SetParentCurseObject(CurseObject.CurseObject curseObject)
+        public void SetParentCurseObject(CurseObject curseObject)
         {
             _curseObject = curseObject;
         }

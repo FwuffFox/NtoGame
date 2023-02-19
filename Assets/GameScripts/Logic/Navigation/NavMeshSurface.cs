@@ -1,10 +1,10 @@
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEditor.SceneManagement;
-using UnityEngine;
-using UnityEngine.AI;
+#endif
 
-namespace GameScripts.Logic.Navigation
+namespace UnityEngine.AI
 {
     public enum CollectObjects
     {

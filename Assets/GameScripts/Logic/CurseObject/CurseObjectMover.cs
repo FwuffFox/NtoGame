@@ -1,9 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using EditorScripts.Inspector;
-using GameScripts.Logic.Units.Player;
+using GameScripts.Logic.Player;
 using UnityEngine;
 
-namespace GameScripts.Logic.CurseObject
+namespace GameScripts.Logic
 {
     [RequireComponent(typeof(SphereCollider))]
     public class CurseObjectMover : MonoBehaviour
