@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using GameScripts.Extensions;
+using GameScripts.Logic.Fireplace;
+using GameScripts.Logic.Navigation;
 using GameScripts.Logic.Tiles;
-using GameScripts.Logic.Enemy;
+using GameScripts.Logic.Units.Enemy;
 using GameScripts.Services.UnitSpawner;
 using GameScripts.StaticData.Enums;
 using GameScripts.StaticData.ScriptableObjects;
@@ -21,7 +23,7 @@ namespace GameScripts.Logic.Generators
 		private const float TileStep = 3.16f;
 		private List<Tile> _tiles = new();
 		private readonly List<Tile> _spawnedTiles = new();
-		private readonly List<CurseObject> _curseObjects = new();
+		private readonly List<CurseObject.CurseObject> _curseObjects = new();
 		private List<Tile> _tilesWithSpawn;
 		private float _posX;
 		private float _posZ;
@@ -99,7 +101,7 @@ namespace GameScripts.Logic.Generators
 					obj.parent = _landFolder;
 					if (tile.HaveCursedObject)
 					{
-						_curseObjects.Add(obj.GetComponentInChildren<CurseObject>());
+						_curseObjects.Add(obj.GetComponentInChildren<CurseObject.CurseObject>());
 					}
 					_posX+=TileStep;
 				}

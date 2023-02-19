@@ -1,4 +1,5 @@
 ﻿using GameScripts.Infrastructure.States;
+using GameScripts.Logic.Fireplace;
 using GameScripts.StaticData.Enums;
 using UnityEngine;
 

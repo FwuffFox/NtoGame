@@ -1,11 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class MenuExitButton : MonoBehaviour
+namespace GameScripts.Logic.UI.InMenu
 {
-    public void Exit()
+    public class MenuExitButton : MonoBehaviour
     {
-        Application.Quit();
+        public void Exit()
+        {
+            Application.Quit();
+        }
     }
 }
