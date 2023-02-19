@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using EditorScripts.Inspector;
-using GameScripts.Logic.Player;
+using GameScripts.Logic.Units.Player;
 using GameScripts.StaticData.Enums;
 using UnityEngine;
 
-namespace GameScripts.Logic
+namespace GameScripts.Logic.CurseObject
 {
     [RequireComponent(typeof(SphereCollider))]
     public class CurseObject : MonoBehaviour

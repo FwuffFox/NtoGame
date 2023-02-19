@@ -1,5 +1,4 @@
 ﻿using System;
-using GameScripts.Logic.Player;
 using GameScripts.StaticData.Enums;
 using UnityEngine;
 
@@ -18,7 +17,7 @@ namespace GameScripts.Logic.Curses
         public bool IsMaxed => CurrentStacks == MaxStacks;
         public bool IsLastStack => MaxStacks - CurrentStacks == 1;
 
-        private Func<GameObject, bool> _onMaxStacks;
+        private Action<GameObject> _onMaxStacks;
         private GameObject _obj;
 
         public StackableCurse(CurseType curseType, int maxStacks, float curseValuePerStack)
@@ -28,7 +27,7 @@ namespace GameScripts.Logic.Curses
             CurseValuePerStack = curseValuePerStack;
         }
 
-        public void SetOnMaxStacksFunction(Func<GameObject, bool> onMaxStacks, GameObject obj)
+        public void SetOnMaxStacksFunction(Action<GameObject> onMaxStacks, GameObject obj)
         {
             _onMaxStacks = onMaxStacks;
             _obj = obj;
