@@ -9,6 +9,7 @@ namespace GameScripts.Logic.Units.Enemy
     public class EnemyAttacker : MonoBehaviour
     {
         public Action OnAttack;
+        public AudioSource Sound;
         private float _damage;
         private float _attackCooldown;
 
@@ -24,6 +25,7 @@ namespace GameScripts.Logic.Units.Enemy
         {
             if (!_canAttack) return;
             player.GetDamage(_damage);
+            Sound.Play();
             StartCoroutine(AttackCooldown());
             OnAttack?.Invoke();
         }
