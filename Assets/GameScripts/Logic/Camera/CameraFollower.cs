@@ -20,7 +20,7 @@ namespace GameScripts.Logic.Camera
 
         private void LateUpdate()
         {
-            if (_target is null) return;
+            if (!_target) return;
             var targetPos = _target.transform.position;
             transform.position = new Vector3(targetPos.x, 0, targetPos.z);
         }

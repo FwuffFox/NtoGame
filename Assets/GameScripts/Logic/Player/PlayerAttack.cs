@@ -18,6 +18,7 @@ public class PlayerAttack : MonoBehaviour
 	[SerializeField] private float _attackRange;
 	[SerializeField] private Transform model;
 	[SerializeField] private LayerMask enemyMask;
+	public AudioSource Sound;
 
 	public Action OnAttack;
 
@@ -38,6 +39,7 @@ public class PlayerAttack : MonoBehaviour
 		if (hit.collider!=null)
 		{
 			hit.transform.GetComponent<EnemyAI>().SetDamage(Damage);
+			Sound.Play();
 		}
 		OnAttack?.Invoke();
 		StartCoroutine(AttackCooldownCoroutine());
