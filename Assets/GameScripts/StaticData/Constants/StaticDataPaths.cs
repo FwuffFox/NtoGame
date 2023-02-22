@@ -6,5 +6,6 @@
         public const string GameData = "StaticData/GameData";
         public const string PlayerData = "StaticData/PlayerData";
         public const string EnemiesData = "StaticData/EnemiesData";
+        public const string AttacksData = "Attacks";
     }
 }

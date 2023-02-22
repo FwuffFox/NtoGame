@@ -1,6 +1,8 @@
 using System;
 using EditorScripts.Inspector;
+using GameScripts.Services.Data;
 using UnityEngine;
+using Zenject;
 
 namespace GameScripts.Logic.Units.Player.FightingSystem
 {
@@ -12,6 +14,15 @@ namespace GameScripts.Logic.Units.Player.FightingSystem
         private State _nextState;
 
         public PlayerAnimator Animator;
+        public AudioSource AudioSource;
+
+        public IStaticDataService StaticDataService;
+
+        [Inject]
+        private void Construct(IStaticDataService staticDataService)
+        {
+            StaticDataService = staticDataService;
+        }
 
         private void Update()
         {
