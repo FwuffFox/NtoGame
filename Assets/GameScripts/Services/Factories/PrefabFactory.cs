@@ -44,23 +44,28 @@ namespace GameScripts.Services.Factories
 
                     var health = player.GetComponent<PlayerHealth>()
                         .With(x => x.SetProperties(playerData));
-
-                    var comboSystem = player.GetComponent<ComboStateMachine>()
-                        .With(x => x.SetNextStateToMain());
                     
-                    var attack = player.GetComponent<PlayerAttack>()
-                        .With(x =>
-                        {
-                            x.SetProperties(playerData);
-                            x.MeleeComboStateMachine = comboSystem;
-                        });
-
                     var animator = player.GetComponent<PlayerAnimator>()
                         .With(animator =>
                         {
                             health.OnBattleUnitDeath += animator.SetDeath;
                             movement.OnMovementSpeedChange += animator.SetSpeed;
                             movement.OnIsRunningChange += animator.SetIsRunning;
+                        });
+                    
+                    var comboSystem = player.GetComponent<ComboStateMachine>()
+                        .With(x =>
+                        {
+                            x.SetNextStateToMain();
+                            x.AudioSource = player.GetComponent<AudioSource>();
+                            x.Animator = animator;
+                        });
+                    
+                    var attack = player.GetComponent<PlayerAttack>()
+                        .With(x =>
+                        {
+                            x.SetProperties(playerData);
+                            x.MeleeComboStateMachine = comboSystem;
                         });
 
                     var debuffSystem = player.GetComponent<PlayerDebuffSystem>().With(x =>

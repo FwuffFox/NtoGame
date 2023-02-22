@@ -1,10 +1,15 @@
+using GameScripts.StaticData.ScriptableObjects;
 using UnityEngine;
 
 namespace GameScripts.Logic.Units.Player.FightingSystem
 {
-    public class BaseState : State
+    public abstract class BaseState : State
     {
-        protected PlayerAnimator PlayerAnimator;
+        /// <summary>
+        /// Name of that state. Must be unique. Player Animator should have an animation
+        /// with the same name. AttackSO should be created with the same name.
+        /// </summary>
+        protected abstract string StateName { get; }
 
         /// <summary>
         /// Whether or not the next attack in the combo sequence should be played or not.
@@ -19,14 +24,33 @@ namespace GameScripts.Logic.Units.Player.FightingSystem
         /// <summary>
         /// How long should state be active before moving next.
         /// </summary>
-        public float Duration { get; set; }
+        protected float Duration { get; set; }
+        
+        /// <summary>
+        /// Audio which will be played after entering a state.
+        /// </summary>
+        protected AudioClip AttackAudio { get; set; }
         
         private float _attackPressedTimer = 0;
+
+        protected AttackSO AttackData;
         
         public override void OnEnter(ComboStateMachine comboStateMachine)
         {
             base.OnEnter(comboStateMachine);
-            PlayerAnimator = comboStateMachine.Animator;
+            if (!comboStateMachine.StaticDataService.AttackDictionary.TryGetValue(StateName, out AttackData))
+            {
+                Debug.LogError($"There is no SO for {this} or names are wrong");
+                return;
+            }
+
+            Duration = AttackData.AttackDuration;
+            AttackAudio = AttackData.AttackAudio;
+            
+            comboStateMachine.Animator.SetTrigger(StateName);
+            
+            comboStateMachine.AudioSource.clip = AttackAudio;
+            comboStateMachine.AudioSource.Play();
         }
 
         public override void OnUpdate()

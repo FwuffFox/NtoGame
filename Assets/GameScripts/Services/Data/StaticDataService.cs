@@ -13,9 +13,12 @@ namespace GameScripts.Services.Data
         
         public Dictionary<EnemyType, EnemyData> Enemies { get; private set; } = new();
 
+        public Dictionary<string, AttackSO> AttackDictionary { get; private set; } = new();
+
         public GameData GameData { get; private set; }
         
         public PlayerData PlayerData { get; private set; }
+        
 
         public void Load()
         {
@@ -23,6 +26,8 @@ namespace GameScripts.Services.Data
                 .ToDictionary(data => data.sceneName, data => data);
             Enemies = LoadResources<EnemyData>(StaticDataPaths.EnemiesData)
                 .ToDictionary(data => data.enemyType, data => data);
+            AttackDictionary = LoadResources<AttackSO>(StaticDataPaths.AttacksData)
+                .ToDictionary(data => data.AttackName, data => data);
 
             GameData = LoadResource<GameData>(StaticDataPaths.GameData);
             PlayerData = LoadResource<PlayerData>(StaticDataPaths.PlayerData);

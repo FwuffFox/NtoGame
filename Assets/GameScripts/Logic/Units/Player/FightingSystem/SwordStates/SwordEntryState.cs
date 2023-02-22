@@ -5,14 +5,12 @@ namespace GameScripts.Logic.Units.Player.FightingSystem
 {
     public class SwordEntryState : BaseState
     {
-        private static readonly int AnimId = Animator.StringToHash("Attack1");
+        protected override string StateName { get; } = "SwordEntry";
+
         public override void OnEnter(ComboStateMachine comboStateMachine)
         {
             base.OnEnter(comboStateMachine);
-            
             AttackIndex = 1;
-            Duration = 1.5f;
-            PlayerAnimator.SetTrigger(AnimId);
             Debug.Log($"Player Attack{AttackIndex}fired!");
         }
 
