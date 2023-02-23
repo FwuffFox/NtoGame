@@ -1,4 +1,5 @@
 using GameScripts.Logic.Units.Enemy;
+using GameScripts.Logic.Units.Player;
 using UnityEngine;
 
 namespace GameScripts.Logic.Weapons
@@ -6,9 +7,10 @@ namespace GameScripts.Logic.Weapons
     [RequireComponent(typeof(Collider))]
     public class Sword : MonoBehaviour
     {
-        [SerializeField] private int _damage;
         [SerializeField] private Collider _weaponCollider;
-
+        [Range(0f, 2f)] [SerializeField] private float _damageMult = 1f;
+        
+        public PlayerAttack PlayerAttack { get; set; }
         public bool IsColliderActive
         {
             get => _weaponCollider.enabled;
@@ -24,7 +26,7 @@ namespace GameScripts.Logic.Weapons
         {
             if (other.TryGetComponent<EnemyAI>(out var enemy))
             {
-                enemy.GetDamage(_damage);
+                enemy.GetDamage((int) (PlayerAttack.Damage * _damageMult));
             }
         }
     }
