@@ -3,6 +3,7 @@ using GameScripts.Logic.Units.Player.FightingSystem;
 using GameScripts.Logic.Weapons;
 using GameScripts.StaticData.ScriptableObjects;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace GameScripts.Logic.Units.Player
 {
@@ -12,8 +13,8 @@ namespace GameScripts.Logic.Units.Player
 		private int _defaultDamage;
 		[field: SerializeField] public int Damage { get; set; }
 		public void ResetDamage() => Damage = _defaultDamage;
-
-		[SerializeField, SerializeReadOnly] private bool _canAttack = true;
+		
+		public bool CanAttack = true;
 		
 		public bool IsWeaponActive
 		{
@@ -27,6 +28,7 @@ namespace GameScripts.Logic.Units.Player
 		public void OnEnable()
 		{
 			MeleeComboStateMachine = GetComponent<ComboStateMachine>();
+			Sword.PlayerAttack = this;
 		}
 
 		public void SetProperties(PlayerData data)
@@ -37,7 +39,7 @@ namespace GameScripts.Logic.Units.Player
 	
 		private void Update()
 		{
-			if (!_canAttack) return;
+			if (!CanAttack) return;
 			if (Input.GetMouseButton(0) &&
 			    MeleeComboStateMachine.CurrentState.GetType() == typeof(IdleState))
 			{

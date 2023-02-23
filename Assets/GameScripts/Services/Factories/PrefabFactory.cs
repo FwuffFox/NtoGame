@@ -45,7 +45,11 @@ namespace GameScripts.Services.Factories
                         .With(x => x.SetProperties(playerData));
 
                     var health = player.GetComponent<PlayerHealth>()
-                        .With(x => x.SetProperties(playerData));
+                        .With(x =>
+                        {
+                            x.SetProperties(playerData);
+                            x.OnBattleUnitDeath += () => attack.CanAttack = false;
+                        });
                     
                     var animator = player.GetComponent<PlayerAnimator>()
                         .With(animator =>

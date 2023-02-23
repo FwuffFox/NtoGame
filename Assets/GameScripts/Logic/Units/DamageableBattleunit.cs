@@ -55,14 +55,11 @@ namespace GameScripts.Logic.Units
             OnBattleUnitDeath?.Invoke();
         }
         
-
+        public void HealToFull() => Health = MaxHealth;
 
 #if UNITY_EDITOR
-        [FormerlySerializedAs("healButton")]
-        [InspectorButton("OnHealButton")]
+        [InspectorButton(nameof(HealToFull))]
         [SerializeField] private bool _healButton;
-
-        private void OnHealButton() => Health = MaxHealth;
 #endif
     }
 }
