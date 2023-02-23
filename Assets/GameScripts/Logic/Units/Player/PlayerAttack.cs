@@ -1,9 +1,8 @@
-using System;
 using EditorScripts.Inspector;
 using GameScripts.Logic.Units.Player.FightingSystem;
+using GameScripts.Logic.Weapons;
 using GameScripts.StaticData.ScriptableObjects;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace GameScripts.Logic.Units.Player
 {
@@ -15,8 +14,16 @@ namespace GameScripts.Logic.Units.Player
 		public void ResetDamage() => Damage = _defaultDamage;
 
 		[SerializeField, SerializeReadOnly] private bool _canAttack = true;
+		
+		public bool IsWeaponActive
+		{
+			get => Sword.IsColliderActive;
+			set => Sword.IsColliderActive = value;
+		}
 
 		[SerializeReadOnly] public ComboStateMachine MeleeComboStateMachine;
+
+		public Sword Sword;
 		public void OnEnable()
 		{
 			MeleeComboStateMachine = GetComponent<ComboStateMachine>();
