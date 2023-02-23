@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using GameScripts.Logic.Fireplace;
 using GameScripts.Services.Factories;
 using GameScripts.StaticData.Enums;
 using UnityEngine;

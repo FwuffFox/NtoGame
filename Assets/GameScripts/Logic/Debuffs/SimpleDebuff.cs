@@ -1,18 +1,25 @@
-﻿using GameScripts.StaticData.Enums;
+﻿using System;
+using UnityEngine;
 
 namespace GameScripts.Logic.Debuffs
 {
-    public class SimpleDebuff
+    /// <summary>
+    /// A debuff that is applying an effect each second.
+    /// </summary>
+    /// <typeparam name="TPlayerComponent">Component that will be changed during debuff.</typeparam>
+    public class SimpleDebuff<TPlayerComponent> where TPlayerComponent : MonoBehaviour
     {
-        public SimpleDebuffType DebuffType;
-        public int Duration;
-        public float DebuffValue;
+        public int DurationInSeconds;
+        
+        public readonly Action<TPlayerComponent> ActionOnDebuffStart;
 
-        public SimpleDebuff(SimpleDebuffType debuffType, int duration, float debuffValue)
+        public readonly Action<TPlayerComponent> ActionOnDebuffEnd;
+        
+        public SimpleDebuff(int durationInSeconds, Action<TPlayerComponent> actionOnDebuffStart, Action<TPlayerComponent> actionOnDebuffEnd)
         {
-            DebuffType = debuffType;
-            Duration = duration;
-            DebuffValue = debuffValue;
+            DurationInSeconds = durationInSeconds;
+            ActionOnDebuffStart = actionOnDebuffStart;
+            ActionOnDebuffEnd = actionOnDebuffEnd;
         }
     }
 }

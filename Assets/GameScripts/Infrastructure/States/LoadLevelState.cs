@@ -1,7 +1,7 @@
 ﻿using GameScripts.Logic.Camera;
 using GameScripts.Logic.Generators;
-using GameScripts.Logic.Player;
 using GameScripts.Logic.UI.InGame;
+using GameScripts.Logic.Units.Player;
 using GameScripts.Services.Data;
 using GameScripts.Services.Factories;
 using GameScripts.Services.UnitSpawner;
@@ -61,21 +61,18 @@ namespace GameScripts.Infrastructure.States
             {
                 p.GetComponent<PlayerHealth>().MaxHealth = 1;
                 Debug.Log("Max stack on health curse");
-                return true;
             }, player);
             
             Curses.StaminaCurse.SetOnMaxStacksFunction(p =>
             {
-                p.GetComponent<PlayerMovement>().Speed -= 1;
+                p.GetComponent<PlayerMovement>().MovementSpeedModifier *= 0.5f;
                 Debug.Log("Max stack on stamina curse");
-                return true;
             }, player);
             
             Curses.DamageCurse.SetOnMaxStacksFunction(p =>
             {
-                p.GetComponent<PlayerAttack>().AttackCooldown *= 2;
+                p.GetComponent<PlayerAttack>().Damage *= Mathf.CeilToInt(0.5f);
                 Debug.Log("Max stack on damage curse");
-                return true;
             }, player);
             
             

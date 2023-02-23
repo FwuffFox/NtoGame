@@ -1,6 +1,6 @@
 using System;
 using EditorScripts.Inspector;
-using GameScripts.Logic.Player;
+using GameScripts.Logic.Units.Player;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,38 +13,33 @@ namespace GameScripts.Logic.UI.InGame
         [SerializeField] private Image _background;
         [SerializeField] private Image _fill;
 
-        [SerializeReadOnly] public PlayerHealth playerHealth;
+        [SerializeReadOnly] private PlayerHealth _playerHealth;
 
         public void SetPlayer(PlayerHealth player)
         {
-            playerHealth = player;
-            _healthSlider.maxValue = playerHealth.MaxHealth;
-            _healthSlider.value = playerHealth.CurrentHealth;
-            playerHealth.OnPlayerHealthChange += SetNewHealth;
-            playerHealth.OnPlayerMaxHealthChange += SetNewMaxHealth;
-        }
-
-        private void OnDestroy()
-        {
-            playerHealth.OnPlayerHealthChange -= SetNewHealth;
+            _playerHealth = player;
+            _healthSlider.maxValue = _playerHealth.MaxHealth;
+            _healthSlider.value = _playerHealth.Health;
+            _playerHealth.OnBattleUnitHealthChange += SetNewHealth;
+            _playerHealth.OnBattleUnitMaxHealthChange += SetNewMaxHealth;
         }
 
         private void SetNewHealth(float health)
         {
             _healthSlider.value = health;
-            _healthText.text = $"{health}/{playerHealth.MaxHealth}";
+            _healthText.text = $"{health}/{_playerHealth.MaxHealth}";
             ManageColors();
         }
 
         void ManageColors()
         {
-            if (Math.Abs(playerHealth.MaxHealth - 1) < 1)
+            if (Math.Abs(_playerHealth.MaxHealth - 1) < 1)
             {
                 _fill.color = Color.black;
                 _background.color = Color.black;
                 return;
             }
-            switch (playerHealth.CurrentHealth)
+            switch (_playerHealth.Health)
             {
                 case < 50:
                     _fill.color = Color.red;
@@ -64,7 +59,7 @@ namespace GameScripts.Logic.UI.InGame
         private void SetNewMaxHealth(float health)
         {
             _healthSlider.maxValue = health;
-            _healthText.text = $"{playerHealth.CurrentHealth}/{health}";
+            _healthText.text = $"{_playerHealth.Health}/{health}";
             ManageColors();
         }
     }
