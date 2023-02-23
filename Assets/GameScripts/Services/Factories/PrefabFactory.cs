@@ -39,6 +39,8 @@ namespace GameScripts.Services.Factories
                     
                     _diContainer.InjectGameObject(player);
 
+                    var attack = player.GetComponent<PlayerAttack>();
+
                     var movement = player.GetComponent<PlayerMovement>()
                         .With(x => x.SetProperties(playerData));
 
@@ -59,10 +61,10 @@ namespace GameScripts.Services.Factories
                             x.SetNextStateToMain();
                             x.AudioSource = player.GetComponent<AudioSource>();
                             x.Animator = animator;
+                            x.PlayerAttack = attack;
                         });
                     
-                    var attack = player.GetComponent<PlayerAttack>()
-                        .With(x =>
+                    attack.With(x =>
                         {
                             x.SetProperties(playerData);
                             x.MeleeComboStateMachine = comboSystem;

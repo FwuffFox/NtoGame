@@ -38,7 +38,7 @@ namespace GameScripts.Logic.Units.Player.FightingSystem
         public override void OnEnter(ComboStateMachine comboStateMachine)
         {
             base.OnEnter(comboStateMachine);
-            if (!comboStateMachine.StaticDataService.AttackDictionary.TryGetValue(StateName, out AttackData))
+            if (!ComboStateMachine.StaticDataService.AttackDictionary.TryGetValue(StateName, out AttackData))
             {
                 Debug.LogError($"There is no SO for {this} or names are wrong");
                 return;
@@ -47,10 +47,11 @@ namespace GameScripts.Logic.Units.Player.FightingSystem
             Duration = AttackData.AttackDuration;
             AttackAudio = AttackData.AttackAudio;
             
-            comboStateMachine.Animator.SetTrigger(StateName);
+            ComboStateMachine.Animator.SetTrigger(StateName);
+            ComboStateMachine.PlayerAttack.IsWeaponActive = true;
             
-            comboStateMachine.AudioSource.clip = AttackAudio;
-            comboStateMachine.AudioSource.Play();
+            ComboStateMachine.AudioSource.clip = AttackAudio;
+            ComboStateMachine.AudioSource.Play();
         }
 
         public override void OnUpdate()
@@ -69,6 +70,7 @@ namespace GameScripts.Logic.Units.Player.FightingSystem
 
         public override void OnExit()
         {
+            ComboStateMachine.PlayerAttack.IsWeaponActive = false;
             base.OnExit();
         }
     }

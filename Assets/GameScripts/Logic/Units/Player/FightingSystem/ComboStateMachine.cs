@@ -15,6 +15,7 @@ namespace GameScripts.Logic.Units.Player.FightingSystem
 
         public PlayerAnimator Animator;
         public AudioSource AudioSource;
+        public PlayerAttack PlayerAttack;
 
         public IStaticDataService StaticDataService;
 
