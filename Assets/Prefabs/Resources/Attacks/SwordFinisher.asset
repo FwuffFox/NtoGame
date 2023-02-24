@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SwordFinisher
   m_EditorClassIdentifier: 
   AttackName: SwordFinisher
-  AttackDuration: 2
+  AttackDuration: 1
   AttackAudio: {fileID: 8300000, guid: e45e8d3a45111fc45a850db26fa3fb0b, type: 3}
