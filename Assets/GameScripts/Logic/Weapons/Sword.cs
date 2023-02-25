@@ -24,7 +24,7 @@ namespace GameScripts.Logic.Weapons
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.TryGetComponent<EnemyAI>(out var enemy))
+            if (other.TryGetComponent<EnemyHealth>(out var enemy))
             {
                 enemy.GetDamage((int) (PlayerAttack.Damage * _damageMult));
             }

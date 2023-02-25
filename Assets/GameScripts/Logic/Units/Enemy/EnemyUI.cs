@@ -8,7 +8,7 @@ namespace GameScripts.Logic.Units.Enemy
     public class EnemyUI : MonoBehaviour
     {
         [SerializeField] private Slider _healthSlider;
-        [SerializeReadOnly, SerializeField] private EnemyAI _enemy;
+        [SerializeReadOnly, SerializeField] private EnemyHealth _enemy;
 
         private Transform _transform;
 
@@ -22,7 +22,7 @@ namespace GameScripts.Logic.Units.Enemy
             _healthSlider.transform.LookAt(_transform);
         }
 
-        public void SetTarget(EnemyAI target)
+        public void SetTarget(EnemyHealth target)
         {
             _enemy = target;
             _enemy.OnBattleUnitHealthChange += SetNewHealth;

@@ -74,7 +74,8 @@ namespace GameScripts.Services.Factories
                             x.MeleeComboStateMachine = comboSystem;
                         });
 
-                    var debuffSystem = player.GetComponent<PlayerDebuffSystem>().With(x =>
+                    var debuffSystem = player.GetComponent<PlayerDebuffSystem>()
+                        .With(x =>
                     {
                         x.RegisterComponent(health);
                         x.RegisterComponent(movement);
@@ -95,8 +96,18 @@ namespace GameScripts.Services.Factories
                 {
                     enemy.name = enemyData.enemyName;
 
+                    var health = enemy.GetComponent<EnemyHealth>()
+                        .With(x =>
+                        {
+                            x.SetProperties();
+                        });
+                    
                     var ai = enemy.GetComponent<EnemyAI>()
-                        .With(x => x.SetProperties(enemyData));
+                        .With(x =>
+                        {
+                            x.SetProperties(enemyData);
+                            x.EnemyHealth = enemy.GetComponent<EnemyHealth>();
+                        });
 
                     var mover = enemy.GetComponent<EnemyMover>()
                         .With(x => x.SetProperties(enemyData));
@@ -109,13 +120,13 @@ namespace GameScripts.Services.Factories
                         {
                             mover.OnSpeedChange += animator.SetSpeed;
                             attacker.OnAttack += animator.SetAttack;
-                            ai.OnBattleUnitDeath += animator.SetDeath;
+                            health.OnBattleUnitDeath += animator.SetDeath;
                         });
 
                     enemy.GetComponent<EnemyUI>()
                         .With(ui =>
                         {
-                            ui.SetTarget(ai);
+                            ui.SetTarget(health);
                         });
 
                 });
