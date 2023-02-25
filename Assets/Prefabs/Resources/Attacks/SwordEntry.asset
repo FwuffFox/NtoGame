@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SwordEntry
   m_EditorClassIdentifier: 
   AttackName: SwordEntry
-  AttackDuration: 2
+  AttackDuration: 0.5
   AttackAudio: {fileID: 8300000, guid: 8a49e6f042fbfdc438d1edaa5907591f, type: 3}
