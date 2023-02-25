@@ -28,6 +28,7 @@ namespace GameScripts.Logic.Generators
 		private float _posX;
 		private float _posZ;
 		private LevelData.XZCoord[] _coords;
+		public LevelSO levelSO;
 
 		[SerializeField] private NavMeshSurface _navMeshSurface;
 		private int _trapsCount;
@@ -36,8 +37,9 @@ namespace GameScripts.Logic.Generators
 		private Transform _landFolder;
 
 		private IUnitSpawner _unitSpawner;
+        private Transform obj;
 
-		[Inject]
+        [Inject]
 		public void Construct(IUnitSpawner unitSpawner)
 		{
 			_unitSpawner = unitSpawner;
@@ -69,41 +71,52 @@ namespace GameScripts.Logic.Generators
 
 		private void GenerateMap() 
 		{
+			int i = 0;
 			for (int w = 0; w < _mapSize; w++) 
 			{
 				for (int h = 0;h < _mapSize; h++)
 				{
-					int tileNumber;
-					if (w == 0 && h == 0 || w == _mapSize - 1 && h == _mapSize - 1 || _coords.Contains(new LevelData.XZCoord { X = w, Z = h }))
+					if (!levelSO)
 					{
-						tileNumber = 0;
+						//автогенерация
+						int tileNumber;
+						if (w == 0 && h == 0 || w == _mapSize - 1 && h == _mapSize - 1 || _coords.Contains(new LevelData.XZCoord { X = w, Z = h }))
+							tileNumber = 0;
+						else tileNumber = Random.Range(0, _tiles.Count);
+
+						obj = Instantiate(_tiles[tileNumber].transform, new Vector3(_posX, 0, _posZ),
+							Quaternion.Euler(-90, 0, 0));
 					}
-					else tileNumber=Random.Range(0,_tiles.Count);
-					var obj = Instantiate(_tiles[tileNumber].transform, new Vector3(_posX, 0, _posZ),
-						Quaternion.Euler(-90, 0, 0));
+					else   //грузим уровень
+						obj = Instantiate(levelSO.objs[i].Tile.transform, new Vector3(_posX, 0, _posZ),
+							Quaternion.Euler(-90, 0, 0));
 					var tile = obj.GetComponent<Tile>();
-					if (w == 0 && h == 0)
-					{
-						_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, FireplaceType.Start);
-						tile.HaveSpawnPoint = false;
-					}
-					else if (w == _mapSize - 1 && h == _mapSize - 1)
-					{
-						_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, FireplaceType.Final);
-						tile.HaveSpawnPoint = false;
-					}
-					else if (_coords.Contains(new LevelData.XZCoord { X = w, Z = h }))
-					{
-						_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, FireplaceType.Checkpoint);
-						tile.HaveSpawnPoint = false;
+					if (tile.HaveSpawnPoint)
+					{	//можем заспавнить объект
+						if (w == 0 && h == 0)
+						{
+							_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, FireplaceType.Start);
+							tile.HaveSpawnPoint = false;
+						}
+						else if (w == _mapSize - 1 && h == _mapSize - 1)
+						{
+							_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, FireplaceType.Final);
+							tile.HaveSpawnPoint = false;
+						}
+						else if (_coords.Contains(new LevelData.XZCoord { X = w, Z = h }))
+						{
+							_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, FireplaceType.Checkpoint);
+							tile.HaveSpawnPoint = false;
+						}
 					}
 					_spawnedTiles.Add(tile);
 					obj.parent = _landFolder;
 					if (tile.HaveCursedObject)
-					{
+					{	//проклятие
 						_curseObjects.Add(obj.GetComponentInChildren<CurseObject.CurseObject>());
 					}
 					_posX+=TileStep;
+					i++;
 				}
 				_posZ+=TileStep;
 				_posX=0;
