@@ -15,6 +15,7 @@ namespace GameScripts.Logic.Units.Enemy
         public override void OnHealthReachZero()
         {
             PlayerMoney.Money += 100;
+            OnlineManager.onlineManager.kills++;
             base.OnHealthReachZero();
         }
     }
