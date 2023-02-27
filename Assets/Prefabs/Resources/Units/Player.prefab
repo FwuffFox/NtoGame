@@ -938,7 +938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Damage>k__BackingField: 0
   _canAttack: 1
-  <AttackCooldown>k__BackingField: 0
+  MeleeComboStateMachine: {fileID: 0}
 --- !u!114 &-5864533921871002223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -963,7 +963,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3e205c8f1684d77bbf5930ff35e69c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CustomName: Combat
   Animator: {fileID: 1801820715673411265}
 --- !u!1 &3564145182107553972
 GameObject:
