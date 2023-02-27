@@ -45,6 +45,7 @@ namespace GameScripts.Logic.Units
             if (Health <= 0)
             {
                 IsDead = true;
+                OnlineManager.onlineManager.SetLeaderBoard();
                 OnHealthReachZero();
             }
         }
