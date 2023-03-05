@@ -2,7 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using GameScripts.Logic.Fireplace;
+using GameScripts.Logic.Campfire;
+using GameScripts.Logic.UI.InGame;
 using GameScripts.Logic.Units.Player;
 using GameScripts.Services.Data;
 using GameScripts.Services.UnitSpawner;
@@ -13,7 +14,7 @@ using Object = UnityEngine.Object;
 
 namespace GameScripts.Infrastructure.States
 {
-    public class GameLoopState : IState
+    public class GameLoopState : IStateWithPayload<GameObject>
     {
         private ICoroutineRunner _coroutineRunner;
         private IUnitSpawner _unitSpawner;
@@ -22,7 +23,9 @@ namespace GameScripts.Infrastructure.States
         public Action<int> OnMoneyAmountChanged;
         private GameObject _player;
         private IEnumerator _eachSecondCoroutine;
-        private List<Fireplace> _fireplaces;
+        private List<Campfire> _fireplaces;
+
+        private GameObject _ui;
 
         [Inject]
         public void Construct(ICoroutineRunner coroutineRunner, IUnitSpawner unitSpawner,
@@ -33,20 +36,28 @@ namespace GameScripts.Infrastructure.States
             _gameStateMachine = gameStateMachine;
         }
         
-        public void Enter()
+        public void Enter(GameObject ui)
         {
+            _ui = ui;
             _player = _unitSpawner.Player;
             _player.GetComponent<PlayerHealth>().OnBattleUnitDeath += ManagePlayerDeath;
             _player.GetComponent<PlayerMoney>().OnMoneyChanged += (a) => OnMoneyAmountChanged?.Invoke(a);
-            _fireplaces = _unitSpawner.Fireplaces.Select(f => f.GetComponent<Fireplace>()).ToList();
-            var finalFireplace = _fireplaces.FirstOrDefault(f => f.Type == FireplaceType.Final);
+            
+            _fireplaces = _unitSpawner.Fireplaces.Select(f => f.GetComponent<Campfire>()).ToList();
+            _fireplaces.ForEach(f => f.OnCampfireInteracted += OnCampfireInteracted );
+            var finalFireplace = _fireplaces.FirstOrDefault(f => f.Type == CampfireType.Final);
             if (finalFireplace != null)
                 finalFireplace.OnFinalCampfireReached += () => _gameStateMachine.Enter<MenuState>();
+        }
+
+        public void OnCampfireInteracted()
+        {
+            _ui.GetComponentInChildren<CampfireUI>().TurnOn(_player);
+            Time.timeScale = 0f;
         }
         
         public void Exit()
         {
-            _player.GetComponent<PlayerHealth>().OnBattleUnitDeath -= ManagePlayerDeath;
             Object.Destroy(_player);
         }
         

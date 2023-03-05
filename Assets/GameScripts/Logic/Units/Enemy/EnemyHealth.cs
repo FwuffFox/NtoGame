@@ -11,8 +11,8 @@ namespace GameScripts.Logic.Units.Enemy
             MaxHealth = 100;
             Health = 100;
         }
-        
-        public override void OnHealthReachZero()
+
+        protected override void OnHealthReachZero()
         {
             PlayerMoney.Money += 100;
             OnlineManager.onlineManager.kills++;

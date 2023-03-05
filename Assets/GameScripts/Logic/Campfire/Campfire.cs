@@ -1,31 +1,42 @@
 using System;
 using System.Collections;
-using EditorScripts.Inspector;
 using GameScripts.Logic.Units.Player;
 using UnityEngine;
 
-namespace GameScripts.Logic.Fireplace
+namespace GameScripts.Logic.Campfire
 {
-    public class Fireplace : MonoBehaviour
+    public enum CampfireType
+    {
+        Start,
+        Checkpoint,
+        Final
+    }
+    
+    public class Campfire : InteractableObject
     {
         [SerializeField] private ParticleSystem _particle;
         [SerializeField] private AudioSource _audio;
+        
     
-        [SerializeReadOnly] public FireplaceType Type;
-        public Action OnFinalCampfireReached;
+        [SerializeField] public CampfireType Type;
+        [SerializeField] private int _checkpointNumber;
 
+        public Action OnCampfireInteracted;
+        public Action OnFinalCampfireReached;
 
         private void OnTriggerEnter(Collider other)
         {
             if (!IsPlayer(other)) return;
-            if (Type == FireplaceType.Final) StartCoroutine(OnFinalReach());
-            if (Type == FireplaceType.Checkpoint)
+            if (Type == CampfireType.Final) StartCoroutine(OnFinalReach());
+            if (Type == CampfireType.Checkpoint)
             {
+                PlayerPrefs.SetFloat("CheckpointNum", _checkpointNumber);
                 PlayerPrefs.SetFloat("CheckpointX", transform.position.x + 1);
                 PlayerPrefs.SetFloat("CheckpointZ", transform.position.z + 1);
             }
             _particle.Play();
             _audio.Play();
+            ActivateObject(other.GetComponent<PlayerInteractions>());
         }
 
         private IEnumerator OnFinalReach()
@@ -45,25 +56,25 @@ namespace GameScripts.Logic.Fireplace
         
             if (!_audio.isPlaying)
                 _audio.Play();
+            ActivateObject(other.GetComponent<PlayerInteractions>());
         }
 
         private void OnTriggerExit(Collider other)
         {
             if (!IsPlayer(other)) return;
+
             _particle.Stop();
             _audio.Stop();
         }
 
-        private bool IsPlayer(Collider collider)
+        private bool IsPlayer(Collider other)
         {
-            return collider.TryGetComponent<PlayerMovement>(out _);
+            return other.TryGetComponent<PlayerMovement>(out _);
         }
-    }
-
-    public enum FireplaceType
-    {
-        Start,
-        Checkpoint,
-        Final
+        
+        public override void Interact()
+        {
+            OnCampfireInteracted?.Invoke();
+        }
     }
 }

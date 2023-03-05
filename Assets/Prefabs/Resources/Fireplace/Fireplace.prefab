@@ -246,6 +246,7 @@ MonoBehaviour:
   _particle: {fileID: 2125229653666544005}
   _audio: {fileID: 8335355561689411854}
   Type: 0
+  _checkpointNumber: 0
 --- !u!135 &4894392749795132732
 SphereCollider:
   m_ObjectHideFlags: 0

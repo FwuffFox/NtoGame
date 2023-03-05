@@ -37,7 +37,6 @@ namespace GameScripts.Infrastructure.States
             if (_menuUI == null)
                 _menuUI = _ui.GetComponent<MenuUI>();
             _menuUI.PlayButton.onClick.AddListener(OnPlayButtonClick);
-            _menuUI.PlaygroundButton.onClick.AddListener(OnPlaygroundButtonClick);
         }
 
         private void OnPlayButtonClick()
@@ -46,11 +45,6 @@ namespace GameScripts.Infrastructure.States
             _stateMachine.Enter<LoadLevelState, string>(SceneNames.Main);
         }
 
-        private void OnPlaygroundButtonClick()
-        {
-            _menuUI.StartLoadingScreen();
-            _stateMachine.Enter<LoadLevelState, string>(SceneNames.Playground);
-        }
         public void Exit() { }
     }
 }

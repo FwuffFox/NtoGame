@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using GameScripts.Extensions;
-using GameScripts.Logic.Fireplace;
+using GameScripts.Logic.Campfire;
 using GameScripts.Logic.Navigation;
 using GameScripts.Logic.Tiles;
 using GameScripts.Logic.Units.Enemy;
@@ -95,17 +95,17 @@ namespace GameScripts.Logic.Generators
 					{	//можем заспавнить объект
 						if (w == 0 && h == 0)
 						{
-							_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, FireplaceType.Start);
+							_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, CampfireType.Start);
 							tile.HaveSpawnPoint = false;
 						}
 						else if (w == _mapSize - 1 && h == _mapSize - 1)
 						{
-							_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, FireplaceType.Final);
+							_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, CampfireType.Final);
 							tile.HaveSpawnPoint = false;
 						}
 						else if (_coords.Contains(new LevelData.XZCoord { X = w, Z = h }))
 						{
-							_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, FireplaceType.Checkpoint);
+							_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, CampfireType.Checkpoint);
 							tile.HaveSpawnPoint = false;
 						}
 					}

@@ -1,5 +1,5 @@
 ﻿using GameScripts.Infrastructure.States;
-using GameScripts.Logic.Fireplace;
+using GameScripts.Logic.Campfire;
 using GameScripts.StaticData.Enums;
 using UnityEngine;
 
@@ -11,7 +11,7 @@ namespace GameScripts.Services.Factories
         GameObject InstantiateEnemy(Vector3 position, EnemyType enemyType);
         GameObject InstantiateTrap(Vector3 position);
         GameObject InstantiateMapGenerator(string sceneName);
-        GameObject InstantiateFireplace(Vector3 position, FireplaceType type);
+        GameObject InstantiateFireplace(Vector3 position, CampfireType type);
         GameObject InstantiateUI<TState>() where TState : class, IStateWithExit;
     }
 }

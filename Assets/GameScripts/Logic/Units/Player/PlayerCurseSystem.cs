@@ -26,6 +26,7 @@ namespace GameScripts.Logic.Units.Player
             foreach (var curse in _curses.Values)
             {
                 curse.OnNewStack += OnNewStack;
+
             }
         }
 

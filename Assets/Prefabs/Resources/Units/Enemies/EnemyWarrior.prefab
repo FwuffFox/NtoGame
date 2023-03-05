@@ -248,6 +248,7 @@ GameObject:
   - component: {fileID: 5150150980551761397}
   - component: {fileID: 6905127230636784349}
   - component: {fileID: -1951765022936610087}
+  - component: {fileID: 6091196801518742484}
   m_Layer: 8
   m_Name: EnemyWarrior
   m_TagString: Untagged
@@ -334,11 +335,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e337f4a0f23417eb4fec7435f6cfab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 0
-  _health: 100
-  _healButton: 0
   _enemyMover: {fileID: 3864904858595052783}
   _enemyAttacker: {fileID: 8088746603740170984}
+  EnemyHealth: {fileID: 6091196801518742484}
   playerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -498,6 +497,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6091196801518742484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800684015187021249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 802daef788a5428b9e23e068cc12d349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 0
+  _health: 0
+  _healButton: 0
+  PlayerMoney: {fileID: 0}
 --- !u!1 &1325359981630037035
 GameObject:
   m_ObjectHideFlags: 0

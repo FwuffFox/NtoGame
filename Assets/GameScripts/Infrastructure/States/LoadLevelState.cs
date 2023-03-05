@@ -57,6 +57,23 @@ namespace GameScripts.Infrastructure.States
             playerPosition = playerPosition == Vector3.zero ? levelData.playerSpawnPoint : playerPosition;
             var player = _unitSpawner.SpawnPlayer(playerPosition);
             generator.PlaceUnits(player);
+            
+            SetCurses(player);
+            
+            Camera.main.GetComponentInParent<CameraFollower>()?.SetTarget(player);            
+            
+            if (_ui == null)
+                _ui = _prefabFactory.InstantiateUI<LoadLevelState>();
+            
+            _ui.GetComponentInChildren<HealthUI>().SetPlayer(player.GetComponent<PlayerHealth>());
+            _ui.GetComponentInChildren<StaminaUI>().SetPlayer(player.GetComponent<PlayerMovement>());
+            player.GetComponent<PlayerCurseSystem>().OnCurseChange += _ui.GetComponentInChildren<CurseUI>().UpdateCurses;
+            
+            _stateMachine.Enter<GameLoopState, GameObject>(_ui);
+        }
+
+        private void SetCurses(GameObject player)
+        {
             Curses.HealthCurse.SetOnMaxStacksFunction(p =>
             {
                 p.GetComponent<PlayerHealth>().MaxHealth = 1;
@@ -74,17 +91,6 @@ namespace GameScripts.Infrastructure.States
                 p.GetComponent<PlayerAttack>().Damage *= Mathf.CeilToInt(0.5f);
                 Debug.Log("Max stack on damage curse");
             }, player);
-            
-            
-            Camera.main.GetComponentInParent<CameraFollower>()?.SetTarget(player);            
-            
-            if (_ui == null)
-                _ui = _prefabFactory.InstantiateUI<LoadLevelState>();
-            
-            _ui.GetComponentInChildren<HealthUI>().SetPlayer(player.GetComponent<PlayerHealth>());
-            _ui.GetComponentInChildren<StaminaUI>().SetPlayer(player.GetComponent<PlayerMovement>());
-            player.GetComponent<PlayerCurseSystem>().OnCurseChange += _ui.GetComponentInChildren<CurseUI>().UpdateCurses;
-            _stateMachine.Enter<GameLoopState>();
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using GameScripts.Logic.Fireplace;
+using GameScripts.Logic.Campfire;
 using GameScripts.Services.Factories;
 using GameScripts.StaticData.Enums;
 using UnityEngine;
@@ -40,7 +40,7 @@ namespace GameScripts.Services.UnitSpawner
             return trap;
         }
 
-        public GameObject SpawnFireplace(Vector3 pos, FireplaceType type)
+        public GameObject SpawnFireplace(Vector3 pos, CampfireType type)
         {
             var fireplace = _prefabFactory.InstantiateFireplace(pos, type);
             fireplace.transform.rotation = Quaternion.Euler(-70.524f, 1.212f, -1.714f); 

@@ -51,7 +51,8 @@ namespace GameScripts.Logic.Units
         }
 
         public Action OnBattleUnitDeath;
-        public virtual void OnHealthReachZero()
+
+        protected virtual void OnHealthReachZero()
         {
             OnBattleUnitDeath?.Invoke();
         }

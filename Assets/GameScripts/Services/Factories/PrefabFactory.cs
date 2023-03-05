@@ -1,6 +1,6 @@
 ﻿using GameScripts.Extensions;
 using GameScripts.Infrastructure.States;
-using GameScripts.Logic.Fireplace;
+using GameScripts.Logic.Campfire;
 using GameScripts.Logic.Generators;
 using GameScripts.Logic.Units.Enemy;
 using GameScripts.Logic.Units.Player;
@@ -152,14 +152,14 @@ namespace GameScripts.Services.Factories
                 });
         }
 
-        public GameObject InstantiateFireplace(Vector3 position, FireplaceType type)
+        public GameObject InstantiateFireplace(Vector3 position, CampfireType type)
         {
             return _assetProvider.Instantiate(PrefabPaths.Fireplace, position)
                 .With(fireplace =>
                 {
                     _diContainer.InjectGameObject(fireplace);
 
-                    fireplace.GetComponent<Fireplace>().Type = type;
+                    fireplace.GetComponent<Campfire>().Type = type;
                 });
         }
 
