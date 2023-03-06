@@ -65,6 +65,7 @@ namespace GameScripts.Logic.Campfire
 
             _particle.Stop();
             _audio.Stop();
+            DisableObject(other.GetComponent<PlayerInteractions>());
         }
 
         private bool IsPlayer(Collider other)

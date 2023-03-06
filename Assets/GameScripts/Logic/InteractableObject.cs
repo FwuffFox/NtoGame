@@ -13,6 +13,12 @@ namespace GameScripts.Logic
             playerInteractions.InteractableObject = this;
         }
 
+        public void DisableObject(PlayerInteractions playerInteractions)
+        {
+            playerInteractions.ReadyToInteract = false;
+            playerInteractions.InteractableObject = null;
+        }
+
         public virtual void Interact()
         {
             

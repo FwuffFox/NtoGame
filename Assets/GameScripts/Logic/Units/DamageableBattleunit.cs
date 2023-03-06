@@ -56,7 +56,8 @@ namespace GameScripts.Logic.Units
         {
             OnBattleUnitDeath?.Invoke();
         }
-        
+
+        public void Heal(float value) => Health += value;
         public void HealToFull() => Health = MaxHealth;
 
 #if UNITY_EDITOR

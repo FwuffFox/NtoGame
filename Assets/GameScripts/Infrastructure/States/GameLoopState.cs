@@ -52,7 +52,7 @@ namespace GameScripts.Infrastructure.States
 
         public void OnCampfireInteracted()
         {
-            _ui.GetComponentInChildren<CampfireUI>().TurnOn(_player);
+            _ui.GetComponentInChildren<CampfireUI>(true).TurnOn(_player);
             Time.timeScale = 0f;
         }
         
