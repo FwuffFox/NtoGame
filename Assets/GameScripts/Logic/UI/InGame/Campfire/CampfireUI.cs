@@ -10,6 +10,10 @@ namespace GameScripts.Logic.UI.InGame
         {
             _player = player;
             gameObject.SetActive(true);
+            foreach (var button in GetComponentsInChildren<BuyButton>())
+            {
+                button.Player = _player;
+            }
         }
 
         public void Exit()
