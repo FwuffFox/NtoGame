@@ -37,7 +37,7 @@ namespace GameScripts.Logic.Units.Enemy
         public void Update()
         {
 	        if (EnemyHealth.IsDead) return;
-	        var position = transform.position;
+            var position = transform.position;
 	        var canSeePlayer = Physics.CheckSphere(position, _seeRange, playerMask);
 	        if (!canSeePlayer) return;
 	        var canAttackPlayer = Physics.CheckSphere(position, _attackRange, playerMask);

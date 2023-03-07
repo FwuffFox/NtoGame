@@ -31,6 +31,7 @@ public class OnlineManager : MonoBehaviour
     {
         LeaderboardCreator.GetLeaderboard(publicKey, ((msg) =>
          {
+             if (!leaderBoard) return;
              for (int i = 0; i < msg.Length; i++)
              {
                  leaderBoard.text += msg[i].Username + " - " + msg[i].Score+'\n';

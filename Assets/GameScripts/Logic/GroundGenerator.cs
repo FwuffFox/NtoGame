@@ -6,6 +6,7 @@ using GameScripts.Logic.Campfire;
 using GameScripts.Logic.Navigation;
 using GameScripts.Logic.Tiles;
 using GameScripts.Logic.Units.Enemy;
+using GameScripts.Services.Factories;
 using GameScripts.Services.UnitSpawner;
 using GameScripts.StaticData.Enums;
 using GameScripts.StaticData.ScriptableObjects;
@@ -29,12 +30,15 @@ namespace GameScripts.Logic.Generators
 		private float _posZ;
 		private LevelData.XZCoord[] _coords;
 		public LevelSO levelSO;
+		public PrefabLevelInfo prefabLevel;
 
 		[SerializeField] private NavMeshSurface _navMeshSurface;
 		private int _trapsCount;
 		private int _unitsCount;
 
 		private Transform _landFolder;
+		private PrefabLevelInfo _spawnedLevel;
+		public EnemyData enemyData;
 
 		private IUnitSpawner _unitSpawner;
         private Transform obj;
@@ -61,12 +65,22 @@ namespace GameScripts.Logic.Generators
 		
 		public void GenerateMapAndTraps()
 		{
-			_landFolder = Instantiate(new GameObject().With(x => x.name = "Land")).transform;
-			GenerateMap();
-			_tilesWithSpawn = _spawnedTiles.Where(tile => tile.HaveSpawnPoint).ToList();
-			PlaceTraps();
-			PlaceCursedObjects();
-			_navMeshSurface.BuildNavMesh();
+			if (prefabLevel)
+			{
+				_spawnedLevel=Instantiate(prefabLevel);
+				//генерация из префаба
+				_navMeshSurface.BuildNavMesh();
+			}
+			else
+            {
+				//старая генерация
+				_landFolder = Instantiate(new GameObject().With(x => x.name = "Land")).transform;
+				GenerateMap();
+				_tilesWithSpawn = _spawnedTiles.Where(tile => tile.HaveSpawnPoint).ToList();
+				PlaceTraps();
+				PlaceCursedObjects();
+				_navMeshSurface.BuildNavMesh();
+			}
 		}
 
 		private void GenerateMap() 
@@ -137,13 +151,59 @@ namespace GameScripts.Logic.Generators
 		
 		public void PlaceUnits(GameObject player)
 		{
-			for (int i = 0; i < _unitsCount; i++)
+			if (prefabLevel)
 			{
-				if (_tilesWithSpawn.Count == 0) break;
-				var spawnTile = _tilesWithSpawn[Random.Range(0, _tilesWithSpawn.Count)];
-				var enemy = _unitSpawner.SpawnEnemy(spawnTile.SpawnPoint.position, EnemyType.Warrior);
-				enemy.GetComponent<EnemyAI>().SetPlayer(player);
-				_tilesWithSpawn.Remove(spawnTile);
+				for (int i = 0; i < _spawnedLevel.enemies.Count; i++)
+				{
+					_spawnedLevel.enemies[i].GetComponent<NavMeshAgent>().enabled = true;
+					GameObject enemy = _spawnedLevel.enemies[i].gameObject;
+					var health = enemy.GetComponent<EnemyHealth>()
+						.With(x =>
+						{
+							x.SetProperties();
+						});
+
+					var ai = enemy.GetComponent<EnemyAI>()
+						.With(x =>
+						{
+							x.SetProperties(enemyData);
+							x.EnemyHealth = enemy.GetComponent<EnemyHealth>();
+						});
+
+					var mover = enemy.GetComponent<EnemyMover>()
+						.With(x => x.SetProperties(enemyData));
+
+					var attacker = enemy.GetComponent<EnemyAttacker>()
+						.With(x => x.SetProperties(enemyData));
+
+					enemy.GetComponent<EnemyAnimator>()
+						.With(animator =>
+						{
+							mover.OnSpeedChange += animator.SetSpeed;
+							attacker.OnAttack += animator.SetAttack;
+							health.OnBattleUnitDeath += animator.SetDeath;
+						});
+
+					enemy.GetComponent<EnemyUI>()
+						.With(ui =>
+						{
+							ui.SetTarget(health);
+						});
+					_spawnedLevel.enemies[i].SetPlayer(player);
+				}
+				//генерация из префаба
+				_navMeshSurface.BuildNavMesh();
+			}
+			else
+			{	//старая генерация
+				for (int i = 0; i < _unitsCount; i++)
+				{
+					if (_tilesWithSpawn.Count == 0) break;
+					var spawnTile = _tilesWithSpawn[Random.Range(0, _tilesWithSpawn.Count)];
+					var enemy = _unitSpawner.SpawnEnemy(spawnTile.SpawnPoint.position, EnemyType.Warrior);
+					enemy.GetComponent<EnemyAI>().SetPlayer(player);
+					_tilesWithSpawn.Remove(spawnTile);
+				}
 			}
 		}
 		
