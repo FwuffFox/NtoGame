@@ -68,6 +68,17 @@ namespace GameScripts.Logic.Generators
 			if (prefabLevel)
 			{
 				_spawnedLevel=Instantiate(prefabLevel);
+				//костры
+				for (int i=0;i<_spawnedLevel.campfires.Count;i++)
+                {
+					if (_spawnedLevel.campfires[i].Type == CampfireType.Start)
+						_unitSpawner.SpawnFireplace(_spawnedLevel.campfires[i].transform.position, CampfireType.Start);
+					if (_spawnedLevel.campfires[i].Type == CampfireType.Checkpoint)
+						_unitSpawner.SpawnFireplace(_spawnedLevel.campfires[i].transform.position, CampfireType.Checkpoint);
+					if (_spawnedLevel.campfires[i].Type == CampfireType.Final)
+						_unitSpawner.SpawnFireplace(_spawnedLevel.campfires[i].transform.position, CampfireType.Final);
+					Destroy(_spawnedLevel.campfires[i].gameObject);
+				}
 				//генерация из префаба
 				_navMeshSurface.BuildNavMesh();
 			}
