@@ -28,6 +28,9 @@ namespace GameScripts.Logic.Units.Player.FightingSystem
             LateTime += UnityEngine.Time.deltaTime;
         }
 
+        /// <summary>
+        /// Called on the exit of a state.
+        /// </summary>
         public virtual void OnExit()
         {
             
