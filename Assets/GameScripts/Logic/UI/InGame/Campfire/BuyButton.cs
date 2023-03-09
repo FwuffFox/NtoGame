@@ -35,13 +35,16 @@ namespace GameScripts.Logic.UI.InGame
 
         private void OnEnable()
         {
+            _shopItemInfo ??= Resources.LoadAll<ShopItemInfo>("StaticData/ShopInfo")
+                .First(x => x.Type == _type);
+            Price = _shopItemInfo.Price;
             SetTexts();
         }
 
         private void OnValidate()
         {
             SetTexts();
-            _shopItemInfo = Resources.LoadAll<ShopItemInfo>("StaticData/ShopInfo")
+            _shopItemInfo ??= Resources.LoadAll<ShopItemInfo>("StaticData/ShopInfo")
                 .First(x => x.Type == _type);
             Price = _shopItemInfo.Price;
         }
