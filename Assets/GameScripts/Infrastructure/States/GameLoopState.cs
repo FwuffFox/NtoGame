@@ -5,9 +5,7 @@ using System.Linq;
 using GameScripts.Logic.Campfire;
 using GameScripts.Logic.UI.InGame;
 using GameScripts.Logic.UI.InGame.PauseMenu;
-using GameScripts.Logic.UI.InMenu;
 using GameScripts.Logic.Units.Player;
-using GameScripts.Services.Data;
 using GameScripts.Services.UnitSpawner;
 using GameScripts.Services.Unity;
 using UnityEngine;
@@ -59,9 +57,9 @@ namespace GameScripts.Infrastructure.States
 
         private void SetupControls()
         {
-            _playerInput = new PlayerInputActions();
-            _playerInput.InGame.Enable();
-            _playerInput.InGame.PauseButton.performed += PauseButton_Performed;
+            PlayerInputSystem.InGame.Enable();
+            PlayerInputSystem.InGame.PauseButton.performed
+                += PauseButton_Performed;
         }
 
         private void PauseButton_Performed(InputAction.CallbackContext obj)

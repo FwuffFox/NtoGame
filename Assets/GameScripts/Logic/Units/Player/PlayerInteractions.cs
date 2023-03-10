@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace GameScripts.Logic.Units.Player
 {
@@ -17,19 +18,16 @@ namespace GameScripts.Logic.Units.Player
 
         public InteractableObject InteractableObject;
 
-        private PlayerInputActions _playerInput;
-
         private void OnEnable()
         {
-            _playerInput = new PlayerInputActions();
-            _playerInput.InGame.Enable();
-            _playerInput.InGame.InteractButton.performed 
-                += _ => InteractionButtonPressed();
+            PlayerInputSystem.InGame.InteractButton.performed 
+                += InteractButton_Pressed;
         }
 
-        private void InteractionButtonPressed()
+        private void InteractButton_Pressed(InputAction.CallbackContext context)
         {
-            InteractableObject.Interact();
+            if (InteractableObject != null)
+                InteractableObject.Interact();
         }
     }
 }
