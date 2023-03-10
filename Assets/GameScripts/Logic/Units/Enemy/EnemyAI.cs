@@ -39,14 +39,17 @@ namespace GameScripts.Logic.Units.Enemy
 	        if (EnemyHealth.IsDead) return;
             var position = transform.position;
 	        var canSeePlayer = Physics.CheckSphere(position, _seeRange, playerMask);
-	        if (!canSeePlayer) return;
-	        var canAttackPlayer = Physics.CheckSphere(position, _attackRange, playerMask);
-	        if (canAttackPlayer)
-	        {
-		        _enemyAttacker.AttackPlayer(_playerHealth);
-		        _enemyMover.Stop();
-	        }
-	        else _enemyMover.Follow(_player);
+            if (canSeePlayer)
+            {
+                var canAttackPlayer = Physics.CheckSphere(position, _attackRange, playerMask);
+                if (canAttackPlayer)
+                {
+                    _enemyAttacker.AttackPlayer(_playerHealth);
+                    _enemyMover.Stop();
+                }
+                else _enemyMover.Follow(_player);
+            }
+            else _enemyMover.Stop();
         }
         
         private void OnDrawGizmos()
