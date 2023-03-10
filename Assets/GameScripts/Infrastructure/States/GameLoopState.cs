@@ -4,11 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using GameScripts.Logic.Campfire;
 using GameScripts.Logic.UI.InGame;
+using GameScripts.Logic.UI.InGame.PauseMenu;
+using GameScripts.Logic.UI.InMenu;
 using GameScripts.Logic.Units.Player;
 using GameScripts.Services.Data;
 using GameScripts.Services.UnitSpawner;
 using GameScripts.Services.Unity;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Zenject;
 using Object = UnityEngine.Object;
 
@@ -27,6 +30,8 @@ namespace GameScripts.Infrastructure.States
 
         private GameObject _ui;
 
+        private PlayerInputActions _playerInput;
+
         [Inject]
         public void Construct(ICoroutineRunner coroutineRunner, IUnitSpawner unitSpawner,
             GameStateMachine gameStateMachine)
@@ -39,15 +44,38 @@ namespace GameScripts.Infrastructure.States
         public void Enter(GameObject ui)
         {
             _ui = ui;
+
+            SetupControls();
+
             _player = _unitSpawner.Player;
             _player.GetComponent<PlayerHealth>().OnBattleUnitDeath += ManagePlayerDeath;
             _player.GetComponent<PlayerMoney>().OnMoneyChanged += (a) => OnMoneyAmountChanged?.Invoke(a);
-            
             _fireplaces = _unitSpawner.Fireplaces.Select(f => f.GetComponent<Campfire>()).ToList();
             _fireplaces.ForEach(f => f.OnCampfireInteracted += OnCampfireInteracted );
             var finalFireplace = _fireplaces.FirstOrDefault(f => f.Type == CampfireType.Final);
             if (finalFireplace != null)
                 finalFireplace.OnFinalCampfireReached += () => _gameStateMachine.Enter<MenuState>();
+        }
+
+        private void SetupControls()
+        {
+            _playerInput = new PlayerInputActions();
+            _playerInput.InGame.Enable();
+            _playerInput.InGame.PauseButton.performed += PauseButton_Performed;
+        }
+
+        private void PauseButton_Performed(InputAction.CallbackContext obj)
+        {
+            Debug.Log("Pause button pressed");
+            var pauseMenu = _ui.GetComponentInChildren<PauseMenu>(true);
+            if (!pauseMenu.gameObject.activeSelf)
+            {
+                pauseMenu.Enter();
+            }
+            else
+            {
+                pauseMenu.Resume();
+            }
         }
 
         public void OnCampfireInteracted()

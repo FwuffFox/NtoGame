@@ -39,6 +39,7 @@ namespace GameScripts.Logic.Units.Player
 	
 		private void Update()
 		{
+			if (Time.timeScale == 0f) return;
 			if (!CanAttack) return;
 			if (Input.GetMouseButton(0) &&
 			    MeleeComboStateMachine.CurrentState.GetType() == typeof(IdleState))

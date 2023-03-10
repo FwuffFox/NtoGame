@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using GameScripts.StaticData.Constants;
 using GameScripts.StaticData.Enums;
 using GameScripts.StaticData.ScriptableObjects;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace GameScripts.Services.Data
 {
@@ -35,8 +37,14 @@ namespace GameScripts.Services.Data
 
         public T LoadResource<T>(string path) where T : Object =>
             Resources.Load<T>(path);
+        
+        public T LoadResource<T>(string path, Func<T, bool> predicate) where T : Object =>
+            Resources.LoadAll<T>(path).First(predicate);
 
         public T[] LoadResources<T>(string path) where T : Object =>
             Resources.LoadAll<T>(path);
+        
+        public T[] LoadResources<T>(string path, Func<T, bool> predicate) where T : Object =>
+            Resources.LoadAll<T>(path).Where(predicate).ToArray();
     }
 }
