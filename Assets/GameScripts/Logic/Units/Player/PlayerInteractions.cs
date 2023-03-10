@@ -29,5 +29,11 @@ namespace GameScripts.Logic.Units.Player
             if (InteractableObject != null)
                 InteractableObject.Interact();
         }
+
+        private void OnDisable()
+        {
+            PlayerInputSystem.InGame.InteractButton.performed 
+                -= InteractButton_Pressed;
+        }
     }
 }

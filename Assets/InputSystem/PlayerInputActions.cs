@@ -62,6 +62,15 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Attack Button"",
+                    ""type"": ""Button"",
+                    ""id"": ""48fcfa9d-919e-44c6-9358-f1442f0472e3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -222,11 +231,44 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""bc380996-954c-4204-a6b2-d94085fbe4ee"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/shift"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard + Mouse"",
                     ""action"": ""Run Button"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6b5007f6-81f7-4938-b79a-93ee3d01f786"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Run Button"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d1d810e8-a314-431e-b803-69a7581ee85d"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard + Mouse"",
+                    ""action"": ""Attack Button"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""31bbfefc-a4d4-4983-9b23-029aecd520db"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Attack Button"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -269,6 +311,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_InGame_InteractButton = m_InGame.FindAction("Interact Button", throwIfNotFound: true);
         m_InGame_Move = m_InGame.FindAction("Move", throwIfNotFound: true);
         m_InGame_RunButton = m_InGame.FindAction("Run Button", throwIfNotFound: true);
+        m_InGame_AttackButton = m_InGame.FindAction("Attack Button", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -332,6 +375,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_InGame_InteractButton;
     private readonly InputAction m_InGame_Move;
     private readonly InputAction m_InGame_RunButton;
+    private readonly InputAction m_InGame_AttackButton;
     public struct InGameActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -340,6 +384,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         public InputAction @InteractButton => m_Wrapper.m_InGame_InteractButton;
         public InputAction @Move => m_Wrapper.m_InGame_Move;
         public InputAction @RunButton => m_Wrapper.m_InGame_RunButton;
+        public InputAction @AttackButton => m_Wrapper.m_InGame_AttackButton;
         public InputActionMap Get() { return m_Wrapper.m_InGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -361,6 +406,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @RunButton.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnRunButton;
                 @RunButton.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnRunButton;
                 @RunButton.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnRunButton;
+                @AttackButton.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnAttackButton;
+                @AttackButton.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnAttackButton;
+                @AttackButton.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnAttackButton;
             }
             m_Wrapper.m_InGameActionsCallbackInterface = instance;
             if (instance != null)
@@ -377,6 +425,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @RunButton.started += instance.OnRunButton;
                 @RunButton.performed += instance.OnRunButton;
                 @RunButton.canceled += instance.OnRunButton;
+                @AttackButton.started += instance.OnAttackButton;
+                @AttackButton.performed += instance.OnAttackButton;
+                @AttackButton.canceled += instance.OnAttackButton;
             }
         }
     }
@@ -405,5 +456,6 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         void OnInteractButton(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnRunButton(InputAction.CallbackContext context);
+        void OnAttackButton(InputAction.CallbackContext context);
     }
 }

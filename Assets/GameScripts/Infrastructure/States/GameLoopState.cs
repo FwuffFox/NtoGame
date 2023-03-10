@@ -81,12 +81,7 @@ namespace GameScripts.Infrastructure.States
             _ui.GetComponentInChildren<CampfireUI>(true).TurnOn(_player);
             Time.timeScale = 0f;
         }
-        
-        public void Exit()
-        {
-            Object.Destroy(_player);
-        }
-        
+
         private void ManagePlayerDeath()
         {
             Object.Destroy(_player.GetComponent<PlayerMovement>());
@@ -100,5 +95,11 @@ namespace GameScripts.Infrastructure.States
             _gameStateMachine.Enter<MenuState>();
         }
        
+        public void Exit()
+        {
+            PlayerInputSystem.InGame.PauseButton.performed
+                -= PauseButton_Performed;
+            Object.Destroy(_player);
+        }
     }
 }

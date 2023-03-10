@@ -96,7 +96,8 @@ namespace GameScripts.Logic.Units.Player
             }
 
             var movementAxis = PlayerInputSystem.InGame.Move.ReadValue<Vector2>().Vector2ToVector3();
-            IsRunning = _inputService.IsPressed(KeyCode.LeftShift) && CurrentStamina >= _staminaConsumptionPerSecondOfRunning / 100f;
+            IsRunning = PlayerInputSystem.InGame.RunButton.IsPressed()
+                        && CurrentStamina >= _staminaConsumptionPerSecondOfRunning / 100f;
             MovementSpeed = _baseSpeed * Time.deltaTime;
             MovementSpeed = IsRunning ? MovementSpeed * _runningSpeedModifier : MovementSpeed;
             MovePlayer(movementAxis, MovementSpeed);
