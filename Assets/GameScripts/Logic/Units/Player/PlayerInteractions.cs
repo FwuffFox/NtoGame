@@ -17,13 +17,17 @@ namespace GameScripts.Logic.Units.Player
 
         public InteractableObject InteractableObject;
 
-        private void Update()
+        private PlayerInputActions _playerInput;
+
+        private void OnEnable()
         {
-            if (Input.GetKey(KeyCode.E))
-                InteractionButtonPressed();
+            _playerInput = new PlayerInputActions();
+            _playerInput.InGame.Enable();
+            _playerInput.InGame.InteractButton.performed 
+                += _ => InteractionButtonPressed();
         }
 
-        public void InteractionButtonPressed()
+        private void InteractionButtonPressed()
         {
             InteractableObject.Interact();
         }
