@@ -113,10 +113,10 @@ RectTransform:
   m_Father: {fileID: 4429083440122517883}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -41.8}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 0.7403337}
+  m_AnchorMax: {x: 1, y: 0.93633467}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4506465943890365560
 CanvasRenderer:
@@ -253,11 +253,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 0
-  _price: 100
   _labelText: {fileID: 368730369223029472}
   _priceText: {fileID: 945885275911157112}
-  _priceIncreaseAfterBuy: 100
   Player: {fileID: 0}
+  _shopItemInfo: {fileID: 11400000, guid: 1fe82d66958ddf24690f5c7620e0540d, type: 2}
 --- !u!114 &946094675236825170
 MonoBehaviour:
   m_ObjectHideFlags: 0
