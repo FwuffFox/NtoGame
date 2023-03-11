@@ -10,11 +10,12 @@ namespace GameScripts.Services.UnitSpawner
         GameObject Player { get; }
         List<GameObject> Enemies { get; }
         List<GameObject> Traps { get; }
-        List<GameObject> Fireplaces { get; }
+        List<Campfire> Campfires { get; }
         GameObject SpawnPlayer() => SpawnPlayer(Vector3.zero);
         GameObject SpawnPlayer(Vector3 spawnPoint);
         GameObject SpawnEnemy(Vector3 spawnPosition, EnemyType enemyType);
         GameObject SpawnTrap(Vector3 trapPosition);
-        GameObject SpawnFireplace(Vector3 pos, CampfireType type);
+        GameObject SpawnCampfire(Vector3 pos, CampfireType type);
+        void Clear();
     }
 }

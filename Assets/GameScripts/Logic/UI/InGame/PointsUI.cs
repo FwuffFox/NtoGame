@@ -1,4 +1,5 @@
 using GameScripts.Infrastructure.States;
+using GameScripts.Logic.Units.Player;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -9,23 +10,21 @@ namespace GameScripts.Logic.UI.InGame
     {
         [SerializeField] private Text counter;
 
-        private GameLoopState _gameLoopState;
-
-        [Inject]
-        private void Construct(GameLoopState gameLoopState)
+        private PlayerMoney _playerMoney;
+        public void SetPlayer(PlayerMoney playerMoney)
         {
-            _gameLoopState = gameLoopState;
-			_gameLoopState.OnMoneyAmountChanged +=ChangePointsAmount;
-        }
-
-        private void OnDestroy()
-        {
-            _gameLoopState.OnMoneyAmountChanged -= ChangePointsAmount;
+            _playerMoney = playerMoney;
+            _playerMoney.OnMoneyChanged += ChangePointsAmount;
         }
 
         public void ChangePointsAmount(int newAmount)
         {
             counter.text = $"Монеты: {newAmount}";
+        }
+        
+        private void OnDestroy()
+        {
+            _playerMoney.OnMoneyChanged -= ChangePointsAmount;
         }
     }
 }

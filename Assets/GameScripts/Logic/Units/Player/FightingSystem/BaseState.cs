@@ -59,7 +59,7 @@ namespace GameScripts.Logic.Units.Player.FightingSystem
             base.OnUpdate();
             _attackPressedTimer -= UnityEngine.Time.deltaTime;
             
-            if (Input.GetMouseButtonDown(0))
+            if (PlayerInputSystem.InGame.AttackButton.IsPressed())
             {
                 _attackPressedTimer = 1;
             }

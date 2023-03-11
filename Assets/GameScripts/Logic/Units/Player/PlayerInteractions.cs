@@ -1,5 +1,5 @@
-using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace GameScripts.Logic.Units.Player
 {
@@ -17,15 +17,22 @@ namespace GameScripts.Logic.Units.Player
 
         public InteractableObject InteractableObject;
 
-        private void Update()
+        private void OnEnable()
         {
-            if (Input.GetKey(KeyCode.E))
-                InteractionButtonPressed();
+            PlayerInputSystem.InGame.InteractButton.performed 
+                += InteractButton_Pressed;
         }
 
-        public void InteractionButtonPressed()
+        private void InteractButton_Pressed(InputAction.CallbackContext context)
         {
-            InteractableObject.Interact();
+            if (InteractableObject != null)
+                InteractableObject.Interact();
+        }
+
+        private void OnDisable()
+        {
+            PlayerInputSystem.InGame.InteractButton.performed 
+                -= InteractButton_Pressed;
         }
     }
 }
