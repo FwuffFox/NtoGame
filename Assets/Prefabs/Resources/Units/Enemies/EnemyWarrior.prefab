@@ -337,6 +337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyMover: {fileID: 3864904858595052783}
   _enemyAttacker: {fileID: 8088746603740170984}
+  _animator: {fileID: 2889508165235882229}
   EnemyHealth: {fileID: 6091196801518742484}
   playerMask:
     serializedVersion: 2
