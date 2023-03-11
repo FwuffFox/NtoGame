@@ -43,7 +43,7 @@ namespace GameScripts.Logic.Units.Player
 		private void AttackButton_Pressed(InputAction.CallbackContext context)
 		{
 			if (Time.timeScale == 0f) return;
-			if (!CanAttack) return;
+			if (!CanAttack) return;	 
 			if (MeleeComboStateMachine.CurrentState.GetType() == typeof(IdleState))
 			{
 				MeleeComboStateMachine.SetNextState(new EntryState());
