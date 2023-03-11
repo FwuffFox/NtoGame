@@ -72,11 +72,11 @@ namespace GameScripts.Logic.Generators
 				for (int i=0;i<_spawnedLevel.campfires.Count;i++)
                 {
 					if (_spawnedLevel.campfires[i].Type == CampfireType.Start)
-						_unitSpawner.SpawnFireplace(_spawnedLevel.campfires[i].transform.position, CampfireType.Start);
+						_unitSpawner.SpawnCampfire(_spawnedLevel.campfires[i].transform.position, CampfireType.Start);
 					if (_spawnedLevel.campfires[i].Type == CampfireType.Checkpoint)
-						_unitSpawner.SpawnFireplace(_spawnedLevel.campfires[i].transform.position, CampfireType.Checkpoint);
+						_unitSpawner.SpawnCampfire(_spawnedLevel.campfires[i].transform.position, CampfireType.Checkpoint);
 					if (_spawnedLevel.campfires[i].Type == CampfireType.Final)
-						_unitSpawner.SpawnFireplace(_spawnedLevel.campfires[i].transform.position, CampfireType.Final);
+						_unitSpawner.SpawnCampfire(_spawnedLevel.campfires[i].transform.position, CampfireType.Final);
 					Destroy(_spawnedLevel.campfires[i].gameObject);
 				}
 				//генерация из префаба
@@ -120,17 +120,17 @@ namespace GameScripts.Logic.Generators
 					{	//можем заспавнить объект
 						if (w == 0 && h == 0)
 						{
-							_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, CampfireType.Start);
+							_unitSpawner.SpawnCampfire(tile.SpawnPoint.position, CampfireType.Start);
 							tile.HaveSpawnPoint = false;
 						}
 						else if (w == _mapSize - 1 && h == _mapSize - 1)
 						{
-							_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, CampfireType.Final);
+							_unitSpawner.SpawnCampfire(tile.SpawnPoint.position, CampfireType.Final);
 							tile.HaveSpawnPoint = false;
 						}
 						else if (_coords.Contains(new LevelData.XZCoord { X = w, Z = h }))
 						{
-							_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, CampfireType.Checkpoint);
+							_unitSpawner.SpawnCampfire(tile.SpawnPoint.position, CampfireType.Checkpoint);
 							tile.HaveSpawnPoint = false;
 						}
 					}

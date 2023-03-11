@@ -66,6 +66,11 @@ namespace GameScripts.Logic.Units.Player
         {
             _curses[curseType].AddStack();
             OnCurseChange?.Invoke(_curses);
-        } 
+        }
+
+        private void OnDisable()
+        {
+            OnCurseChange = null;
+        }
     }
 }

@@ -7,7 +7,6 @@ namespace GameScripts.Logic.Units
 {
     public abstract class DamageableBattleunit : MonoBehaviour
     {
-        
         public Action<float> OnBattleUnitMaxHealthChange;
         [Header("Battle Unit")] [SerializeReadOnly, SerializeField] private float _maxHealth;
         
@@ -60,6 +59,13 @@ namespace GameScripts.Logic.Units
         public void Heal(float value) => Health += value;
         public void HealToFull() => Health = MaxHealth;
 
+        private void OnDisable()
+        {
+            OnBattleUnitDeath = null;
+            OnBattleUnitHealthChange = null;
+            OnBattleUnitMaxHealthChange = null;
+        }
+        
 #if UNITY_EDITOR
         [InspectorButton(nameof(HealToFull))]
         [SerializeField] private bool _healButton;

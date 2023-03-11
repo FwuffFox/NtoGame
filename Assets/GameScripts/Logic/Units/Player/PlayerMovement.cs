@@ -127,5 +127,12 @@ namespace GameScripts.Logic.Units.Player
                 if (IsRunning) CurrentStamina -= _staminaConsumptionPerSecondOfRunning / 100f;
             }
         }
+
+        private void OnDisable()
+        {
+            OnMovementSpeedChange = null;
+            OnPlayerStaminaChange = null;
+            OnIsRunningChange = null;
+        }
     }
 }

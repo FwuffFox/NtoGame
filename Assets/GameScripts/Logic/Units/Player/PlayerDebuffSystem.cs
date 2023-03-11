@@ -59,16 +59,12 @@ namespace GameScripts.Logic.Units.Player
                 debuff.DurationInSeconds -= 1;
             }
         }
-       
         
-        
-        
-        
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         [InspectorButton("RemoveAllDebuffsButton", ButtonWidth = 200)]
         [SerializeField] private bool removeAllDebuffs;
         
         private void RemoveAllDebuffsButton() => StopAllCoroutines();
-        #endif
+#endif
     }
 }

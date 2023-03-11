@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -5,6 +6,7 @@ namespace GameScripts.Logic.UI.InGame.PauseMenu
 {
     public class PauseMenu : MonoBehaviour
     {
+        public Action OnExitButtonPressed;
         public void Enter()
         {
             Debug.Log("Entered pause menu");
@@ -21,7 +23,8 @@ namespace GameScripts.Logic.UI.InGame.PauseMenu
         
         public void ExitToMenu()
         {
-            SceneManager.LoadScene("Menu");
+            Time.timeScale = 1f;
+            OnExitButtonPressed?.Invoke();
         }
     }
 }

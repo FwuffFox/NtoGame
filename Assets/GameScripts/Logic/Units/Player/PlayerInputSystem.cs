@@ -20,6 +20,5 @@ namespace GameScripts.Logic.Units.Player
         private static Matrix4x4 _matrix = Matrix4x4.Rotate(Quaternion.Euler(0, 45, 0));
         public static Vector3 SkewVector3(this Vector3 val)
             => _matrix.MultiplyPoint3x4(val);
-            
     }
 }
