@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class QuestSystem : MonoBehaviour
 {
-    public Quest activeQuest;
-    public List<Quest> quests;
+    public QuestBox activeQuest;
+    public List<QuestBox> quests;
     void OnEnable()
     {
         if (activeQuest) 
