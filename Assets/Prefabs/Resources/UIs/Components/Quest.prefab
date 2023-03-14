@@ -174,4 +174,4 @@ MonoBehaviour:
   description: "\u041A\u0430\u043A \u0432\u0441\u0435\u0433\u0434\u0430 \u043D\u0443\u0436\u043D\u0430
     \u0432\u0430\u0448\u0430 \u043F\u043E\u043C\u043E\u0449\u044C"
   titleText: {fileID: 4833704275493859575}
-  descriptionText: {fileID: 0}
+  background: {fileID: 3189409985090395296}
