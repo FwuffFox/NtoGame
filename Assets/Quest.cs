@@ -8,5 +8,5 @@ public class Quest : MonoBehaviour
     public string title = "Небольшие проблемы";
     public string description = "Как всегда нужна ваша помощь";
     public Text titleText;
-    public Text descriptionText;
+    public Image background;
 }
