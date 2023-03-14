@@ -19,8 +19,6 @@ namespace GameScripts.Infrastructure.States
         private ICoroutineRunner _coroutineRunner;
         private IUnitSpawner _unitSpawner;
         private GameStateMachine _gameStateMachine;
-        
-        private IEnumerator _eachSecondCoroutine;
 
         private GameObject _ui;
 
