@@ -10,7 +10,6 @@ namespace GameScripts.StaticData.ScriptableObjects.Dialogue.Phrase
     {
         public bool DoesCallPlayerChoice;
         public List<PlayerAnswer> PlayerAnswers;
-        public DialoguePhraseBase NextPhrase;
     }
 
     [Serializable]

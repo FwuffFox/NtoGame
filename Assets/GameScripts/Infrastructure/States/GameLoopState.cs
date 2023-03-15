@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Linq;
+using GameScripts.Logic;
 using GameScripts.Logic.Campfire;
 using GameScripts.Logic.UI.InGame;
+using GameScripts.Logic.UI.InGame.Dialogue;
 using GameScripts.Logic.UI.InGame.PauseMenu;
 using GameScripts.Logic.Units.Player;
 using GameScripts.Services.UnitSpawner;
@@ -42,7 +44,9 @@ namespace GameScripts.Infrastructure.States
             
             _unitSpawner.Player.GetComponent<PlayerHealth>().OnBattleUnitDeath += ManagePlayerDeath;
             _unitSpawner.Campfires.ForEach(f => f.OnCampfireInteracted += OnCampfireInteracted );
-            
+            Object.FindObjectsOfType<TalkingNpc>().ToList()
+                .ForEach(x => x.OnNpcDialogueOpen += () => OnNpcInteracted(x));
+
             var finalCampfire = _unitSpawner.Campfires
                 .FirstOrDefault(f => f.Type == CampfireType.Final);
             if (finalCampfire != null)
@@ -74,6 +78,11 @@ namespace GameScripts.Infrastructure.States
         {
             _ui.GetComponentInChildren<CampfireUI>(true).TurnOn(_unitSpawner.Player);
             Time.timeScale = 0f;
+        }
+
+        private void OnNpcInteracted(TalkingNpc npc)
+        {
+            _ui.GetComponentInChildren<DialogueUI>().Enter(npc.NpcDialogue);
         }
 
         private void ManagePlayerDeath()

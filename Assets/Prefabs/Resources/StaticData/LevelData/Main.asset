@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Main
   m_EditorClassIdentifier: 
   sceneName: Main
-  playerSpawnPoint: {x: 0, y: 1, z: 0}
-  mapSize: 40
+  playerSpawnPoint: {x: 51.79023, y: 0.593, z: 58.15425}
+  mapSize: 20
   trapsCount: 30
   unitCount: 20
   Curses:
