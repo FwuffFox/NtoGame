@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using EditorScripts.Inspector;
 using GameScripts.Logic.Units.Player;
 using GameScripts.StaticData.ScriptableObjects.Dialogue;
 using GameScripts.StaticData.ScriptableObjects.Dialogue.Phrase;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 namespace GameScripts.Logic.UI.InGame.Dialogue
@@ -54,7 +56,9 @@ namespace GameScripts.Logic.UI.InGame.Dialogue
             _currentPhrase = _currentPhrase.NextPhrase;
             if (_currentPhrase is NpcDialoguePhrase { DoesCallPlayerChoice: true } phrase)
             {
-                _answers = phrase.PlayerAnswers;
+                PlayerAnswer[] temp = new PlayerAnswer[phrase.PlayerAnswers.Count];
+                phrase.PlayerAnswers.CopyTo(temp);
+                _answers = temp.ToList();
             }
             _dialogueText.text = _currentPhrase.Text;
             _audio.clip = _currentPhrase.DialogueAudio;
@@ -106,10 +110,9 @@ namespace GameScripts.Logic.UI.InGame.Dialogue
             if (_currentPhrase.IsFinalPhrase) Exit();
         }
 
-        public void Exit()
+        private void Exit()
         {
             PlayerInputSystem.InGame.Enable();
-            _dialogueSo = null;
             _currentPhrase = null;
             gameObject.SetActive(false);
         }
