@@ -21,7 +21,14 @@ namespace GameScripts.Services
             if (File.Exists(_path))
             {
                 Debug.Log($"Reading QuestBook file at {_path}");
-                _questBook = JsonUtility.FromJson<QuestBook>(_path);
+                try
+                {
+                    _questBook = JsonUtility.FromJson<QuestBook>(_path);
+                } 
+                catch (ArgumentException e)
+                {
+                    Debug.Log($"Can't parse file at {_path}");
+                }
                 return;
             }
             Debug.Log($"Creating QuestBook file at {_path}");

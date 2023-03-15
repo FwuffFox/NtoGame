@@ -579,6 +579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb787a4a1b7d9624fa79e11c8c49996d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curQuest: {fileID: 11400000, guid: 5aca0e85ebbca0145b8173042b4e87ed, type: 2}
   kills: 0
 --- !u!4 &667287140
 Transform:
