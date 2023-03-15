@@ -41,10 +41,8 @@ namespace GameScripts.StaticData.ScriptableObjects
         public struct Attack
         {
             public int Damage;
-            public float AttackCooldown;
-            public float AttackRange;
         }
 
-        [Space] public Attack attack = new() { Damage = 35, AttackCooldown = 0.6f, AttackRange = 2f };
+        [Space] public Attack attack = new() { Damage = 35 };
     }
 }
