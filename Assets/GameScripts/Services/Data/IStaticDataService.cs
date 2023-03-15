@@ -11,7 +11,6 @@ namespace GameScripts.Services.Data
         Dictionary<string, LevelData> Levels { get; } 
         Dictionary<EnemyType, EnemyData> Enemies { get; } 
         Dictionary<string, AttackSO> AttackDictionary { get; }
-        GameData GameData { get; }
         PlayerData PlayerData { get; }
         
         void Load();
