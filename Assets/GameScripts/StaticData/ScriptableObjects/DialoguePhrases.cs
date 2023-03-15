@@ -1,3 +1,4 @@
+using GameScripts.StaticData.ScriptableObjects;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,4 +12,5 @@ public class dialogue
 {
     public string phrase;
     public List<int> toPhrase;
+    public QuestData quest;
 }

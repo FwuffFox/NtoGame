@@ -7,11 +7,13 @@ public class DialogueSystem : MonoBehaviour
 {
     public DialoguePhrases playerPhrases;
     public DialoguePhrases npcPhrases;
-    public Text dialogue;
     public GameObject dialogueWindow;
-    public Transform content;
     public GameObject phrase;
     public bool player = false;
+    [Header("UI")]
+    public Transform content;
+    public Text dialogue;
+
     private void OnEnable()
     {
         dialogue.text = "";
@@ -26,15 +28,14 @@ public class DialogueSystem : MonoBehaviour
         if (id == -1) {
             dialogueWindow.SetActive(false);
             player = false;
-            Debug.Log("Exit dialog...");
             return;
         }
-        //Г®Г±Г­ ГЄГ®Г¤
+        //осн код
         if (!player)
         {
             player = true;
-            dialogue.text += "Г‘ГІГ°Г Г­Г­ГЁГЄ: "+ text + "\n";
-            //Г±Г®Г§Г¤Г ВёГ¬ ГЄГ­Г®ГЇГЄГЁ
+            dialogue.text = "Странник: "+ text + "\n";
+            //создаём кнопки
             for (int i = 0; i < npcPhrases.phrase[id].toPhrase.Count; i++)
             {
                 Transform newPhrase = Instantiate(phrase).transform;
@@ -50,8 +51,12 @@ public class DialogueSystem : MonoBehaviour
         else
         {
             player = false;
-            dialogue.text += "Г‚Г»: " + text+ "\n";
+            dialogue.text = "Вы: " + text+ "\n";
             loadDialogue(id,npcPhrases.phrase[id].phrase);
+            if (npcPhrases.phrase[id].quest)
+            {
+                dialogue.text = "Доступен квест: " + npcPhrases.phrase[id].quest.questName;
+            }
         }
     }
 }

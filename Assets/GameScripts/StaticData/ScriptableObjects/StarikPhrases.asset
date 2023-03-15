@@ -15,8 +15,11 @@ MonoBehaviour:
   phrase:
   - phrase: "\u0417\u0434\u0440\u0430\u0432\u0441\u0442\u0432\u0443\u0439, \u0432\u043E\u0438\u043D"
     toPhrase: 0000000001000000
+    quest: {fileID: 0}
   - phrase: "\u0427\u0442\u043E \u043F\u0440\u0438\u0432\u0435\u043B\u043E \u0442\u0435\u0431\u044F
       \u0441\u044E\u0434\u0430?"
     toPhrase: 02000000
+    quest: {fileID: 0}
   - phrase: "\u041E\u043A, \u043C\u0435\u043D"
     toPhrase: 02000000
+    quest: {fileID: 11400000, guid: 5aca0e85ebbca0145b8173042b4e87ed, type: 2}
