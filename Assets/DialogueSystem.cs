@@ -29,12 +29,12 @@ public class DialogueSystem : MonoBehaviour
             Debug.Log("Exit dialog...");
             return;
         }
-        //осн код
+        //Г®Г±Г­ ГЄГ®Г¤
         if (!player)
         {
             player = true;
-            dialogue.text += "Странник: "+ text + "\n";
-            //создаём кнопки
+            dialogue.text += "Г‘ГІГ°Г Г­Г­ГЁГЄ: "+ text + "\n";
+            //Г±Г®Г§Г¤Г ВёГ¬ ГЄГ­Г®ГЇГЄГЁ
             for (int i = 0; i < npcPhrases.phrase[id].toPhrase.Count; i++)
             {
                 Transform newPhrase = Instantiate(phrase).transform;
@@ -50,7 +50,7 @@ public class DialogueSystem : MonoBehaviour
         else
         {
             player = false;
-            dialogue.text += "Вы: " + text+ "\n";
+            dialogue.text += "Г‚Г»: " + text+ "\n";
             loadDialogue(id,npcPhrases.phrase[id].phrase);
         }
     }
