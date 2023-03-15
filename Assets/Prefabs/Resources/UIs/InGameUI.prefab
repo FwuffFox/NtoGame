@@ -2693,6 +2693,7 @@ MonoBehaviour:
   questDoneName: {fileID: 2932290451845739039}
   questDone: {fileID: 6198539331481906714}
   kills: 0
+  goToCoster: 0
 --- !u!1001 &1350481973588315565
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3173,6 +3174,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quest (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8172072914567669346, guid: 3befae61ae2a2fd40a757e1defc8fc4d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8228306545100961700, guid: 3befae61ae2a2fd40a757e1defc8fc4d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -3350,6 +3356,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Quest (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172072914567669346, guid: 3befae61ae2a2fd40a757e1defc8fc4d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8228306545100961700, guid: 3befae61ae2a2fd40a757e1defc8fc4d,
         type: 3}
@@ -3724,6 +3735,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quest (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8172072914567669346, guid: 3befae61ae2a2fd40a757e1defc8fc4d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8228306545100961700, guid: 3befae61ae2a2fd40a757e1defc8fc4d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -4031,6 +4047,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Quest
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172072914567669346, guid: 3befae61ae2a2fd40a757e1defc8fc4d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8228306545100961700, guid: 3befae61ae2a2fd40a757e1defc8fc4d,
         type: 3}

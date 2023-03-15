@@ -11,6 +11,7 @@ namespace GameScripts.StaticData.ScriptableObjects
         public questType questType;
         public int value;
         public int reward=100;
+        public int addNewQuest = -1;
     }
 
     public enum questType

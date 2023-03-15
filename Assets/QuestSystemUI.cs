@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,26 @@ public class QuestSystemUI : MonoBehaviour
     public GameObject buttons;
     public List<QuestBox> quests;
     private int selectedQuestId = 0;
+
+    private void Awake()
+    {
+        //read from file
+        readTextFile("Quest.txt");
+        void readTextFile(string file_path)
+        {
+            StreamReader inp_stm = new StreamReader(file_path);
+
+            while (!inp_stm.EndOfStream)
+            {
+                string inp_ln = inp_stm.ReadLine();
+                Debug.Log(inp_ln);
+                // Do Something with the input. 
+            }
+
+            inp_stm.Close();
+        }
+    }
+
     void OnEnable()
     {
         if (activeQuest)
@@ -29,10 +50,10 @@ public class QuestSystemUI : MonoBehaviour
     public void SelectQuest(int id)
     {
         SetColor(id);
-        description.text =
+        description.text = 
             quests[id].questData.questName 
             +"\n"+quests[id].questData.description
-            + "\n" + "Награда: " + activeQuest.questData.reward + " монет";
+            + "\n" + "Награда: " + quests[id].questData.reward + " монет";
         selectedQuestId = id;
         if (!quests[id].doned) buttons.SetActive(true);
         else buttons.SetActive(false);

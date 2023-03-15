@@ -44,18 +44,23 @@ public class QuestManager : MonoBehaviour
                 PlayerInputSystem.InGame.Disable();
             questsJournal.SetActive(!questsJournal.activeSelf);
         }
+        if (!curQuest) return;
         //quest doned?
-        if (curQuest.questType == questType.kills)
-            if (kills >= curQuest.value)
-                QuestDone();
-        if (curQuest.questType == questType.goToCoster)
-            if (goToCoster >= curQuest.value)
-                QuestDone();
+        switch (curQuest.questType)
+        {
+            case questType.kills:
+                if (kills >= curQuest.value)
+                    QuestDone();
+                break;
+            case questType.goToCoster:
+                if (goToCoster >= curQuest.value)
+                    QuestDone();
+                break;
+        }
     }
     public void QuestDone()
     {
         playerMoney.Money += curQuest.reward;
-        Debug.Log("quest doned!");
         StopCoroutine(questIdentification());
         StartCoroutine(questIdentification());
         //find active quest
@@ -67,6 +72,7 @@ public class QuestManager : MonoBehaviour
                 questSystemUI.activeQuest = null;
             }
         }
+        curQuest = null;
     }
 
     IEnumerator questIdentification()
