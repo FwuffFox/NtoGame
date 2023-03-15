@@ -6,5 +6,6 @@ namespace GameScripts.StaticData.ScriptableObjects.Dialogue.Phrase
     {
         [TextArea] public string Text;
         public AudioClip DialogueAudio;
+        public DialoguePhraseBase NextPhrase;
     }
 }

@@ -2,13 +2,14 @@ using System;
 using GameScripts.Logic.Units.Player;
 using GameScripts.StaticData.ScriptableObjects.Dialogue;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace GameScripts.Logic
 {
     [RequireComponent(typeof(Collider))]
     public class TalkingNpc : InteractableObject
     {
-        [SerializeField] private NpcDialogueSO _npcDialogue;
+        public NpcDialogueSO NpcDialogue;
 
         public Action OnNpcDialogueOpen;
         private void OnTriggerEnter(Collider other)
