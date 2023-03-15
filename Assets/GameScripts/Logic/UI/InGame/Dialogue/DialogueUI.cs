@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using EditorScripts.Inspector;
@@ -15,7 +14,6 @@ namespace GameScripts.Logic.UI.InGame.Dialogue
     {
         [SerializeField] private Text _dialogueText;
         [SerializeField] private Text _npcName;
-        [SerializeField] public GameObject _dialogueWindow;
         [SerializeField, SerializeReadOnly] private NpcDialogueSO _dialogueSo;
         [SerializeField] private DialoguePhraseBase _currentPhrase;
 
