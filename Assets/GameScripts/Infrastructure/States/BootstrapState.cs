@@ -1,4 +1,5 @@
-﻿using GameScripts.Services.Data;
+﻿using GameScripts.Services;
+using GameScripts.Services.Data;
 using GameScripts.Services.Unity;
 using GameScripts.StaticData.Constants;
 using Zenject;
@@ -23,6 +24,7 @@ namespace GameScripts.Infrastructure.States
         public void Enter()
         {
             WarmUp();
+            var questBook = new QuestBookService(); // TODO: Logic
             _sceneLoader.LoadAsync(SceneNames.Bootstrap, EnterMenuState);
         }
 
