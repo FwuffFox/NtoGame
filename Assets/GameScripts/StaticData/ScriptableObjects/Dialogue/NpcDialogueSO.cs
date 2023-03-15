@@ -8,5 +8,6 @@ namespace GameScripts.StaticData.ScriptableObjects.Dialogue
     {
         public string NpcName;
         public DialoguePhraseBase FirstPhrase;
+        public PlayerAnswer DialogueCancelAnswer;
     }
 }
