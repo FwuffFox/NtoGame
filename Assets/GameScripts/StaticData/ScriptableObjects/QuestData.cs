@@ -16,6 +16,8 @@ namespace GameScripts.StaticData.ScriptableObjects
     public enum questType
     {
         kills,
-        talk
+        talk,
+        goToCoster,
+        interactCoster
     };
 }

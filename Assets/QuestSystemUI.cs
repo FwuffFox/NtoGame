@@ -36,6 +36,7 @@ public class QuestSystemUI : MonoBehaviour
 
     public void SetActiveQuest()
     {
+        activeQuest.background.color = Color.white;
         activeQuest = quests[selectedQuestId];
         activeQuest.background.color = Color.green;
         QuestManager.questManager.curQuest = activeQuest.questData;
