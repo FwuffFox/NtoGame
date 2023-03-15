@@ -11,6 +11,7 @@ using Zenject;
 public class QuestManager : MonoBehaviour
 {
     public static QuestManager questManager;
+    public GameObject questsJournal;
     public QuestData curQuest;
     private QuestBookService questBookService;
     public Text questDoneName;
@@ -34,6 +35,11 @@ public class QuestManager : MonoBehaviour
     }
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            questsJournal.SetActive(!questsJournal.activeSelf);
+        }
+        //quest doned?
         if (curQuest.questType == questType.kills)
             if (kills >= curQuest.value)
             { 

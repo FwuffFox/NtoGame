@@ -170,8 +170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91679ade5edc3d943b8c06005e331b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: "\u041D\u0435\u0431\u043E\u043B\u044C\u0448\u0438\u0435 \u043F\u0440\u043E\u0431\u043B\u0435\u043C\u044B"
-  description: "\u041A\u0430\u043A \u0432\u0441\u0435\u0433\u0434\u0430 \u043D\u0443\u0436\u043D\u0430
-    \u0432\u0430\u0448\u0430 \u043F\u043E\u043C\u043E\u0449\u044C"
+  questData: {fileID: 11400000, guid: 5aca0e85ebbca0145b8173042b4e87ed, type: 2}
   titleText: {fileID: 4833704275493859575}
   background: {fileID: 3189409985090395296}
