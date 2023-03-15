@@ -88,6 +88,9 @@ namespace GameScripts.Logic.Units.Player
 
         private void FixedUpdate()
         {
+            #if UNITY_EDITOR
+                if (Input.GetKeyDown(KeyCode.LeftAlt)) UnityEditor.EditorWindow.focusedWindow.maximized = !UnityEditor.EditorWindow.focusedWindow.maximized;
+            #endif
             if (!PlayerInputSystem.InGame.Move.IsPressed())
             {
                 MovementSpeed = 0;

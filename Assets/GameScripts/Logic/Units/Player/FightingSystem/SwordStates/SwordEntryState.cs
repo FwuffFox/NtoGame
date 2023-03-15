@@ -5,7 +5,7 @@ namespace GameScripts.Logic.Units.Player.FightingSystem
 {
     public class SwordEntryState : BaseState
     {
-        protected override string StateName { get; } = "SwordEntry";
+        protected override string StateName => "SwordEntry";
 
         public override void OnEnter(ComboStateMachine comboStateMachine)
         {

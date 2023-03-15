@@ -17,6 +17,9 @@ public class OnlineManager : MonoBehaviour
     private void Start()
     {
         if (!inMenu) return;
+#if UNITY_EDITOR
+       UnityEditor.EditorWindow.focusedWindow.maximized = !UnityEditor.EditorWindow.focusedWindow.maximized;
+#endif
         onlineManager = this;
         GetLeaderBoard();
         if (PlayerPrefs.HasKey("Nick"))

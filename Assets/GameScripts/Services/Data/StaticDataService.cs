@@ -17,8 +17,6 @@ namespace GameScripts.Services.Data
 
         public Dictionary<string, AttackSO> AttackDictionary { get; private set; } = new();
 
-        public GameData GameData { get; private set; }
-        
         public PlayerData PlayerData { get; private set; }
         
 
@@ -30,8 +28,7 @@ namespace GameScripts.Services.Data
                 .ToDictionary(data => data.enemyType, data => data);
             AttackDictionary = LoadResources<AttackSO>(StaticDataPaths.AttacksData)
                 .ToDictionary(data => data.AttackName, data => data);
-
-            GameData = LoadResource<GameData>(StaticDataPaths.GameData);
+            
             PlayerData = LoadResource<PlayerData>(StaticDataPaths.PlayerData);
         }
 
