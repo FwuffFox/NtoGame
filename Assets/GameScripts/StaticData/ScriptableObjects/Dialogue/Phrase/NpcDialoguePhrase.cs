@@ -8,6 +8,7 @@ namespace GameScripts.StaticData.ScriptableObjects.Dialogue.Phrase
         menuName = "DialogueSystem/NpcDialoguePhrase", order = 0)]
     public class NpcDialoguePhrase : DialoguePhraseBase
     {
+        [Header(nameof(this))]
         public bool DoesCallPlayerChoice;
         public List<PlayerAnswer> PlayerAnswers;
     }
