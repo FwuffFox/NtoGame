@@ -12,6 +12,7 @@ public class QuestManager : MonoBehaviour
 {
     public static QuestManager questManager;
     public GameObject questsJournal;
+    public QuestSystemUI questSystemUI;
     public QuestData curQuest;
     private QuestBookService questBookService;
     public Text questDoneName;
@@ -60,6 +61,14 @@ public class QuestManager : MonoBehaviour
         Debug.Log("quest doned!");
         StopCoroutine(questIdentification());
         StartCoroutine(questIdentification());
+        //find active quest
+        for (int i = 0; i < questSystemUI.quests.Count;i++) {
+            if (questSystemUI.quests[i].questData == curQuest)
+            {
+                questSystemUI.quests[i].doned = true;
+                questSystemUI.activeQuest = null;
+            }
+        }
     }
 
     IEnumerator questIdentification()
