@@ -9,4 +9,9 @@ public class QuestBox : MonoBehaviour
     public QuestData questData;
     public Text titleText;
     public Image background;
+
+    public void Start()
+    {
+        titleText.text = questData.questName;
+    }
 }

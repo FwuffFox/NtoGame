@@ -36,7 +36,7 @@ namespace GameScripts.Logic
         {
             if (!other.TryGetComponent<PlayerInteractions>(out var playerInteractions))
                 return;
-            DestroyImmediate(playerInteractions);
+            DisableObject(playerInteractions);
             animator.SetBool(playerNearBy, false);
         }
 

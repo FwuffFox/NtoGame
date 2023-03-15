@@ -35,8 +35,15 @@ public class QuestManager : MonoBehaviour
     }
     private void Update()
     {
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.LeftAlt)) UnityEditor.EditorWindow.focusedWindow.maximized = !UnityEditor.EditorWindow.focusedWindow.maximized;
+#endif
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            if (questsJournal.activeSelf)
+                PlayerInputSystem.InGame.Enable();
+            else
+                PlayerInputSystem.InGame.Disable();
             questsJournal.SetActive(!questsJournal.activeSelf);
         }
         //quest doned?
