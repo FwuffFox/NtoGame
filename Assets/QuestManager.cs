@@ -19,6 +19,7 @@ public class QuestManager : MonoBehaviour
     public GameObject questDone;
     private PlayerMoney playerMoney;
     public int kills = 0;
+    public int goToCoster = 0;
 
     [Inject]
     public void Constructor(IUnitSpawner unitSpawner)
@@ -29,10 +30,6 @@ public class QuestManager : MonoBehaviour
     { 
         questManager = this;
         questBookService = new QuestBookService();
-    }
-    public void initQuest()
-    {
-        kills = 0;
     }
     private void Update()
     {
@@ -50,10 +47,10 @@ public class QuestManager : MonoBehaviour
         //quest doned?
         if (curQuest.questType == questType.kills)
             if (kills >= curQuest.value)
-            { 
                 QuestDone();
-                kills = 0;
-            }
+        if (curQuest.questType == questType.goToCoster)
+            if (goToCoster >= curQuest.value)
+                QuestDone();
     }
     public void QuestDone()
     {

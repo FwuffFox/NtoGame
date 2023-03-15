@@ -15,7 +15,9 @@ public class QuestSystemUI : MonoBehaviour
         {
             SetColor();
             description.text =
-                activeQuest.questData.questName + "\n" + activeQuest.questData.description;
+                activeQuest.questData.questName
+                + "\n" + activeQuest.questData.description
+                + "\n" + "Награда: "+activeQuest.questData.reward+" монет";
         }
         else
         {
