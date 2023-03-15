@@ -51,8 +51,11 @@ namespace GameScripts.Infrastructure.States
             var generator = mapGenerator.GetComponent<GroundGenerator>();
             generator.GenerateMapAndTraps();
 
-            var playerPosition = new Vector3(PlayerPrefs.GetFloat("CheckpointX"), 1 , PlayerPrefs.GetFloat("CheckpointX"));
-            playerPosition = playerPosition == Vector3.zero ? levelData.playerSpawnPoint : playerPosition;
+            var playerPosition = levelData.playerSpawnPoint;
+            if (PlayerPrefs.HasKey("CheckpointX"))
+            {
+                playerPosition = new Vector3(PlayerPrefs.GetFloat("CheckpointX"), 1, PlayerPrefs.GetFloat("CheckpointX"));
+            }
             
             if (_unitSpawner.Player != null) Object.Destroy(_unitSpawner.Player);
             var player = _unitSpawner.SpawnPlayer(playerPosition);
