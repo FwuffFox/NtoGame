@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Main
   m_EditorClassIdentifier: 
   sceneName: Main
-  playerSpawnPoint: {x: 51.79023, y: 0.593, z: 58.15425}
+  playerSpawnPoint: {x: 6.419574, y: 0.7461159, z: 2.440788}
   mapSize: 20
   trapsCount: 30
   unitCount: 20
