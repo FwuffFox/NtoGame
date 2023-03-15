@@ -22,6 +22,7 @@ namespace GameScripts.Logic.UI.InGame.Dialogue
         [SerializeField, SerializeReadOnly] private bool _dialogueBusy;
         [SerializeField, SerializeReadOnly] private List<PlayerAnswer> _answers;
         [SerializeField] private List<Button> _answerButtons;
+        [SerializeField] private Button _dialogueCancelButton;
         
         public void Enter(NpcDialogueSO dialogueSo)
         {
@@ -43,6 +44,7 @@ namespace GameScripts.Logic.UI.InGame.Dialogue
             if (_answers.Count != 0)
             {
                 UseAnswers();
+                return;
             }
             UseDialog();
         }
@@ -59,18 +61,7 @@ namespace GameScripts.Logic.UI.InGame.Dialogue
             _audio.Play();
             StartCoroutine(PlayDialog());
         }
-        
-        private IEnumerator PlayDialog()
-        {
-            _dialogueBusy = true;
-            while (_audio.isPlaying || !Input.GetMouseButtonDown(0))
-            {
-                yield return null;
-            }
 
-            _dialogueBusy = false;
-        }
-        
         private void UseAnswers()
         {
             _dialogueBusy = true;
@@ -83,6 +74,10 @@ namespace GameScripts.Logic.UI.InGame.Dialogue
                 button.onClick.RemoveAllListeners();
                 button.onClick.AddListener(() => Answer(answer.NextPhrase));
             }
+
+            _dialogueCancelButton.GetComponentInChildren<Text>().text = _dialogueSo.DialogueCancelAnswer.Text;
+            _dialogueCancelButton.onClick.RemoveAllListeners();
+            _dialogueCancelButton.onClick.AddListener(Exit);
         }
 
         private void Answer(DialoguePhraseBase phrase)
@@ -92,13 +87,27 @@ namespace GameScripts.Logic.UI.InGame.Dialogue
             _dialogueText.text = _currentPhrase.Text;
             _audio.clip = _currentPhrase.DialogueAudio;
             _audio.Play();
+            _answers.Clear();
             StartCoroutine(PlayDialog());
+        }
+        
+        private IEnumerator PlayDialog()
+        {
+            _dialogueBusy = true;
+            while (_audio.isPlaying && !Input.GetMouseButtonDown(0))
+            {
+                yield return null;
+            }
+
+            _dialogueBusy = false;
+            if (_currentPhrase.IsFinalPhrase) Exit();
         }
 
         public void Exit()
         {
             PlayerInputSystem.InGame.Enable();
             _dialogueSo = null;
+            _currentPhrase = null;
             gameObject.SetActive(false);
         }
     }
