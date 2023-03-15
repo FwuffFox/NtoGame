@@ -18,3 +18,5 @@ MonoBehaviour:
     toPhrase: 01000000
   - phrase: "\u0418\u0437\u0432\u0438\u043D\u0438, \u043E\u0431\u043E\u0437\u043D\u0430\u043B\u0441\u044F"
     toPhrase: ffffffff
+  - phrase: "\u0414\u0435\u043D\u044C\u0433\u0438"
+    toPhrase: ffffffff

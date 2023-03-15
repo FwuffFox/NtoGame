@@ -11,6 +11,6 @@ public class DialoguePhrase : MonoBehaviour
 
     public void chooseDialoge()
     {
-        dialogueSystem.loadDialogue(id);
+        dialogueSystem.loadDialogue(id, text.text);
     }
 }
