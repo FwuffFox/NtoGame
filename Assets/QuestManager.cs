@@ -63,6 +63,7 @@ public class QuestManager : MonoBehaviour
             if (questSystemUI.quests[i].questData == curQuest)
             {
                 questSystemUI.quests[i].doned = true;
+                questSystemUI.activeQuest.background.color = Color.white;
                 questSystemUI.activeQuest = null;
             }
         }

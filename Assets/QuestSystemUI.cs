@@ -30,7 +30,9 @@ public class QuestSystemUI : MonoBehaviour
     {
         SetColor(id);
         description.text =
-            quests[id].questData.questName +"\n"+quests[id].questData.description;
+            quests[id].questData.questName 
+            +"\n"+quests[id].questData.description
+            + "\n" + "Награда: " + activeQuest.questData.reward + " монет";
         selectedQuestId = id;
         if (!quests[id].doned) buttons.SetActive(true);
         else buttons.SetActive(false);
@@ -38,7 +40,7 @@ public class QuestSystemUI : MonoBehaviour
 
     public void SetActiveQuest()
     {
-        activeQuest.background.color = Color.white;
+        if (activeQuest) activeQuest.background.color = Color.white;
         activeQuest = quests[selectedQuestId];
         activeQuest.background.color = Color.green;
         QuestManager.questManager.curQuest = activeQuest.questData;
