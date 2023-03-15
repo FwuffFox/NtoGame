@@ -14,2291 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelData: {fileID: 11400000, guid: ad40366ab6847e744bc9eb12d6b93189, type: 2}
   objs:
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
@@ -2311,74 +45,44 @@ MonoBehaviour:
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+    Power: 2
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
+    Power: 10
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
@@ -2386,43 +90,37 @@ MonoBehaviour:
     Power: 2
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
+  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+    Power: 2
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
@@ -2432,335 +130,281 @@ MonoBehaviour:
     Power: 2
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+    Power: 10
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+    Power: 10
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+    Power: 10
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
+  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+    Power: 2
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
+    Power: 2
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+    Power: 2
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
+  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+    Power: 2
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
+  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+    Power: 2
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
+    Power: 10
+  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+    Power: 10
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
+    Power: 10
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
+  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+    Power: 2
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
+  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+    Power: 2
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
+  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+    Power: 10
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
+  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+    Power: 2
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
+    Power: 10
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
+    Power: 2
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
+  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+    Power: 2
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+    Power: 10
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+    Power: 2
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+    Power: 2
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+    Power: 2
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
@@ -2768,13 +412,15 @@ MonoBehaviour:
     Power: 2
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
+  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+    Power: 2
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+    Power: 2
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
@@ -2784,431 +430,385 @@ MonoBehaviour:
     Power: 10
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+    Power: 10
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
+  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+    Power: 10
+  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
+  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+    Power: 2
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
+    Power: 10
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
+  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
+  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
+  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+    Power: 2
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
+  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+    Power: 2
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+    Power: 2
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
+    Power: 2
+  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+    Power: 10
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+    Power: 2
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
+    Power: 2
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
+    Power: 10
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+    Power: 10
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
+  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+    Power: 10
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
+    Power: 10
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
+    Power: 10
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
+    Power: 10
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+    Power: 2
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
+    Power: 10
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
+    Power: 10
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
+    Power: 10
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
+  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+    Power: 2
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+    Power: 2
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
+    Power: 2
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
+    Power: 10
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+    Power: 10
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
+  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
+  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
+    Power: 3
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+    Power: 2
+  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
   - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
-  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+    Power: 10
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
   - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
-    Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
     Power: 2
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
-    Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+    Power: 10
+  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+    Power: 10
   - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
-    Power: 2
-  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
     Power: 2
   - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
     Power: 2
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
+    Power: 2
+  - Tile: {fileID: 3728341224763652673, guid: 3f965c4897054a74c9b75f08016a5d7a, type: 3}
     Power: 10
-  - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
-    Power: 3
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
-  - Tile: {fileID: 7230528121826704380, guid: 7176b9a910a5cd44a831ff395065a3f3, type: 3}
+  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
   - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
-  - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
-    Power: 10
+  - Tile: {fileID: 2457388591660115771, guid: 2e6fdd5b874d05147a3c15068f7fb496, type: 3}
+    Power: 2
+  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+    Power: 2
   - Tile: {fileID: 2857231118676992137, guid: cb1c1f2334e6e55459e0434e6f1bc4c8, type: 3}
     Power: 10
-  - Tile: {fileID: 6765699229046021085, guid: 9b8b6928ddfc2774387b935682f2506d, type: 3}
+  - Tile: {fileID: 6548098573519307425, guid: 14adf078e909bca4586537dc01df8362, type: 3}
     Power: 2
   - Tile: {fileID: 946824050095780663, guid: 92892a06dee2ef5469d247a39c382f6d, type: 3}
     Power: 3

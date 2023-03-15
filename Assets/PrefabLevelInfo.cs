@@ -7,9 +7,9 @@ using UnityEngine.AI;
 
 public class PrefabLevelInfo : MonoBehaviour
 {
-    public List<Campfire> campfires;
-    public List<EnemyAI> enemies;
-    public List<BearTrap> traps;
+    public List<Campfire> campfires = new();
+    public List<EnemyAI> enemies = new();
+    public List<BearTrap> traps = new();
 
     [ContextMenu("Save")]
     void Save()
