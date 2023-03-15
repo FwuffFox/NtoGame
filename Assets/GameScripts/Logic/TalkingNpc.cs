@@ -10,6 +10,8 @@ namespace GameScripts.Logic
     public class TalkingNpc : InteractableObject
     {
         public NpcDialogueSO NpcDialogue;
+        public Animator animator;
+        private static readonly int playerNearBy=Animator.StringToHash("PlayerNearBy");
 
         public Action OnNpcDialogueOpen;
         private void OnTriggerEnter(Collider other)
@@ -17,6 +19,7 @@ namespace GameScripts.Logic
             if (!other.TryGetComponent<PlayerInteractions>(out var playerInteractions))
                 return;
             ActivateObject(playerInteractions);
+            animator.SetBool(playerNearBy, true);
         }
 
         private void OnTriggerStay(Collider other)
@@ -24,6 +27,9 @@ namespace GameScripts.Logic
             if (!other.TryGetComponent<PlayerInteractions>(out var playerInteractions))
                 return;
             ActivateObject(playerInteractions);
+            Vector3 direction = Vector3.RotateTowards(transform.forward, other.transform.position - transform.position, 20f, 0);
+            direction.y = 0;
+            transform.rotation = Quaternion.LookRotation(direction);
         }
 
         private void OnTriggerExit(Collider other)
@@ -31,6 +37,7 @@ namespace GameScripts.Logic
             if (!other.TryGetComponent<PlayerInteractions>(out var playerInteractions))
                 return;
             DestroyImmediate(playerInteractions);
+            animator.SetBool(playerNearBy, false);
         }
 
         public override void Interact()
