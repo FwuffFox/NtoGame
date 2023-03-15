@@ -75,8 +75,11 @@ namespace GameScripts.Logic.UI.InGame.Dialogue
                 button.onClick.AddListener(() => Answer(answer.NextPhrase));
             }
 
+            _dialogueCancelButton.gameObject.SetActive(true);
             _dialogueCancelButton.GetComponentInChildren<Text>().text = _dialogueSo.DialogueCancelAnswer.Text;
             _dialogueCancelButton.onClick.RemoveAllListeners();
+            _dialogueCancelButton.onClick
+                .AddListener(() => _dialogueCancelButton.gameObject.SetActive(false));
             _dialogueCancelButton.onClick.AddListener(Exit);
         }
 
