@@ -50,32 +50,26 @@ public class QuestManager : MonoBehaviour
             switch (CurQuest.questType)
             {
                 case questType.kills:
-                    if (Kills >= CurQuest.value)
-                        QuestDone();
+                    Kills = 1;
+                    HaveTorch = true;
+                    InteractWithCoster = true;
+                    Talked = true;
+                    QuestDone();
                     break;
                 case questType.goToCoster:
-                    if (GoToCoster >= CurQuest.value)
+                    GoToCoster = 1;
                         QuestDone();
                     break;
                 case questType.talk:
-                    if (Talked)
-                    {
                         Talked = false;
                         QuestDone();
-                    }
                     break;
                 case questType.fireCoster:
-                    if (FireCoster)
-                    {
                         CanInterectWithNpc = true;
                         QuestDone();
-                    }
                     break;
                 case questType.interactCoster:
-                    if (InteractWithCoster)
-                    {
                         QuestDone();
-                    }
                     break;
             }
         }
