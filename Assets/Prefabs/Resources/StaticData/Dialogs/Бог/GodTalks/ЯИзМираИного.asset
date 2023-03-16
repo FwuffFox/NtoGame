@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Text: "\u042F \u0438\u0437 \u043C\u0438\u0440\u0430 \u0438\u043D\u043E\u0433\u043E,
     \u0431\u0440\u0430\u0442\u0435\u0446!"
-  DialogueAudio: {fileID: 0}
-  NextPhrase: {fileID: 0}
+  DialogueAudio: {fileID: 8300000, guid: c78b4ab94a760d8459fda1e95bd8f38a, type: 3}
+  NextPhrase: {fileID: 11400000, guid: 9adc4f8bb72bf2e49903e600d84d16f4, type: 2}
   IsFinalPhrase: 0
   DoesCallPlayerChoice: 0
   PlayerAnswers: []

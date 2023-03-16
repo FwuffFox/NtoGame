@@ -219,6 +219,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodenButton
       objectReference: {fileID: 0}
+    - target: {fileID: 3701284841228418341, guid: 678b42687e0250c4caedb8d7babfeb36,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3878604011927820479, guid: 678b42687e0250c4caedb8d7babfeb36,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -386,6 +391,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WoodenButton (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701284841228418341, guid: 678b42687e0250c4caedb8d7babfeb36,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3878604011927820479, guid: 678b42687e0250c4caedb8d7babfeb36,
         type: 3}
