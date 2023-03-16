@@ -20,7 +20,8 @@ public class QuestManager : MonoBehaviour
     private PlayerMoney playerMoney;
     public int kills = 0;
     public int goToCoster = 0;
-    public int interactWithCoster = 0;
+    public bool fireCoster = false;
+    public bool interactWithCoster = false;
     public bool talked = false;
     public bool haveTorch = false;
     public bool canInterectWithNpc = false;
@@ -64,10 +65,16 @@ public class QuestManager : MonoBehaviour
                 if (talked)
                     QuestDone();
                 break;
-            case questType.interactCoster:
-                if (interactWithCoster >= curQuest.value)
+            case questType.fireCoster:
+                if (fireCoster)
                 {
                     canInterectWithNpc = true;
+                    QuestDone();
+                }
+                break;
+            case questType.interactCoster:
+                if (interactWithCoster)
+                {
                     QuestDone();
                 }
                 break;
@@ -87,6 +94,7 @@ public class QuestManager : MonoBehaviour
                 questSystemUI.activeQuest = null;
             }
         }
+        if (curQuest.nextQuest != -1) questSystemUI.quests[curQuest.nextQuest].gameObject.SetActive(true);
         questSystemUI.SelectQuest(0);
         curQuest = null;
     }
