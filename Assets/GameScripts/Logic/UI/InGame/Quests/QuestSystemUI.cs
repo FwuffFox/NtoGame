@@ -23,7 +23,7 @@ namespace GameScripts.Logic.UI.InGame.Quests
             }
             else
             {
-                Description.text = "�������� �����";
+                Description.text = "Выберите квест";
                 SetColor();
                 Buttons.SetActive(false);
             }
@@ -31,15 +31,15 @@ namespace GameScripts.Logic.UI.InGame.Quests
         public void SelectQuest(int id)
         {
             SetColor(id);
-            Description.text = 
-                Quests[id].QuestData.questName 
-                +"\n"+Quests[id].QuestData.description
-                + "\n" + "�������: " + Quests[id].QuestData.reward + " �����";
+            Description.text =
+                Quests[id].QuestData.questName
+                + "\n" + Quests[id].QuestData.description
+                + "\n" + "Награда: " + Quests[id].QuestData.reward + " монет";
             _selectedQuestId = id;
             if (Quests[id].QuestData.questImportance == questImportance.main)
-                DeclineButton.text = "[�������� �����]";
+                DeclineButton.text = "[Основной квест]";
             else
-                DeclineButton.text = "����������";
+                DeclineButton.text = "Отказаться";
         }
 
         public void SetActiveQuest()
