@@ -41,7 +41,7 @@ namespace GameScripts.Logic.Campfire
                 if (!interactWithCampfireQM)
                 {
                     interactWithCampfireQM = true;
-                    QuestManager.questManager.interactWithCoster += 1;
+                    QuestManager.questManager.fireCoster = true;
                 }
             }
             if (Type == CampfireType.Final) StartCoroutine(OnFinalReach());
@@ -73,7 +73,7 @@ namespace GameScripts.Logic.Campfire
                 if (!interactWithCampfireQM)
                 {
                     interactWithCampfireQM = true;
-                    QuestManager.questManager.interactWithCoster += 1;
+                    QuestManager.questManager.fireCoster= true;
                 }
             }
 
@@ -102,6 +102,7 @@ namespace GameScripts.Logic.Campfire
         public override void Interact()
         {
             OnCampfireInteracted?.Invoke();
+            QuestManager.questManager.interactWithCoster = true;
         }
     }
 }

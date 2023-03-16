@@ -17,5 +17,7 @@ MonoBehaviour:
   description: "\u0412\u044B\u0441\u043B\u0443\u0448\u0430\u0442\u044C \u043D\u0435\u0437\u043D\u0430\u043A\u043E\u043C\u044B\u0439
     \u0433\u043E\u043B\u043E\u0441"
   questType: 1
+  questImportance: 0
   value: 1
   reward: 250
+  nextQuest: 4

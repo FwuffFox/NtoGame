@@ -9,8 +9,10 @@ namespace GameScripts.StaticData.ScriptableObjects
         [TextArea]
         public string description;
         public questType questType;
+        public questImportance questImportance;
         public int value;
         public int reward=100;
+        public int nextQuest=-1;
     }
 
     public enum questType
@@ -18,6 +20,12 @@ namespace GameScripts.StaticData.ScriptableObjects
         kills,
         talk,
         goToCoster,
+        fireCoster,
         interactCoster
+    };
+    public enum questImportance
+    {
+        main,
+        additional
     };
 }
