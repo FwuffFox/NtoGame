@@ -612,7 +612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _staminaSlider: {fileID: 1499023937963134039}
-  playerMovement: {fileID: 0}
+  PlayerMovement: {fileID: 0}
 --- !u!1 &4892318377554670778
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,7 +787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a78918612b77274468b6108e1cf589ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  counter: {fileID: 4996184459710821839}
+  _counter: {fileID: 4996184459710821839}
 --- !u!1 &6631334971580124345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,6 +1589,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3340005843262566233}
     m_Modifications:
+    - target: {fileID: 2463505019800248929, guid: 98043e83e79556f489ebee51e830ad0f,
+        type: 3}
+      propertyPath: m_ScrollSensitivity
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4633301719483544023, guid: 98043e83e79556f489ebee51e830ad0f,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1714,6 +1719,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6864139272229791691, guid: 98043e83e79556f489ebee51e830ad0f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.20520592
+      objectReference: {fileID: 0}
     - target: {fileID: 7272472828182041820, guid: 98043e83e79556f489ebee51e830ad0f,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1757,12 +1767,12 @@ PrefabInstance:
     - target: {fileID: 8119856531078665846, guid: 98043e83e79556f489ebee51e830ad0f,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 366.33148
+      value: 306.79645
       objectReference: {fileID: 0}
     - target: {fileID: 8119856531078665846, guid: 98043e83e79556f489ebee51e830ad0f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 183.16574
+      value: 153.39822
       objectReference: {fileID: 0}
     - target: {fileID: 8119856531078665846, guid: 98043e83e79556f489ebee51e830ad0f,
         type: 3}

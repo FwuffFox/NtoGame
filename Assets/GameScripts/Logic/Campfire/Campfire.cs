@@ -18,7 +18,7 @@ namespace GameScripts.Logic.Campfire
         [SerializeField] private AudioSource _audio;
         
         private bool _goToCampfireQm = false;
-        private bool _interactWithCampfireQm = false;
+        private bool _playerNear = false;
 
         public CampfireType Type;
 
@@ -36,9 +36,9 @@ namespace GameScripts.Logic.Campfire
             }
             //torch
             if (!QuestManager.questManager.haveTorch) return;
-            if (!_interactWithCampfireQm)
+            if (!_playerNear)
             {
-                _interactWithCampfireQm = true;
+                _playerNear = true;
                 QuestManager.questManager.fireCoster = true;
             }
             if (Type == CampfireType.Final) StartCoroutine(OnFinalReach());
@@ -66,9 +66,9 @@ namespace GameScripts.Logic.Campfire
         {
             if (!IsPlayer(other)) return;
             if (!QuestManager.questManager.haveTorch) return;
-            if (!_interactWithCampfireQm)
+            if (!_playerNear)
             {
-                _interactWithCampfireQm = true;
+                _playerNear = true;
                 QuestManager.questManager.fireCoster= true;
             }
 
