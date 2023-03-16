@@ -41,6 +41,9 @@ namespace GameScripts.Logic.Units.Enemy
 	        var canSeePlayer = Physics.CheckSphere(position, _seeRange, playerMask);
             if (canSeePlayer)
             {
+                Vector3 direction = Vector3.RotateTowards(transform.forward, _player.transform.position - transform.position, 2*Time.deltaTime,0.0f);
+                direction.y = 0;
+                transform.rotation = Quaternion.LookRotation(direction);
                 var canAttackPlayer = Physics.CheckSphere(position, _attackRange, playerMask);
                 if (canAttackPlayer)
                 {

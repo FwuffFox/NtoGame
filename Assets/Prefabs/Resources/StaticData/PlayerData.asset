@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health:
     maxHealth: 100
-    healthRegenPerSecond: 0
+    healthRegenPerSecond: 3
   speed:
     baseSpeed: 2.5
     runningSpeedModifier: 2
@@ -25,5 +25,3 @@ MonoBehaviour:
     staminaRegenPerSecond: 5
   attack:
     Damage: 35
-    AttackCooldown: 1.2
-    AttackRange: 3

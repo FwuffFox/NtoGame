@@ -16,6 +16,7 @@ namespace GameScripts.Logic.Units.Enemy
         public void SetProperties(EnemyData enemyData)
         {
             _speed = enemyData.speed;
+            _navMeshAgent.updateRotation = false;
         }
 
         public void Follow(GameObject obj)
