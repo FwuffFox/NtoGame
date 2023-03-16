@@ -20,7 +20,7 @@ namespace GameScripts.Logic.UI.InGame.Dialogue
         
         private NpcDialogueSO _dialogueSo;
         private DialoguePhraseBase _currentPhrase;
-        private List<PlayerAnswer> _answers;
+        private List<PlayerAnswer> _answers = new();
         private bool _dialogueBusy;
         private PlayerHealth _playerHealth;
         
