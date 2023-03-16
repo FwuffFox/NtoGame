@@ -46,7 +46,38 @@ public class QuestManager : MonoBehaviour
             CurQuest = QuestSystemUI.Quests[i].QuestData;
             QuestSystemUI.Quests[i].Done = nums[i] == 1;
             if (nums[i] == 0) continue;
-            QuestDone();
+            
+            switch (CurQuest.questType)
+            {
+                case questType.kills:
+                    if (Kills >= CurQuest.value)
+                        QuestDone();
+                    break;
+                case questType.goToCoster:
+                    if (GoToCoster >= CurQuest.value)
+                        QuestDone();
+                    break;
+                case questType.talk:
+                    if (Talked)
+                    {
+                        Talked = false;
+                        QuestDone();
+                    }
+                    break;
+                case questType.fireCoster:
+                    if (FireCoster)
+                    {
+                        CanInterectWithNpc = true;
+                        QuestDone();
+                    }
+                    break;
+                case questType.interactCoster:
+                    if (InteractWithCoster)
+                    {
+                        QuestDone();
+                    }
+                    break;
+            }
         }
           
     }
