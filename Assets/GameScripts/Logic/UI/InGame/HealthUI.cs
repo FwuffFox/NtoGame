@@ -31,7 +31,7 @@ namespace GameScripts.Logic.UI.InGame
             ManageColors();
         }
 
-        void ManageColors()
+        private void ManageColors()
         {
             if (Math.Abs(_playerHealth.MaxHealth - 1) < 1)
             {

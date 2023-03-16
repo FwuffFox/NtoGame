@@ -7,13 +7,13 @@ namespace GameScripts.Logic
     [RequireComponent(typeof(Collider))]
     public abstract class InteractableObject : MonoBehaviour
     {
-        public void ActivateObject(PlayerInteractions playerInteractions)
+        protected void ActivateObject(PlayerInteractions playerInteractions)
         {
             playerInteractions.ReadyToInteract = true;
             playerInteractions.InteractableObject = this;
         }
 
-        public void DisableObject(PlayerInteractions playerInteractions)
+        protected void DisableObject(PlayerInteractions playerInteractions)
         {
             playerInteractions.ReadyToInteract = false;
             playerInteractions.InteractableObject = null;

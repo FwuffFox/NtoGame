@@ -15,7 +15,7 @@ namespace GameScripts.Logic.UI.InGame
     {
         [SerializeField] private ShopItemType _type;
         
-        private int _price;
+        private int _price = -1;
 
         public int Price
         {
@@ -39,7 +39,7 @@ namespace GameScripts.Logic.UI.InGame
         {
             _shopItemInfo ??= Resources.LoadAll<ShopItemInfo>("StaticData/ShopInfo")
                 .First(x => x.Type == _type);
-            Price = _shopItemInfo.Price;
+            Price = Price == -1 ? _shopItemInfo.Price : Price;
             SetTexts();
         }
 

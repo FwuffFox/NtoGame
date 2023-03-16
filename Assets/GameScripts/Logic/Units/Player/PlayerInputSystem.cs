@@ -12,7 +12,7 @@ namespace GameScripts.Logic.Units.Player
     public static class Vector2Extensions
     {
         public static Vector3 Vector2ToVector3(this Vector2 val)
-            => new Vector3(val.x, 0, val.y);
+            => new(val.x, 0, val.y);
     }
 
     public static class Vector3Extensions

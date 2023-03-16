@@ -43,12 +43,11 @@ namespace GameScripts.Logic.Units
             
             Health -= damage;
             OnBattleUnitGetDamage?.Invoke(damage);
-            if (Health <= 0)
-            {
-                IsDead = true;
-                OnlineManager.onlineManager.SetLeaderBoard();
-                OnHealthReachZero();
-            }
+            if (!(Health <= 0)) return;
+            
+            IsDead = true;
+            OnlineManager.onlineManager.SetLeaderBoard();
+            OnHealthReachZero();
         }
 
         public Action OnBattleUnitDeath;

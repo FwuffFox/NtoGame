@@ -16,23 +16,22 @@ namespace GameScripts.Logic.UI.InGame.Dialogue
     {
         [SerializeField] private Text _dialogueText;
         [SerializeField] private Text _npcName;
-        [SerializeField, SerializeReadOnly] private NpcDialogueSO _dialogueSo;
-        [SerializeField] private DialoguePhraseBase _currentPhrase;
-
         [SerializeField] private AudioSource _audio;
-
-        [SerializeField, SerializeReadOnly] private bool _dialogueBusy;
-        [SerializeField, SerializeReadOnly] private List<PlayerAnswer> _answers;
+        [SerializeField] private Button _dialogueCancelButton; 
         [SerializeField] private List<Button> _answerButtons;
-        [SerializeField] private Button _dialogueCancelButton;
+        
+        private NpcDialogueSO _dialogueSo;
+        private DialoguePhraseBase _currentPhrase;
+        private List<PlayerAnswer> _answers;
+        private bool _dialogueBusy;
+        private PlayerHealth _playerHealth;
+        
+        private void OnPlayerGetDamage(float dmg) => Exit(); 
         
         public void Enter(NpcDialogueSO dialogueSo, PlayerHealth playerHealth)
         {
-            playerHealth.OnBattleUnitGetDamage += _ =>
-            {
-                Debug.Log("Exited: Got Damage");
-                Exit();
-            };
+            _playerHealth = playerHealth;
+            _playerHealth.OnBattleUnitGetDamage += OnPlayerGetDamage;
             PlayerInputSystem.InGame.Disable();
             _dialogueSo = dialogueSo;
             _npcName.text = _dialogueSo.NpcName;
@@ -119,6 +118,8 @@ namespace GameScripts.Logic.UI.InGame.Dialogue
         private void Exit()
         {
             PlayerInputSystem.InGame.Enable();
+            _playerHealth.OnBattleUnitGetDamage -= OnPlayerGetDamage;
+            _dialogueSo = null;
             _currentPhrase = null;
             gameObject.SetActive(false);
         }

@@ -1,5 +1,6 @@
 using GameScripts.Logic.Units.Player;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace GameScripts.Logic.UI.InGame
@@ -8,19 +9,19 @@ namespace GameScripts.Logic.UI.InGame
     {
         [SerializeField] private Slider _staminaSlider;
 
-        public PlayerMovement playerMovement;
+        [FormerlySerializedAs("playerMovement")] public PlayerMovement PlayerMovement;
 
         public void SetPlayer(PlayerMovement player)
         {
-            playerMovement = player;
-            _staminaSlider.maxValue = playerMovement.MaxStamina;
-            _staminaSlider.value = playerMovement.CurrentStamina;
-            playerMovement.OnPlayerStaminaChange += SetNewStamina;
+            PlayerMovement = player;
+            _staminaSlider.maxValue = PlayerMovement.MaxStamina;
+            _staminaSlider.value = PlayerMovement.CurrentStamina;
+            PlayerMovement.OnPlayerStaminaChange += SetNewStamina;
         }
 
         private void OnDestroy()
         {
-            playerMovement.OnPlayerStaminaChange -= SetNewStamina;
+            PlayerMovement.OnPlayerStaminaChange -= SetNewStamina;
         }
 
         private void SetNewStamina(float stamina)

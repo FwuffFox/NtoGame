@@ -13,7 +13,7 @@ namespace GameScripts.Logic.Units.Player
         [SerializeField] private PlayerAttack _playerAttack;
         
         public Action<Dictionary<CurseType, StackableCurse>> OnCurseChange;
-        private Dictionary<CurseType, StackableCurse> _curses = new()
+        private readonly Dictionary<CurseType, StackableCurse> _curses = new()
         {
             { CurseType.Health, StaticData.Curses.HealthCurse },
             { CurseType.Stamina, StaticData.Curses.StaminaCurse },
@@ -26,7 +26,6 @@ namespace GameScripts.Logic.Units.Player
             foreach (var curse in _curses.Values)
             {
                 curse.OnNewStack += OnNewStack;
-
             }
         }
 

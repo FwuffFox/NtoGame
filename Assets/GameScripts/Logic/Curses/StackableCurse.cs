@@ -6,11 +6,11 @@ namespace GameScripts.Logic.Curses
 {
     public class StackableCurse
     {
-        public CurseType CurseType;
+        public readonly CurseType CurseType;
         public readonly int MaxStacks;
         public Action<StackableCurse> OnNewStack;
         public int CurrentStacks;
-        public float CurseValuePerStack;
+        public readonly float CurseValuePerStack;
 
         public bool ShouldBeUnVisible => CurrentStacks >= MaxStacks / 2;
         public bool ShouldBeUnVisibleUi => IsMaxed;

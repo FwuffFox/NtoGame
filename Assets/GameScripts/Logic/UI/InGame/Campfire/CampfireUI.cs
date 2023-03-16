@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace GameScripts.Logic.UI.InGame
+namespace GameScripts.Logic.UI.InGame.Campfire
 {
     public class CampfireUI : MonoBehaviour
     {

@@ -24,7 +24,6 @@ namespace GameScripts.Infrastructure.States
         public void Enter()
         {
             WarmUp();
-            var questBook = new QuestBookService(); // TODO: Logic
             _sceneLoader.LoadAsync(SceneNames.Bootstrap, EnterMenuState);
         }
 

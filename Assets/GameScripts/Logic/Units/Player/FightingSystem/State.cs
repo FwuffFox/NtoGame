@@ -2,7 +2,7 @@ namespace GameScripts.Logic.Units.Player.FightingSystem
 {
     public abstract class State
     {
-        public ComboStateMachine ComboStateMachine;
+        protected ComboStateMachine ComboStateMachine;
         
         protected float Time { get; set; }
         protected float FixedTime { get; set; }

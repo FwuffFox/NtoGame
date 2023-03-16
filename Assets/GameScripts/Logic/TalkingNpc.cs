@@ -10,8 +10,8 @@ namespace GameScripts.Logic
     public class TalkingNpc : InteractableObject
     {
         public NpcDialogueSO NpcDialogue;
-        public Animator animator;
-        private static readonly int playerNearBy=Animator.StringToHash("PlayerNearBy");
+        [FormerlySerializedAs("animator")] public Animator Animator;
+        private static readonly int PlayerNearBy = Animator.StringToHash("PlayerNearBy");
 
         public Action OnNpcDialogueOpen;
         private void OnTriggerEnter(Collider other)
@@ -20,7 +20,7 @@ namespace GameScripts.Logic
                 return;
             if (!QuestManager.questManager.canInterectWithNpc) return;
             ActivateObject(playerInteractions);
-            animator.SetBool(playerNearBy, true);
+            Animator.SetBool(PlayerNearBy, true);
         }
 
         private void OnTriggerStay(Collider other)
@@ -40,7 +40,7 @@ namespace GameScripts.Logic
                 return;
             if (!QuestManager.questManager.canInterectWithNpc) return;
             DisableObject(playerInteractions);
-            animator.SetBool(playerNearBy, false);
+            Animator.SetBool(PlayerNearBy, false);
         }
 
         public override void Interact()
