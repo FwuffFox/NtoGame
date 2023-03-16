@@ -11,25 +11,6 @@ public class QuestSystemUI : MonoBehaviour
     public List<QuestBox> quests;
     private int selectedQuestId = 0;
 
-    private void Awake()
-    {
-        //read from file
-        readTextFile("Quest.txt");
-        void readTextFile(string file_path)
-        {
-            StreamReader inp_stm = new StreamReader(file_path);
-
-            while (!inp_stm.EndOfStream)
-            {
-                string inp_ln = inp_stm.ReadLine();
-                Debug.Log(inp_ln);
-                // Do Something with the input. 
-            }
-
-            inp_stm.Close();
-        }
-    }
-
     void OnEnable()
     {
         if (activeQuest)
@@ -55,8 +36,6 @@ public class QuestSystemUI : MonoBehaviour
             +"\n"+quests[id].questData.description
             + "\n" + "Награда: " + quests[id].questData.reward + " монет";
         selectedQuestId = id;
-        if (!quests[id].doned) buttons.SetActive(true);
-        else buttons.SetActive(false);
     }
 
     public void SetActiveQuest()
@@ -67,7 +46,7 @@ public class QuestSystemUI : MonoBehaviour
         QuestManager.questManager.curQuest = activeQuest.questData;
     }
 
-    private void SetColor(int selectedId=-1)
+    public void SetColor(int selectedId=-1)
     {
         for (int i = 0; i < quests.Count; i++)
         {
@@ -78,7 +57,12 @@ public class QuestSystemUI : MonoBehaviour
         if (activeQuest)
             activeQuest.background.color = Color.green;
 
-        if (selectedId!=-1) 
+        if (selectedId != -1)
+        {
             quests[selectedId].background.color = Color.gray;
+
+            if (!quests[selectedId].doned) buttons.SetActive(true);
+            else buttons.SetActive(false);
+        }
     }
 }
