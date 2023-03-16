@@ -1,6 +1,7 @@
 ﻿using GameScripts.Logic.Units.Player;
 using GameScripts.StaticData.ScriptableObjects;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace GameScripts.Logic.Units.Enemy
 {
@@ -16,7 +17,7 @@ namespace GameScripts.Logic.Units.Enemy
         [SerializeField] private EnemyAttacker _enemyAttacker;
 
         public EnemyHealth EnemyHealth;
-        [SerializeField] private LayerMask playerMask;
+        [FormerlySerializedAs("playerMask")] [SerializeField] private LayerMask _playerMask;
         
         private float _seeRange;
         private float _attackRange;
@@ -38,13 +39,13 @@ namespace GameScripts.Logic.Units.Enemy
         {
 	        if (EnemyHealth.IsDead) return;
             var position = transform.position;
-	        var canSeePlayer = Physics.CheckSphere(position, _seeRange, playerMask);
+	        var canSeePlayer = Physics.CheckSphere(position, _seeRange, _playerMask);
             if (canSeePlayer)
             {
                 Vector3 direction = Vector3.RotateTowards(transform.forward, _player.transform.position - transform.position, 2*Time.deltaTime,0.0f);
                 direction.y = 0;
                 transform.rotation = Quaternion.LookRotation(direction);
-                var canAttackPlayer = Physics.CheckSphere(position, _attackRange, playerMask);
+                var canAttackPlayer = Physics.CheckSphere(position, _attackRange, _playerMask);
                 if (canAttackPlayer)
                 {
                     _enemyAttacker.AttackPlayer(_playerHealth);

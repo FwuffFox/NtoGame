@@ -16,11 +16,11 @@ namespace GameScripts.Logic.Campfire
     {
         [SerializeField] private ParticleSystem _particle;
         [SerializeField] private AudioSource _audio;
-        private bool goToCosterQM = false;
-        private bool interactWithCampfireQM = false;
+        
+        private bool _goToCampfireQm = false;
+        private bool _interactWithCampfireQm = false;
 
-        [SerializeField] public CampfireType Type;
-        [SerializeField] private int _checkpointNumber;
+        public CampfireType Type;
 
         public Action OnCampfireInteracted;
         public Action OnFinalCampfireReached;
@@ -29,27 +29,24 @@ namespace GameScripts.Logic.Campfire
         {
             if (!IsPlayer(other)) return;
             //send quest
-            if (!goToCosterQM)
+            if (!_goToCampfireQm)
             {
-                goToCosterQM = true;
+                _goToCampfireQm = true;
                 QuestManager.questManager.goToCoster += 1;
             }
             //torch
             if (!QuestManager.questManager.haveTorch) return;
-            else
+            if (!_interactWithCampfireQm)
             {
-                if (!interactWithCampfireQM)
-                {
-                    interactWithCampfireQM = true;
-                    QuestManager.questManager.fireCoster = true;
-                }
+                _interactWithCampfireQm = true;
+                QuestManager.questManager.fireCoster = true;
             }
             if (Type == CampfireType.Final) StartCoroutine(OnFinalReach());
             if (Type == CampfireType.Checkpoint)
             {
-                PlayerPrefs.SetFloat("CheckpointNum", _checkpointNumber);
-                PlayerPrefs.SetFloat("CheckpointX", transform.position.x + 1);
-                PlayerPrefs.SetFloat("CheckpointZ", transform.position.z + 1);
+                var position = transform.position;
+                PlayerPrefs.SetFloat("CheckpointX", position.x + 1);
+                PlayerPrefs.SetFloat("CheckpointZ", position.z + 1);
             }
             _particle.Play();
             _audio.Play();
@@ -69,13 +66,10 @@ namespace GameScripts.Logic.Campfire
         {
             if (!IsPlayer(other)) return;
             if (!QuestManager.questManager.haveTorch) return;
-            else
+            if (!_interactWithCampfireQm)
             {
-                if (!interactWithCampfireQM)
-                {
-                    interactWithCampfireQM = true;
-                    QuestManager.questManager.fireCoster= true;
-                }
+                _interactWithCampfireQm = true;
+                QuestManager.questManager.fireCoster= true;
             }
 
             if (!_particle.isPlaying) 

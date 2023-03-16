@@ -14,7 +14,7 @@ public class QuestManager : MonoBehaviour
     public GameObject questsJournal;
     public QuestSystemUI questSystemUI;
     public QuestData curQuest;
-    private QuestBookService questBookService;
+
     public Text questDoneName;
     public GameObject questDone;
     private PlayerMoney playerMoney;
@@ -31,11 +31,12 @@ public class QuestManager : MonoBehaviour
     {
         playerMoney=unitSpawner.Player.GetComponent<PlayerMoney>();
     }
+    
     void Awake() 
     { 
         questManager = this;
-        questBookService = new QuestBookService();
     }
+    
     private void Update()
     {
 #if UNITY_EDITOR
@@ -86,6 +87,7 @@ public class QuestManager : MonoBehaviour
                 break;
         }
     }
+    
     public void QuestDone()
     {
         playerMoney.Money += curQuest.reward;
