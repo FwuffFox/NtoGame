@@ -17,7 +17,7 @@ namespace GameScripts.Logic.Campfire
         [SerializeField] private ParticleSystem _particle;
         [SerializeField] private AudioSource _audio;
         private bool goToCosterQM = false;
-
+        private bool interactWithCampfireQM = false;
 
         [SerializeField] public CampfireType Type;
         [SerializeField] private int _checkpointNumber;
@@ -28,10 +28,21 @@ namespace GameScripts.Logic.Campfire
         private void OnTriggerEnter(Collider other)
         {
             if (!IsPlayer(other)) return;
+            //send quest
             if (!goToCosterQM)
             {
                 goToCosterQM = true;
                 QuestManager.questManager.goToCoster += 1;
+            }
+            //torch
+            if (!QuestManager.questManager.haveTorch) return;
+            else
+            {
+                if (!interactWithCampfireQM)
+                {
+                    interactWithCampfireQM = true;
+                    QuestManager.questManager.interactWithCoster += 1;
+                }
             }
             if (Type == CampfireType.Final) StartCoroutine(OnFinalReach());
             if (Type == CampfireType.Checkpoint)
@@ -56,6 +67,15 @@ namespace GameScripts.Logic.Campfire
         private void OnTriggerStay(Collider other)
         {
             if (!IsPlayer(other)) return;
+            if (!QuestManager.questManager.haveTorch) return;
+            else
+            {
+                if (!interactWithCampfireQM)
+                {
+                    interactWithCampfireQM = true;
+                    QuestManager.questManager.interactWithCoster += 1;
+                }
+            }
 
             if (!_particle.isPlaying) 
                 _particle.Play();
