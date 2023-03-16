@@ -31,6 +31,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2230580876624333376}
+  - {fileID: 2843447082265651050}
   m_Father: {fileID: 6166507364717472811}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -477,6 +478,87 @@ RectTransform:
   m_AnchoredPosition: {x: 2.5, y: -0.5}
   m_SizeDelta: {x: -5, y: -0.99994}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &6549283625445012230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2843447082265651050}
+  - component: {fileID: 1973187533971578226}
+  - component: {fileID: 2109828996558836094}
+  m_Layer: 5
+  m_Name: Text (Legacy) (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2843447082265651050
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6549283625445012230}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5559445357458978601}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.0078125, y: 0}
+  m_AnchorMax: {x: 1, y: 0.19600001}
+  m_AnchoredPosition: {x: -7.5, y: 0.000061035156}
+  m_SizeDelta: {x: 15, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1973187533971578226
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6549283625445012230}
+  m_CullTransparentMesh: 1
+--- !u!114 &2109828996558836094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6549283625445012230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: d18384b0c15a27f4bacfe65439347718, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 266
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u0421\u043E\u0432\u0435\u0442: Q \u043E\u0442\u043A\u0440\u044B\u0432\u0430\u0435\u0442
+    \u043C\u0435\u043D\u044E \u043A\u0432\u0435\u0441\u0442\u043E\u0432."
 --- !u!1 &6876285216761469548
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,7 +950,7 @@ PrefabInstance:
     - target: {fileID: 3438158201602349807, guid: 3eda4280c7185ae4987bafb08d6c0723,
         type: 3}
       propertyPath: m_Size
-      value: 1
+      value: 0.999996
       objectReference: {fileID: 0}
     - target: {fileID: 3438158201602349807, guid: 3eda4280c7185ae4987bafb08d6c0723,
         type: 3}
@@ -968,7 +1050,7 @@ PrefabInstance:
     - target: {fileID: 5723633670905769114, guid: 3eda4280c7185ae4987bafb08d6c0723,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000015259
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5723633670905769114, guid: 3eda4280c7185ae4987bafb08d6c0723,
         type: 3}
@@ -984,6 +1066,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6104367467188961167, guid: 3eda4280c7185ae4987bafb08d6c0723,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00094753905
       objectReference: {fileID: 0}
     - target: {fileID: 7100886556132756424, guid: 3eda4280c7185ae4987bafb08d6c0723,
         type: 3}
