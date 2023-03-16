@@ -82,7 +82,8 @@ namespace GameScripts.Infrastructure.States
 
         private void OnNpcInteracted(TalkingNpc npc)
         {
-            _ui.GetComponentInChildren<DialogueUI>(true).Enter(npc.NpcDialogue);
+            _ui.GetComponentInChildren<DialogueUI>(true)
+                .Enter(npc.NpcDialogue, _unitSpawner.Player.GetComponent<PlayerHealth>());
         }
 
         private void ManagePlayerDeath()

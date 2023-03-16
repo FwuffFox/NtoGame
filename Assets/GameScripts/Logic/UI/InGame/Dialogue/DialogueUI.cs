@@ -26,8 +26,13 @@ namespace GameScripts.Logic.UI.InGame.Dialogue
         [SerializeField] private List<Button> _answerButtons;
         [SerializeField] private Button _dialogueCancelButton;
         
-        public void Enter(NpcDialogueSO dialogueSo)
+        public void Enter(NpcDialogueSO dialogueSo, PlayerHealth playerHealth)
         {
+            playerHealth.OnBattleUnitGetDamage += _ =>
+            {
+                Debug.Log("Exited: Got Damage");
+                Exit();
+            };
             PlayerInputSystem.InGame.Disable();
             _dialogueSo = dialogueSo;
             _npcName.text = _dialogueSo.NpcName;
@@ -89,6 +94,7 @@ namespace GameScripts.Logic.UI.InGame.Dialogue
 
         private void Answer(DialoguePhraseBase phrase)
         {
+            _dialogueCancelButton.gameObject.SetActive(false);
             _answerButtons.ForEach(b => b.gameObject.SetActive(false));
             _currentPhrase = phrase;
             _dialogueText.text = _currentPhrase.Text;
