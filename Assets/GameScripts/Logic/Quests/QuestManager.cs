@@ -17,6 +17,7 @@ public class QuestManager : MonoBehaviour
     [FormerlySerializedAs("questSystemUI")] public QuestSystemUI QuestSystemUI;
     [FormerlySerializedAs("curQuest")] public QuestData CurQuest;
     [FormerlySerializedAs("questDoneName")] public Text QuestDoneName;
+    public Text QuestDoneMoney;
     [FormerlySerializedAs("questDone")] public GameObject DoneQuest;
     private PlayerMoney _playerMoney;
     private Vector3 _notificationPos;
@@ -133,6 +134,7 @@ public class QuestManager : MonoBehaviour
         QuestDoneName.text = "Квест " + "\"" + CurQuest.questName + "\"" + " выполнен!"
             +"\n"+"Доступен новый квест!";
         DoneQuest.transform.position = _notificationPos;
+        QuestDoneMoney.text = CurQuest.reward.ToString();
         DoneQuest.SetActive(true);
         yield return new WaitForSeconds(3);
         for (int i = 0; i < 360; i++)
