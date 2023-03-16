@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health:
     maxHealth: 100
-    healthRegenPerSecond: 3
+    healthRegenPerSecond: 2
   speed:
     baseSpeed: 2.5
     runningSpeedModifier: 2

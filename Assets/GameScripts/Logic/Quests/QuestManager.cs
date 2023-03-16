@@ -18,6 +18,7 @@ public class QuestManager : MonoBehaviour
     [FormerlySerializedAs("questDoneName")] public Text QuestDoneName;
     [FormerlySerializedAs("questDone")] public GameObject DoneQuest;
     private PlayerMoney _playerMoney;
+    private Vector3 _notificationPos;
     [FormerlySerializedAs("kills")] public int Kills = 0;
     [FormerlySerializedAs("goToCoster")] public int GoToCoster = 0;
     [FormerlySerializedAs("fireCoster")] public bool FireCoster = false;
@@ -35,6 +36,7 @@ public class QuestManager : MonoBehaviour
     private void Awake() 
     { 
         Instance = this;
+        _notificationPos = DoneQuest.transform.position;
     }
     
     private void Update()
@@ -110,12 +112,15 @@ public class QuestManager : MonoBehaviour
 
     private IEnumerator QuestIdentification()
     {
-        QuestDoneName.text = "Квест " + "\"" + CurQuest.questName + "\"" + " выполнен!";
+        QuestDoneName.text = "Квест " + "\"" + CurQuest.questName + "\"" + " выполнен!"
+            +"\n"+"Доступен новый квест!";
+        DoneQuest.transform.position = _notificationPos;
         DoneQuest.SetActive(true);
-        for (int i = 0; i < 60; i++)
+        yield return new WaitForSeconds(3);
+        for (int i = 0; i < 360; i++)
         {
-            yield return new WaitForEndOfFrame();
-            DoneQuest.transform.Translate(1, 0, 0);
+            yield return new WaitForSeconds(1/60);
+            DoneQuest.transform.Translate(1f, 0, 0);
         }
         DoneQuest.SetActive(false);
     }
