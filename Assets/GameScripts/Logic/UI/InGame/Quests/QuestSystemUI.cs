@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using GameScripts.Logic.Units.Player;
 using GameScripts.StaticData.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -75,6 +76,11 @@ namespace GameScripts.Logic.UI.InGame.Quests
             Quests[selectedId].Background.color = Color.gray;
 
             Buttons.SetActive(!Quests[selectedId].Done);
+        }
+        public void ExtiButton()
+        {
+            PlayerInputSystem.InGame.Enable();
+            gameObject.SetActive(false);
         }
     }
 }

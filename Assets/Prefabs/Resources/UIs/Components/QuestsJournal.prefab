@@ -2166,7 +2166,7 @@ PrefabInstance:
     - target: {fileID: 3701284841228418341, guid: 678b42687e0250c4caedb8d7babfeb36,
         type: 3}
       propertyPath: m_Name
-      value: WoodenButton
+      value: Exit
       objectReference: {fileID: 0}
     - target: {fileID: 3878604011927820479, guid: 678b42687e0250c4caedb8d7babfeb36,
         type: 3}
@@ -2181,24 +2181,25 @@ PrefabInstance:
     - target: {fileID: 5763452612750479312, guid: 678b42687e0250c4caedb8d7babfeb36,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5763452612750479312, guid: 678b42687e0250c4caedb8d7babfeb36,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 6511089195494543888}
+      objectReference: {fileID: 6786276158134100901}
     - target: {fileID: 5763452612750479312, guid: 678b42687e0250c4caedb8d7babfeb36,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: ExtiButton
       objectReference: {fileID: 0}
     - target: {fileID: 5763452612750479312, guid: 678b42687e0250c4caedb8d7babfeb36,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: GameScripts.Logic.UI.InGame.Quests.QuestSystemUI, Assembly-CSharp
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 544229581147102833, guid: 678b42687e0250c4caedb8d7babfeb36, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 678b42687e0250c4caedb8d7babfeb36, type: 3}
 --- !u!224 &2743787980281146853 stripped
 RectTransform:

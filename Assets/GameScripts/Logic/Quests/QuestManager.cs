@@ -7,6 +7,8 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Zenject;
+using System.Collections.Generic;
+using System.Linq;
 
 public class QuestManager : MonoBehaviour
 {
@@ -14,7 +16,6 @@ public class QuestManager : MonoBehaviour
     [FormerlySerializedAs("questsJournal")] public GameObject QuestsJournal;
     [FormerlySerializedAs("questSystemUI")] public QuestSystemUI QuestSystemUI;
     [FormerlySerializedAs("curQuest")] public QuestData CurQuest;
-
     [FormerlySerializedAs("questDoneName")] public Text QuestDoneName;
     [FormerlySerializedAs("questDone")] public GameObject DoneQuest;
     private PlayerMoney _playerMoney;
@@ -37,6 +38,13 @@ public class QuestManager : MonoBehaviour
     { 
         Instance = this;
         _notificationPos = DoneQuest.transform.position;
+        if (!FileUsing.SaveExists()) return;
+        var nums = FileUsing.ReadFile().ToArray();
+        for (int i = 0; i < nums.Count(); i++)
+        {
+            QuestSystemUI.Quests[i].Done = nums[i] == 1;
+        }
+          
     }
     
     private void Update()
@@ -108,6 +116,10 @@ public class QuestManager : MonoBehaviour
         if (CurQuest.additionalQuest != -1) QuestSystemUI.Quests[CurQuest.additionalQuest].gameObject.SetActive(true);
         QuestSystemUI.SelectQuest(0);
         CurQuest = null;
+        //file
+        var questState = QuestSystemUI.Quests
+            .Select(x => x.Done ? 1 : 0);
+        FileUsing.WriteFile(questState);
     }
 
     private IEnumerator QuestIdentification()
