@@ -1,5 +1,4 @@
 using GameScripts.Logic.Units.Player;
-using GameScripts.StaticData.ScriptableObjects;
 
 namespace GameScripts.Logic.Units.Enemy
 {
@@ -15,9 +14,9 @@ namespace GameScripts.Logic.Units.Enemy
         protected override void OnHealthReachZero()
         {
             PlayerMoney.Money += 100;
-            QuestManager.questManager.haveTorch = true;
-            QuestManager.questManager.kills++;
-            OnlineManager.onlineManager.kills++;
+            QuestManager.Instance.HaveTorch = true;
+            QuestManager.Instance.Kills++;
+            OnlineManager.OnlineManager.Manager.Kills++;
             base.OnHealthReachZero();
         }
     }

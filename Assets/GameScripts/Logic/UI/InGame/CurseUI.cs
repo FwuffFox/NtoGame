@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using GameScripts.Logic.Curses;
 using GameScripts.Logic.Units.Player;
 using GameScripts.StaticData.Enums;

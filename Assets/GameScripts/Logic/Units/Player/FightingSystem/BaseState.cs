@@ -1,4 +1,3 @@
-using System;
 using GameScripts.StaticData.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.InputSystem;

@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using EditorScripts.Inspector;
 using GameScripts.Logic.Units.Player;
 using GameScripts.StaticData.Enums;
 using UnityEngine;

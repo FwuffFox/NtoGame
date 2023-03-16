@@ -1,12 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using EditorScripts.Inspector;
 using GameScripts.Logic.Units.Player;
 using GameScripts.StaticData.ScriptableObjects.Dialogue;
 using GameScripts.StaticData.ScriptableObjects.Dialogue.Phrase;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 namespace GameScripts.Logic.UI.InGame.Dialogue

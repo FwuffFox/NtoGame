@@ -1,4 +1,3 @@
-using System;
 using GameScripts.Logic.Units.Player;
 using UnityEngine;
 
