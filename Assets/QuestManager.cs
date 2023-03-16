@@ -49,6 +49,9 @@ public class QuestManager : MonoBehaviour
                 PlayerInputSystem.InGame.Disable();
             questsJournal.SetActive(!questsJournal.activeSelf);
         }
+        //check additional quests
+        if (talked)
+                questSystemUI.quests[5].gameObject.SetActive(true);
         if (!curQuest) return;
         //quest doned?
         switch (curQuest.questType)
@@ -63,7 +66,10 @@ public class QuestManager : MonoBehaviour
                 break;
             case questType.talk:
                 if (talked)
+                {
+                    talked = false;
                     QuestDone();
+                }
                 break;
             case questType.fireCoster:
                 if (fireCoster)
@@ -95,6 +101,7 @@ public class QuestManager : MonoBehaviour
             }
         }
         if (curQuest.nextQuest != -1) questSystemUI.quests[curQuest.nextQuest].gameObject.SetActive(true);
+        if (curQuest.additionalQuest != -1) questSystemUI.quests[curQuest.additionalQuest].gameObject.SetActive(true);
         questSystemUI.SelectQuest(0);
         curQuest = null;
     }

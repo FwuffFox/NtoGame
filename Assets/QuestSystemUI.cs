@@ -50,21 +50,20 @@ public class QuestSystemUI : MonoBehaviour
 
     public void DeclineQuest()
     {
-        if (!activeQuest) return;
         if (quests[selectedQuestId].questData.questImportance == questImportance.main) 
             return;
+        quests[selectedQuestId].gameObject.SetActive(false);
+        QuestManager.questManager.talked = false;
         activeQuest = null;
         QuestManager.questManager.curQuest = null;
+        SelectQuest(0);
     }
 
     public void SetColor(int selectedId=-1)
     {
         for (int i = 0; i < quests.Count; i++)
-        {
-            if (!quests[i].doned)
-                quests[i].background.color = Color.white;
-            else quests[i].background.color = Color.yellow;
-        }
+            quests[i].background.color = !quests[i].doned ?
+                Color.white : Color.yellow;
         if (activeQuest)
             activeQuest.background.color = Color.green;
 
