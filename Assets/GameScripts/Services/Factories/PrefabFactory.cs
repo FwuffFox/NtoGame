@@ -1,7 +1,7 @@
 ﻿using GameScripts.Extensions;
 using GameScripts.Infrastructure.States;
+using GameScripts.Logic;
 using GameScripts.Logic.Campfire;
-using GameScripts.Logic.Generators;
 using GameScripts.Logic.Units.Enemy;
 using GameScripts.Logic.Units.Player;
 using GameScripts.Logic.Units.Player.FightingSystem;

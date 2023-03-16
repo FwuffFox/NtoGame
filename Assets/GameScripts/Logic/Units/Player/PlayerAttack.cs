@@ -1,11 +1,9 @@
-using System;
 using EditorScripts.Inspector;
 using GameScripts.Logic.Units.Player.FightingSystem;
 using GameScripts.Logic.Weapons;
 using GameScripts.StaticData.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 namespace GameScripts.Logic.Units.Player
 {

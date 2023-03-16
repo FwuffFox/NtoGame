@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 namespace GameScripts.Logic.Units.Player.FightingSystem
 {

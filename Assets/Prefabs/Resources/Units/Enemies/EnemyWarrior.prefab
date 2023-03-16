@@ -337,9 +337,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyMover: {fileID: 3864904858595052783}
   _enemyAttacker: {fileID: 8088746603740170984}
-  _animator: {fileID: 2889508165235882229}
   EnemyHealth: {fileID: 6091196801518742484}
-  playerMask:
+  _playerMask:
     serializedVersion: 2
     m_Bits: 64
 --- !u!114 &8088746603740170984
@@ -513,6 +512,7 @@ MonoBehaviour:
   _maxHealth: 0
   _health: 0
   _healButton: 0
+  _damageButton: 0
   PlayerMoney: {fileID: 0}
 --- !u!1 &1325359981630037035
 GameObject:

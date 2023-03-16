@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Linq;
 using GameScripts.Logic;
 using GameScripts.Logic.Campfire;
-using GameScripts.Logic.UI.InGame;
 using GameScripts.Logic.UI.InGame.Campfire;
 using GameScripts.Logic.UI.InGame.Dialogue;
 using GameScripts.Logic.UI.InGame.PauseMenu;

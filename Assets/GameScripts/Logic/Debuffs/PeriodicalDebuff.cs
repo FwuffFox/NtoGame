@@ -1,5 +1,4 @@
 ﻿using System;
-using GameScripts.StaticData.Enums;
 using UnityEngine;
 
 namespace GameScripts.Logic.Debuffs

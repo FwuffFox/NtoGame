@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using GameScripts.Extensions;
@@ -6,7 +5,6 @@ using GameScripts.Logic.Campfire;
 using GameScripts.Logic.Navigation;
 using GameScripts.Logic.Tiles;
 using GameScripts.Logic.Units.Enemy;
-using GameScripts.Services.Factories;
 using GameScripts.Services.UnitSpawner;
 using GameScripts.StaticData.Enums;
 using GameScripts.StaticData.ScriptableObjects;
@@ -15,7 +13,7 @@ using UnityEngine.AI;
 using Zenject;
 using Random = UnityEngine.Random;
 
-namespace GameScripts.Logic.Generators
+namespace GameScripts.Logic
 {
 	public class GroundGenerator : MonoBehaviour
 	{
@@ -69,15 +67,15 @@ namespace GameScripts.Logic.Generators
 			{
 				_spawnedLevel=Instantiate(prefabLevel);
 				//костры
-				for (int i=0;i<_spawnedLevel.campfires.Count;i++)
+				for (int i=0;i<_spawnedLevel.Campfires.Count;i++)
                 {
-					if (_spawnedLevel.campfires[i].Type == CampfireType.Start)
-						_unitSpawner.SpawnCampfire(_spawnedLevel.campfires[i].transform.position, CampfireType.Start);
-					if (_spawnedLevel.campfires[i].Type == CampfireType.Checkpoint)
-						_unitSpawner.SpawnCampfire(_spawnedLevel.campfires[i].transform.position, CampfireType.Checkpoint);
-					if (_spawnedLevel.campfires[i].Type == CampfireType.Final)
-						_unitSpawner.SpawnCampfire(_spawnedLevel.campfires[i].transform.position, CampfireType.Final);
-					Destroy(_spawnedLevel.campfires[i].gameObject);
+					if (_spawnedLevel.Campfires[i].Type == CampfireType.Start)
+						_unitSpawner.SpawnCampfire(_spawnedLevel.Campfires[i].transform.position, CampfireType.Start);
+					if (_spawnedLevel.Campfires[i].Type == CampfireType.Checkpoint)
+						_unitSpawner.SpawnCampfire(_spawnedLevel.Campfires[i].transform.position, CampfireType.Checkpoint);
+					if (_spawnedLevel.Campfires[i].Type == CampfireType.Final)
+						_unitSpawner.SpawnCampfire(_spawnedLevel.Campfires[i].transform.position, CampfireType.Final);
+					Destroy(_spawnedLevel.Campfires[i].gameObject);
 				}
 				//генерация из префаба
 				_navMeshSurface.BuildNavMesh();
@@ -164,10 +162,10 @@ namespace GameScripts.Logic.Generators
 		{
 			if (prefabLevel)
 			{
-				for (int i = 0; i < _spawnedLevel.enemies.Count; i++)
+				for (int i = 0; i < _spawnedLevel.Enemies.Count; i++)
 				{
-					_spawnedLevel.enemies[i].GetComponent<NavMeshAgent>().enabled = true;
-					GameObject enemy = _spawnedLevel.enemies[i].gameObject;
+					_spawnedLevel.Enemies[i].GetComponent<NavMeshAgent>().enabled = true;
+					GameObject enemy = _spawnedLevel.Enemies[i].gameObject;
 					var health = enemy.GetComponent<EnemyHealth>()
 						.With(x =>
 						{
@@ -200,7 +198,7 @@ namespace GameScripts.Logic.Generators
 						{
 							ui.SetTarget(health);
 						});
-					_spawnedLevel.enemies[i].SetPlayer(player);
+					_spawnedLevel.Enemies[i].SetPlayer(player);
 				}
 				//генерация из префаба
 				_navMeshSurface.BuildNavMesh();

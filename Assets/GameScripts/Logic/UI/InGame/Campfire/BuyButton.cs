@@ -2,12 +2,10 @@ using System;
 using System.Linq;
 using EditorScripts.Inspector;
 using GameScripts.Logic.Units.Player;
-using GameScripts.Services.Data;
 using GameScripts.StaticData.Enums;
 using GameScripts.StaticData.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.UI;
-using Zenject;
 
 namespace GameScripts.Logic.UI.InGame
 {

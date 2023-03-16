@@ -1,7 +1,6 @@
 using System;
 using EditorScripts.Inspector;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace GameScripts.Logic.Units
 {
@@ -46,7 +45,7 @@ namespace GameScripts.Logic.Units
             if (!(Health <= 0)) return;
             
             IsDead = true;
-            OnlineManager.onlineManager.SetLeaderBoard();
+            OnlineManager.OnlineManager.Manager.SetLeaderBoard();
             OnHealthReachZero();
         }
 

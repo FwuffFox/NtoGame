@@ -16,7 +16,7 @@ namespace GameScripts.Infrastructure
 
         public void CreateStates()
         {
-            Dictionary<Type, IStateWithExit> states = _stateFactory.CreateStates();
+            var states = _stateFactory.CreateStates();
             _states = states;
         }
 
@@ -28,14 +28,14 @@ namespace GameScripts.Infrastructure
 
         public void Enter<TState, TPayload>(TPayload payload) where TState : class, IStateWithPayload<TPayload>
         {
-            TState state = LoadState<TState>();
+            var state = LoadState<TState>();
             state.Enter(payload);
         }
 
         private TState LoadState<TState>() where TState : class, IStateWithExit
         {
             _currentState?.Exit();
-            TState state = GetState<TState>();
+            var state = GetState<TState>();
             _currentState = state;
             return state;
         }
