@@ -1,3 +1,4 @@
+using GameScripts.StaticData.ScriptableObjects;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class QuestSystemUI : MonoBehaviour
     public QuestBox activeQuest;
     public Text description;
     public GameObject buttons;
+    public Text declineButton;
     public List<QuestBox> quests;
     private int selectedQuestId = 0;
 
@@ -15,11 +17,7 @@ public class QuestSystemUI : MonoBehaviour
     {
         if (activeQuest)
         {
-            SetColor();
-            description.text =
-                activeQuest.questData.questName
-                + "\n" + activeQuest.questData.description
-                + "\n" + "Награда: "+activeQuest.questData.reward+" монет";
+            SelectQuest(0);
         }
         else
         {
@@ -36,6 +34,10 @@ public class QuestSystemUI : MonoBehaviour
             +"\n"+quests[id].questData.description
             + "\n" + "Награда: " + quests[id].questData.reward + " монет";
         selectedQuestId = id;
+        if (quests[id].questData.questImportance == questImportance.main)
+            declineButton.text = "[Сюжетный квест]";
+        else
+            declineButton.text = "Отказаться";
     }
 
     public void SetActiveQuest()
@@ -44,6 +46,15 @@ public class QuestSystemUI : MonoBehaviour
         activeQuest = quests[selectedQuestId];
         activeQuest.background.color = Color.green;
         QuestManager.questManager.curQuest = activeQuest.questData;
+    }
+
+    public void DeclineQuest()
+    {
+        if (!activeQuest) return;
+        if (quests[selectedQuestId].questData.questImportance == questImportance.main) 
+            return;
+        activeQuest = null;
+        QuestManager.questManager.curQuest = null;
     }
 
     public void SetColor(int selectedId=-1)
