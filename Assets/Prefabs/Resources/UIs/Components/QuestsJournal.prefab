@@ -1063,11 +1063,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: add50da84273e894a835cfa4a29df13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeQuest: {fileID: 845476396939319279}
-  description: {fileID: 8926218404620753671}
-  buttons: {fileID: 6760706621669598897}
-  declineButton: {fileID: 6959019503047622585}
-  quests:
+  ActiveQuest: {fileID: 845476396939319279}
+  Description: {fileID: 8926218404620753671}
+  Buttons: {fileID: 6760706621669598897}
+  DeclineButton: {fileID: 4754307926558583844}
+  Quests:
   - {fileID: 845476396939319279}
   - {fileID: 5868131660603461519}
   - {fileID: 714684346713436780}
@@ -1682,6 +1682,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 248749403356442503, guid: 3befae61ae2a2fd40a757e1defc8fc4d,
         type: 3}
+      propertyPath: QuestData
+      value: 
+      objectReference: {fileID: 11400000, guid: 60408e1455a050c4b89cd10e15b26f20,
+        type: 2}
+    - target: {fileID: 248749403356442503, guid: 3befae61ae2a2fd40a757e1defc8fc4d,
+        type: 3}
       propertyPath: questData
       value: 
       objectReference: {fileID: 11400000, guid: 60408e1455a050c4b89cd10e15b26f20,
@@ -1863,6 +1869,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 999426712041036266}
     m_Modifications:
+    - target: {fileID: 248749403356442503, guid: 3befae61ae2a2fd40a757e1defc8fc4d,
+        type: 3}
+      propertyPath: QuestData
+      value: 
+      objectReference: {fileID: 11400000, guid: 2ecb5caf3abaab545a2ebdf3f7ccd4a6,
+        type: 2}
     - target: {fileID: 248749403356442503, guid: 3befae61ae2a2fd40a757e1defc8fc4d,
         type: 3}
       propertyPath: questData
@@ -2203,6 +2215,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 248749403356442503, guid: 3befae61ae2a2fd40a757e1defc8fc4d,
         type: 3}
+      propertyPath: QuestData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d2a005a7c5fa6a41bb88c21b80d45f4,
+        type: 2}
+    - target: {fileID: 248749403356442503, guid: 3befae61ae2a2fd40a757e1defc8fc4d,
+        type: 3}
       propertyPath: questData
       value: 
       objectReference: {fileID: 11400000, guid: 1d2a005a7c5fa6a41bb88c21b80d45f4,
@@ -2386,6 +2404,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 248749403356442503, guid: 3befae61ae2a2fd40a757e1defc8fc4d,
         type: 3}
+      propertyPath: QuestData
+      value: 
+      objectReference: {fileID: 11400000, guid: 34d0317551bf35841a66c313cf2d8f24,
+        type: 2}
+    - target: {fileID: 248749403356442503, guid: 3befae61ae2a2fd40a757e1defc8fc4d,
+        type: 3}
       propertyPath: questData
       value: 
       objectReference: {fileID: 11400000, guid: 34d0317551bf35841a66c313cf2d8f24,
@@ -2567,6 +2591,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 999426712041036266}
     m_Modifications:
+    - target: {fileID: 248749403356442503, guid: 3befae61ae2a2fd40a757e1defc8fc4d,
+        type: 3}
+      propertyPath: QuestData
+      value: 
+      objectReference: {fileID: 11400000, guid: 705f68937b602334a9ba097bc49bf766,
+        type: 2}
     - target: {fileID: 248749403356442503, guid: 3befae61ae2a2fd40a757e1defc8fc4d,
         type: 3}
       propertyPath: questData

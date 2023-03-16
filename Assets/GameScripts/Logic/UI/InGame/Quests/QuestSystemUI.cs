@@ -11,7 +11,7 @@ namespace GameScripts.Logic.UI.InGame.Quests
         [FormerlySerializedAs("activeQuest")] public QuestBox ActiveQuest;
         [FormerlySerializedAs("description")] public Text Description;
         [FormerlySerializedAs("buttons")] public GameObject Buttons;
-        [FormerlySerializedAs("declineButton")] public Text DeclineButton;
+        [FormerlySerializedAs("buttons")] public GameObject DeclineButton;
         [FormerlySerializedAs("quests")] public List<QuestBox> Quests;
         private int _selectedQuestId = 0;
 
@@ -37,9 +37,9 @@ namespace GameScripts.Logic.UI.InGame.Quests
                 + "\n" + "Награда: " + Quests[id].QuestData.reward + " монет";
             _selectedQuestId = id;
             if (Quests[id].QuestData.questImportance == questImportance.main)
-                DeclineButton.text = "[Основной квест]";
+                DeclineButton.SetActive(false);
             else
-                DeclineButton.text = "Отказаться";
+                DeclineButton.SetActive(true);
         }
 
         public void SetActiveQuest()

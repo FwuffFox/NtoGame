@@ -1289,7 +1289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   QuestsJournal: {fileID: 8520590243590003632}
   QuestSystemUI: {fileID: 8236675503676221957}
-  CurQuest: {fileID: 11400000, guid: 5aca0e85ebbca0145b8173042b4e87ed, type: 2}
+  CurQuest: {fileID: 0}
   QuestDoneName: {fileID: 2932290451845739039}
   DoneQuest: {fileID: 6198539331481906714}
   Kills: 0
@@ -1533,6 +1533,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -65.3641
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933518178256885364, guid: b7df16fc9b02b054690e27377145079f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7458428139074880703, guid: b7df16fc9b02b054690e27377145079f,
         type: 3}
@@ -1779,6 +1784,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6786276158134100901, guid: 98043e83e79556f489ebee51e830ad0f,
+        type: 3}
+      propertyPath: ActiveQuest
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6786276158134100901, guid: 98043e83e79556f489ebee51e830ad0f,
+        type: 3}
+      propertyPath: DeclineButton
+      value: 
+      objectReference: {fileID: 7897500996754498948}
     - target: {fileID: 6864139272229791691, guid: 98043e83e79556f489ebee51e830ad0f,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1879,6 +1894,12 @@ PrefabInstance:
 --- !u!224 &7795719768342050935 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4633301719483544023, guid: 98043e83e79556f489ebee51e830ad0f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3198468944256125344}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7897500996754498948 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4754307926558583844, guid: 98043e83e79556f489ebee51e830ad0f,
     type: 3}
   m_PrefabInstance: {fileID: 3198468944256125344}
   m_PrefabAsset: {fileID: 0}

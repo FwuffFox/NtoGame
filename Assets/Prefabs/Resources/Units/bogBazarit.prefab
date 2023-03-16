@@ -640,7 +640,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 972.7
+  m_Radius: 672.7
   m_Center: {x: 0, y: 60.58, z: 0}
 --- !u!114 &1203918022729180055
 MonoBehaviour:
@@ -655,7 +655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NpcDialogue: {fileID: 11400000, guid: bbb3036de7fb0b3418e7299ed1f9700c, type: 2}
-  animator: {fileID: 8591388688396262373}
+  Animator: {fileID: 8591388688396262373}
 --- !u!95 &8591388688396262373
 Animator:
   serializedVersion: 4

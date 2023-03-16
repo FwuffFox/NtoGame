@@ -246,7 +246,6 @@ MonoBehaviour:
   _particle: {fileID: 2125229653666544005}
   _audio: {fileID: 8335355561689411854}
   Type: 0
-  _checkpointNumber: 0
 --- !u!135 &4894392749795132732
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -258,7 +257,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.13
+  m_Radius: 0.11
   m_Center: {x: 0.003120236, y: -0.041961253, z: 0.000103798375}
 --- !u!54 &-8859567792401691675
 Rigidbody:
