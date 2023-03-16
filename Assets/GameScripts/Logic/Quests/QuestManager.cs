@@ -34,7 +34,7 @@ public class QuestManager : MonoBehaviour
         _playerMoney = unitSpawner.Player.GetComponent<PlayerMoney>();
     }
 
-    private void Awake() 
+    private void Start() 
     { 
         Instance = this;
         _notificationPos = DoneQuest.transform.position;
@@ -42,7 +42,10 @@ public class QuestManager : MonoBehaviour
         var nums = FileUsing.ReadFile().ToArray();
         for (int i = 0; i < nums.Count(); i++)
         {
+            CurQuest = QuestSystemUI.Quests[i].QuestData;
             QuestSystemUI.Quests[i].Done = nums[i] == 1;
+            if (nums[i] == 0) continue;
+            QuestDone();
         }
           
     }
@@ -109,8 +112,11 @@ public class QuestManager : MonoBehaviour
             if (questBox.QuestData != CurQuest) continue;
             
             questBox.Done = true;
-            QuestSystemUI.ActiveQuest!.Background.color = Color.white;
-            QuestSystemUI.ActiveQuest = null;
+            if (QuestSystemUI.ActiveQuest)
+            {
+                QuestSystemUI.ActiveQuest!.Background.color = Color.white;
+                QuestSystemUI.ActiveQuest = null;
+            }
         }
         if (CurQuest.nextQuest != -1) QuestSystemUI.Quests[CurQuest.nextQuest].gameObject.SetActive(true);
         if (CurQuest.additionalQuest != -1) QuestSystemUI.Quests[CurQuest.additionalQuest].gameObject.SetActive(true);
