@@ -35,12 +35,14 @@ namespace GameScripts.Logic.Units
         }
 
         public bool IsDead { get; private set; }
-        
+
+        public Action<float> OnBattleUnitGetDamage;
         public virtual void GetDamage(float damage)
         {
             if (IsDead) return;
             
             Health -= damage;
+            OnBattleUnitGetDamage?.Invoke(damage);
             if (Health <= 0)
             {
                 IsDead = true;
@@ -69,6 +71,11 @@ namespace GameScripts.Logic.Units
 #if UNITY_EDITOR
         [InspectorButton(nameof(HealToFull))]
         [SerializeField] private bool _healButton;
+
+        [InspectorButton(nameof(TestDamage))]
+        [SerializeField] private bool _damageButton;
+
+        public void TestDamage() => GetDamage(1);
 #endif
     }
 }

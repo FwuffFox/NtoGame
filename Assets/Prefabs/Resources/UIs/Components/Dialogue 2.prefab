@@ -894,7 +894,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 753.885, y: -326.8205}
+  m_AnchoredPosition: {x: 753.885, y: -215.3641}
   m_SizeDelta: {x: 1507.77, y: 130.7282}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2577396779317214655
@@ -1132,19 +1132,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5623687437104554960}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8811504264518603905}
-  m_Father: {fileID: 7408639776947310007}
-  m_RootOrder: 1
+  m_Father: {fileID: 3425750771797660154}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.827312, y: 0}
-  m_AnchorMax: {x: 1, y: 0.20358092}
-  m_AnchoredPosition: {x: -2.625, y: 4}
-  m_SizeDelta: {x: -5.25, y: -8}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 753.885, y: -150}
+  m_SizeDelta: {x: 1507.77, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1928264072584814174
 CanvasRenderer:
@@ -1846,7 +1846,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -1889,6 +1889,7 @@ RectTransform:
   - {fileID: 1071138169674785449}
   - {fileID: 8925026601231119478}
   - {fileID: 4352618746862912419}
+  - {fileID: 488744884561405419}
   m_Father: {fileID: 1735354135761733626}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1919,7 +1920,7 @@ MonoBehaviour:
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
-  m_ChildControlHeight: 0
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
@@ -1954,7 +1955,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6933518178256885364}
-  - {fileID: 488744884561405419}
   m_Father: {fileID: 4739146024966483779}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
