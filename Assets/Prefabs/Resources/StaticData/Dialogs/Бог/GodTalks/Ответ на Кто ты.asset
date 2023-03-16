@@ -19,6 +19,6 @@ MonoBehaviour:
     \u043C\u043E\u0438\u043C, \u0441\u043B\u0430\u0432\u044F\u043D\u0430\u043C!"
   DialogueAudio: {fileID: 8300000, guid: fa6456be7012df34eb769d8a962d95a3, type: 3}
   NextPhrase: {fileID: 0}
-  IsFinalPhrase: 1
+  IsFinalPhrase: 0
   DoesCallPlayerChoice: 0
   PlayerAnswers: []
