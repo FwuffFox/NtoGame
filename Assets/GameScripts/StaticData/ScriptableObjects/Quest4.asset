@@ -20,4 +20,5 @@ MonoBehaviour:
   questImportance: 0
   value: 1
   reward: 250
+  additionalQuest: 5
   nextQuest: 4
