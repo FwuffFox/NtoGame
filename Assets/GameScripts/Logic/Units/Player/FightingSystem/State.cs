@@ -2,7 +2,7 @@ namespace GameScripts.Logic.Units.Player.FightingSystem
 {
     public abstract class State
     {
-        public ComboStateMachine ComboStateMachine;
+        protected ComboStateMachine ComboStateMachine;
         
         protected float Time { get; set; }
         protected float FixedTime { get; set; }
@@ -28,6 +28,9 @@ namespace GameScripts.Logic.Units.Player.FightingSystem
             LateTime += UnityEngine.Time.deltaTime;
         }
 
+        /// <summary>
+        /// Called on the exit of a state.
+        /// </summary>
         public virtual void OnExit()
         {
             

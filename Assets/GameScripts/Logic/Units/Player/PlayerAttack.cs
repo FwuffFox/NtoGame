@@ -3,7 +3,7 @@ using GameScripts.Logic.Units.Player.FightingSystem;
 using GameScripts.Logic.Weapons;
 using GameScripts.StaticData.ScriptableObjects;
 using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEngine.InputSystem;
 
 namespace GameScripts.Logic.Units.Player
 {
@@ -28,6 +28,7 @@ namespace GameScripts.Logic.Units.Player
 		public void OnEnable()
 		{
 			MeleeComboStateMachine = GetComponent<ComboStateMachine>();
+			PlayerInputSystem.InGame.AttackButton.performed += AttackButton_Pressed;
 			Sword.PlayerAttack = this;
 		}
 
@@ -37,14 +38,19 @@ namespace GameScripts.Logic.Units.Player
 			Damage = _defaultDamage;
 		}
 	
-		private void Update()
+		private void AttackButton_Pressed(InputAction.CallbackContext context)
 		{
-			if (!CanAttack) return;
-			if (Input.GetMouseButton(0) &&
-			    MeleeComboStateMachine.CurrentState.GetType() == typeof(IdleState))
+			if (Time.timeScale == 0f) return;
+			if (!CanAttack) return;	 
+			if (MeleeComboStateMachine.CurrentState.GetType() == typeof(IdleState))
 			{
 				MeleeComboStateMachine.SetNextState(new EntryState());
 			}
+		}
+
+		private void OnDisable()
+		{
+			PlayerInputSystem.InGame.AttackButton.performed -= AttackButton_Pressed;
 		}
 	}
 }

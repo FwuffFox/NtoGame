@@ -1,5 +1,5 @@
-﻿using GameScripts.Logic.Camera;
-using GameScripts.Logic.Generators;
+﻿using GameScripts.Logic;
+using GameScripts.Logic.Camera;
 using GameScripts.Logic.UI.InGame;
 using GameScripts.Logic.Units.Player;
 using GameScripts.Services.Data;
@@ -16,8 +16,6 @@ namespace GameScripts.Infrastructure.States
 {
     public class LoadLevelState : IStateWithPayload<string>
     {
-        private GameObject _ui;
-        
         private GameStateMachine _gameStateMachine;
         private ISceneLoader _sceneLoader;
         private GameStateMachine _stateMachine;
@@ -53,10 +51,32 @@ namespace GameScripts.Infrastructure.States
             var generator = mapGenerator.GetComponent<GroundGenerator>();
             generator.GenerateMapAndTraps();
 
-            var playerPosition = new Vector3(PlayerPrefs.GetFloat("CheckpointX"), 1 , PlayerPrefs.GetFloat("CheckpointX"));
-            playerPosition = playerPosition == Vector3.zero ? levelData.playerSpawnPoint : playerPosition;
+            var playerPosition = levelData.playerSpawnPoint;
+            if (PlayerPrefs.HasKey("CheckpointX"))
+            {
+                playerPosition = new Vector3(PlayerPrefs.GetFloat("CheckpointX"), 1, PlayerPrefs.GetFloat("CheckpointX"));
+            }
+            
+            if (_unitSpawner.Player != null) Object.Destroy(_unitSpawner.Player);
             var player = _unitSpawner.SpawnPlayer(playerPosition);
             generator.PlaceUnits(player);
+            
+            SetCurses(player);
+            
+            Camera.main!.GetComponentInParent<CameraFollower>().SetTarget(player);            
+            
+            var ui = _prefabFactory.InstantiateUI<LoadLevelState>();
+            
+            ui.GetComponentInChildren<HealthUI>().SetPlayer(player.GetComponent<PlayerHealth>());
+            ui.GetComponentInChildren<StaminaUI>().SetPlayer(player.GetComponent<PlayerMovement>());
+            ui.GetComponentInChildren<CurseUI>().SetPlayer(player.GetComponent<PlayerCurseSystem>());
+            ui.GetComponentInChildren<PointsUI>().SetPlayer(player.GetComponent<PlayerMoney>());
+            
+            _stateMachine.Enter<GameLoopState, GameObject>(ui);
+        }
+
+        private void SetCurses(GameObject player)
+        {
             Curses.HealthCurse.SetOnMaxStacksFunction(p =>
             {
                 p.GetComponent<PlayerHealth>().MaxHealth = 1;
@@ -74,17 +94,6 @@ namespace GameScripts.Infrastructure.States
                 p.GetComponent<PlayerAttack>().Damage *= Mathf.CeilToInt(0.5f);
                 Debug.Log("Max stack on damage curse");
             }, player);
-            
-            
-            Camera.main.GetComponentInParent<CameraFollower>()?.SetTarget(player);            
-            
-            if (_ui == null)
-                _ui = _prefabFactory.InstantiateUI<LoadLevelState>();
-            
-            _ui.GetComponentInChildren<HealthUI>().SetPlayer(player.GetComponent<PlayerHealth>());
-            _ui.GetComponentInChildren<StaminaUI>().SetPlayer(player.GetComponent<PlayerMovement>());
-            player.GetComponent<PlayerCurseSystem>().OnCurseChange += _ui.GetComponentInChildren<CurseUI>().UpdateCurses;
-            _stateMachine.Enter<GameLoopState>();
         }
     }
 }

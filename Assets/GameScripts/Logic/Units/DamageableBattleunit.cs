@@ -1,13 +1,11 @@
 using System;
 using EditorScripts.Inspector;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace GameScripts.Logic.Units
 {
     public abstract class DamageableBattleunit : MonoBehaviour
     {
-        
         public Action<float> OnBattleUnitMaxHealthChange;
         [Header("Battle Unit")] [SerializeReadOnly, SerializeField] private float _maxHealth;
         
@@ -36,31 +34,46 @@ namespace GameScripts.Logic.Units
         }
 
         public bool IsDead { get; private set; }
-        
+
+        public Action<float> OnBattleUnitGetDamage;
         public virtual void GetDamage(float damage)
         {
             if (IsDead) return;
             
             Health -= damage;
-            if (Health <= 0)
-            {
-                IsDead = true;
-                OnlineManager.onlineManager.SetLeaderBoard();
-                OnHealthReachZero();
-            }
+            OnBattleUnitGetDamage?.Invoke(damage);
+            if (!(Health <= 0)) return;
+            
+            IsDead = true;
+            OnlineManager.OnlineManager.Manager.SetLeaderBoard();
+            OnHealthReachZero();
         }
 
         public Action OnBattleUnitDeath;
-        public virtual void OnHealthReachZero()
+
+        protected virtual void OnHealthReachZero()
         {
             OnBattleUnitDeath?.Invoke();
         }
-        
+
+        public void Heal(float value) => Health += value;
         public void HealToFull() => Health = MaxHealth;
 
+        private void OnDisable()
+        {
+            OnBattleUnitDeath = null;
+            OnBattleUnitHealthChange = null;
+            OnBattleUnitMaxHealthChange = null;
+        }
+        
 #if UNITY_EDITOR
         [InspectorButton(nameof(HealToFull))]
         [SerializeField] private bool _healButton;
+
+        [InspectorButton(nameof(TestDamage))]
+        [SerializeField] private bool _damageButton;
+
+        public void TestDamage() => GetDamage(1);
 #endif
     }
 }

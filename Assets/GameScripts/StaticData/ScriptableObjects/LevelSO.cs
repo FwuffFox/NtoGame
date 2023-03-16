@@ -1,5 +1,4 @@
 using GameScripts.StaticData.ScriptableObjects;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static GameScripts.StaticData.ScriptableObjects.LevelData;

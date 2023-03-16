@@ -1,5 +1,3 @@
-using System;
-using EditorScripts.Inspector;
 using GameScripts.Services.Data;
 using UnityEngine;
 using Zenject;
@@ -8,7 +6,7 @@ namespace GameScripts.Logic.Units.Player.FightingSystem
 {
     public class ComboStateMachine : MonoBehaviour
     {
-        private State _mainStateType = new IdleState();
+        private readonly State _mainStateType = new IdleState();
         
         public State CurrentState { get; private set; }
         private State _nextState;
@@ -32,17 +30,13 @@ namespace GameScripts.Logic.Units.Player.FightingSystem
                 SetState(_nextState);
             }
 
-            if (CurrentState != null)
-                CurrentState.OnUpdate();
+            CurrentState?.OnUpdate();
         }
 
         public void SetState(State newState)
         {
             _nextState = null;
-            if (CurrentState != null)
-            {
-                CurrentState.OnExit();
-            }
+            CurrentState?.OnExit();
             CurrentState = newState;
             CurrentState.OnEnter(this);
         }
@@ -57,14 +51,12 @@ namespace GameScripts.Logic.Units.Player.FightingSystem
         
         private void FixedUpdate()
         {
-            if (CurrentState != null)
-                CurrentState.OnFixedUpdate();
+            CurrentState?.OnFixedUpdate();
         }
         
         private void LateUpdate()
         {
-            if (CurrentState != null)
-                CurrentState.OnLateUpdate();
+            CurrentState?.OnLateUpdate();
         }
 
         public void SetNextStateToMain()

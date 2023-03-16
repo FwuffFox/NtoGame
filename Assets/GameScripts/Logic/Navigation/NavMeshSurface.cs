@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using UnityEditor;
+#if UNITY_EDITOR
 using UnityEditor.SceneManagement;
+#endif
 using UnityEngine;
 using UnityEngine.AI;
 

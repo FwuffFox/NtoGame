@@ -1,5 +1,6 @@
 using GameScripts.StaticData.ScriptableObjects;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace GameScripts.Logic.Units.Player.FightingSystem
 {
@@ -34,7 +35,7 @@ namespace GameScripts.Logic.Units.Player.FightingSystem
         private float _attackPressedTimer = 0;
 
         protected AttackSO AttackData;
-        
+
         public override void OnEnter(ComboStateMachine comboStateMachine)
         {
             base.OnEnter(comboStateMachine);
@@ -52,18 +53,20 @@ namespace GameScripts.Logic.Units.Player.FightingSystem
             
             ComboStateMachine.AudioSource.clip = AttackAudio;
             ComboStateMachine.AudioSource.Play();
+            
+            PlayerInputSystem.InGame.AttackButton.performed += AttackButtonOnPerformed;
+        }
+
+        private void AttackButtonOnPerformed(InputAction.CallbackContext obj)
+        {
+            _attackPressedTimer = 1;
         }
 
         public override void OnUpdate()
         {     
             base.OnUpdate();
             _attackPressedTimer -= UnityEngine.Time.deltaTime;
-            
-            if (Input.GetMouseButtonDown(0))
-            {
-                _attackPressedTimer = 1;
-            }
-            
+
             if (_attackPressedTimer > 0)
                 ShouldCombo = true;
         }
@@ -71,6 +74,7 @@ namespace GameScripts.Logic.Units.Player.FightingSystem
         public override void OnExit()
         {
             ComboStateMachine.PlayerAttack.IsWeaponActive = false;
+            PlayerInputSystem.InGame.AttackButton.performed -= AttackButtonOnPerformed;
             base.OnExit();
         }
     }

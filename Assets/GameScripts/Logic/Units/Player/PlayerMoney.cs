@@ -16,5 +16,10 @@ namespace GameScripts.Logic.Units.Player
 				_money = value;
 			}
 		}
+
+		private void OnDisable()
+		{
+			OnMoneyChanged = null;
+		}
 	}
 }

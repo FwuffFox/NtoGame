@@ -7,6 +7,7 @@ using Zenject;
 
 namespace GameScripts.Logic.Units.Player
 {
+    [RequireComponent(typeof(Rigidbody))]
     public class PlayerMovement : MonoBehaviour
     {
 
@@ -46,7 +47,6 @@ namespace GameScripts.Logic.Units.Player
         
         private float _staminaRegenPerSecond;
         private float _staminaConsumptionPerSecondOfRunning;
-        private float _staminaPerDodge;
 
         public Action<bool> OnIsRunningChange;
 
@@ -77,38 +77,35 @@ namespace GameScripts.Logic.Units.Player
             CurrentStamina = MaxStamina;
             _staminaRegenPerSecond = playerData.stamina.staminaRegenPerSecond;
             _staminaConsumptionPerSecondOfRunning = playerData.stamina.staminaConsumptionPerSecondOfRunning;
-            _staminaPerDodge = playerData.stamina.staminaPerDodge;
         }
-
+        
         private void OnEnable()
         {
-            if (!TryGetComponent(out _rigidbody))
-                Debug.LogError("Attach rigidbody to player");
+            _rigidbody = GetComponent<Rigidbody>();
             StartCoroutine(StaminaRegenerationCoroutine());
             StartCoroutine(StaminaConsumptionByRunningCoroutine());
         }
 
         private void FixedUpdate()
         {
-            Vector3 movementAxis = _inputService.GetMovementAxis();
-            if (movementAxis != Vector3.zero)
-            {
-                IsRunning = _inputService.IsPressed(KeyCode.LeftShift) && CurrentStamina >= _staminaConsumptionPerSecondOfRunning / 100f;
-                MovementSpeed = _baseSpeed * Time.deltaTime;
-                MovementSpeed = IsRunning ? MovementSpeed * _runningSpeedModifier : MovementSpeed;
-                Move(movementAxis, MovementSpeed);
-            }
-            else
+            if (!PlayerInputSystem.InGame.Move.IsPressed())
             {
                 MovementSpeed = 0;
                 IsRunning = false;
+                return;
             }
+
+            var movementAxis = PlayerInputSystem.InGame.Move.ReadValue<Vector2>().Vector2ToVector3();
+            IsRunning = PlayerInputSystem.InGame.RunButton.IsPressed()
+                        && CurrentStamina >= _staminaConsumptionPerSecondOfRunning / 100f;
+            MovementSpeed = _baseSpeed * Time.deltaTime;
+            MovementSpeed = IsRunning ? MovementSpeed * _runningSpeedModifier : MovementSpeed;
+            MovePlayer(movementAxis, MovementSpeed);
         }
 
-        private void Move(Vector3 movementAxis, float movementSpeed)
+        private void MovePlayer(Vector3 movementAxis, float movementSpeed)
         {
-            var matrix = Matrix4x4.Rotate(Quaternion.Euler(0, 45, 0));
-            var skewedInput = matrix.MultiplyPoint3x4(movementAxis);
+            var skewedInput = movementAxis.SkewVector3();
             _rigidbody.MovePosition(transform.position + skewedInput * movementSpeed);
             transform.LookAt(transform.position + skewedInput * movementSpeed);
         }
@@ -129,6 +126,13 @@ namespace GameScripts.Logic.Units.Player
                 yield return new WaitForSeconds(1f/100f);
                 if (IsRunning) CurrentStamina -= _staminaConsumptionPerSecondOfRunning / 100f;
             }
+        }
+
+        private void OnDisable()
+        {
+            OnMovementSpeedChange = null;
+            OnPlayerStaminaChange = null;
+            OnIsRunningChange = null;
         }
     }
 }

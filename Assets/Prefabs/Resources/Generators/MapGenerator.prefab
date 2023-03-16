@@ -46,7 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelSO: {fileID: 11400000, guid: 22a802065a337004ca49dea15f35ba98, type: 2}
+  prefabLevel: {fileID: 8898427660157074432, guid: 38a31e611c4404e45bfb638624fd7fe4,
+    type: 3}
   _navMeshSurface: {fileID: 6870081781584189043}
+  enemyData: {fileID: 11400000, guid: 80ef72a6e7ff99a4c97da0aa9aa9dcd8, type: 2}
 --- !u!114 &6870081781584189043
 MonoBehaviour:
   m_ObjectHideFlags: 0

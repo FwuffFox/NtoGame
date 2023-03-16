@@ -1,8 +1,8 @@
 ﻿using System.Collections;
-using EditorScripts.Inspector;
 using GameScripts.Logic.Units.Player;
 using GameScripts.StaticData.Enums;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace GameScripts.Logic.CurseObject
 {
@@ -12,14 +12,14 @@ namespace GameScripts.Logic.CurseObject
         [SerializeField] private SphereCollider _collider;
         [SerializeField] private CurseObjectMover _curseObjectMover;
         [SerializeField] private bool _isEnabled;
-        [SerializeField] private float curseCooldown;
-        [SerializeReadOnly] public CurseType CurseType;
-        [SerializeField] private GameObject cleanseItem;
-        [SerializeReadOnly, SerializeField] private bool canCurse = true;
-        [SerializeField] private float afterCleanseCooldown;
-        [SerializeReadOnly, SerializeField] private bool cleansedRecently;
-        [SerializeReadOnly, SerializeField] private bool isCleanseSpawned;
-        [SerializeField] private GameObject curseObjectMask;
+        [FormerlySerializedAs("curseCooldown")] [SerializeField] private float _curseCooldown;
+        public CurseType CurseType;
+        [FormerlySerializedAs("cleanseItem")] [SerializeField] private GameObject _cleanseItem;
+        private bool _canCurse = true;
+        [FormerlySerializedAs("afterCleanseCooldown")] [SerializeField] private float _afterCleanseCooldown;
+        private bool _cleansedRecently;
+        private bool _isCleanseSpawned;
+        [FormerlySerializedAs("curseObjectMask")] [SerializeField] private GameObject _curseObjectMask;
 
 
         private TestCleanseObject _cleanseObj;
@@ -33,42 +33,42 @@ namespace GameScripts.Logic.CurseObject
         private void OnTriggerEnter(Collider other)
         {
             if (!_isEnabled) return;
-            if (cleansedRecently) return;
-            if (isCleanseSpawned) return;
+            if (_cleansedRecently) return;
+            if (_isCleanseSpawned) return;
             if (!other.TryGetComponent(out PlayerCurseSystem curseSystem)) return;
             if (curseSystem.Curses[CurseType].IsMaxed) return;
             var myPos = transform.position;
             var playerPos = other.transform.position;
             var oppositeVector = new Vector3(myPos.x - (playerPos.x - myPos.x), myPos.y, myPos.z - (playerPos.z - myPos.z));
-            var obj = Instantiate(cleanseItem, oppositeVector, Quaternion.identity, transform);
+            var obj = Instantiate(_cleanseItem, oppositeVector, Quaternion.identity, transform);
             var cleanse = obj.GetComponent<TestCleanseObject>();
             cleanse.SetParentCurseObject(this);
             _cleanseObj = cleanse;
-            isCleanseSpawned = true;
+            _isCleanseSpawned = true;
         }
 
         private void OnTriggerStay(Collider other)
         {
             if (!_isEnabled) return;
-            if (cleansedRecently) return;
-            if (!isCleanseSpawned) OnTriggerEnter(other);
+            if (_cleansedRecently) return;
+            if (!_isCleanseSpawned) OnTriggerEnter(other);
             var myPos = transform.position;
             Debug.DrawLine(myPos, other.transform.position, Color.red, 0.1f);
-            if (!canCurse) return;
+            if (!_canCurse) return;
             if (!other.TryGetComponent(out PlayerCurseSystem curseSystem)) return;
-            if (curseSystem.Curses[CurseType].IsLastStack && isCleanseSpawned) {
+            if (curseSystem.Curses[CurseType].IsLastStack && _isCleanseSpawned) {
                 _cleanseObj.DestroyMe();
-                isCleanseSpawned = false;
+                _isCleanseSpawned = false;
                 Enable(false);
             }
-            if (!curseSystem.Curses[CurseType].ShouldBeUnVisible && isCleanseSpawned)
+            if (!curseSystem.Curses[CurseType].ShouldBeUnVisible && _isCleanseSpawned)
             {
-                curseObjectMask.SetActive(true);
+                _curseObjectMask.SetActive(true);
                 _cleanseObj.EnableMask(true);
             }
-            else if (isCleanseSpawned)
+            else if (_isCleanseSpawned)
             {
-                curseObjectMask.SetActive(false);
+                _curseObjectMask.SetActive(false);
                 _cleanseObj.EnableMask(false);
             }
             
@@ -78,23 +78,23 @@ namespace GameScripts.Logic.CurseObject
 
         private IEnumerator Cooldown()
         {
-            canCurse = false;
-            yield return new WaitForSeconds(curseCooldown);
-            canCurse = true;
+            _canCurse = false;
+            yield return new WaitForSeconds(_curseCooldown);
+            _canCurse = true;
         }
 
         public void CleanseWasTaken()
         {
-            isCleanseSpawned = false;
+            _isCleanseSpawned = false;
             StartCoroutine(CleanseCooldown());
-            curseObjectMask.SetActive(false);
+            _curseObjectMask.SetActive(false);
         }
 
         private IEnumerator CleanseCooldown()
         {
-            cleansedRecently = true;
-            yield return new WaitForSeconds(afterCleanseCooldown);
-            cleansedRecently = false;
+            _cleansedRecently = true;
+            yield return new WaitForSeconds(_afterCleanseCooldown);
+            _cleansedRecently = false;
         }
 
         private void OnDrawGizmos()

@@ -1,8 +1,7 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using GameScripts.Extensions;
-using GameScripts.Logic.Fireplace;
+using GameScripts.Logic.Campfire;
 using GameScripts.Logic.Navigation;
 using GameScripts.Logic.Tiles;
 using GameScripts.Logic.Units.Enemy;
@@ -14,7 +13,7 @@ using UnityEngine.AI;
 using Zenject;
 using Random = UnityEngine.Random;
 
-namespace GameScripts.Logic.Generators
+namespace GameScripts.Logic
 {
 	public class GroundGenerator : MonoBehaviour
 	{
@@ -29,12 +28,15 @@ namespace GameScripts.Logic.Generators
 		private float _posZ;
 		private LevelData.XZCoord[] _coords;
 		public LevelSO levelSO;
+		public PrefabLevelInfo prefabLevel;
 
 		[SerializeField] private NavMeshSurface _navMeshSurface;
 		private int _trapsCount;
 		private int _unitsCount;
 
 		private Transform _landFolder;
+		private PrefabLevelInfo _spawnedLevel;
+		public EnemyData enemyData;
 
 		private IUnitSpawner _unitSpawner;
         private Transform obj;
@@ -61,12 +63,33 @@ namespace GameScripts.Logic.Generators
 		
 		public void GenerateMapAndTraps()
 		{
-			_landFolder = Instantiate(new GameObject().With(x => x.name = "Land")).transform;
-			GenerateMap();
-			_tilesWithSpawn = _spawnedTiles.Where(tile => tile.HaveSpawnPoint).ToList();
-			PlaceTraps();
-			PlaceCursedObjects();
-			_navMeshSurface.BuildNavMesh();
+			if (prefabLevel)
+			{
+				_spawnedLevel=Instantiate(prefabLevel);
+				//костры
+				for (int i=0;i<_spawnedLevel.Campfires.Count;i++)
+                {
+					if (_spawnedLevel.Campfires[i].Type == CampfireType.Start)
+						_unitSpawner.SpawnCampfire(_spawnedLevel.Campfires[i].transform.position, CampfireType.Start);
+					if (_spawnedLevel.Campfires[i].Type == CampfireType.Checkpoint)
+						_unitSpawner.SpawnCampfire(_spawnedLevel.Campfires[i].transform.position, CampfireType.Checkpoint);
+					if (_spawnedLevel.Campfires[i].Type == CampfireType.Final)
+						_unitSpawner.SpawnCampfire(_spawnedLevel.Campfires[i].transform.position, CampfireType.Final);
+					Destroy(_spawnedLevel.Campfires[i].gameObject);
+				}
+				//генерация из префаба
+				_navMeshSurface.BuildNavMesh();
+			}
+			else
+            {
+				//старая генерация
+				_landFolder = Instantiate(new GameObject().With(x => x.name = "Land")).transform;
+				GenerateMap();
+				_tilesWithSpawn = _spawnedTiles.Where(tile => tile.HaveSpawnPoint).ToList();
+				PlaceTraps();
+				PlaceCursedObjects();
+				_navMeshSurface.BuildNavMesh();
+			}
 		}
 
 		private void GenerateMap() 
@@ -95,17 +118,17 @@ namespace GameScripts.Logic.Generators
 					{	//можем заспавнить объект
 						if (w == 0 && h == 0)
 						{
-							_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, FireplaceType.Start);
+							_unitSpawner.SpawnCampfire(tile.SpawnPoint.position, CampfireType.Start);
 							tile.HaveSpawnPoint = false;
 						}
 						else if (w == _mapSize - 1 && h == _mapSize - 1)
 						{
-							_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, FireplaceType.Final);
+							_unitSpawner.SpawnCampfire(tile.SpawnPoint.position, CampfireType.Final);
 							tile.HaveSpawnPoint = false;
 						}
 						else if (_coords.Contains(new LevelData.XZCoord { X = w, Z = h }))
 						{
-							_unitSpawner.SpawnFireplace(tile.SpawnPoint.position, FireplaceType.Checkpoint);
+							_unitSpawner.SpawnCampfire(tile.SpawnPoint.position, CampfireType.Checkpoint);
 							tile.HaveSpawnPoint = false;
 						}
 					}
@@ -137,13 +160,59 @@ namespace GameScripts.Logic.Generators
 		
 		public void PlaceUnits(GameObject player)
 		{
-			for (int i = 0; i < _unitsCount; i++)
+			if (prefabLevel)
 			{
-				if (_tilesWithSpawn.Count == 0) break;
-				var spawnTile = _tilesWithSpawn[Random.Range(0, _tilesWithSpawn.Count)];
-				var enemy = _unitSpawner.SpawnEnemy(spawnTile.SpawnPoint.position, EnemyType.Warrior);
-				enemy.GetComponent<EnemyAI>().SetPlayer(player);
-				_tilesWithSpawn.Remove(spawnTile);
+				for (int i = 0; i < _spawnedLevel.Enemies.Count; i++)
+				{
+					_spawnedLevel.Enemies[i].GetComponent<NavMeshAgent>().enabled = true;
+					GameObject enemy = _spawnedLevel.Enemies[i].gameObject;
+					var health = enemy.GetComponent<EnemyHealth>()
+						.With(x =>
+						{
+							x.SetProperties();
+						});
+
+					var ai = enemy.GetComponent<EnemyAI>()
+						.With(x =>
+						{
+							x.SetProperties(enemyData);
+							x.EnemyHealth = enemy.GetComponent<EnemyHealth>();
+						});
+
+					var mover = enemy.GetComponent<EnemyMover>()
+						.With(x => x.SetProperties(enemyData));
+
+					var attacker = enemy.GetComponent<EnemyAttacker>()
+						.With(x => x.SetProperties(enemyData));
+
+					enemy.GetComponent<EnemyAnimator>()
+						.With(animator =>
+						{
+							mover.OnSpeedChange += animator.SetSpeed;
+							attacker.OnAttack += animator.SetAttack;
+							health.OnBattleUnitDeath += animator.SetDeath;
+						});
+
+					enemy.GetComponent<EnemyUI>()
+						.With(ui =>
+						{
+							ui.SetTarget(health);
+						});
+					_spawnedLevel.Enemies[i].SetPlayer(player);
+				}
+				//генерация из префаба
+				_navMeshSurface.BuildNavMesh();
+			}
+			else
+			{	//старая генерация
+				for (int i = 0; i < _unitsCount; i++)
+				{
+					if (_tilesWithSpawn.Count == 0) break;
+					var spawnTile = _tilesWithSpawn[Random.Range(0, _tilesWithSpawn.Count)];
+					var enemy = _unitSpawner.SpawnEnemy(spawnTile.SpawnPoint.position, EnemyType.Warrior);
+					enemy.GetComponent<EnemyAI>().SetPlayer(player);
+					_tilesWithSpawn.Remove(spawnTile);
+				}
 			}
 		}
 		
