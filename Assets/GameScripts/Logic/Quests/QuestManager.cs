@@ -112,7 +112,11 @@ public class QuestManager : MonoBehaviour
     {
         QuestDoneName.text = "Квест " + "\"" + CurQuest.questName + "\"" + " выполнен!";
         DoneQuest.SetActive(true);
-        yield return new WaitForSeconds(4);
+        for (int i = 0; i < 60; i++)
+        {
+            yield return new WaitForEndOfFrame();
+            DoneQuest.transform.Translate(1, 0, 0);
+        }
         DoneQuest.SetActive(false);
     }
 }
