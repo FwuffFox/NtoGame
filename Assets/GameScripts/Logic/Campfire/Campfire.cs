@@ -53,7 +53,8 @@ namespace GameScripts.Logic.Campfire
             }
             _particle.Play();
             _audio.Play();
-            ActivateObject(other.GetComponent<PlayerInteractions>());
+            if (QuestManager.questManager.talked)
+                ActivateObject(other.GetComponent<PlayerInteractions>());
         }
 
         private IEnumerator OnFinalReach()
@@ -82,7 +83,8 @@ namespace GameScripts.Logic.Campfire
         
             if (!_audio.isPlaying)
                 _audio.Play();
-            ActivateObject(other.GetComponent<PlayerInteractions>());
+            if (QuestManager.questManager.talked) 
+                ActivateObject(other.GetComponent<PlayerInteractions>());
         }
 
         private void OnTriggerExit(Collider other)
