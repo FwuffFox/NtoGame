@@ -18,7 +18,7 @@ namespace GameScripts.Logic
         {
             if (!other.TryGetComponent<PlayerInteractions>(out var playerInteractions))
                 return;
-            if (!QuestManager.questManager.canInterectWithNpc) return;
+            if (!QuestManager.Instance.CanInterectWithNpc) return;
             ActivateObject(playerInteractions);
             Animator.SetBool(PlayerNearBy, true);
         }
@@ -27,10 +27,11 @@ namespace GameScripts.Logic
         {
             if (!other.TryGetComponent<PlayerInteractions>(out var playerInteractions))
                 return;
-            Vector3 direction = Vector3.RotateTowards(transform.forward, other.transform.position - transform.position, 20f, 0);
+            var transform1 = transform;
+            Vector3 direction = Vector3.RotateTowards(transform1.forward, other.transform.position - transform1.position, 20f, 0);
             direction.y = 0;
             transform.rotation = Quaternion.LookRotation(direction);
-            if (!QuestManager.questManager.canInterectWithNpc) return;
+            if (!QuestManager.Instance.CanInterectWithNpc) return;
             ActivateObject(playerInteractions);
         }
 
@@ -38,7 +39,7 @@ namespace GameScripts.Logic
         {
             if (!other.TryGetComponent<PlayerInteractions>(out var playerInteractions))
                 return;
-            if (!QuestManager.questManager.canInterectWithNpc) return;
+            if (!QuestManager.Instance.CanInterectWithNpc) return;
             DisableObject(playerInteractions);
             Animator.SetBool(PlayerNearBy, false);
         }
@@ -46,7 +47,7 @@ namespace GameScripts.Logic
         public override void Interact()
         {
             OnNpcDialogueOpen?.Invoke();
-            QuestManager.questManager.talked = true;
+            QuestManager.Instance.Talked = true;
         }
     }
 }

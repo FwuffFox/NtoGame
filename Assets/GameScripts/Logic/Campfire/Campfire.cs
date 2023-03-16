@@ -18,7 +18,7 @@ namespace GameScripts.Logic.Campfire
         [SerializeField] private AudioSource _audio;
         
         private bool _goToCampfireQm = false;
-        private bool _playerNear = false;
+        private bool _interactWithCampfireQm = false;
 
         public CampfireType Type;
 
@@ -32,14 +32,14 @@ namespace GameScripts.Logic.Campfire
             if (!_goToCampfireQm)
             {
                 _goToCampfireQm = true;
-                QuestManager.questManager.goToCoster += 1;
+                QuestManager.Instance.GoToCoster += 1;
             }
             //torch
-            if (!QuestManager.questManager.haveTorch) return;
-            if (!_playerNear)
+            if (!QuestManager.Instance.HaveTorch) return;
+            if (!_interactWithCampfireQm)
             {
-                _playerNear = true;
-                QuestManager.questManager.fireCoster = true;
+                _interactWithCampfireQm = true;
+                QuestManager.Instance.FireCoster = true;
             }
             if (Type == CampfireType.Final) StartCoroutine(OnFinalReach());
             if (Type == CampfireType.Checkpoint)
@@ -50,7 +50,7 @@ namespace GameScripts.Logic.Campfire
             }
             _particle.Play();
             _audio.Play();
-            if (QuestManager.questManager.talked)
+            if (QuestManager.Instance.Talked)
                 ActivateObject(other.GetComponent<PlayerInteractions>());
         }
 
@@ -65,11 +65,11 @@ namespace GameScripts.Logic.Campfire
         private void OnTriggerStay(Collider other)
         {
             if (!IsPlayer(other)) return;
-            if (!QuestManager.questManager.haveTorch) return;
-            if (!_playerNear)
+            if (!QuestManager.Instance.HaveTorch) return;
+            if (!_interactWithCampfireQm)
             {
-                _playerNear = true;
-                QuestManager.questManager.fireCoster= true;
+                _interactWithCampfireQm = true;
+                QuestManager.Instance.FireCoster= true;
             }
 
             if (!_particle.isPlaying) 
@@ -77,7 +77,7 @@ namespace GameScripts.Logic.Campfire
         
             if (!_audio.isPlaying)
                 _audio.Play();
-            if (QuestManager.questManager.talked) 
+            if (QuestManager.Instance.Talked) 
                 ActivateObject(other.GetComponent<PlayerInteractions>());
         }
 
@@ -98,7 +98,7 @@ namespace GameScripts.Logic.Campfire
         public override void Interact()
         {
             OnCampfireInteracted?.Invoke();
-            QuestManager.questManager.interactWithCoster = true;
+            QuestManager.Instance.InteractWithCoster = true;
         }
     }
 }

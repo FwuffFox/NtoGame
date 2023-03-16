@@ -1,5 +1,4 @@
-﻿using System;
-using GameScripts.Logic.Units.Player;
+﻿using GameScripts.Logic.Units.Player;
 using UnityEngine;
 
 namespace GameScripts.Logic

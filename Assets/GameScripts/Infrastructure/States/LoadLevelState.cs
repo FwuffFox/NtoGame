@@ -1,5 +1,5 @@
-﻿using GameScripts.Logic.Camera;
-using GameScripts.Logic.Generators;
+﻿using GameScripts.Logic;
+using GameScripts.Logic.Camera;
 using GameScripts.Logic.UI.InGame;
 using GameScripts.Logic.Units.Player;
 using GameScripts.Services.Data;

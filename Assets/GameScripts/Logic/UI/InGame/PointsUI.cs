@@ -1,9 +1,7 @@
-using GameScripts.Infrastructure.States;
 using GameScripts.Logic.Units.Player;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
-using Zenject;
 
 namespace GameScripts.Logic.UI.InGame
 {

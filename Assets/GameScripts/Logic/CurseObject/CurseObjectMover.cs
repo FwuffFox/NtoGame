@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using EditorScripts.Inspector;
 using GameScripts.Logic.Units.Player;
 using UnityEngine;
 
@@ -12,7 +11,8 @@ namespace GameScripts.Logic.CurseObject
         [SerializeField] private float _moveCooldown;
         [SerializeField] private bool _canMove = true;
         [SerializeField] private SphereCollider _collider;
-        [SerializeReadOnly, SerializeField] private bool _isEnable;
+        
+        private bool _isEnable;
 
         public void Enable(bool isEnable)
         {

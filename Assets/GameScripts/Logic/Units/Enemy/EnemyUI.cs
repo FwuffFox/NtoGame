@@ -1,4 +1,3 @@
-using System;
 using EditorScripts.Inspector;
 using UnityEngine;
 using UnityEngine.UI;
